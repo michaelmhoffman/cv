@@ -18,11 +18,13 @@ Assistant Professor, Department of Computer Science, University of Toronto, Toro
 
 Senior Fellow\
 University of Washington, Seattle, WA, 2008-2013.
+
 * Mentor: Dr. William Stafford Noble, Professor
 * National Human Genome Research Institute K99/R00 Pathway to Independence Award
 
 Doctor of Philosophy, Bioinformatics\
 University of Cambridge (Trinity College), Cambridge, UK, 2003-2008.
+
 * Adviser: Dr. Ewan Birney, Associate Director, European Bioinformatics Institute
 * Marshall Scholar
 * National Science Foundation Graduate Research Fellow
@@ -30,6 +32,7 @@ University of Cambridge (Trinity College), Cambridge, UK, 2003-2008.
 Bachelor of Science, Biochemistry, with Highest Honors, Special Honors\
 Bachelor of Arts, Plan II Honors Liberal Arts, with Highest Honors\
 The University of Texas at Austin, Austin, TX, 1998-2003.
+
 * Adviser: Dr. Andrew D. Ellington, Professor
 * College of Natural Sciences Commencement Speaker, Dean's Honored Graduate
 * College of Liberal Arts Dean's Distinguished Graduate
@@ -46,13 +49,16 @@ J15. Libbrecht MW, Ay F, Hoffman MM, Gilbert DM, Bilmes JA, Noble WS. "Joint ann
 J14. Church DM, Schneider VA, Steinberg KM, Schatz MC, Quinlan AR, Chin CS, Kitts PA, Aken B, Marth GT, Hoffman MM, Herrero J, Mendoza LZ, Durbin R,  Flicek P. "Extending reference assembly models." Genome Biol. 2015; 16:13.
 
 J13. Ho JWK, Jung YL, Liu T, Alver BH, Lee S, Ikegami K, Sohn K, Minoda A, Tolstorukov MY, Appert A, Parker SCJ, Gu T, Kundaje A, Riddle NC, Bishop E, Egelhofer TA, Hu SS, Alekseyenko AA, Rechtsteiner A, Asker D, Belsky JA, Bowman SK, Chen QB, Chen RA, Day DS, Dong Y, Dose AC, Duan X, Epstein CB, Ercan S, Feingold EA, Ferrari F, Garrigues JM, Gehlenborg N, Good PJ, Haseley P, He D, Herrmann M, Hoffman MM, Jeffers TE, Kharchenko PV, Kolasinska-Zwierz P, Kotwaliwale CV, Kumar N, Langley SA, Larschan EN, Latorre I, Libbrecht MW, Lin X, Park R, Pazin MJ, Pham HN, Plachetka A, Qin B, Schwartz YB, Shoresh N, Stempor P, Vielle A, Wang C, Whittle CM, Xue H, Kingston RE, Kim JH, Bernstein BE, Dernburg AF, Pirrotta V, Kuroda MI, Noble WS, Tullius TD, Kellis M, MacAlpine DM, Strome S, Elgin SCR, Liu XS, Lieb JD, Ahringer J, Karpen GH, Park PJ. "Comparative analysis of metazoan chromatin organization." Nature. 2014 Aug 28; 512:449-52.
+
 * News and Views: Muerdter F, Stark A. Nature. 2014 Aug 28; 512:374-5.
 
 J12. Hoffman MM*, Ernst J*, Wilder SP, Kundaje A, Harris RS, Libbrecht M, Giardine B, Ellenbogen PM, Bilmes JA, Birney E, Hardison RC, Dunham I, Kellis M, Noble WS. "Integrative annotation of chromatin elements from ENCODE data." Nucleic Acids Res. 2013 Jan; 41:827-41.
+
 * Featured Article in Nucleic Acids Research.
 * Cited 103 times.
 
 J11. ENCODE Project Consortium. "An integrated Encyclopedia of DNA Elements in the human genome." Nature. 2012 Sep 6; 489:57-74.
+
 * Author contribution: "Lead analyst".
 * Featured on cover of Nature.
 * Recommended by Faculty of 1000.
@@ -60,13 +66,16 @@ J11. ENCODE Project Consortium. "An integrated Encyclopedia of DNA Elements in t
 * Cited 2,809 times.
 
 J10. Landt SG, Marinov GK, Kundaje A, Kheradpour P, Pauli F, Batzoglou S, Bernstein B, Bickel P, Brown B, Cayting P, Chen Y, Desalvo G, Epstein C, Fisher-Aylor KI, Euskirchen G, Gerstein M, Gertz J, Hartemink AJ, Hoffman MM, Iyer VR, Jung YL, Karmakar S, Kellis M, Kharchenko PV, Li Q, Liu T, Liu XS, Ma L, Milosavljevic A, Myers RM, Park PJ, Pazin MJ, Perry MD, Raha D, Reddy TE, Rozowsky J, Shoresh N, Sidow A, Slattery M, Stamatoyonnopoulous JA, Tolstorukov MY, White KP, Xi S, Farnham PJ, Lieb JF, Wold BJ, Snyder M. "ChIP-seq guidelines and practices used by the ENCODE and modENCODE consortia." Genome Res. 2012 Sep; 22:1813-31.
+
 * Recommended by Faculty of 1000.
 * Cited 296 times.
 
 J9. Hoffman MM, Buske OJ, Wang J, Weng Z, Bilmes JA, Noble WS. "Unsupervised pattern discovery in human chromatin structure through genomic segmentation." Nat Methods. 2012 Mar 18; 9:473-6.
+
 * Cited 129 times.
 
 J8. ENCODE Project Consortium. "A user's guide to the Encyclopedia of DNA Elements (ENCODE) functional genomic data." PLOS Biol. 2011 Apr; 9:e1001046.
+
 * Recommended by Faculty of 1000.
 * Cited 648 times.
 
@@ -81,11 +90,13 @@ J4. Hoffman MM, Birney E. "An effective model for natural selection in promoters
 J3. Hoffman MM, Birney E. "Estimating the neutral rate of nucleotide substitution using introns." Mol Biol Evol. 2007 Feb; 24:522-31.
 
 J2. International Chicken Genome Sequencing Consortium. "Sequence and comparative analysis of the chicken genome provide unique perspectives on vertebrate evolution." Nature. 2004 Dec 9; 432:695-716.
+
 * Featured on cover of Nature.
 * News and Views: Schmutz J, Grimwood J. Nature. 2004 Dec 9; 432:679-80.
 * Cited 1,552 times.
 
 J1. Hoffman MM, Khrapov MA, Cox JC, Yao J, Tong L, Ellington AD. "AANT: the Amino Acid-Nucleotide Interaction Database." Nucleic Acids Res. 2004 Jan 1; 32:D174-81.
+
 * Cited 96 times.
 
 [//]: # (XXX: Boldface indicates Michael Hoffman or one of his trainees is an author or a consortium member. Underline indicates Michael Hoffman is an author or a consortium member.)
