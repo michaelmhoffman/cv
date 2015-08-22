@@ -1,0 +1,6 @@
+- filter.py: filter out top-level headings based on names
+- set class of numbered lines to get desired indentation activity
+- set Word styles
+- automatic citation numbers
+- LaTeX/PDF output
+- HTML output

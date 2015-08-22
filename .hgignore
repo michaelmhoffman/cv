@@ -1,0 +1,6 @@
+syntax:glob
+
+~$*
+
+cv.docx
+cv.html
