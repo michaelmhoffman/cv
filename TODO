@@ -1,6 +1,10 @@
+- Makefile: pandoc cv.md -s --toc --smart -o cv.html
 - filter.py: filter out top-level headings based on names
 - set class of numbered lines to get desired indentation activity
 - set Word styles
 - automatic citation numbers
 - LaTeX/PDF output
 - HTML output
+- set template that includes author name and not title name
+- include links to papers
+- BibTeX bibliography

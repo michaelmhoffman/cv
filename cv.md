@@ -1,4 +1,10 @@
-# Michael M. Hoffman
+% Curriculum vitae
+% Michael M. Hoffman
+
+---
+# XXX: get rid of "Curriculum vitae"
+# # Michael M. Hoffman
+---
 
 101 College St TMDT 11-311\
 Toronto, ON M5G 1L7
@@ -8,22 +14,22 @@ E-mail michael.hoffman@utoronto.ca
 
 ## Current positions
 
-Scientist, Princess Margaret Cancer Centre, Toronto, ON, 2013-present.
+Scientist, Princess Margaret Cancer Centre, Toronto, ON, 2013--present.
 
-Assistant Professor, Department of Medical Biophysics, University of Toronto, Toronto, ON, 2014-present.
+Assistant Professor, Department of Medical Biophysics, University of Toronto, Toronto, ON, 2014--present.
 
-Assistant Professor, Department of Computer Science, University of Toronto, Toronto, ON, 2014-present.
+Assistant Professor, Department of Computer Science, University of Toronto, Toronto, ON, 2014--present.
 
 ## Education
 
 Senior Fellow\
-University of Washington, Seattle, WA, 2008-2013.
+University of Washington, Seattle, WA, 2008--2013.
 
 * Mentor: Dr. William Stafford Noble, Professor
 * National Human Genome Research Institute K99/R00 Pathway to Independence Award
 
 Doctor of Philosophy, Bioinformatics\
-University of Cambridge (Trinity College), Cambridge, UK, 2003-2008.
+University of Cambridge (Trinity College), Cambridge, UK, 2003--2008.
 
 * Adviser: Dr. Ewan Birney, Associate Director, European Bioinformatics Institute
 * Marshall Scholar
@@ -31,7 +37,7 @@ University of Cambridge (Trinity College), Cambridge, UK, 2003-2008.
 
 Bachelor of Science, Biochemistry, with Highest Honors, Special Honors\
 Bachelor of Arts, Plan II Honors Liberal Arts, with Highest Honors\
-The University of Texas at Austin, Austin, TX, 1998-2003.
+The University of Texas at Austin, Austin, TX, 1998--2003.
 
 * Adviser: Dr. Andrew D. Ellington, Professor
 * College of Natural Sciences Commencement Speaker, Dean's Honored Graduate
@@ -42,35 +48,35 @@ The University of Texas at Austin, Austin, TX, 1998-2003.
 
 ### Publications: journal
 
-J16. Viner C, Hoffman MM. "Determining the epigenome using DNA alone." Nat Methods. 2015 Mar; 12:191-2.
+J16. Viner C, Hoffman MM. "Determining the epigenome using DNA alone." Nat Methods. 2015 Mar; 12:191--2.
 
-J15. Libbrecht MW, Ay F, Hoffman MM, Gilbert DM, Bilmes JA, Noble WS. "Joint annotation of chromatin state and chromatin conformation reveals relationships among domain types and identifies domains of cell type-specific expression." Genome Res. 2015; 25:544-57.
+J15. Libbrecht MW, Ay F, Hoffman MM, Gilbert DM, Bilmes JA, Noble WS. "Joint annotation of chromatin state and chromatin conformation reveals relationships among domain types and identifies domains of cell type-specific expression." Genome Res. 2015; 25:544--57.
 
 J14. Church DM, Schneider VA, Steinberg KM, Schatz MC, Quinlan AR, Chin CS, Kitts PA, Aken B, Marth GT, Hoffman MM, Herrero J, Mendoza LZ, Durbin R,  Flicek P. "Extending reference assembly models." Genome Biol. 2015; 16:13.
 
-J13. Ho JWK, Jung YL, Liu T, Alver BH, Lee S, Ikegami K, Sohn K, Minoda A, Tolstorukov MY, Appert A, Parker SCJ, Gu T, Kundaje A, Riddle NC, Bishop E, Egelhofer TA, Hu SS, Alekseyenko AA, Rechtsteiner A, Asker D, Belsky JA, Bowman SK, Chen QB, Chen RA, Day DS, Dong Y, Dose AC, Duan X, Epstein CB, Ercan S, Feingold EA, Ferrari F, Garrigues JM, Gehlenborg N, Good PJ, Haseley P, He D, Herrmann M, Hoffman MM, Jeffers TE, Kharchenko PV, Kolasinska-Zwierz P, Kotwaliwale CV, Kumar N, Langley SA, Larschan EN, Latorre I, Libbrecht MW, Lin X, Park R, Pazin MJ, Pham HN, Plachetka A, Qin B, Schwartz YB, Shoresh N, Stempor P, Vielle A, Wang C, Whittle CM, Xue H, Kingston RE, Kim JH, Bernstein BE, Dernburg AF, Pirrotta V, Kuroda MI, Noble WS, Tullius TD, Kellis M, MacAlpine DM, Strome S, Elgin SCR, Liu XS, Lieb JD, Ahringer J, Karpen GH, Park PJ. "Comparative analysis of metazoan chromatin organization." Nature. 2014 Aug 28; 512:449-52.
+J13. Ho JWK, Jung YL, Liu T, Alver BH, Lee S, Ikegami K, Sohn K, Minoda A, Tolstorukov MY, Appert A, Parker SCJ, Gu T, Kundaje A, Riddle NC, Bishop E, Egelhofer TA, Hu SS, Alekseyenko AA, Rechtsteiner A, Asker D, Belsky JA, Bowman SK, Chen QB, Chen RA, Day DS, Dong Y, Dose AC, Duan X, Epstein CB, Ercan S, Feingold EA, Ferrari F, Garrigues JM, Gehlenborg N, Good PJ, Haseley P, He D, Herrmann M, Hoffman MM, Jeffers TE, Kharchenko PV, Kolasinska-Zwierz P, Kotwaliwale CV, Kumar N, Langley SA, Larschan EN, Latorre I, Libbrecht MW, Lin X, Park R, Pazin MJ, Pham HN, Plachetka A, Qin B, Schwartz YB, Shoresh N, Stempor P, Vielle A, Wang C, Whittle CM, Xue H, Kingston RE, Kim JH, Bernstein BE, Dernburg AF, Pirrotta V, Kuroda MI, Noble WS, Tullius TD, Kellis M, MacAlpine DM, Strome S, Elgin SCR, Liu XS, Lieb JD, Ahringer J, Karpen GH, Park PJ. "Comparative analysis of metazoan chromatin organization." Nature. 2014 Aug 28; 512:449--52.
 
-* News and Views: Muerdter F, Stark A. Nature. 2014 Aug 28; 512:374-5.
+* News and Views: Muerdter F, Stark A. Nature. 2014 Aug 28; 512:374--5.
 
-J12. Hoffman MM*, Ernst J*, Wilder SP, Kundaje A, Harris RS, Libbrecht M, Giardine B, Ellenbogen PM, Bilmes JA, Birney E, Hardison RC, Dunham I, Kellis M, Noble WS. "Integrative annotation of chromatin elements from ENCODE data." Nucleic Acids Res. 2013 Jan; 41:827-41.
+J12. Hoffman MM*, Ernst J*, Wilder SP, Kundaje A, Harris RS, Libbrecht M, Giardine B, Ellenbogen PM, Bilmes JA, Birney E, Hardison RC, Dunham I, Kellis M, Noble WS. "Integrative annotation of chromatin elements from ENCODE data." Nucleic Acids Res. 2013 Jan; 41:827--41.
 
 * Featured Article in Nucleic Acids Research.
 * Cited 103 times.
 
-J11. ENCODE Project Consortium. "An integrated Encyclopedia of DNA Elements in the human genome." Nature. 2012 Sep 6; 489:57-74.
+J11. ENCODE Project Consortium. "An integrated Encyclopedia of DNA Elements in the human genome." Nature. 2012 Sep 6; 489:57--74.
 
 * Author contribution: "Lead analyst".
 * Featured on cover of Nature.
 * Recommended by Faculty of 1000.
-* News and Views: Ecker JR et al. Nature. 2012 Sep 6; 489:52-55.
+* News and Views: Ecker JR et al. Nature. 2012 Sep 6; 489:52--55.
 * Cited 2,809 times.
 
-J10. Landt SG, Marinov GK, Kundaje A, Kheradpour P, Pauli F, Batzoglou S, Bernstein B, Bickel P, Brown B, Cayting P, Chen Y, Desalvo G, Epstein C, Fisher-Aylor KI, Euskirchen G, Gerstein M, Gertz J, Hartemink AJ, Hoffman MM, Iyer VR, Jung YL, Karmakar S, Kellis M, Kharchenko PV, Li Q, Liu T, Liu XS, Ma L, Milosavljevic A, Myers RM, Park PJ, Pazin MJ, Perry MD, Raha D, Reddy TE, Rozowsky J, Shoresh N, Sidow A, Slattery M, Stamatoyonnopoulous JA, Tolstorukov MY, White KP, Xi S, Farnham PJ, Lieb JF, Wold BJ, Snyder M. "ChIP-seq guidelines and practices used by the ENCODE and modENCODE consortia." Genome Res. 2012 Sep; 22:1813-31.
+J10. Landt SG, Marinov GK, Kundaje A, Kheradpour P, Pauli F, Batzoglou S, Bernstein B, Bickel P, Brown B, Cayting P, Chen Y, Desalvo G, Epstein C, Fisher-Aylor KI, Euskirchen G, Gerstein M, Gertz J, Hartemink AJ, Hoffman MM, Iyer VR, Jung YL, Karmakar S, Kellis M, Kharchenko PV, Li Q, Liu T, Liu XS, Ma L, Milosavljevic A, Myers RM, Park PJ, Pazin MJ, Perry MD, Raha D, Reddy TE, Rozowsky J, Shoresh N, Sidow A, Slattery M, Stamatoyonnopoulous JA, Tolstorukov MY, White KP, Xi S, Farnham PJ, Lieb JF, Wold BJ, Snyder M. "ChIP-seq guidelines and practices used by the ENCODE and modENCODE consortia." Genome Res. 2012 Sep; 22:1813--31.
 
 * Recommended by Faculty of 1000.
 * Cited 296 times.
 
-J9. Hoffman MM, Buske OJ, Wang J, Weng Z, Bilmes JA, Noble WS. "Unsupervised pattern discovery in human chromatin structure through genomic segmentation." Nat Methods. 2012 Mar 18; 9:473-6.
+J9. Hoffman MM, Buske OJ, Wang J, Weng Z, Bilmes JA, Noble WS. "Unsupervised pattern discovery in human chromatin structure through genomic segmentation." Nat Methods. 2012 Mar 18; 9:473--6.
 
 * Cited 129 times.
 
@@ -81,25 +87,27 @@ J8. ENCODE Project Consortium. "A user's guide to the Encyclopedia of DNA Elemen
 
 J7. Buske OJ, Hoffman MM, Ponts N, Le Roch KG, Noble WS. "Exploratory analysis of genomic segmentations with Segtools." BMC Bioinformatics. 2011 Oct 26; 12:415.
 
-J6. Hoffman MM, Buske OJ, Noble WS. "The Genomedata format for storing large-scale functional genomics data." Bioinformatics. 2010 Jun 1; 26:1458-9.
+J6. Hoffman MM, Buske OJ, Noble WS. "The Genomedata format for storing large-scale functional genomics data." Bioinformatics. 2010 Jun 1; 26:1458--9.
 
-J5. Chen X, Hoffman MM, Bilmes JA, Hesselberth JR, Noble WS. "A dynamic Bayesian network for identifying protein-binding footprints from single molecule-based sequencing data." Bioinformatics. 2010 Jun 15; 26:i334-42.
+J5. Chen X, Hoffman MM, Bilmes JA, Hesselberth JR, Noble WS. "A dynamic Bayesian network for identifying protein-binding footprints from single molecule-based sequencing data." Bioinformatics. 2010 Jun 15; 26:i334--42.
 
-J4. Hoffman MM, Birney E. "An effective model for natural selection in promoters." Genome Res. 2010 May; 20:685-92.
+J4. Hoffman MM, Birney E. "An effective model for natural selection in promoters." Genome Res. 2010 May; 20:685--92.
 
-J3. Hoffman MM, Birney E. "Estimating the neutral rate of nucleotide substitution using introns." Mol Biol Evol. 2007 Feb; 24:522-31.
+J3. Hoffman MM, Birney E. "Estimating the neutral rate of nucleotide substitution using introns." Mol Biol Evol. 2007 Feb; 24:522--31.
 
-J2. International Chicken Genome Sequencing Consortium. "Sequence and comparative analysis of the chicken genome provide unique perspectives on vertebrate evolution." Nature. 2004 Dec 9; 432:695-716.
+J2. International Chicken Genome Sequencing Consortium. "Sequence and comparative analysis of the chicken genome provide unique perspectives on vertebrate evolution." Nature. 2004 Dec 9; 432:695--716.
 
 * Featured on cover of Nature.
-* News and Views: Schmutz J, Grimwood J. Nature. 2004 Dec 9; 432:679-80.
+* News and Views: Schmutz J, Grimwood J. Nature. 2004 Dec 9; 432:679--80.
 * Cited 1,552 times.
 
-J1. Hoffman MM, Khrapov MA, Cox JC, Yao J, Tong L, Ellington AD. "AANT: the Amino Acid-Nucleotide Interaction Database." Nucleic Acids Res. 2004 Jan 1; 32:D174-81.
+J1. Hoffman MM, Khrapov MA, Cox JC, Yao J, Tong L, Ellington AD. "AANT: the Amino Acid-Nucleotide Interaction Database." Nucleic Acids Res. 2004 Jan 1; 32:D174--81.
 
 * Cited 96 times.
 
-[//]: # (XXX: Boldface indicates Michael Hoffman or one of his trainees is an author or a consortium member. Underline indicates Michael Hoffman is an author or a consortium member.)
+---
+# XXX: Boldface indicates Michael Hoffman or one of his trainees is an author or a consortium member. Underline indicates Michael Hoffman is an author or a consortium member.
+---
 
 ### Publications: conference proceedings
 
@@ -127,12 +135,12 @@ D1. Hoffman MM. Quantifying evolution and natural selection in vertebrate noncod
 * Canadian Cancer Society Research Institute Junior Investigator Grant Panel Travel Award, 2014.
 * Trinity College Moore, Beale Sargent and Mitchell Fund, 2005.
 * The University of Texas at Austin Junior Fellows Research Grant, 2003.
-* The University of Texas at Austin Undergraduate Research Fellowship, 1999-2000, 2000-2001, 2002-2003.
+* The University of Texas at Austin Undergraduate Research Fellowship, 1999--2000, 2000--2001, 2002--2003.
 * NSF Research Experience for Undergraduates supplement, 1999.
-* Dedman Merit Scholarship, 1998-2002.
-* Dorothy B. Banks Charitable Trust Scholarship, 1999-2000.
-* IBM Thomas J. Watson Memorial Scholarship, 1998-2002.
-* National Merit Scholarship, 1998-2002.
+* Dedman Merit Scholarship, 1998--2002.
+* Dorothy B. Banks Charitable Trust Scholarship, 1999--2000.
+* IBM Thomas J. Watson Memorial Scholarship, 1998--2002.
+* National Merit Scholarship, 1998--2002.
 
 ### Recognitions: honors
 
@@ -141,16 +149,16 @@ D1. Hoffman MM. Quantifying evolution and natural selection in vertebrate noncod
 * Phi Beta Kappa Award of Distinction, 2003.
 * Phi Beta Kappa Induction, 2003.
 * Cambridge Overseas Trust Honorary Scholar, 2003.
-* College of Liberal Arts Junior Fellow, 2000-2003.
-* College of Natural Sciences Dean's Scholar, 1998-2003.
-* College of Liberal Arts Plan II Honors Program (2% of university), 1998-2003.
+* College of Liberal Arts Junior Fellow, 2000--2003.
+* College of Natural Sciences Dean's Scholar, 1998--2003.
+* College of Liberal Arts Plan II Honors Program (2% of university), 1998--2003.
 * College of Natural Sciences College Scholar 2000, 2001, 2002, 2003.
 
 ## Presentations
 
 ### Presentations: invited/keynote
 
-* Semi-automated human genome annotation using chromatin data. Institute for Operations Research and the Management Sciences Annual Meeting. Philadelphia, PA. 1-4 November 2015.
+* Semi-automated human genome annotation using chromatin data. Institute for Operations Research and the Management Sciences Annual Meeting. Philadelphia, PA. 1--4 November 2015.
 * Cold Spring Harbor Laboratory Meeting on Genome Informatics. Cold Spring Harbor, NY. October 2015.
 * Transcription factor binding motifs in an expanded epigenetic alphabet. Taiwan-Canada Joint Workshop on Epigenetics. Canadian Human and Statistical Genetics Meeting. Vancouver, BC. 21 April 2015.
 * Semi-automated genome annotation and an expanded epigenetic alphabet. Program in Genetic Networks Workshop. Canadian Institute for Advanced Research. Toronto, ON. 10 April 2015.
@@ -173,7 +181,7 @@ D1. Hoffman MM. Quantifying evolution and natural selection in vertebrate noncod
 * Student address, The University of Texas at Austin 120th Spring Commencement, College of Natural Sciences Convocation. Austin, TX. 17 May 2003.
 * Student address, The University of Texas at Austin 55th Honors Day Convocation. Austin, TX. 12 April 2003.
 
-## Presentations: conference, selected from abstracts
+### Presentations: conference, selected from abstracts
 
 * Segway: semi-automated genome annotation. Bioinformatics Open Source Conference. Dublin, Ireland. 10 July 2015.
 * Transcription factor binding in an expanded epigenetic alphabet. World Congress on Medical Physics. International Union for Physical and Engineering Sciences. Toronto, ON. 11 June 2015.
@@ -206,10 +214,10 @@ D1. Hoffman MM. Quantifying evolution and natural selection in vertebrate noncod
 
 * "Epigenomics." Summer Student Program. Department of Medical Biophysics. University of Toronto. 8 June 2015.
 * "Gene Regulation Network Analysis." Pathway and Network Analysis of -omic Data. 3 June 2015.
-* MBP 1015Y: Biophysics Seminar. Department of Medical Biophysics. University of Toronto. 15 October 2014-13 May 2015.
+* MBP 1015Y: Biophysics Seminar. Department of Medical Biophysics. University of Toronto. 15 October 2014--13 May 2015.
 * "Gene Regulation Network Analysis." High-throughput Biology: From Sequence to Networks. Canadian Bioinformatics Workshop. 3 May 2015.
 * "Transcription Factor Regulatory Analysis." Pathway and Network Analysis of omics Data. Canadian Bioinformatics Workshop, 4 June 2014.
-* "Introduction to ENCODE" and "The Segway annotation of the ENCODE Data." Iowa Institute of Human Genetics Bioinformatics Short Course. Taught two one-hour lectures. University of Iowa. 30-31 July 2013.
+* "Introduction to ENCODE" and "The Segway annotation of the ENCODE Data." Iowa Institute of Human Genetics Bioinformatics Short Course. Taught two one-hour lectures. University of Iowa. 30--31 July 2013.
 * "Genes and gambling: using probability to make sense of biology." Guest lecture for undergraduate computer science course, Bellevue College. Winter 2010.
 * "Introduction to Python." Taught two-day seminar. European Molecular Biology Laboratory. Autumn 2005.
 * EMBL Predoctoral Bioinformatics Workshop. Organizing committee member and teaching assistant for three-day course. European Molecular Biology Laboratory. Autumn 2004.
@@ -254,28 +262,28 @@ D1. Hoffman MM. Quantifying evolution and natural selection in vertebrate noncod
 * Genome organization and variant detection. Association for Computing Machinery Conference on Bioinformatics, Computational Biology and Biomedicine. Washington, DC. 24 September 2013.
 
 ### Professional activities: leadership and committee positions
-* **Member**, Graduate Admissions Committee, Department of Computer Science, University of Toronto, 2014-2015.
-* **Member**, Program Committee, Research in Computational Molecular Biology (RECOMB), 2014-present.
+* **Member**, Graduate Admissions Committee, Department of Computer Science, University of Toronto, 2014--2015.
+* **Member**, Program Committee, Research in Computational Molecular Biology (RECOMB), 2014--present.
 * **Teleconference member,** Genomics Peer Review Committee, Canadian Institutes for Health Research, 2015.
 * **Member**, Review Committee, Collaborative Personalized Cancer Medicine Team Grant, Princess Margaret Cancer Centre, 2015.
-* **Judge**, Summer Student Poster Day, Department of Medical Biophysics, University of Toronto, 2014-2015.
+* **Judge**, Summer Student Poster Day, Department of Medical Biophysics, University of Toronto, 2014--2015.
 * **Mentor**, National Resource for Network Biology, Google Summer of Code, 2014.
-* **Co-chair**, University Health Network Cancer Genomics Program Bioinformatics Subcommittee, 2013-present.
-* **Member**, Princess Margaret Genomics Centre Advisory Board, 2013-present.
-* **Chair**, Large-scale Integration Task Group, ENCODE Analysis Working Group, 2010-2012.
-* **Chair**, Cambridge University Student Pugwash Society, 2006-2007. **Secretary**, 2007-2008. *Organized seminar series on science and society topics.*
-* **Representative**, EMBL-European Bioinformatics Institute Predoctoral Fellow Association, 2004-2005.
-* **Secretary/Treasurer**, International Society for Computational Biology Student Council, 2004. **Member**, 2003-2004.
-* **President**, Texas Student Publications Board of Operating Trustees, 2002-2003. **Vice** **President**, 2001-2002. **Member**, 2000-2003. *Managed finances, personnel, and policy of daily newspaper, radio station, television station, and other media. $2.9 million annual budget.*
-* **Member**, College of Natural Sciences Dean's Scholars Committee, 2000-2003.
-* **Founder** and **Co-President**, University of Texas at Austin Barbecue Club, 1999-2003.
+* **Co-chair**, University Health Network Cancer Genomics Program Bioinformatics Subcommittee, 2013--present.
+* **Member**, Princess Margaret Genomics Centre Advisory Board, 2013--present.
+* **Chair**, Large-scale Integration Task Group, ENCODE Analysis Working Group, 2010--2012.
+* **Chair**, Cambridge University Student Pugwash Society, 2006--2007. **Secretary**, 2007--2008. *Organized seminar series on science and society topics.*
+* **Representative**, EMBL-European Bioinformatics Institute Predoctoral Fellow Association, 2004--2005.
+* **Secretary/Treasurer**, International Society for Computational Biology Student Council, 2004. **Member**, 2003--2004.
+* **President**, Texas Student Publications Board of Operating Trustees, 2002--2003. **Vice** **President**, 2001--2002. **Member**, 2000--2003. *Managed finances, personnel, and policy of daily newspaper, radio station, television station, and other media. $2.9 million annual budget.*
+* **Member**, College of Natural Sciences Dean's Scholars Committee, 2000--2003.
+* **Founder** and **Co--President**, University of Texas at Austin Barbecue Club, 1999--2003.
 * **Chair**, Texas Student Publications Handbook Revision Committee, 2002.
-* **Chair**, Texas Student Publications Election Committee, 2001-2002.
-* **Member**, University of Texas at Austin Information Technology Coordinating Council, 1999-2002.
-* **Member**, University of Texas at Austin General Faculty Admissions and Registration Committee, 1999-2000.
+* **Chair**, Texas Student Publications Election Committee, 2001--2002.
+* **Member**, University of Texas at Austin Information Technology Coordinating Council, 1999--2002.
+* **Member**, University of Texas at Austin General Faculty Admissions and Registration Committee, 1999--2000.
 
 ### Professional activities: review activities
-* **Organizer**, Early Career Investigators Meeting on Quantitative Problems in Human Genetics and Health. Banff International Research Station. Banff, AB, Canada. 10 January 2016-15 January 2016.
+* **Organizer**, Early Career Investigators Meeting on Quantitative Problems in Human Genetics and Health. Banff International Research Station. Banff, AB, Canada. 10 January 2016--15 January 2016.
 * **Reviewer** for journals: Nature Methods, Genome Biology, PLOS Computational Biology, Nucleic Acids Research, Scientific Reports, Bioinformatics, PLoS ONE, BMC Genomics, BMC Bioinformatics, Journal of Machine Learning Research, IEEE Transactions on Computational Biology and Bioinformatics, Artificial Intelligence in Medicine, Computational and Structural Biotechnology Journal.
 * **Reviewer** for conferences: Intelligent Systems in Molecular Biology/European Conferences on Computational Biology (ISMB/ECCB), Research in Computational Molecular Biology (RECOMB).
 * **Reviewer** for funders: United Kingdom Medical Research Council.
@@ -283,23 +291,23 @@ D1. Hoffman MM. Quantifying evolution and natural selection in vertebrate noncod
 * **Invited Participant**, National Human Genome Research Institute planning workshop: Planning the future of genomics: foundational research and applications in genomic medicine.
 
 ### Professional activities: memberships
-* **Member**, Global Alliance for Genomics and Health, 2014-present.
-* **Member**, Association for Computing Machinery Special Interest Group on Bioinformatics, 2013-present.
-* **Member**, National Postdoctoral Association, 2011-2013.
-* **Member**, Northwest Institute of Genetic Medicine, 2009-2013.
-* **Member**, University of Washington Postdoctoral Association, 2008-2013.
-* **Member**, Phi Beta Kappa, 2003-present.
-* **Member**, International Society for Computational Biology, 2003-2004, 2010-2011, 2015-2016.
-* **Junior Member**, Isaac Newton Institute for Mathematical Sciences, 2006-2013.
-* **Member**, American Association for the Advancement of Science, 2007-2008.
-* **Member**, Genetics Society, 2006-2007.
-* **Member**, Society of Computational Biology, 2002-2003.
-* **Member**, Microbiology and Molecular Biology Student Society, 1998-1999.
+* **Member**, Global Alliance for Genomics and Health, 2014--present.
+* **Member**, Association for Computing Machinery Special Interest Group on Bioinformatics, 2013--present.
+* **Member**, National Postdoctoral Association, 2011--2013.
+* **Member**, Northwest Institute of Genetic Medicine, 2009--2013.
+* **Member**, University of Washington Postdoctoral Association, 2008--2013.
+* **Member**, Phi Beta Kappa, 2003--present.
+* **Member**, International Society for Computational Biology, 2003--2004, 2010--2011, 2015--2016.
+* **Junior Member**, Isaac Newton Institute for Mathematical Sciences, 2006--2013.
+* **Member**, American Association for the Advancement of Science, 2007--2008.
+* **Member**, Genetics Society, 2006--2007.
+* **Member**, Society of Computational Biology, 2002--2003.
+* **Member**, Microbiology and Molecular Biology Student Society, 1998--1999.
 
 ## Prior positions
-* **Senior Fellow**, Department of Genome Sciences, University of Washington, 2008-2013.
-* **Predoctoral Fellow**, EMBL-European Bioinformatics Institute, 2003-2008.
-* **Research Assistant**, Department of Chemistry and Biochemistry, The University of Texas at Austin, 1999-2003.
+* **Senior Fellow**, Department of Genome Sciences, University of Washington, 2008--2013.
+* **Predoctoral Fellow**, EMBL-European Bioinformatics Institute, 2003--2008.
+* **Research Assistant**, Department of Chemistry and Biochemistry, The University of Texas at Austin, 1999--2003.
 * **Undergraduate Research Program Participant**, Cold Spring Harbor Laboratory, 2001.
 * **Undergraduate Research Fellow**, Plant Biochemistry Research Training Center, Washington State University, 2000.
 
@@ -309,17 +317,17 @@ D1. Hoffman MM. Quantifying evolution and natural selection in vertebrate noncod
 
 T14. **Madani Tonekaboni, S. Ali**. MSc Student, Department of Medical Biophysics, University of Toronto. 2015.
 
-T13. **Sood, Ankur Jai**. BESc (Honors) Student, Summer Student Program, Department of Medical Biophysics, University of Toronto. 2015-present.
+T13. **Sood, Ankur Jai**. BESc (Honors) Student, Summer Student Program, Department of Medical Biophysics, University of Toronto. 2015--present.
 
-T12. **Zeng, Xing**. BSc (Honors) Student, Undergraduate Toronto Research Experience in Computer Science, Department of Computer Science, University of Toronto. 2015-present.
+T12. **Zeng, Xing**. BSc (Honors) Student, Undergraduate Toronto Research Experience in Computer Science, Department of Computer Science, University of Toronto. 2015--present.
 
-T11. **Karimzadeh, Mehran R**. Research Assistant, University Health Network, 2015-present.
+T11. **Karimzadeh, Mehran R**. Research Assistant, University Health Network, 2015--present.
 
-T10. **Chicco, Davide**. Postdoctoral Fellow, University Health Network, 2014-present.
+T10. **Chicco, Davide**. Postdoctoral Fellow, University Health Network, 2014--present.
 
-T9. **Viner, Coby**. MSc Student, Department of Computer Science, University of Toronto, 2014-present.
+T9. **Viner, Coby**. MSc Student, Department of Computer Science, University of Toronto, 2014--present.
 
-T8. **Roberts, Eric**. Bioinformatics Programmer, University Health Network, 2014-present.
+T8. **Roberts, Eric**. Bioinformatics Programmer, University Health Network, 2014--present.
 
 ### Trainees and staff supervised: past
 
@@ -327,7 +335,7 @@ T7. **Shaw, Adam J**. Student, Google Summer of Code, 2014. Present position: So
 
 T6. **Petwe, Harshad S**. BS Student, Department of Computer Science and Engineering, University of Washington, 2012.
 
-T5. **Ellenbogen, Paul**. BS Student, Department of Computer Science and Engineering, University of Washington, 2011-2013. Present position: PhD Student, Department of Computer Science, Princeton University, Princeton, USA.
+T5. **Ellenbogen, Paul**. BS Student, Department of Computer Science and Engineering, University of Washington, 2011--2013. Present position: PhD Student, Department of Computer Science, Princeton University, Princeton, USA.
 
 T4. **Sahu, Avinash D**. MS Student, School of Communication and Computer Science, École Polytechnic Fédérale de Lausanne, 2011. Present position: PhD Student, Department of Computer Science, University of Maryland, College Park, Maryland, USA.
 
@@ -335,7 +343,7 @@ T3. **Staples, Jeffrey**. PhD Student, Department of Genome Sciences, University
 
 T2. **Lemus Vergara, Tzitziki J**. PhD Student, Department of Genome Sciences, University of Washington, 2009. Present position: PhD Student, Department of Genome Sciences, University of Washington, Seattle, Washington, USA.
 
-T1. **Buske, Orion J**. BS (Honors) Student, Department of Computer Science and Engineering, University of Washington, 2009-2010. Present position: PhD Student, Department of Computer Science, University of Toronto, Toronto, Ontario, Canada.
+T1. **Buske, Orion J**. BS (Honors) Student, Department of Computer Science and Engineering, University of Washington, 2009--2010. Present position: PhD Student, Department of Computer Science, University of Toronto, Toronto, Ontario, Canada.
 
 ## Interviews and media relations
 * "Strength In Numbers: Finding And Developing Bioinformaticians." *Front Line Genomics*. 13 October 2014.
