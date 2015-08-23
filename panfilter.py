@@ -11,12 +11,15 @@ __version__ = "0.1"
 
 from datetime import date
 import json
+from pprint import pprint
 import re
 import sys
 
+from bs4 import BeautifulSoup
 import yaml
 
 YEAR = date.today().year
+SCHOLAR_FILENAME = "google-scholar.html"
 
 re_year = re.compile(r"19\d\d|20\d\d|present")
 
@@ -26,12 +29,30 @@ def text_to_year(text):
     else:
         return int(text)
 
+def load_google_scholar(filename=SCHOLAR_FILENAME):
+    with open(filename) as infile:
+        soup = BeautifulSoup(infile)
+
+    table = soup.find(id="gsc_a_t")
+
+    res = {}
+
+    rows = table.find_all("tr", class_="gsc_a_tr")
+    for row in rows:
+        id = row.find("a", class_="gsc_a_at")["href"].rpartition(":")[2]
+        cites = row.find("a", class_="gsc_a_ac").contents[0]
+        res[id] = cites
+
+    return res
+
 def panfilter(infile, config_file):
     pandoc_in = json.load(infile)
     metadata, tree = pandoc_in
 
     assert isinstance(metadata, dict)
     assert isinstance(tree, list)
+
+    citations = load_google_scholar()
 
     config_raw = yaml.load(config_file)
     config = dict((item["id"], dict(subitem for subitem in item.items()
@@ -88,6 +109,15 @@ def panfilter(infile, config_file):
 
         if not para_accept:
             continue
+
+        if node_type == "BulletList":
+            for subnode in node_content:
+                for subsubnode in subnode:
+                    for subsubsubnode in subsubnode["c"]:
+                        subsubsubnode_content = subsubsubnode["c"]
+                        if subsubsubnode["t"] == "Str" and subsubsubnode_content.startswith("%CITES"):
+                            citation_id = subsubsubnode_content.partition(":")[2]
+                            subsubsubnode["c"] = "{:,}".format(int(citations[citation_id]))
 
         res.append(node)
 

@@ -55,7 +55,7 @@ J13. Ho JWK, Jung YL, Liu T, Alver BH, Lee S, Ikegami K, Sohn K, Minoda A, Tolst
 J12. **Hoffman MM**\*, Ernst J\*, Wilder SP, Kundaje A, Harris RS, Libbrecht M, Giardine B, **Ellenbogen PM**, Bilmes JA, Birney E, Hardison RC, Dunham I, Kellis M, Noble WS. "Integrative annotation of chromatin elements from ENCODE data." *Nucleic Acids Res*. 2013 Jan; 41:827--41.
 
 * Featured Article in *Nucleic Acids Research*.
-* Cited 103 times.
+* Cited %CITES:ufrVoPGSRksC times.
 
 J11. **ENCODE Project Consortium**. "An integrated Encyclopedia of DNA Elements in the human genome." *Nature*. 2012 Sep 6; 489:57--74.
 
@@ -63,21 +63,21 @@ J11. **ENCODE Project Consortium**. "An integrated Encyclopedia of DNA Elements 
 * Featured on cover of *Nature*.
 * Recommended by Faculty of 1000.
 * News and Views: Ecker JR et al. *Nature*. 2012 Sep 6; 489:52--55.
-* Cited 2,809 times.
+* Cited %CITES:eQOLeE2rZwMC times.
 
 J10. Landt SG, Marinov GK, Kundaje A, Kheradpour P, Pauli F, Batzoglou S, Bernstein B, Bickel P, Brown B, Cayting P, Chen Y, Desalvo G, Epstein C, Fisher-Aylor KI, Euskirchen G, Gerstein M, Gertz J, Hartemink AJ, **Hoffman MM**, Iyer VR, Jung YL, Karmakar S, Kellis M, Kharchenko PV, Li Q, Liu T, Liu XS, Ma L, Milosavljevic A, Myers RM, Park PJ, Pazin MJ, Perry MD, Raha D, Reddy TE, Rozowsky J, Shoresh N, Sidow A, Slattery M, Stamatoyonnopoulous JA, Tolstorukov MY, White KP, Xi S, Farnham PJ, Lieb JF, Wold BJ, Snyder M. "ChIP-seq guidelines and practices used by the ENCODE and modENCODE consortia." *Genome Res*. 2012 Sep; 22:1813--31.
 
 * Recommended by Faculty of 1000.
-* Cited 296 times.
+* Cited %CITES:WF5omc3nYNoC times.
 
 J9. **Hoffman MM**, **Buske OJ**, Wang J, Weng Z, Bilmes JA, Noble WS. "Unsupervised pattern discovery in human chromatin structure through genomic segmentation." *Nat Methods*. 2012 Mar 18; 9:473--6.
 
-* Cited 129 times.
+* Cited %CITES:IjCSPb-OGe4C times.
 
 J8. **ENCODE Project Consortium**. "A user's guide to the Encyclopedia of DNA Elements (ENCODE) functional genomic data." *PLOS Biol*. 2011 Apr; 9:e1001046.
 
 * Recommended by Faculty of 1000.
-* Cited 648 times.
+* Cited %CITES:YsMSGLbcyi4C times.
 
 J7. **Buske OJ**, **Hoffman MM**, Ponts N, Le Roch KG, Noble WS. "Exploratory analysis of genomic segmentations with Segtools." *BMC Bioinformatics*. 2011 Oct 26; 12:415.
 
@@ -93,11 +93,11 @@ J2. **International Chicken Genome Sequencing Consortium**. "Sequence and compar
 
 * Featured on cover of *Nature*.
 * News and Views: Schmutz J, Grimwood J. *Nature*. 2004 Dec 9; 432:679--80.
-* Cited 1,552 times.
+* Cited %CITES:W7OEmFMy1HYC times.
 
 J1. **Hoffman MM**, Khrapov MA, Cox JC, Yao J, Tong L, Ellington AD. "AANT: the Amino Acid-Nucleotide Interaction Database." *Nucleic Acids Res*. 2004 Jan 1; 32:D174--81.
 
-* Cited 96 times.
+* Cited %CITES:u5HHmVD_uO8C times.
 
 *Boldface indicates Michael Hoffman or one of his trainees is an author or a consortium member.*
 
