@@ -25,7 +25,7 @@ University of Washington, Seattle, WA, 2008--2013.
 Doctor of Philosophy, Bioinformatics\
 University of Cambridge (Trinity College), Cambridge, UK, 2003--2008.
 
-* Adviser: Dr. Ewan Birney, Associate Director, European Bioinformatics Institute
+* Adviser: Dr. Ewan Birney, Director, European Bioinformatics Institute
 * Marshall Scholar
 * National Science Foundation Graduate Research Fellow
 
