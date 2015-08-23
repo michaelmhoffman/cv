@@ -6,5 +6,6 @@ syntax:glob
 cv.docx
 cv.html
 cv.json
+google-scholar.html
 
 cv-*.docx

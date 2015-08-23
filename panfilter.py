@@ -45,35 +45,36 @@ def load_google_scholar(filename=SCHOLAR_FILENAME):
 
     return res
 
-def panfilter(infile, config_file):
-    pandoc_in = json.load(infile)
-    metadata, tree = pandoc_in
+def read_config(config_file):
+    if config_file is None:
+        config_raw = {}
+    else:
+        config_raw = yaml.load(config_file)
 
-    assert isinstance(metadata, dict)
-    assert isinstance(tree, list)
-
-    citations = load_google_scholar()
-
-    config_raw = yaml.load(config_file)
     config = dict((item["id"], dict(subitem for subitem in item.items()
                                     if subitem[0] != "id"))
                   for item in config_raw)
 
     include_ids = frozenset(section["id"] for section in config_raw)
 
+    return config, include_ids
+
+def proc_tree(tree, config, include_ids, citations):
     section_id = None
     section_accept = True
     para_accept = True
     section_year_min = None
     res = []
 
+    # XXX: this is pretty hairy, should probably have a generator that
+    # eliminates this t/c stuff on the fly
     for node in tree:
         node_type = node["t"]
-        node_content= node["c"]
+        node_content = node["c"]
 
         if node_type == "Header":
             section_id = node_content[1][0]
-            section_accept = section_id in include_ids
+            section_accept = not include_ids or section_id in include_ids
             section_config = config.get(section_id)
             para_accept = True
             if section_config is not None:
@@ -110,6 +111,7 @@ def panfilter(infile, config_file):
         if not para_accept:
             continue
 
+        # XXX: this will probably break, need to replace with something recursive
         if node_type == "BulletList":
             for subnode in node_content:
                 for subsubnode in subnode:
@@ -121,7 +123,19 @@ def panfilter(infile, config_file):
 
         res.append(node)
 
-    pandoc_out = metadata, res
+    return res
+
+def panfilter(infile, config_file=None):
+    pandoc_in = json.load(infile)
+    metadata, tree = pandoc_in
+
+    assert isinstance(metadata, dict)
+    assert isinstance(tree, list)
+
+    citations = load_google_scholar()
+    config, include_ids = read_config(config_file)
+
+    pandoc_out = metadata, proc_tree(tree, config, include_ids, citations)
     json.dump(pandoc_out, sys.stdout)
 
     # XXX: print heading options
