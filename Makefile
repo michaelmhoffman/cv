@@ -1,6 +1,7 @@
 ## variables
 SRC = cv.md
-PANDOC = pandoc --standalone --smart
+PANDOC = pandoc
+PANDOCFINAL = $(PANDOC) --standalone --smart
 
 ## phony targets
 ALL=$(SRC:.md=.docx) $(SRC:.md=.html)
@@ -15,7 +16,13 @@ clean:
 ## pattern rules
 
 %.docx : %.md
-	$(PANDOC) $< -o $@
+	$(PANDOCFINAL) $< -o $@
 
 %.html : %.md
-	$(PANDOC) --toc $< -o $@
+	$(PANDOCFINAL) --toc $< -o $@
+
+cv-%.docx: cv.md include-%.txt
+	$(PANDOC) $< --to=json | ./panfilter.py --include-from=include-$(*F).txt | $(PANDOCFINAL) --from=json -o $@
+
+## explicit rules
+

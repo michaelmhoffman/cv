@@ -4,3 +4,6 @@ syntax:glob
 
 cv.docx
 cv.html
+cv.json
+
+cv-*.docx
