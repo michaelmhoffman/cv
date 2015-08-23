@@ -48,12 +48,20 @@ def panfilter(infile, config_file):
 
     for node in tree:
         node_type = node["t"]
+        node_content= node["c"]
+
         if node_type == "Header":
-            section_id = node["c"][1][0]
+            section_id = node_content[1][0]
             section_accept = section_id in include_ids
             section_config = config.get(section_id)
             para_accept = True
             if section_config is not None:
+                section_name = section_config.get("name")
+                if section_name:
+                    node_content[2] = [{"c": section_name, "t": "Str"}]
+
+                section_exclude = frozenset(section_config.get("exclude", []))
+
                 section_year_min = section_config.get("year-min")
                 if section_year_min is not None and section_year_min < 0:
                     section_year_min = YEAR + section_year_min
@@ -62,7 +70,11 @@ def panfilter(infile, config_file):
             continue
 
         if section_year_min is not None and node_type == "Para":
-            for subnode in node["c"]:
+            if node_content[0]["c"].rstrip(".") in section_exclude:
+                para_accept = False
+                continue
+
+            for subnode in node_content:
                 if subnode["t"] == "Str":
                     node_years = [text_to_year(match.group(0))
                                   for match in re_year.finditer(subnode["c"])]

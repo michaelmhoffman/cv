@@ -2,6 +2,10 @@
 - id: education
 - id: publications
 - id: publications-journal
+  name: "Publications: journal, peer-reviewed"
+  exclude:
+    - J16
+    - J14
   year-min: -5
 - id: publications-conference-proceedings
   year-min: -5
