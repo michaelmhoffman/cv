@@ -1,3 +1,4 @@
+- id: michael-m.-hoffman
 - id: current-positions
 - id: education
 - id: publications
@@ -9,3 +10,9 @@
   year-min: -5
 - id: publications-conference-proceedings
   year-min: -5
+- id: funding
+- id: funding-principal-investigator
+  year-min: -5
+- id: funding-co-investigator
+  year-min: -5
+

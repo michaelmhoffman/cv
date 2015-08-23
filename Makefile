@@ -2,6 +2,7 @@
 SRC = cv.md
 PANDOC = pandoc
 PANDOCFINAL = $(PANDOC) --standalone --smart
+PANDOCDOCX = $(PANDOCFINAL) --reference-docx=reference.docx
 
 ## phony targets
 ALL=$(SRC:.md=.docx) $(SRC:.md=.html)
@@ -16,7 +17,7 @@ clean:
 ## pattern rules
 
 %.docx : %.md
-	$(PANDOCFINAL) $< -o $@
+	$(PANDOCDOCX) $< -o $@
 
 %.html : %.md
 	$(PANDOCFINAL) --toc $< -o $@
@@ -25,7 +26,7 @@ clean:
 	$(PANDOC) $< -o $@
 
 cv-%.docx: cv.md %.yaml
-	$(PANDOC) $< --smart --to=json | ./panfilter.py --config=$(*F).yaml | $(PANDOCFINAL) --from=json -o $@
+	$(PANDOC) --smart --to=json $< | ./panfilter.py --config=$(*F).yaml | $(PANDOCDOCX) --from=json -o $@
 
 ## explicit rules
 
