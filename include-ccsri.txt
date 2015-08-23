@@ -1,6 +1,0 @@
-current-positions
-education
-publications
-publications-journal
-publications-conference-proceedings
-prior-positions

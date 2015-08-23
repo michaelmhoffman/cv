@@ -9,27 +9,73 @@ __version__ = "0.1"
 
 ## Copyright 2015 Michael M. Hoffman <michael.hoffman@utoronto.ca>
 
+from datetime import date
 import json
+import re
 import sys
 
-def panfilter(infile, include_file):
+import yaml
+
+YEAR = date.today().year
+
+re_year = re.compile(r"19\d\d|20\d\d|present")
+
+def text_to_year(text):
+    if text == "present":
+        return YEAR
+    else:
+        return int(text)
+
+def panfilter(infile, config_file):
     pandoc_in = json.load(infile)
     metadata, tree = pandoc_in
 
     assert isinstance(metadata, dict)
     assert isinstance(tree, list)
 
-    include_ids = frozenset(line.strip() for line in include_file)
+    config_raw = yaml.load(config_file)
+    config = dict((item["id"], dict(subitem for subitem in item.items()
+                                    if subitem[0] != "id"))
+                  for item in config_raw)
 
-    accept = True
+    include_ids = frozenset(section["id"] for section in config_raw)
+
+    section_id = None
+    section_accept = True
+    para_accept = True
+    section_year_min = None
     res = []
 
     for node in tree:
-        if node["t"] == "Header":
-            accept = node["c"][1][0] in include_ids
+        node_type = node["t"]
+        if node_type == "Header":
+            section_id = node["c"][1][0]
+            section_accept = section_id in include_ids
+            section_config = config.get(section_id)
+            para_accept = True
+            if section_config is not None:
+                section_year_min = section_config.get("year-min")
+                if section_year_min is not None and section_year_min < 0:
+                    section_year_min = YEAR + section_year_min
 
-        if accept:
-            res.append(node)
+        if not section_accept:
+            continue
+
+        if section_year_min is not None and node_type == "Para":
+            for subnode in node["c"]:
+                if subnode["t"] == "Str":
+                    node_years = [text_to_year(match.group(0))
+                                  for match in re_year.finditer(subnode["c"])]
+                    if node_years and max(node_years) < section_year_min:
+                        para_accept = False
+                        break
+            else:
+                para_accept = True
+
+        if not para_accept:
+            continue
+
+        res.append(node)
 
     pandoc_out = metadata, res
     json.dump(pandoc_out, sys.stdout)
@@ -48,10 +94,8 @@ def parse_args(args):
     parser.add_argument("infile", nargs="?", type=FileType("r"),
                         default=sys.stdin, metavar="FILE",
                         help="input file in Pandoc JSON format")
-    parser.add_argument("--include-from", type=FileType("r"),
-                        dest="include_file", metavar="FILE",
-                        help="file of list of heading IDs to include, "
-                        "newline-delimited")
+    parser.add_argument("--config", type=FileType("r"),
+                        metavar="FILE", help="file with YAML configuration")
 
     version = "%(prog)s {}".format(__version__)
     parser.add_argument("--version", action="version", version=version)
@@ -61,7 +105,7 @@ def parse_args(args):
 def main(argv=sys.argv[1:]):
     args = parse_args(argv)
 
-    return panfilter(args.infile, args.include_file)
+    return panfilter(args.infile, args.config)
 
 if __name__ == "__main__":
     sys.exit(main())

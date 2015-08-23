@@ -21,8 +21,11 @@ clean:
 %.html : %.md
 	$(PANDOCFINAL) --toc $< -o $@
 
-cv-%.docx: cv.md include-%.txt
-	$(PANDOC) $< --to=json | ./panfilter.py --include-from=include-$(*F).txt | $(PANDOCFINAL) --from=json -o $@
+%.json : %.md
+	$(PANDOC) $< -o $@
+
+cv-%.docx: cv.md %.yaml
+	$(PANDOC) $< --smart --to=json | ./panfilter.py --config=$(*F).yaml | $(PANDOCFINAL) --from=json -o $@
 
 ## explicit rules
 
