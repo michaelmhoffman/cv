@@ -1,16 +1,8 @@
 For CCSRI:
-add in grant support received in the past 5 years
 - automatic citation numbers
 
 Programmatic:
 
 - LaTeX/PDF output
 - BibTeX bibliography
-- automatic citation numbers
 - include links to papers
-
-Visual:
-- set Word styles
-- set class of numbered lines to get desired indentation activity
-- set template that includes author name and not title name
-

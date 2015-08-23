@@ -70,7 +70,9 @@ def panfilter(infile, config_file):
             continue
 
         if section_year_min is not None and node_type == "Para":
-            if node_content[0]["c"].rstrip(".") in section_exclude:
+            subnode = node_content[0]
+            if (subnode["t"] == "Str"
+                and subnode["c"].rstrip(".") in section_exclude):
                 para_accept = False
                 continue
 
