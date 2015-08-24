@@ -29,6 +29,9 @@ clean:
 %.json : %.md
 	$(PANDOC) $< -o $@
 
+% : %.jinja
+	./jinja.py $< $@
+
 # using a pipeline because using --filter, a Python filter, and Cygwin python doesn't seem to work
 %.docx : %.md reference.docx google-scholar.html default.yaml
 	$(PANDOC_TOFILTER) $< | $(PANFILTER_DEFAULT) | $(PANDOC_DOCX) --from=json -o $@
