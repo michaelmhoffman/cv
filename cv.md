@@ -187,11 +187,11 @@ F9.\ "Epigenetic DNA modifications as drivers of leukemia gene expression progra
 
 F8.\ "Interpreting epigenetic DNA modifications in glioblastoma stem cells." McLaughlin Centre. Accelerator Grant in Genomic Medicine and Health Informatics. 1 year, direct costs $65,000. May 2015--April 2016.
 
-F7.\ "Transcription factor recognition models with modified nucleobases." Natural Sciences and Engineering Research Council of Canada (NSERC). Discovery Grant. 5 years, direct costs $175,000. April 2015--March 2021.
+F7.\ "Transcription factor recognition models with modified nucleobases." Natural Sciences and Engineering Research Council of Canada. Discovery Grant. 5 years, direct costs $175,000. April 2015--March 2021.
 
-F2.\ "Pattern discovery for comparative epigenomics." National Institutes of Health (NIH)/National Human Genome Research Institute (NHGRI). Pathway to Independence Award (Parent K99/R00). Awarded: 5 years, total costs $966,069. September 2011--October 2013. 
+F2.\ "Pattern discovery for comparative epigenomics." National Institutes of Health/National Human Genome Research Institute. Pathway to Independence Award (Parent K99/R00). Awarded: 5 years, total costs $966,069. September 2011--October 2013. 
 
-F1.\ Graduate research fellowship. National Science Foundation (NSF). 5 years, direct costs $142,872. September 2003--August 2008     
+F1.\ Graduate research fellowship. National Science Foundation. 5 years, direct costs $142,872. September 2003--August 2008     
 
 \endenumerate
 
@@ -199,9 +199,9 @@ F1.\ Graduate research fellowship. National Science Foundation (NSF). 5 years, d
 
 \beginenumerate
 
-F6.\ Cancer Stem Cell Program. Ontario Institute for Cancer Research (OICR). 2 years, total costs $5,436,364. April 2015--March 2017. Principal Investigator: John Dick. 
+F6.\ Cancer Stem Cell Program. Ontario Institute for Cancer Research. 2 years, total costs $5,436,364. April 2015--March 2017. Principal Investigator: John Dick. 
 
-F5.\ "Sequence variation and DNA methylation patterning." Natural Sciences and Engineering Research Council of Canada (NSERC). Discovery Grant. Awarded: 5 years, direct costs $160,000. January 2015--January 2016. Principal Investigator: Carl P. Ernst.
+F5.\ "Sequence variation and DNA methylation patterning." Natural Sciences and Engineering Research Council of Canada. Discovery Grant. Awarded: 5 years, direct costs $160,000. January 2015--January 2016. Principal Investigator: Carl P. Ernst.
 
 \endenumerate
 
