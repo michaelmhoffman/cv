@@ -1,0 +1,34 @@
+- id: michael-m.-hoffman
+- id: current-positions
+- id: education
+- id: publications
+- id: publications-journal
+- id: publications-conference-proceedings
+- id: publications-submitted
+- id: publications-theses
+- id: intellectual-property
+- id: recognitions
+- id: recognitions-other-scholarships-and-awards
+- id: recognitions-honors
+- id: funding
+- id: funding-principal-investigator
+- id: funding-co-investigator
+- id: presentations
+- id: presentations-invitedkeynote
+- id: presentations-conference-selected-from-abstracts
+# - id: presentations-conference-selected-from-abstracts-trainee
+- id: presentations-invited-panelist
+- id: presentations-other-teaching
+- id: presentations-other-seminars
+# - id: presentations-other-seminars-local
+- id: professional-activities
+- id: professional-activities-session-chair
+- id: professional-activities-leadership-and-committee-positions
+- id: professional-activities-review-activities
+- id: professional-activities-memberships
+- id: prior-positions
+- id: trainees-and-staff-supervised
+- id: trainees-and-staff-supervised-current
+- id: trainees-and-staff-supervised-past
+- id: interviews-and-media-relations
+- id: citizenship-and-immigration

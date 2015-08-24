@@ -1,3 +1,5 @@
+\setlength{\topskip}{0mm}
+
 # Michael M. Hoffman
 
 101 College St TMDT 11-311\
@@ -8,29 +10,36 @@ E-mail michael.hoffman@utoronto.ca
 
 ## Current positions
 
-Scientist, Princess Margaret Cancer Centre, Toronto, ON, 2013--present.
+**Scientist**\
+Princess Margaret Cancer Centre, Toronto, ON, 2013--present.
 
-Assistant Professor, Department of Medical Biophysics, University of Toronto, Toronto, ON, 2014--present.
+**Assistant Professor**\
+Department of Medical Biophysics, University of Toronto, Toronto, ON, 2014--present.
 
-Assistant Professor, Department of Computer Science, University of Toronto, Toronto, ON, 2014--present.
+**Assistant Professor**\
+Department of Computer Science, University of Toronto, Toronto, ON, 2014--present.
 
 ## Education
 
-Senior Fellow\
+**Senior Fellow**\
 University of Washington, Seattle, WA, 2008--2013.
 
 * Mentor: Dr. William Stafford Noble, Professor
 * National Human Genome Research Institute K99/R00 Pathway to Independence Award
 
-Doctor of Philosophy, Bioinformatics\
+\vspace{3ex}
+
+**Doctor of Philosophy, Bioinformatics**\
 University of Cambridge (Trinity College), Cambridge, UK, 2003--2008.
 
 * Adviser: Dr. Ewan Birney, Director, European Bioinformatics Institute
 * Marshall Scholar
 * National Science Foundation Graduate Research Fellow
 
-Bachelor of Science, Biochemistry, with Highest Honors, Special Honors\
-Bachelor of Arts, Plan II Honors Liberal Arts, with Highest Honors\
+\vspace{3ex}
+
+**Bachelor of Science, Biochemistry, with Highest Honors, Special Honors**\
+**Bachelor of Arts, Plan II Honors Liberal Arts, with Highest Honors**\
 The University of Texas at Austin, Austin, TX, 1998--2003.
 
 * Adviser: Dr. Andrew D. Ellington, Professor
@@ -103,6 +112,8 @@ J1.\ **Hoffman MM**, Khrapov MA, Cox JC, Yao J, Tong L, Ellington AD. "AANT: the
 
 \endenumerate
 
+\vspace{3ex}
+
 *Boldface indicates Michael Hoffman or one of his trainees is an author or a consortium member.*
 
 ---
@@ -121,7 +132,7 @@ C1.\ Libbrecht MW, Hoffman MM, Noble WS, Bilmes JA. "Entropic graph-based poster
 
 \beginenumerate
 
-S1.\ Lundberg SM, Tu WB, Raught B, Penn LZ, Hoffman MM, Lee SI. "Learning the human chromatin network from all ENCODE ChIP-seq data." 2015. Submitted. Preprint: http://dx.doi.org/10.1101/023911
+S1.\ Lundberg SM, Tu WB, Raught B, Penn LZ, Hoffman MM, Lee SI. "Learning the human chromatin network from all ENCODE ChIP-seq data." 2015. Submitted. Preprint: <http://dx.doi.org/10.1101/023911>.
 
 \endenumerate
 
@@ -229,7 +240,6 @@ F5.\ "Sequence variation and DNA methylation patterning." Natural Sciences and E
 * Transcription factor motif discovery and prediction in an expanded epigenetic alphabet. Cold Spring Harbor Laboratory/Wellcome Trust Conference on Genome Informatics. Cambridge, United Kingdom. 22 September 2014.
 * One genome, many epigenomes, machine learning. Workshop on Big Data for Health, University of Toronto. Toronto, ON. 4 July 2014.
 * Semi-automated annotation of functional elements with whole genome RNA-seq. Machine Learning in Computational Biology 2012. Neural Information Processing Systems Conference 2012. Stateline, NV. 7 December 2012.
-* Semi-automated annotation of the human genome using chromatin data. University of Washington Postdoctoral Association Research Symposium. Seattle, WA. 27 November 2012.
 * Functional genomics and machine learning. SynBioCon 2012. Austin, TX. 26 May 2012.
 * Semi-automated annotation of the human genome using whole-genome RNA-seq. ENCODE and modENCODE AWG/PI Meeting. Cambridge, MA. 22 May 2012.
 * Discovery of functional elements using whole-genome RNA-seq. The Biology of Genomes. Cold Spring Harbor, NY. 9 May 2012.
@@ -238,10 +248,13 @@ F5.\ "Sequence variation and DNA methylation patterning." Natural Sciences and E
 * Large-scale behavior task group. ENCODE AWG Workshop. Rockville, MD. 8 March 2010.
 * Segway: a dynamic Bayesian network for genomic segmentation. ENCODE and modENCODE Consortia Meeting. Bethesda, MD. Spring 2009.
 * ENCODE and Segway. ENCODE AWG Workshop. Rockville, MD. December 2008.
+* Poly: rapid development of embarrassingly parallelizable applications. Bioinformatics Open Source Conference. Glasgow, Scotland. Summer 2004.
+
+### Presentations: conference, selected from abstracts, trainee
+* Semi-automated annotation of the human genome using chromatin data. University of Washington Postdoctoral Association Research Symposium. Seattle, WA. 27 November 2012.
 * Properties of natural selection in mammalian promoters. Sanger-Cambridge PhD Symposium. Hinxton, England. Spring 2008.
 * Sunflower: a model of transcription factor binding. EMBL Predoctoral Fellow Retreat. Barcelona, Spain. Summer 2007.
 * Measurements of evolution and natural selection. Trinity College Science Society Symposium. Cambridge, England. Spring 2007.
-* Poly: rapid development of embarrassingly parallelizable applications. Bioinformatics Open Source Conference. Glasgow, Scotland. Summer 2004.
 * Visualizing protein-DNA and protein-RNA interactions with AANT. Trinity College Science Society Symposium. Cambridge, England. 13 March 2004.
 
 ### Presentations: invited panelist
@@ -265,8 +278,6 @@ F5.\ "Sequence variation and DNA methylation patterning." Natural Sciences and E
 
 ### Presentations: other seminars
 
-* Epigenetics. Princess Margaret Cancer Foundation Board Retreat. Toronto, ON. 8 November 2014.
-* Machine Learning and Epigenomics. Princess Margaret Cancer Centre Research Retreat. Huntsville, ON. 15 May 2014.
 * Semi-automated annotation of the human genome using chromatin and RNA-seq data. Department of Genetics. University of Pennsylvania. Philadelphia, PA. 25 July 2013.
 * Semi-automated annotation of the human genome using chromatin and RNA-seq data. Ontario Cancer Institute. Toronto, ON. 4 July 2013.
 * Semi-automated annotation of the human genome using chromatin and RNA-seq data. Institute for Human Genetics. University of California, San Francisco. San Francisco, CA. 21 March 2013.
@@ -274,23 +285,27 @@ F5.\ "Sequence variation and DNA methylation patterning." Natural Sciences and E
 * Semi-automated annotation of the human genome using chromatin and RNA-seq data. Department of Electrical and Computer Engineering. University of Texas at Austin. 22 April 2013.
 * Semi-automated annotation of the human genome using chromatin and RNA-seq data. The Jackson Laboratory. Bar Harbor, ME. 11 March 2013.
 * Semi-automated annotation of the human genome using chromatin and RNA-seq data. McKusick-Nathans Institute of Genetic Medicine. Johns Hopkins University. Baltimore, MD. 7 March 2013.
-* Semi-automated annotation of the human genome using chromatin data. Biomedical Postdoc Seminar. University of Washington. Seattle, WA. 4 March 2013.
 * Semi-automated annotation of the human genome using chromatin and RNA-seq data. Department of Human Genetics. University of Utah. Salt Lake City, UT. 25 February 2013.
 * Semi-automated annotation of the human genome using chromatin and RNA-seq data. National Eye Institute. National Institutes of Health. Bethesda, MD. 30 January 2013.
 * Semi-automated annotation of the human genome using chromatin and RNA-seq data. Department of Molecular and Medical Genetics. Oregon Health and Science University. Portland, OR. 23 January 2013.
 * Semi-automated annotation of the human genome using chromatin and RNA-seq data. Department of Human Genetics. Emory University. Atlanta, GA. 14 January 2013.
 * Semi-automated annotation of the human genome using chromatin and RNA-seq data. McDermott Center for Human Growth and Development/Center for Human Genetics. University of Texas Southwestern Medical Center. Dallas, TX. 7 January 2013.
 * Semi-automated annotation of the human genome using chromatin and RNA-seq data. Earl Stadtman Symposium on Genetics, Genomics, and Systems Biology. Division of Intramural Research. National Institutes of Health. Bethesda, MD. 17 December 2012.
-* Semi-automated annotation of the human genome using chromatin and RNA-seq data. Computational Biology Group Meeting/CSE 591C. Department of Computer Science. Seattle, WA. 14 December 2012.
 * Semi-automated annotation of the human genome using chromatin and RNA-seq data. Program in Bioinformatics and Integrative Biology. University of Massachusetts Medical School. Worcester, MA. 10 December 2012.
 * Semi-automated annotation of the human genome using chromatin and RNA-seq data. Department of Pediatrics. University of California, San Diego. 4 June 2012.
 * Unsupervised and semi-supervised pattern discovery in human chromatin\ structure. Section of Genetic Medicine. University of Chicago. Chicago, IL. 23 April 2012.
 * Simultaneous segmentation of multiple functional genomics data\ sets with heterogeneous patterns of missing data. Department of Computer Science. Colorado State University. Fort Collins, CO. 10 April 2012.
+* Properties of natural selection in mammalian promoters. Seminar, Broad Institute of MIT and Harvard. Cambridge, MA. Spring 2008.
+* Properties of natural selection in mammalian promoters. Seminar, Program in Bioinformatics and Integrative Biology, University of Massachusetts Medical School. Worcester, MA. Spring 2008.
+
+### Presentations: other seminars, local
+* Epigenetics. Princess Margaret Cancer Foundation Board Retreat. Toronto, ON. 8 November 2014.
+* Machine Learning and Epigenomics. Princess Margaret Cancer Centre Research Retreat. Huntsville, ON. 15 May 2014.
+* Semi-automated annotation of the human genome using chromatin data. Biomedical Postdoc Seminar. University of Washington. Seattle, WA. 4 March 2013.
+* Semi-automated annotation of the human genome using chromatin and RNA-seq data. Computational Biology Group Meeting/CSE 591C. Department of Computer Science. Seattle, WA. 14 December 2012.
 * Semi-automated annotation of the human genome using whole-genome RNA-seq. Postdoctoral Research Talk. Department of Genome Sciences. University of Washington. 16 May 2012.
 * Segway: pattern discovery in multitrack functional genomics data. Research Reports. Department of Genome Sciences. University of Washington. 13 November 2009.
 * Segway: a dynamic Bayesian network for genomic segmentation. Reading and Research in Computational Biology. CSE 590C. 4 May 2009.
-* Properties of natural selection in mammalian promoters. Seminar, Broad Institute of MIT and Harvard. Cambridge, MA. Spring 2008.
-* Properties of natural selection in mammalian promoters. Seminar, Program in Bioinformatics and Integrative Biology, University of Massachusetts Medical School. Worcester, MA. Spring 2008.
 
 ## Professional activities
 
@@ -345,11 +360,21 @@ F5.\ "Sequence variation and DNA methylation patterning." Natural Sciences and E
 * **Member**, Microbiology and Molecular Biology Student Society, 1998--1999.
 
 ## Prior positions
-* **Senior Fellow**, Department of Genome Sciences, University of Washington, 2008--2013.
-* **Predoctoral Fellow**, EMBL-European Bioinformatics Institute, 2003--2008.
-* **Research Assistant**, Department of Chemistry and Biochemistry, The University of Texas at Austin, 1999--2003.
-* **Undergraduate Research Program Participant**, Cold Spring Harbor Laboratory, 2001.
-* **Undergraduate Research Fellow**, Plant Biochemistry Research Training Center, Washington State University, 2000.
+
+**Senior Fellow**\
+Department of Genome Sciences, University of Washington, 2008--2013.
+
+**Predoctoral Fellow**\
+EMBL-European Bioinformatics Institute, 2003--2008.
+
+**Research Assistant**\
+Department of Chemistry and Biochemistry, The University of Texas at Austin, 1999--2003.
+
+**Undergraduate Research Program Participant**\
+Cold Spring Harbor Laboratory, 2001.
+
+**Undergraduate Research Fellow**\
+Plant Biochemistry Research Training Center, Washington State University, 2000.
 
 ## Trainees and staff supervised
 
