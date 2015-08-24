@@ -1,8 +1,5 @@
-Next:
-- put local talks in another section
-
 Programmatic:
 
 - BibTeX bibliography
 - include links to papers
-- separate the Google Scholar parsing
+- make the Google Scholar parsing a separate script because it is likely to break
