@@ -96,7 +96,7 @@ def proc_tree(tree, config, include_ids, citations):
         if section_year_min is not None and node_type == "Para":
             subnode = node_content[0]
             if (subnode["t"] == "Str"
-                and subnode["c"].rstrip(".") in section_exclude):
+                and subnode["c"].partition(".")[0] in section_exclude):
                 para_accept = False
                 continue
 
