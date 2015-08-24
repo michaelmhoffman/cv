@@ -1,9 +1,14 @@
 syntax:glob
 
+auto
 ~$*
 \#*
+*.aux
+*.log
+*.out
 
-cv.{docx,html,json,pdf}
+cv.{docx,html,json,pdf,tex}
+cv-*.{docx,html,json,pdf,tex}
+
 google-scholar.html
 
-cv-*.docx

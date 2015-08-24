@@ -4,9 +4,10 @@ SCHOLARID = 96r1DYUAAAAJ
 
 ## command variables
 PANDOC = pandoc
-PANDOCTOFILTER = $(PANDOC) --smart --to=json
-PANDOCFINAL = $(PANDOC) --standalone --smart
-PANDOCDOCX = $(PANDOCFINAL) --reference-docx=reference.docx
+PANDOC_TOFILTER = $(PANDOC) --smart --to=json
+PANDOC_FINAL = $(PANDOC) --standalone --smart
+PANDOC_DOCX = $(PANDOC_FINAL) --reference-docx=reference.docx
+PANDOC_TEX = $(PANDOC_FINAL) --variable=geometry=margin=1in --variable=mainfont="TeX Gyre Heros" --latex-engine=xelatex
 
 ## phony targets
 ALL=$(SRC:.md=.docx) $(SRC:.md=.html)
@@ -21,20 +22,23 @@ clean:
 ## pattern rules
 
 # using a pipeline because using --filter, a Python filter, and Cygwin python doesn't seem to work
-%.docx : %.md google-scholar.html
-	$(PANDOCTOFILTER) $< | ./panfilter.py | $(PANDOCDOCX) --from=json -o $@
+%.docx : %.md reference.docx google-scholar.html
+	$(PANDOC_TOFILTER) $< | ./panfilter.py | $(PANDOC_DOCX) --from=json -o $@
 
-%.pdf : %.md google-scholar.html
-	$(PANDOCTOFILTER) $< | ./panfilter.py | $(PANDOCFINAL) --latex-engine=xelatex --from=json -o $@
+%.tex : %.md template.tex google-scholar.html
+	$(PANDOC_TOFILTER) $< | ./panfilter.py | $(PANDOC_TEX) --from=json -o $@
+
+%.pdf : %.md template.tex google-scholar.html
+	$(PANDOC_TOFILTER) $< | ./panfilter.py | $(PANDOC_TEX) --from=json -o $@
 
 %.html : %.md google-scholar.html
-	$(PANDOCTOFILTER) $< | ./panfilter.py | $(PANDOCFINAL) --toc --from=json -o $@
+	$(PANDOC_TOFILTER) $< | ./panfilter.py | $(PANDOC_FINAL) --toc --from=json -o $@
 
 %.json : %.md
 	$(PANDOC) $< -o $@
 
 cv-%.docx: cv.md %.yaml google-scholar.html
-	$(PANDOCTOFILTER) $< | ./panfilter.py --config=$(*F).yaml | $(PANDOCDOCX) --from=json -o $@
+	$(PANDOC_TOFILTER) $< | ./panfilter.py --config=$(*F).yaml | $(PANDOC_DOCX) --from=json -o $@
 
 ## explicit rules
 
