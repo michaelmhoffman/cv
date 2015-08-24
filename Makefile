@@ -7,7 +7,7 @@ PANDOC = pandoc
 PANDOC_TOFILTER = $(PANDOC) --smart --to=json
 PANDOC_FINAL = $(PANDOC) --standalone --smart
 PANDOC_DOCX = $(PANDOC_FINAL) --reference-docx=reference.docx
-PANDOC_TEX = $(PANDOC_FINAL) --variable=geometry=margin=1in --variable=mainfont="TeX Gyre Heros" --latex-engine=xelatex
+PANDOC_TEX = $(PANDOC_FINAL) --variable=geometry=margin=1in --variable=mainfont="TeX Gyre Heros" --variable=fontsize=12pt --include-in-header=preamble.tex --latex-engine=xelatex
 
 ## phony targets
 ALL=$(SRC:.md=.docx) $(SRC:.md=.html)
@@ -25,10 +25,10 @@ clean:
 %.docx : %.md reference.docx google-scholar.html
 	$(PANDOC_TOFILTER) $< | ./panfilter.py | $(PANDOC_DOCX) --from=json -o $@
 
-%.tex : %.md template.tex google-scholar.html
+%.tex : %.md preamble.tex google-scholar.html
 	$(PANDOC_TOFILTER) $< | ./panfilter.py | $(PANDOC_TEX) --from=json -o $@
 
-%.pdf : %.md template.tex google-scholar.html
+%.pdf : %.md preamble.tex google-scholar.html
 	$(PANDOC_TOFILTER) $< | ./panfilter.py | $(PANDOC_TEX) --from=json -o $@
 
 %.html : %.md google-scholar.html

@@ -42,22 +42,22 @@ The University of Texas at Austin, Austin, TX, 1998--2003.
 
 ### Publications: journal
 
-J16. **Viner C**, **Hoffman MM**. "Determining the epigenome using DNA alone." *Nat Methods*. 2015 Mar; 12:191--2.
+J16.\ **Viner C**, **Hoffman MM**. "Determining the epigenome using DNA alone." *Nat Methods*. 2015 Mar; 12:191--2.
 
-J15. Libbrecht MW, Ay F, **Hoffman MM**, Gilbert DM, Bilmes JA, Noble WS. "Joint annotation of chromatin state and chromatin conformation reveals relationships among domain types and identifies domains of cell type-specific expression." *Genome Res*. 2015; 25:544--57.
+J15.\ Libbrecht MW, Ay F, **Hoffman MM**, Gilbert DM, Bilmes JA, Noble WS. "Joint annotation of chromatin state and chromatin conformation reveals relationships among domain types and identifies domains of cell type-specific expression." *Genome Res*. 2015; 25:544--57.
 
-J14. Church DM, Schneider VA, Steinberg KM, Schatz MC, Quinlan AR, Chin CS, Kitts PA, Aken B, Marth GT, **Hoffman MM**, Herrero J, Mendoza LZ, Durbin R,  Flicek P. "Extending reference assembly models." *Genome Biol*. 2015; 16:13.
+J14.\ Church DM, Schneider VA, Steinberg KM, Schatz MC, Quinlan AR, Chin CS, Kitts PA, Aken B, Marth GT, **Hoffman MM**, Herrero J, Mendoza LZ, Durbin R,  Flicek P. "Extending reference assembly models." *Genome Biol*. 2015; 16:13.
 
-J13. Ho JWK, Jung YL, Liu T, Alver BH, Lee S, Ikegami K, Sohn K, Minoda A, Tolstorukov MY, Appert A, Parker SCJ, Gu T, Kundaje A, Riddle NC, Bishop E, Egelhofer TA, Hu SS, Alekseyenko AA, Rechtsteiner A, Asker D, Belsky JA, Bowman SK, Chen QB, Chen RA, Day DS, Dong Y, Dose AC, Duan X, Epstein CB, Ercan S, Feingold EA, Ferrari F, Garrigues JM, Gehlenborg N, Good PJ, Haseley P, He D, Herrmann M, **Hoffman MM**, Jeffers TE, Kharchenko PV, Kolasinska-Zwierz P, Kotwaliwale CV, Kumar N, Langley SA, Larschan EN, Latorre I, Libbrecht MW, Lin X, Park R, Pazin MJ, Pham HN, Plachetka A, Qin B, Schwartz YB, Shoresh N, Stempor P, Vielle A, Wang C, Whittle CM, Xue H, Kingston RE, Kim JH, Bernstein BE, Dernburg AF, Pirrotta V, Kuroda MI, Noble WS, Tullius TD, Kellis M, MacAlpine DM, Strome S, Elgin SCR, Liu XS, Lieb JD, Ahringer J, Karpen GH, Park PJ. "Comparative analysis of metazoan chromatin organization." *Nature*. 2014 Aug 28; 512:449--52.
+J13.\ Ho JWK, Jung YL, Liu T, Alver BH, Lee S, Ikegami K, Sohn K, Minoda A, Tolstorukov MY, Appert A, Parker SCJ, Gu T, Kundaje A, Riddle NC, Bishop E, Egelhofer TA, Hu SS, Alekseyenko AA, Rechtsteiner A, Asker D, Belsky JA, Bowman SK, Chen QB, Chen RA, Day DS, Dong Y, Dose AC, Duan X, Epstein CB, Ercan S, Feingold EA, Ferrari F, Garrigues JM, Gehlenborg N, Good PJ, Haseley P, He D, Herrmann M, **Hoffman MM**, Jeffers TE, Kharchenko PV, Kolasinska-Zwierz P, Kotwaliwale CV, Kumar N, Langley SA, Larschan EN, Latorre I, Libbrecht MW, Lin X, Park R, Pazin MJ, Pham HN, Plachetka A, Qin B, Schwartz YB, Shoresh N, Stempor P, Vielle A, Wang C, Whittle CM, Xue H, Kingston RE, Kim JH, Bernstein BE, Dernburg AF, Pirrotta V, Kuroda MI, Noble WS, Tullius TD, Kellis M, MacAlpine DM, Strome S, Elgin SCR, Liu XS, Lieb JD, Ahringer J, Karpen GH, Park PJ. "Comparative analysis of metazoan chromatin organization." *Nature*. 2014 Aug 28; 512:449--52.
 
 * News and Views: Muerdter F, Stark A. *Nature*. 2014 Aug 28; 512:374--5.
 
-J12. **Hoffman MM**\*, Ernst J\*, Wilder SP, Kundaje A, Harris RS, Libbrecht M, Giardine B, **Ellenbogen PM**, Bilmes JA, Birney E, Hardison RC, Dunham I, Kellis M, Noble WS. "Integrative annotation of chromatin elements from ENCODE data." *Nucleic Acids Res*. 2013 Jan; 41:827--41.
+J12.\ **Hoffman MM**\*, Ernst J\*, Wilder SP, Kundaje A, Harris RS, Libbrecht M, Giardine B, **Ellenbogen PM**, Bilmes JA, Birney E, Hardison RC, Dunham I, Kellis M, Noble WS. "Integrative annotation of chromatin elements from ENCODE data." *Nucleic Acids Res*. 2013 Jan; 41:827--41.
 
 * Featured Article in *Nucleic Acids Research*.
 * Cited %CITES:ufrVoPGSRksC times.
 
-J11. **ENCODE Project Consortium**. "An integrated Encyclopedia of DNA Elements in the human genome." *Nature*. 2012 Sep 6; 489:57--74.
+J11.\ **ENCODE Project Consortium**. "An integrated Encyclopedia of DNA Elements in the human genome." *Nature*. 2012 Sep 6; 489:57--74.
 
 * Author contribution: "Lead analyst".
 * Featured on cover of *Nature*.
@@ -65,37 +65,37 @@ J11. **ENCODE Project Consortium**. "An integrated Encyclopedia of DNA Elements 
 * News and Views: Ecker JR et al. *Nature*. 2012 Sep 6; 489:52--55.
 * Cited %CITES:eQOLeE2rZwMC times.
 
-J10. Landt SG, Marinov GK, Kundaje A, Kheradpour P, Pauli F, Batzoglou S, Bernstein B, Bickel P, Brown B, Cayting P, Chen Y, Desalvo G, Epstein C, Fisher-Aylor KI, Euskirchen G, Gerstein M, Gertz J, Hartemink AJ, **Hoffman MM**, Iyer VR, Jung YL, Karmakar S, Kellis M, Kharchenko PV, Li Q, Liu T, Liu XS, Ma L, Milosavljevic A, Myers RM, Park PJ, Pazin MJ, Perry MD, Raha D, Reddy TE, Rozowsky J, Shoresh N, Sidow A, Slattery M, Stamatoyonnopoulous JA, Tolstorukov MY, White KP, Xi S, Farnham PJ, Lieb JF, Wold BJ, Snyder M. "ChIP-seq guidelines and practices used by the ENCODE and modENCODE consortia." *Genome Res*. 2012 Sep; 22:1813--31.
+J10.\ Landt SG, Marinov GK, Kundaje A, Kheradpour P, Pauli F, Batzoglou S, Bernstein B, Bickel P, Brown B, Cayting P, Chen Y, Desalvo G, Epstein C, Fisher-Aylor KI, Euskirchen G, Gerstein M, Gertz J, Hartemink AJ, **Hoffman MM**, Iyer VR, Jung YL, Karmakar S, Kellis M, Kharchenko PV, Li Q, Liu T, Liu XS, Ma L, Milosavljevic A, Myers RM, Park PJ, Pazin MJ, Perry MD, Raha D, Reddy TE, Rozowsky J, Shoresh N, Sidow A, Slattery M, Stamatoyonnopoulous JA, Tolstorukov MY, White KP, Xi S, Farnham PJ, Lieb JF, Wold BJ, Snyder M. "ChIP-seq guidelines and practices used by the ENCODE and modENCODE consortia." *Genome Res*. 2012 Sep; 22:1813--31.
 
 * Recommended by Faculty of 1000.
 * Cited %CITES:WF5omc3nYNoC times.
 
-J9. **Hoffman MM**, **Buske OJ**, Wang J, Weng Z, Bilmes JA, Noble WS. "Unsupervised pattern discovery in human chromatin structure through genomic segmentation." *Nat Methods*. 2012 Mar 18; 9:473--6.
+J9.\ **Hoffman MM**, **Buske OJ**, Wang J, Weng Z, Bilmes JA, Noble WS. "Unsupervised pattern discovery in human chromatin structure through genomic segmentation." *Nat Methods*. 2012 Mar 18; 9:473--6.
 
 * Cited %CITES:IjCSPb-OGe4C times.
 
-J8. **ENCODE Project Consortium**. "A user's guide to the Encyclopedia of DNA Elements (ENCODE) functional genomic data." *PLOS Biol*. 2011 Apr; 9:e1001046.
+J8.\ **ENCODE Project Consortium**. "A user's guide to the Encyclopedia of DNA Elements (ENCODE) functional genomic data." *PLOS Biol*. 2011 Apr; 9:e1001046.
 
 * Recommended by Faculty of 1000.
 * Cited %CITES:YsMSGLbcyi4C times.
 
-J7. **Buske OJ**, **Hoffman MM**, Ponts N, Le Roch KG, Noble WS. "Exploratory analysis of genomic segmentations with Segtools." *BMC Bioinformatics*. 2011 Oct 26; 12:415.
+J7.\ **Buske OJ**, **Hoffman MM**, Ponts N, Le Roch KG, Noble WS. "Exploratory analysis of genomic segmentations with Segtools." *BMC Bioinformatics*. 2011 Oct 26; 12:415.
 
-J6. **Hoffman MM**, **Buske OJ**, Noble WS. "The Genomedata format for storing large-scale functional genomics data." *Bioinformatics*. 2010 Jun 1; 26:1458--9.
+J6.\ **Hoffman MM**, **Buske OJ**, Noble WS. "The Genomedata format for storing large-scale functional genomics data." *Bioinformatics*. 2010 Jun 1; 26:1458--9.
 
-J5. Chen X, **Hoffman MM**, Bilmes JA, Hesselberth JR, Noble WS. "A dynamic Bayesian network for identifying protein-binding footprints from single molecule-based sequencing data." *Bioinformatics*. 2010 Jun 15; 26:i334--42.
+J5.\ Chen X, **Hoffman MM**, Bilmes JA, Hesselberth JR, Noble WS. "A dynamic Bayesian network for identifying protein-binding footprints from single molecule-based sequencing data." *Bioinformatics*. 2010 Jun 15; 26:i334--42.
 
-J4. **Hoffman MM**, Birney E. "An effective model for natural selection in promoters." *Genome Res*. 2010 May; 20:685--92.
+J4.\ **Hoffman MM**, Birney E. "An effective model for natural selection in promoters." *Genome Res*. 2010 May; 20:685--92.
 
-J3. **Hoffman MM**, Birney E. "Estimating the neutral rate of nucleotide substitution using introns." *Mol Biol Evol*. 2007 Feb; 24:522--31.
+J3.\ **Hoffman MM**, Birney E. "Estimating the neutral rate of nucleotide substitution using introns." *Mol Biol Evol*. 2007 Feb; 24:522--31.
 
-J2. **International Chicken Genome Sequencing Consortium**. "Sequence and comparative analysis of the chicken genome provide unique perspectives on vertebrate evolution." *Nature*. 2004 Dec 9; 432:695--716.
+J2.\ **International Chicken Genome Sequencing Consortium**. "Sequence and comparative analysis of the chicken genome provide unique perspectives on vertebrate evolution." *Nature*. 2004 Dec 9; 432:695--716.
 
 * Featured on cover of *Nature*.
 * News and Views: Schmutz J, Grimwood J. *Nature*. 2004 Dec 9; 432:679--80.
 * Cited %CITES:W7OEmFMy1HYC times.
 
-J1. **Hoffman MM**, Khrapov MA, Cox JC, Yao J, Tong L, Ellington AD. "AANT: the Amino Acid-Nucleotide Interaction Database." *Nucleic Acids Res*. 2004 Jan 1; 32:D174--81.
+J1.\ **Hoffman MM**, Khrapov MA, Cox JC, Yao J, Tong L, Ellington AD. "AANT: the Amino Acid-Nucleotide Interaction Database." *Nucleic Acids Res*. 2004 Jan 1; 32:D174--81.
 
 * Cited %CITES:u5HHmVD_uO8C times.
 
@@ -107,15 +107,15 @@ J1. **Hoffman MM**, Khrapov MA, Cox JC, Yao J, Tong L, Ellington AD. "AANT: the 
 
 ### Publications: conference proceedings
 
-C1. Libbrecht MW, Hoffman MM, Noble WS, Bilmes JA. "Entropic graph-based posterior regularization." International Conference on Machine Learning. 2015. Lille, France.
+C1.\ Libbrecht MW, Hoffman MM, Noble WS, Bilmes JA. "Entropic graph-based posterior regularization." International Conference on Machine Learning. 2015. Lille, France.
 
 ### Publications: submitted
 
-S1. Lundberg SM, Tu WB, Raught B, Penn LZ, Hoffman MM, Lee SI. "Learning the human chromatin network from all ENCODE ChIP-seq data." 2015. Submitted. Preprint: http://dx.doi.org/10.1101/023911
+S1.\ Lundberg SM, Tu WB, Raught B, Penn LZ, Hoffman MM, Lee SI. "Learning the human chromatin network from all ENCODE ChIP-seq data." 2015. Submitted. Preprint: http://dx.doi.org/10.1101/023911
 
 ### Publications: theses
 
-D1. Hoffman MM. *Quantifying evolution and natural selection in vertebrate noncoding sequence*. PhD thesis, University of Cambridge. 2008 Jul 8.
+D1.\ Hoffman MM. *Quantifying evolution and natural selection in vertebrate noncoding sequence*. PhD thesis, University of Cambridge. 2008 Jul 8.
 
 ## Intellectual property
 
@@ -154,21 +154,21 @@ D1. Hoffman MM. *Quantifying evolution and natural selection in vertebrate nonco
 
 ### Funding: principal investigator
 
-F9. "Epigenetic DNA modifications as drivers of leukemia gene expression programs" Canadian Cancer Society Research Institute. 3 years, direct costs $200,000. August 2015--July 2018. 
+F9.\ "Epigenetic DNA modifications as drivers of leukemia gene expression programs" Canadian Cancer Society Research Institute. 3 years, direct costs $200,000. August 2015--July 2018. 
 
-F8. "Interpreting epigenetic DNA modifications in glioblastoma stem cells." McLaughlin Centre. Accelerator Grant in Genomic Medicine and Health Informatics. 1 year, direct costs $65,000. May 2015--April 2016.
+F8.\ "Interpreting epigenetic DNA modifications in glioblastoma stem cells." McLaughlin Centre. Accelerator Grant in Genomic Medicine and Health Informatics. 1 year, direct costs $65,000. May 2015--April 2016.
 
-F7. "Transcription factor recognition models with modified nucleobases." Natural Sciences and Engineering Research Council of Canada (NSERC). Discovery Grant. 5 years, direct costs $175,000. April 2015--March 2021.
+F7.\ "Transcription factor recognition models with modified nucleobases." Natural Sciences and Engineering Research Council of Canada (NSERC). Discovery Grant. 5 years, direct costs $175,000. April 2015--March 2021.
 
-F2. "Pattern discovery for comparative epigenomics." National Institutes of Health (NIH)/National Human Genome Research Institute (NHGRI). Pathway to Independence Award (Parent K99/R00). Awarded: 5 years, total costs $966,069. September 2011--October 2013. 
+F2.\ "Pattern discovery for comparative epigenomics." National Institutes of Health (NIH)/National Human Genome Research Institute (NHGRI). Pathway to Independence Award (Parent K99/R00). Awarded: 5 years, total costs $966,069. September 2011--October 2013. 
 
-F1. Graduate research fellowship. National Science Foundation (NSF). 5 years, direct costs $142,872. September 2003--August 2008     
+F1.\ Graduate research fellowship. National Science Foundation (NSF). 5 years, direct costs $142,872. September 2003--August 2008     
 
 ### Funding: co-investigator
 
-F6. Cancer Stem Cell Program. Ontario Institute for Cancer Research (OICR). 2 years, total costs $5,436,364. April 2015--March 2017. Principal Investigator: John Dick. 
+F6.\ Cancer Stem Cell Program. Ontario Institute for Cancer Research (OICR). 2 years, total costs $5,436,364. April 2015--March 2017. Principal Investigator: John Dick. 
 
-F5. "Sequence variation and DNA methylation patterning." Natural Sciences and Engineering Research Council of Canada (NSERC). Discovery Grant. Awarded: 5 years, direct costs $160,000. January 2015--January 2016. Principal Investigator: Carl P. Ernst.
+F5.\ "Sequence variation and DNA methylation patterning." Natural Sciences and Engineering Research Council of Canada (NSERC). Discovery Grant. Awarded: 5 years, direct costs $160,000. January 2015--January 2016. Principal Investigator: Carl P. Ernst.
 
 ## Presentations
 
@@ -331,35 +331,35 @@ F5. "Sequence variation and DNA methylation patterning." Natural Sciences and En
 
 ### Trainees and staff supervised: current
 
-T14. **Madani Tonekaboni, S. Ali**. MSc Student, Department of Medical Biophysics, University of Toronto. 2015.
+T14.\ **Madani Tonekaboni, S. Ali**. MSc Student, Department of Medical Biophysics, University of Toronto. 2015.
 
-T13. **Sood, Ankur Jai**. BESc (Honors) Student, Summer Student Program, Department of Medical Biophysics, University of Toronto. 2015--present.
+T13.\ **Sood, Ankur Jai**. BESc (Honors) Student, Summer Student Program, Department of Medical Biophysics, University of Toronto. 2015--present.
 
-T12. **Zeng, Xing**. BSc (Honors) Student, Undergraduate Toronto Research Experience in Computer Science, Department of Computer Science, University of Toronto. 2015--present.
+T12.\ **Zeng, Xing**. BSc (Honors) Student, Undergraduate Toronto Research Experience in Computer Science, Department of Computer Science, University of Toronto. 2015--present.
 
-T11. **Karimzadeh, Mehran R**. Research Assistant, University Health Network, 2015--present.
+T11.\ **Karimzadeh, Mehran R**. Research Assistant, University Health Network, 2015--present.
 
-T10. **Chicco, Davide**. Postdoctoral Fellow, University Health Network, 2014--present.
+T10.\ **Chicco, Davide**. Postdoctoral Fellow, University Health Network, 2014--present.
 
-T9. **Viner, Coby**. MSc Student, Department of Computer Science, University of Toronto, 2014--present.
+T9.\ **Viner, Coby**. MSc Student, Department of Computer Science, University of Toronto, 2014--present.
 
-T8. **Roberts, Eric**. Bioinformatics Programmer, University Health Network, 2014--present.
+T8.\ **Roberts, Eric**. Bioinformatics Programmer, University Health Network, 2014--present.
 
 ### Trainees and staff supervised: past
 
-T7. **Shaw, Adam J**. Student, Google Summer of Code, 2014. Present position: Software Engineer, Google, San Bruno, California, USA.
+T7.\ **Shaw, Adam J**. Student, Google Summer of Code, 2014. Present position: Software Engineer, Google, San Bruno, California, USA.
 
-T6. **Petwe, Harshad S**. BS Student, Department of Computer Science and Engineering, University of Washington, 2012.
+T6.\ **Petwe, Harshad S**. BS Student, Department of Computer Science and Engineering, University of Washington, 2012.
 
-T5. **Ellenbogen, Paul**. BS Student, Department of Computer Science and Engineering, University of Washington, 2011--2013. Present position: PhD Student, Department of Computer Science, Princeton University, Princeton, USA.
+T5.\ **Ellenbogen, Paul**. BS Student, Department of Computer Science and Engineering, University of Washington, 2011--2013. Present position: PhD Student, Department of Computer Science, Princeton University, Princeton, USA.
 
-T4. **Sahu, Avinash D**. MS Student, School of Communication and Computer Science, École Polytechnic Fédérale de Lausanne, 2011. Present position: PhD Student, Department of Computer Science, University of Maryland, College Park, Maryland, USA.
+T4.\ **Sahu, Avinash D**. MS Student, School of Communication and Computer Science, École Polytechnic Fédérale de Lausanne, 2011. Present position: PhD Student, Department of Computer Science, University of Maryland, College Park, Maryland, USA.
 
-T3. **Staples, Jeffrey**. PhD Student, Department of Genome Sciences, University of Washington, 2011. Present position: Bioinformatics R&D Developer, Regeneron Genetics, Tarrytown, NY, USA.
+T3.\ **Staples, Jeffrey**. PhD Student, Department of Genome Sciences, University of Washington, 2011. Present position: Bioinformatics R&D Developer, Regeneron Genetics, Tarrytown, NY, USA.
 
-T2. **Lemus Vergara, Tzitziki J**. PhD Student, Department of Genome Sciences, University of Washington, 2009. Present position: PhD Student, Department of Genome Sciences, University of Washington, Seattle, Washington, USA.
+T2.\ **Lemus Vergara, Tzitziki J**. PhD Student, Department of Genome Sciences, University of Washington, 2009. Present position: PhD Student, Department of Genome Sciences, University of Washington, Seattle, Washington, USA.
 
-T1. **Buske, Orion J**. BS (Honors) Student, Department of Computer Science and Engineering, University of Washington, 2009--2010. Present position: PhD Student, Department of Computer Science, University of Toronto, Toronto, Ontario, Canada.
+T1.\ **Buske, Orion J**. BS (Honors) Student, Department of Computer Science and Engineering, University of Washington, 2009--2010. Present position: PhD Student, Department of Computer Science, University of Toronto, Toronto, Ontario, Canada.
 
 ## Interviews and media relations
 * "Strength In Numbers: Finding And Developing Bioinformaticians." *Front Line Genomics*. 13 October 2014.
