@@ -3,8 +3,8 @@ SRC = cv.md
 SCHOLARID = 96r1DYUAAAAJ
 
 ## command variables
-PANDOC = pandoc
-PANDOC_TOFILTER = $(PANDOC) --smart --to=json
+PANDOC = pandoc --smart --from=markdown+raw_tex
+PANDOC_TOFILTER = $(PANDOC) --to=json
 PANDOC_FINAL = $(PANDOC) --standalone --smart
 PANDOC_DOCX = $(PANDOC_FINAL) --reference-docx=reference.docx
 PANDOC_TEX = $(PANDOC_FINAL) --variable=geometry=margin=1in --variable=mainfont="TeX Gyre Heros" --variable=fontsize=12pt --include-in-header=preamble.tex --latex-engine=xelatex
@@ -26,10 +26,10 @@ clean:
 	$(PANDOC_TOFILTER) $< | ./panfilter.py | $(PANDOC_DOCX) --from=json -o $@
 
 %.tex : %.md preamble.tex google-scholar.html
-	$(PANDOC_TOFILTER) $< | ./panfilter.py | $(PANDOC_TEX) --from=json -o $@
+	$(PANDOC_TOFILTER) $< | ./panfilter.py | $(PANDOC_TEX) --from=json --to=latex | perl -pe 's/^([A-Z][0-9]+.)~/\\item[\1] /; s/\\(begin|end)enumerate/\\\1\{enumerate}/g' > $@
 
-%.pdf : %.md preamble.tex google-scholar.html
-	$(PANDOC_TOFILTER) $< | ./panfilter.py | $(PANDOC_TEX) --from=json -o $@
+%.pdf : %.tex
+	xelatex $<
 
 %.html : %.md google-scholar.html
 	$(PANDOC_TOFILTER) $< | ./panfilter.py | $(PANDOC_FINAL) --toc --from=json -o $@

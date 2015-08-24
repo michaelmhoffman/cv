@@ -42,6 +42,8 @@ The University of Texas at Austin, Austin, TX, 1998--2003.
 
 ### Publications: journal
 
+\beginenumerate
+
 J16.\ **Viner C**, **Hoffman MM**. "Determining the epigenome using DNA alone." *Nat Methods*. 2015 Mar; 12:191--2.
 
 J15.\ Libbrecht MW, Ay F, **Hoffman MM**, Gilbert DM, Bilmes JA, Noble WS. "Joint annotation of chromatin state and chromatin conformation reveals relationships among domain types and identifies domains of cell type-specific expression." *Genome Res*. 2015; 25:544--57.
@@ -99,6 +101,8 @@ J1.\ **Hoffman MM**, Khrapov MA, Cox JC, Yao J, Tong L, Ellington AD. "AANT: the
 
 * Cited %CITES:u5HHmVD_uO8C times.
 
+\endenumerate
+
 *Boldface indicates Michael Hoffman or one of his trainees is an author or a consortium member.*
 
 ---
@@ -107,15 +111,27 @@ J1.\ **Hoffman MM**, Khrapov MA, Cox JC, Yao J, Tong L, Ellington AD. "AANT: the
 
 ### Publications: conference proceedings
 
+\beginenumerate
+
 C1.\ Libbrecht MW, Hoffman MM, Noble WS, Bilmes JA. "Entropic graph-based posterior regularization." International Conference on Machine Learning. 2015. Lille, France.
+
+\endenumerate
 
 ### Publications: submitted
 
+\beginenumerate
+
 S1.\ Lundberg SM, Tu WB, Raught B, Penn LZ, Hoffman MM, Lee SI. "Learning the human chromatin network from all ENCODE ChIP-seq data." 2015. Submitted. Preprint: http://dx.doi.org/10.1101/023911
+
+\endenumerate
 
 ### Publications: theses
 
+\beginenumerate
+
 D1.\ Hoffman MM. *Quantifying evolution and natural selection in vertebrate noncoding sequence*. PhD thesis, University of Cambridge. 2008 Jul 8.
+
+\endenumerate
 
 ## Intellectual property
 
@@ -154,6 +170,8 @@ D1.\ Hoffman MM. *Quantifying evolution and natural selection in vertebrate nonc
 
 ### Funding: principal investigator
 
+\beginenumerate
+
 F9.\ "Epigenetic DNA modifications as drivers of leukemia gene expression programs" Canadian Cancer Society Research Institute. 3 years, direct costs $200,000. August 2015--July 2018. 
 
 F8.\ "Interpreting epigenetic DNA modifications in glioblastoma stem cells." McLaughlin Centre. Accelerator Grant in Genomic Medicine and Health Informatics. 1 year, direct costs $65,000. May 2015--April 2016.
@@ -164,11 +182,17 @@ F2.\ "Pattern discovery for comparative epigenomics." National Institutes of Hea
 
 F1.\ Graduate research fellowship. National Science Foundation (NSF). 5 years, direct costs $142,872. September 2003--August 2008     
 
+\endenumerate
+
 ### Funding: co-investigator
+
+\beginenumerate
 
 F6.\ Cancer Stem Cell Program. Ontario Institute for Cancer Research (OICR). 2 years, total costs $5,436,364. April 2015--March 2017. Principal Investigator: John Dick. 
 
 F5.\ "Sequence variation and DNA methylation patterning." Natural Sciences and Engineering Research Council of Canada (NSERC). Discovery Grant. Awarded: 5 years, direct costs $160,000. January 2015--January 2016. Principal Investigator: Carl P. Ernst.
+
+\endenumerate
 
 ## Presentations
 
@@ -331,6 +355,8 @@ F5.\ "Sequence variation and DNA methylation patterning." Natural Sciences and E
 
 ### Trainees and staff supervised: current
 
+\beginenumerate
+
 T14.\ **Madani Tonekaboni, S. Ali**. MSc Student, Department of Medical Biophysics, University of Toronto. 2015.
 
 T13.\ **Sood, Ankur Jai**. BESc (Honors) Student, Summer Student Program, Department of Medical Biophysics, University of Toronto. 2015--present.
@@ -345,7 +371,11 @@ T9.\ **Viner, Coby**. MSc Student, Department of Computer Science, University of
 
 T8.\ **Roberts, Eric**. Bioinformatics Programmer, University Health Network, 2014--present.
 
+\endenumerate
+
 ### Trainees and staff supervised: past
+
+\beginenumerate
 
 T7.\ **Shaw, Adam J**. Student, Google Summer of Code, 2014. Present position: Software Engineer, Google, San Bruno, California, USA.
 
@@ -360,6 +390,8 @@ T3.\ **Staples, Jeffrey**. PhD Student, Department of Genome Sciences, Universit
 T2.\ **Lemus Vergara, Tzitziki J**. PhD Student, Department of Genome Sciences, University of Washington, 2009. Present position: PhD Student, Department of Genome Sciences, University of Washington, Seattle, Washington, USA.
 
 T1.\ **Buske, Orion J**. BS (Honors) Student, Department of Computer Science and Engineering, University of Washington, 2009--2010. Present position: PhD Student, Department of Computer Science, University of Toronto, Toronto, Ontario, Canada.
+
+\endenumerate
 
 ## Interviews and media relations
 * "Strength In Numbers: Finding And Developing Bioinformaticians." *Front Line Genomics*. 13 October 2014.

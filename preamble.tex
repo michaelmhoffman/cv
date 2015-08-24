@@ -1,4 +1,13 @@
 \usepackage{enumitem}
+\usepackage{titlesec}
 
 \newcommand{\textblacksquare}{{\tiny\raisebox{0.6ex}{\ensuremath{\blacksquare}}}}
-\setlist{itemsep=0ex,parsep=0ex,topsep=-2ex,after=\vspace{\baselineskip},leftmargin=1.2em,label=\textblacksquare}
+\newcommand{\afteritemizeskip}{\baselineskip}
+
+\setlist[itemize]{itemsep=0ex,parsep=0ex,topsep=-2ex,after=\vspace{\afteritemizeskip},leftmargin=1.2em,label=\textblacksquare}
+
+\setlist[enumerate]{itemsep=0ex,parsep=0ex,topsep=-2ex,before=\renewcommand{\afteritemizeskip}{0ex},after=\renewcommand{\afteritemizeskip}{\baselineskip},leftmargin=2.5em}
+
+\titlespacing{\section}{0pt}{\parskip}{-\parskip}
+\titlespacing{\subsection}{0pt}{\parskip}{-\parskip}
+\titlespacing{\subsubsection}{0pt}{\parskip}{-\parskip}
