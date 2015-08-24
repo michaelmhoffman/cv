@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+
 """panfilter.py: filter out parts of a pandoc document
 """
 
