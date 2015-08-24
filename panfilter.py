@@ -21,6 +21,7 @@ import yaml
 
 YEAR = date.today().year
 SCHOLAR_FILENAME = "google-scholar.html"
+HTML_PARSER = "lxml"
 
 re_year = re.compile(r"19\d\d|20\d\d|present")
 
@@ -32,7 +33,7 @@ def text_to_year(text):
 
 def load_google_scholar(filename=SCHOLAR_FILENAME):
     with open(filename) as infile:
-        soup = BeautifulSoup(infile)
+        soup = BeautifulSoup(infile, HTML_PARSER)
 
     table = soup.find(id="gsc_a_t")
 

@@ -3,9 +3,7 @@ syntax:glob
 ~$*
 \#*
 
-cv.docx
-cv.html
-cv.json
+cv.{docx,html,json,pdf}
 google-scholar.html
 
 cv-*.docx

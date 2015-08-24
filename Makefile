@@ -25,7 +25,7 @@ clean:
 	$(PANDOCTOFILTER) $< | ./panfilter.py | $(PANDOCDOCX) --from=json -o $@
 
 %.pdf : %.md google-scholar.html
-	$(PANDOCTOFILTER) $< | ./panfilter.py | $(PANDOCDOCX) --from=json -o $@
+	$(PANDOCTOFILTER) $< | ./panfilter.py | $(PANDOCFINAL) --latex-engine=xelatex --from=json -o $@
 
 %.html : %.md google-scholar.html
 	$(PANDOCTOFILTER) $< | ./panfilter.py | $(PANDOCFINAL) --toc --from=json -o $@
