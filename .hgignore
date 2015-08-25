@@ -4,6 +4,7 @@ auto
 ~$*
 \#*
 .#*
+.nfs*
 *.aux
 *.log
 *.out
