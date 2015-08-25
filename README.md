@@ -23,7 +23,7 @@ pip install PyYAML beautifulsoup4
 License for software and config files: GNU General Public License v2.
 
 No license is provided for the contents of Michael Hoffman's CV
-(`cv.md`). Make your own!
+(`cv.md.jinja`). Make your own!
 
 ## Support
 
