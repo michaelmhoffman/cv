@@ -1,5 +1,6 @@
 Programmatic:
 
+- need way to exclude anything from cv-private
 - BibTeX bibliography
 - include links to papers
 - make the Google Scholar parsing a separate script because it is likely to break

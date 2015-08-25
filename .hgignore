@@ -8,8 +8,8 @@ auto
 *.log
 *.out
 
-cv.{docx,html,json,pdf,tex}
-cv-*.{docx,html,json,pdf,tex}
+cv.{md,docx,html,json,pdf,tex}
+cv-*.{md,docx,html,json,pdf,tex}
 
 google-scholar.html
 
