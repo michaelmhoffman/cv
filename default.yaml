@@ -22,9 +22,13 @@
 - id: presentations-other-seminars
 # - id: presentations-other-seminars-local
 - id: professional-activities
+- id: professional-activities-conference-organizer
 - id: professional-activities-session-chair
 - id: professional-activities-leadership-and-committee-positions
-- id: professional-activities-review-activities
+- id: professional-activities-advisory
+- id: professional-activities-manuscript-peer-review
+- id: professional-activities-funding-peer-review
+- id: professional-activities-student-committees-and-examinations
 - id: professional-activities-memberships
 - id: prior-positions
 - id: trainees-and-staff-supervised
