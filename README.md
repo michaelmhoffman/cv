@@ -15,7 +15,7 @@ Pandoc is required.
 
 Python prerequisites
 ```
-pip install PyYAML beautifulsoup4
+pip install PyYAML beautifulsoup4 jinja2
 ```
 
 ## License
