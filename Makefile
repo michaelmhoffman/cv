@@ -12,6 +12,7 @@ PANDOC_TEX = $(PANDOC_FINAL) --variable=geometry=margin=1in --variable=mainfont=
 PANFILTER = ./panfilter.py
 PANFILTER_DEFAULT = $(PANFILTER) --config=default.yaml
 
+# XXX: \beginenumerate etc. could be made a TeX macro rather than filtering here
 TEXFILTER = perl -pe 's/^([A-Z][0-9]+.)~/\\item[\1] /; s/\\(begin|end)enumerate/\\\1\{enumerate}/g'
 
 ## phony targets
