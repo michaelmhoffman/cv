@@ -34,5 +34,6 @@
 - id: trainees-and-staff-supervised
 - id: trainees-and-staff-supervised-current
 - id: trainees-and-staff-supervised-past
-- id: interviews-and-media-relations
+- id: media-coverage-interviews
+- id: media-coverage-meeting-reports
 - id: citizenship-and-immigration
