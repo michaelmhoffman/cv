@@ -24,10 +24,12 @@
 - id: professional-activities
 - id: professional-activities-conference-organizer
 - id: professional-activities-session-chair
-- id: professional-activities-leadership-and-committee-positions
+- id: professional-activities-funding-review
+- id: professional-activities-manuscript-review
 - id: professional-activities-advisory
-- id: professional-activities-manuscript-peer-review
-- id: professional-activities-funding-peer-review
+- id: professional-activities-society-leadership-positions
+- id: professional-activities-consortium-leadership-positions
+- id: professional-activities-institutional-leadership-positions-and-committees
 - id: professional-activities-student-committees-and-examinations
 - id: professional-activities-memberships
 - id: prior-positions
