@@ -14,12 +14,26 @@ import sys
 
 from jinja2 import Environment, FileSystemLoader
 
-def jinja(infile, outfilename):
+def parse_variable_specs(specs):
+    res = {}
+
+    if not specs:
+        return res
+
+    for spec in specs:
+        key, _, value = spec.partition("=")
+        res[key] = value
+
+    return res
+
+def jinja(infile, outfilename, variable_specs):
     env = Environment(loader=FileSystemLoader([".", "../cv-private"]))
     template = env.get_template(infile)
 
+    variables = parse_variable_specs(variable_specs)
+
     with codecs.open(outfilename, "w", "utf-8") as outfile:
-        print(template.render(), file=outfile)
+        print(template.render(variables), file=outfile)
 
 def parse_args(args):
     from argparse import (ArgumentDefaultsHelpFormatter, ArgumentParser,
@@ -33,6 +47,9 @@ def parse_args(args):
     parser.add_argument("outfile", nargs="?", metavar="OUTFILE",
                         help="output file")
 
+    parser.add_argument("-s", "--set", action="append", metavar="VAR=VALUE",
+                        help="set variable VAR to VALUE")
+
     version = "%(prog)s {}".format(__version__)
     parser.add_argument("--version", action="version", version=version)
 
@@ -41,7 +58,7 @@ def parse_args(args):
 def main(argv=sys.argv[1:]):
     args = parse_args(argv)
 
-    return jinja(args.infile, args.outfile)
+    return jinja(args.infile, args.outfile, args.set)
 
 if __name__ == "__main__":
     sys.exit(main())
