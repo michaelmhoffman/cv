@@ -212,34 +212,35 @@ F5.\ "Sequence variation and DNA methylation patterning." Natural Sciences and E
 ### Presentations: invited/keynote
 
 {% set presentation_score_min = presentation_score|default("-inf")|float -%}
+{% set num_presentations = cycler(*range(1000)) %}
 {% macro p(text, score=0) -%}
 {% if score >= presentation_score_min -%}
-* {{ text }}
+* {{ text }}{{ num_presentations.next()|string|truncate(0, true, "") }}
 {% endif -%}
 {% endmacro -%}
 
-{{ p('"Semi-automated human genome annotation using chromatin data." Institute for Operations Research and the Management Sciences Annual Meeting. Philadelphia, PA. 1--4 November 2015.') -}}
-{{ p('Cold Spring Harbor Laboratory Meeting on Genome Informatics. Cold Spring Harbor, NY. October 2015.') -}}
-{{ p('"Transcription factor binding motifs in an expanded epigenetic alphabet." Taiwan-Canada Joint Workshop on Epigenetics. Canadian Human and Statistical Genetics Meeting. Vancouver, BC. 21 April 2015.') -}}
-{{ p('"Semi-automated genome annotation and an expanded epigenetic alphabet." Program in Genetic Networks Workshop. Canadian Institute for Advanced Research. Toronto, ON. 10 April 2015.') -}}
-{{ p('"Semi-automated genome annotation and an expanded epigenetic alphabet." Department of Biochemistry and Molecular Genetics. University of Colorado Anschutz Medical Campus. Denver, CO. 3 April 2015.') -}}
-{{ p('"Semi-automated genome annotation and an expanded epigenetic alphabet." Bioinformatics Club. University of Waterloo. Waterloo, ON. 24 March 2015.') -}}
-{{ p('"Semi-automated human genome annotation." Signals and Intelligence Chapter/Signal Processing Chapter/Engineering in Medicine and Biology Chapter. Toronto Section. Institute of Electrical and Electronics Engineers. Toronto, ON. 9 March 2015.') -}}
-{{ p('"Transcription factor binding prediction." Biohackathon. University of Toronto Internationally Genetically Engineered Machine. University of Toronto. Toronto, ON. 22 January 2015.') -}}
-{{ p('"Semi-automated genome annotation and an expanded epigenetic alphabet." Understanding non-coding DNA through intra and inter-species epigenomic variation. Bellairs Research Institute. Holetown, Barbados. 9 January 2015.') -}}
-{{ p('"Semi-automated genome annotation and an expanded epigenetic alphabet." McGill University. Montreal, QC. 21 November 2014.') -}}
-{{ p('"Semi-automated annotation of the human genome using chromatin and RNA-seq data." Major Discoveries in Biology. Undergraduate Program in Genomic Sciences. National Autonomous University of Mexico. Mexico City, Mexico (videoconference). 5 March 2014.') -}}
-{{ p('"Semi-automated Genome Annotation with Segway." Institute of Electrical and Electronics Engineers International Workshop on Genomic Signal Processing and Statistics 2013. Houston, TX. 17 November 2013.') -}}
-{{ p('"Semi-automated annotation of the human genome using chromatin and RNA-seq data." Toronto Bioinformatics Users Group. Toronto, ON. 27 November 2013.') -}}
-{{ p('"Unsupervised pattern discovery in human chromatin structure through genomic segmentation." Workshop on Epigenomics and Cell Function 2013. Association for Computing Machinery Conference on Bioinformatics, Computational Biology and Biomedicine. Washington, DC. 22 September 2013.') -}}
-{{ p('"Semi-automated annotation of the human genome using chromatin and RNA-seq data." Genentech. South San Francisco, CA. 12 November 2012.') -}}
-{{ p('"Unsupervised pattern discovery in human chromatin data." Computational Biology Center Guest Seminar. Memorial Sloan-Kettering Cancer Center. New York, New York. 18 May 2011.') -}}
-{{ p('"Segway: finding patterns in chromatin data." Center for Bioinformatics Research Special Talk, Indiana University. Bloomington, Indiana. 18 November 2010.') -}}
-{{ p('"Finding the patterns in chromatin data." Fifth Barbados Workshop on Gene Regulation: The role of chromatin in 3D structure. Holetown, Barbados. 21 April 2010.') -}}
-{{ p('"Properties of natural selection in mammalian promoters." Weizmann UK Symposium: Biological complexity: from models to systems. London, England. Summer 2008.') -}}
-{{ p('"Predicting Selection in Promoters by Simulating the Effects of Mutations." Waterman Seminar, Leibniz Institute of Plant Genetics and Crop Plant Research. Gatersleben, Germany. Autumn 2007.') -}}
-{{ p('"Student address, The University of Texas at Austin 120th Spring Commencement, College of Natural Sciences Convocation." Austin, TX. 17 May 2003.') -}}
-{{ p('"Student address, The University of Texas at Austin 55th Honors Day Convocation." Austin, TX. 12 April 2003.') }}
+{{ p('"Semi-automated human genome annotation using chromatin data." Institute for Operations Research and the Management Sciences Annual Meeting. Philadelphia, PA. 1--4 November 2015.', 700) -}}
+{{ p('Cold Spring Harbor Laboratory Meeting on Genome Informatics. Cold Spring Harbor, NY. October 2015.', 800) -}}
+{{ p('"Transcription factor binding motifs in an expanded epigenetic alphabet." Taiwan-Canada Joint Workshop on Epigenetics. Canadian Human and Statistical Genetics Meeting. Vancouver, BC. 21 April 2015.', 800) -}}
+{{ p('"Semi-automated genome annotation and an expanded epigenetic alphabet." Program in Genetic Networks Workshop. Canadian Institute for Advanced Research. Toronto, ON. 10 April 2015.', 600) -}}
+{{ p('"Semi-automated genome annotation and an expanded epigenetic alphabet." Department of Biochemistry and Molecular Genetics. University of Colorado Anschutz Medical Campus. Denver, CO. 3 April 2015.', 750) -}}
+{{ p('"Semi-automated genome annotation and an expanded epigenetic alphabet." Bioinformatics Club. University of Waterloo. Waterloo, ON. 24 March 2015.', 500) -}}
+{{ p('"Semi-automated human genome annotation." Signals and Intelligence Chapter/Signal Processing Chapter/Engineering in Medicine and Biology Chapter. Toronto Section. Institute of Electrical and Electronics Engineers. Toronto, ON. 9 March 2015.', 500) -}}
+{{ p('"Transcription factor binding prediction." Biohackathon. University of Toronto Internationally Genetically Engineered Machine. University of Toronto. Toronto, ON. 22 January 2015.', 500) -}}
+{{ p('"Semi-automated genome annotation and an expanded epigenetic alphabet." Understanding non-coding DNA through intra and inter-species epigenomic variation. Bellairs Research Institute. Holetown, Barbados. 9 January 2015.', 750) -}}
+{{ p('"Semi-automated genome annotation and an expanded epigenetic alphabet." McGill University. Montreal, QC. 21 November 2014.', 750) -}}
+{{ p('"Semi-automated annotation of the human genome using chromatin and RNA-seq data." Major Discoveries in Biology. Undergraduate Program in Genomic Sciences. National Autonomous University of Mexico. Mexico City, Mexico (videoconference). 5 March 2014.', 500) -}}
+{{ p('"Semi-automated Genome Annotation with Segway." Institute of Electrical and Electronics Engineers International Workshop on Genomic Signal Processing and Statistics 2013. Houston, TX. 17 November 2013.', 700) -}}
+{{ p('"Semi-automated annotation of the human genome using chromatin and RNA-seq data." Toronto Bioinformatics Users Group. Toronto, ON. 27 November 2013.', 500) -}}
+{{ p('"Unsupervised pattern discovery in human chromatin structure through genomic segmentation." Workshop on Epigenomics and Cell Function 2013. Association for Computing Machinery Conference on Bioinformatics, Computational Biology and Biomedicine. Washington, DC. 22 September 2013.', 700) -}}
+{{ p('"Semi-automated annotation of the human genome using chromatin and RNA-seq data." Genentech. South San Francisco, CA. 12 November 2012.', 600) -}}
+{{ p('"Unsupervised pattern discovery in human chromatin data." Computational Biology Center Guest Seminar. Memorial Sloan-Kettering Cancer Center. New York, New York. 18 May 2011.', 600) -}}
+{{ p('"Segway: finding patterns in chromatin data." Center for Bioinformatics Research Special Talk, Indiana University. Bloomington, Indiana. 18 November 2010.', 700) -}}
+{{ p('"Finding the patterns in chromatin data." Fifth Barbados Workshop on Gene Regulation: The role of chromatin in 3D structure. Holetown, Barbados. 21 April 2010.', 700) -}}
+{{ p('"Properties of natural selection in mammalian promoters." Weizmann UK Symposium: Biological complexity: from models to systems. London, England. Summer 2008.', 700) -}}
+{{ p('"Predicting Selection in Promoters by Simulating the Effects of Mutations." Waterman Seminar, Leibniz Institute of Plant Genetics and Crop Plant Research. Gatersleben, Germany. Autumn 2007.', 700) -}}
+{{ p('"Student address, The University of Texas at Austin 120th Spring Commencement, College of Natural Sciences Convocation." Austin, TX. 17 May 2003.', 300) -}}
+{{ p('"Student address, The University of Texas at Austin 55th Honors Day Convocation." Austin, TX. 12 April 2003.', 300) }}
 
 ### Presentations: conference, selected from abstracts
 
@@ -260,17 +261,17 @@ F5.\ "Sequence variation and DNA methylation patterning." Natural Sciences and E
 {{ p('"Poly: rapid development of embarrassingly parallelizable applications." Bioinformatics Open Source Conference. Glasgow, Scotland. Summer 2004.') }}
 
 ### Presentations: conference, selected from abstracts, trainee
-{{ p('"Semi-automated annotation of the human genome using chromatin data." University of Washington Postdoctoral Association Research Symposium. Seattle, WA. 27 November 2012.') -}}
-{{ p('"Properties of natural selection in mammalian promoters." Sanger-Cambridge PhD Symposium. Hinxton, England. Spring 2008.') -}}
-{{ p('"Sunflower: a model of transcription factor binding." EMBL Predoctoral Fellow Retreat. Barcelona, Spain. Summer 2007.') -}}
-{{ p('"Measurements of evolution and natural selection." Trinity College Science Society Symposium. Cambridge, England. Spring 2007.') -}}
-{{ p('"Visualizing protein-DNA and protein-RNA interactions with AANT." Trinity College Science Society Symposium. Cambridge, England. 13 March 2004.') }}
+{{ p('"Semi-automated annotation of the human genome using chromatin data." University of Washington Postdoctoral Association Research Symposium. Seattle, WA. 27 November 2012.', 100) -}}
+{{ p('"Properties of natural selection in mammalian promoters." Sanger-Cambridge PhD Symposium. Hinxton, England. Spring 2008.', 100) -}}
+{{ p('"Sunflower: a model of transcription factor binding." EMBL Predoctoral Fellow Retreat. Barcelona, Spain. Summer 2007.', 100) -}}
+{{ p('"Measurements of evolution and natural selection." Trinity College Science Society Symposium. Cambridge, England. Spring 2007.', 100) -}}
+{{ p('"Visualizing protein-DNA and protein-RNA interactions with AANT." Trinity College Science Society Symposium. Cambridge, England. 13 March 2004.', 100) }}
 
 ### Presentations: invited panelist
 
-{{ p('"Informatics, Annotation, and Computing." Applied Cancer Genomics Symposium, Toronto, ON. 3 October 2014.') -}}
-{{ p('"The job search process: postdoctoral, faculty, and industry jobs." Toronto Bioinformatics Users Group. Toronto, ON. 27 November 2013.') -}}
-{{ p('"Networking." Women in Genome Sciences Discussion. University of Washington. 23 February 2012.') }}
+{{ p('"Informatics, Annotation, and Computing." Applied Cancer Genomics Symposium, Toronto, ON. 3 October 2014.', 200) -}}
+{{ p('"The job search process: postdoctoral, faculty, and industry jobs." Toronto Bioinformatics Users Group. Toronto, ON. 27 November 2013.', 200) -}}
+{{ p('"Networking." Women in Genome Sciences Discussion. University of Washington. 23 February 2012.', 200) }}
 
 ### Presentations: other teaching
 
@@ -308,14 +309,17 @@ F5.\ "Sequence variation and DNA methylation patterning." Natural Sciences and E
 {{ p('"Properties of natural selection in mammalian promoters." Seminar, Program in Bioinformatics and Integrative Biology, University of Massachusetts Medical School. Worcester, MA. Spring 2008.') -}}
 
 ### Presentations: other seminars, local
-{{ p('"Epigenetics." Princess Margaret Cancer Foundation Board Retreat. Toronto, ON. 8 November 2014.') -}}
-{{ p('"Machine Learning and Epigenomics." Princess Margaret Cancer Centre Research Retreat. Huntsville, ON. 15 May 2014.') -}}
-{{ p('"Semi-automated annotation of the human genome using chromatin data." Biomedical Postdoc Seminar. University of Washington. Seattle, WA. 4 March 2013.') -}}
-{{ p('"Semi-automated annotation of the human genome using chromatin and RNA-seq data." Computational Biology Group Meeting/CSE 591C. Department of Computer Science. Seattle, WA. 14 December 2012.') -}}
-{{ p('"Semi-automated annotation of the human genome using whole-genome RNA-seq." Postdoctoral Research Talk. Department of Genome Sciences. University of Washington. 16 May 2012.') -}}
-{{ p('"Segway: pattern discovery in multitrack functional genomics data." Research Reports. Department of Genome Sciences. University of Washington. 13 November 2009.') -}}
-{{ p('"Segway: a dynamic Bayesian network for genomic segmentation." Reading and Research in Computational Biology. CSE 590C. 4 May 2009.') }}
+{{ p('"Epigenetics." Princess Margaret Cancer Foundation Board Retreat. Toronto, ON. 8 November 2014.', 100) -}}
+{{ p('"Machine Learning and Epigenomics." Princess Margaret Cancer Centre Research Retreat. Huntsville, ON. 15 May 2014.', 100) -}}
+{{ p('"Semi-automated annotation of the human genome using chromatin data." Biomedical Postdoc Seminar. University of Washington. Seattle, WA. 4 March 2013.', 100) -}}
+{{ p('"Semi-automated annotation of the human genome using chromatin and RNA-seq data." Computational Biology Group Meeting/CSE 591C. Department of Computer Science. Seattle, WA. 14 December 2012.', 100) -}}
+{{ p('"Semi-automated annotation of the human genome using whole-genome RNA-seq." Postdoctoral Research Talk. Department of Genome Sciences. University of Washington. 16 May 2012.', 100) -}}
+{{ p('"Segway: pattern discovery in multitrack functional genomics data." Research Reports. Department of Genome Sciences. University of Washington. 13 November 2009.', 100) -}}
+{{ p('"Segway: a dynamic Bayesian network for genomic segmentation." Reading and Research in Computational Biology. CSE 590C. 4 May 2009.', 100) }}
 
+---
+# displayed presentations: {{ num_presentations.current }}
+---
 ## Professional activities
 
 ### Professional activities: conference organizer
