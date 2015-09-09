@@ -211,7 +211,14 @@ F5.\ "Sequence variation and DNA methylation patterning." Natural Sciences and E
 
 ### Presentations: invited/keynote
 
-* "Semi-automated human genome annotation using chromatin data." Institute for Operations Research and the Management Sciences Annual Meeting. Philadelphia, PA. 1--4 November 2015.
+{% set presentation_score_min = presentation_score|default("-inf")|float -%}
+{% macro p(text, score=0) -%}
+{% if score >= presentation_score_min -%}
+* {{ text }}
+{% endif -%}
+{% endmacro -%}
+
+{{ p('"Semi-automated human genome annotation using chromatin data." Institute for Operations Research and the Management Sciences Annual Meeting. Philadelphia, PA. 1--4 November 2015.') -}}
 * Cold Spring Harbor Laboratory Meeting on Genome Informatics. Cold Spring Harbor, NY. October 2015.
 * "Transcription factor binding motifs in an expanded epigenetic alphabet." Taiwan-Canada Joint Workshop on Epigenetics. Canadian Human and Statistical Genetics Meeting. Vancouver, BC. 21 April 2015.
 * "Semi-automated genome annotation and an expanded epigenetic alphabet." Program in Genetic Networks Workshop. Canadian Institute for Advanced Research. Toronto, ON. 10 April 2015.
