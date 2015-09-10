@@ -1,5 +1,7 @@
 Programmatic:
 
+- panfilter collapse any empty sections (for example, after filtering
+  out all presentations)
 - need way to exclude anything from cv-private (for web site)
 - BibTeX bibliography
 - include links to papers
