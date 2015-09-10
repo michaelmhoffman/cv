@@ -27,7 +27,8 @@ def parse_variable_specs(specs):
     return res
 
 def jinja(infile, outfilename, variable_specs):
-    env = Environment(loader=FileSystemLoader([".", "../cv-private"]))
+    env = Environment(loader=FileSystemLoader([".", "../cv-private"]),
+                      extensions=['jinja2.ext.do'])
     template = env.get_template(infile)
 
     variables = parse_variable_specs(variable_specs)
