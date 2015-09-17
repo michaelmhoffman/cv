@@ -1,6 +1,7 @@
 ## user variables
 SRC = cv.md
 SCHOLARID = 96r1DYUAAAAJ
+PANFILTER_FLAGS =
 
 ## command variables
 PANDOC = pandoc --smart --from=markdown+raw_tex
@@ -9,7 +10,7 @@ PANDOC_FINAL = $(PANDOC) --standalone --smart
 PANDOC_DOCX = $(PANDOC_FINAL) --reference-docx=reference.docx
 PANDOC_TEX = $(PANDOC_FINAL) --variable=geometry=margin=1in --variable=mainfont="TeX Gyre Heros" --variable=fontsize=12pt --include-in-header=preamble.tex --latex-engine=xelatex --to=latex
 
-PANFILTER = ./panfilter.py
+PANFILTER = ./panfilter.py $(PANFILTER_FLAGS)
 PANFILTER_DEFAULT = $(PANFILTER) --config=default.yaml
 
 # XXX: \beginenumerate etc. could be made a TeX macro rather than filtering here

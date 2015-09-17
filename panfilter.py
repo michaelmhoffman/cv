@@ -52,6 +52,8 @@ def read_config(config_file):
         config_raw = {}
     else:
         config_raw = yaml.load(config_file)
+        if config_raw is None:
+            config_raw = {}
 
     config = dict((item["id"], dict(subitem for subitem in item.items()
                                     if subitem[0] != "id"))
@@ -61,7 +63,7 @@ def read_config(config_file):
 
     return config, include_ids
 
-def proc_tree(tree, config, include_ids, citations):
+def proc_tree(tree, config, include_ids, citations, verbose):
     section_id = None
     section_accept = True
     para_accept = True
@@ -77,6 +79,12 @@ def proc_tree(tree, config, include_ids, citations):
         if node_type == "Header":
             section_id = node_content[1][0]
             section_accept = not include_ids or section_id in include_ids
+            if verbose:
+                if section_accept:
+                    including = "including"
+                else:
+                    including = "excluding"
+                print(including, section_id, file=sys.stderr)
             section_config = config.get(section_id)
             para_accept = True
             if section_config is not None:
@@ -127,7 +135,7 @@ def proc_tree(tree, config, include_ids, citations):
 
     return res
 
-def panfilter(infile, config_file=None):
+def panfilter(infile, config_file=None, verbose=False):
     pandoc_in = json.load(infile)
     metadata, tree = pandoc_in
 
@@ -137,7 +145,7 @@ def panfilter(infile, config_file=None):
     citations = load_google_scholar()
     config, include_ids = read_config(config_file)
 
-    pandoc_out = metadata, proc_tree(tree, config, include_ids, citations)
+    pandoc_out = metadata, proc_tree(tree, config, include_ids, citations, verbose)
     json.dump(pandoc_out, sys.stdout)
 
     # XXX: print heading options
@@ -156,6 +164,8 @@ def parse_args(args):
                         help="input file in Pandoc JSON format")
     parser.add_argument("--config", type=FileType("r"),
                         metavar="FILE", help="file with YAML configuration")
+    parser.add_argument("--verbose", action="store_true",
+                        help="verbose output")
 
     version = "%(prog)s {}".format(__version__)
     parser.add_argument("--version", action="version", version=version)
@@ -165,7 +175,7 @@ def parse_args(args):
 def main(argv=sys.argv[1:]):
     args = parse_args(argv)
 
-    return panfilter(args.infile, args.config)
+    return panfilter(args.infile, args.config, args.verbose)
 
 if __name__ == "__main__":
     sys.exit(main())
