@@ -17,14 +17,17 @@ PANFILTER_DEFAULT = $(PANFILTER) --config=default.yaml
 TEXFILTER = perl -pe 's/^([A-Z][0-9]+.)~/\\item[\1] /; s/\\(begin|end)enumerate/\\\1\{enumerate}/g'
 
 ## phony targets
-ALL=$(SRC:.md=.docx) $(SRC:.md=.html) $(SRC:.md=.pdf)
+ALL=$(SRC:.md=.docx) $(SRC:.md=.html) $(SRC:.md=.pdf) web
 
 all: $(ALL)
+
+web: cv-web.pdf
+	scp cv-web.pdf mordor:~/public_html/cv/michael-hoffman-cv.pdf
 
 clean:
 	-rm $(ALL) google-scholar.html cv-*.docx
 
-.PHONY: all
+.PHONY: all clean web
 
 ## pattern rules
 
