@@ -48,7 +48,7 @@ cv-%.docx: cv.md reference.docx google-scholar.html %.yaml
 	$(PANDOC_TOFILTER) $< | $(PANFILTER_DEFAULT) | $(PANDOC_TEX) --from=json | $(TEXFILTER) > $@
 
 cv-%.tex : cv.md preamble.tex google-scholar.html %.yaml
-	$(PANDOC_TOFILTER) $< | $(PANFILTER_DEFAULT) --config=$(*F).yaml | $(PANDOC_TEX) --from=json | $(TEXFILTER) > $@
+	$(PANDOC_TOFILTER) $< | $(PANFILTER) --config=$(*F).yaml | $(PANDOC_TEX) --from=json | $(TEXFILTER) > $@
 
 %.pdf : %.tex
 	xelatex $<

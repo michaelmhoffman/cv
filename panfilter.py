@@ -63,6 +63,12 @@ def read_config(config_file):
 
     return config, include_ids
 
+def text_accept(flag):
+    if flag:
+        return "including"
+    else:
+        return "excluding"
+
 def proc_tree(tree, config, include_ids, citations, verbose):
     section_id = None
     section_accept = True
@@ -80,11 +86,7 @@ def proc_tree(tree, config, include_ids, citations, verbose):
             section_id = node_content[1][0]
             section_accept = not include_ids or section_id in include_ids
             if verbose:
-                if section_accept:
-                    including = "including"
-                else:
-                    including = "excluding"
-                print(including, section_id, file=sys.stderr)
+                print(text_accept(section_accept), section_id, file=sys.stderr)
             section_config = config.get(section_id)
             para_accept = True
             if section_config is not None:
@@ -93,6 +95,8 @@ def proc_tree(tree, config, include_ids, citations, verbose):
                     node_content[2] = [{"c": section_name, "t": "Str"}]
 
                 section_exclude = frozenset(section_config.get("exclude", []))
+                if verbose:
+                    print(" section_exclude:", *section_exclude, file=sys.stderr)
 
                 section_year_min = section_config.get("year-min")
                 if section_year_min is not None and section_year_min < 0:
@@ -101,12 +105,16 @@ def proc_tree(tree, config, include_ids, citations, verbose):
         if not section_accept:
             continue
 
-        if section_year_min is not None and node_type == "Para":
+        if node_type == "Para":
             subnode = node_content[0]
             if (subnode["t"] == "Str"
                 and subnode["c"].partition(".")[0] in section_exclude):
                 para_accept = False
+                if verbose:
+                    print("", text_accept(para_accept), subnode["c"], file=sys.stderr)
                 continue
+            if verbose:
+                    print("", text_accept(para_accept), subnode["c"], file=sys.stderr)
 
             for subnode in node_content:
                 if subnode["t"] == "Str":
