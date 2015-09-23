@@ -72,6 +72,7 @@ def text_accept(flag):
 def proc_tree(tree, config, include_ids, citations, verbose):
     section_id = None
     section_accept = True
+    section_exclude = frozenset()
     para_accept = True
     section_year_min = None
     res = []
