@@ -16,6 +16,8 @@ PANFILTER_DEFAULT = $(PANFILTER) --config=default.yaml
 # XXX: \beginenumerate etc. could be made a TeX macro rather than filtering here
 TEXFILTER = perl -pe 's/^([A-Z][0-9]+.)~/\\item[\1] /; s/\\(begin|end)enumerate/\\\1\{enumerate}/g'
 
+SCHOLARURL=https://scholar.google.com/citations?user=$(SCHOLARID)
+
 ## phony targets
 ALL=$(SRC:.md=.docx) $(SRC:.md=.html) $(SRC:.md=.pdf) web
 
@@ -58,5 +60,8 @@ cv-%.tex : cv.md preamble.tex google-scholar.html %.yaml
 
 ## explicit rules
 
-google-scholar.html:
-	wget -O $@ https://scholar.google.com/citations?user=$(SCHOLARID)
+google-scholar.html: cookies.txt
+	wget --load-cookies=$< -O $@ $(SCHOLARURL)
+
+cookies.txt:
+	wget --save-cookies=$@ -O /dev/null $(SCHOLARURL)
