@@ -1,5 +1,6 @@
 Programmatic:
 
+- switch to using Jinja2 for adding things in, filter for subtracting
 - panfilter collapse any empty sections (for example, after filtering
   out all presentations)
 - need way to exclude anything from cv-private (for web site)
