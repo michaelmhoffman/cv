@@ -3,16 +3,17 @@
 """
 
 from __future__ import absolute_import, division, print_function
-from future_builtins import ascii, filter, hex, map, oct, zip
+from future_builtins import ascii, filter, hex, map, oct, zip  # noqa
 
 __version__ = "$Revision: 871 $"
 
-## Copyright 2011, 2015 Michael M. Hoffman <mmh1@uw.edu>
+# Copyright 2011, 2015, 2016 Michael M. Hoffman <mmh1@uw.edu>
 
 import codecs
 import sys
 
 from jinja2 import Environment, FileSystemLoader
+
 
 def parse_variable_specs(specs):
     res = {}
@@ -26,6 +27,7 @@ def parse_variable_specs(specs):
 
     return res
 
+
 def jinja(infile, outfilename, variable_specs):
     env = Environment(loader=FileSystemLoader([".", "../cv-private"]),
                       extensions=['jinja2.ext.do'])
@@ -36,9 +38,9 @@ def jinja(infile, outfilename, variable_specs):
     with codecs.open(outfilename, "w", "utf-8") as outfile:
         print(template.render(variables), file=outfile)
 
+
 def parse_args(args):
-    from argparse import (ArgumentDefaultsHelpFormatter, ArgumentParser,
-                          FileType)
+    from argparse import ArgumentDefaultsHelpFormatter, ArgumentParser
 
     description = __doc__.splitlines()[0].partition(": ")[2]
     parser = ArgumentParser(description=description,
@@ -55,6 +57,7 @@ def parse_args(args):
     parser.add_argument("--version", action="version", version=version)
 
     return parser.parse_args(args)
+
 
 def main(argv=sys.argv[1:]):
     args = parse_args(argv)
