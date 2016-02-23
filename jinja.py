@@ -28,8 +28,8 @@ def parse_variable_specs(specs):
     return res
 
 
-def jinja(infile, outfilename, variable_specs):
-    env = Environment(loader=FileSystemLoader([".", "../cv-private"]),
+def jinja(infile, outfilename, variable_specs, search_dirnames):
+    env = Environment(loader=FileSystemLoader(search_dirnames),
                       extensions=['jinja2.ext.do'])
     template = env.get_template(infile)
 
@@ -52,6 +52,9 @@ def parse_args(args):
 
     parser.add_argument("-s", "--set", action="append", metavar="VAR=VALUE",
                         help="set variable VAR to VALUE")
+    # to prepend, reverse after parsing
+    parser.add_argument("--search-dir", action="append", default=["."],
+                        help="prepend directory to template search path",)
 
     version = "%(prog)s {}".format(__version__)
     parser.add_argument("--version", action="version", version=version)
@@ -62,7 +65,8 @@ def parse_args(args):
 def main(argv=sys.argv[1:]):
     args = parse_args(argv)
 
-    return jinja(args.infile, args.outfile, args.set)
+    search_dirnames = reversed(args.search_dir)
+    return jinja(args.infile, args.outfile, args.set, search_dirnames)
 
 if __name__ == "__main__":
     sys.exit(main())
