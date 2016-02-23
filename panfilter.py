@@ -25,7 +25,7 @@ HTML_PARSER = "lxml"
 
 re_year = re.compile(r"19\d\d|20\d\d|present")
 
-error = partial(print, file=sys.stderr)
+info = partial(print, file=sys.stderr)
 
 
 def text_to_year(text):
@@ -94,7 +94,7 @@ def proc_tree(tree, config, include_ids, citations, verbose):
             section_id = node_content[1][0]
             section_accept = not include_ids or section_id in include_ids
             if verbose:
-                error(text_accept(section_accept), section_id)
+                info(text_accept(section_accept), section_id)
             section_config = config.get(section_id)
             para_accept = True
             if section_config is not None:
@@ -104,7 +104,7 @@ def proc_tree(tree, config, include_ids, citations, verbose):
 
                 section_exclude = frozenset(section_config.get("exclude", []))
                 if verbose:
-                    error(" section_exclude:", *section_exclude)
+                    info(" section_exclude:", *section_exclude)
 
                 section_year_min = section_config.get("year-min")
                 if section_year_min is not None and section_year_min < 0:
@@ -119,10 +119,10 @@ def proc_tree(tree, config, include_ids, citations, verbose):
                     and subnode["c"].partition(".")[0] in section_exclude):
                 para_accept = False
                 if verbose:
-                    error("", text_accept(para_accept), subnode["c"])
+                    info("", text_accept(para_accept), subnode["c"])
                 continue
             if verbose:
-                    error("", text_accept(para_accept), subnode["c"])
+                    info("", text_accept(para_accept), subnode["c"])
 
             for subnode in node_content:
                 if subnode["t"] == "Str":
