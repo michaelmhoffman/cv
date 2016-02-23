@@ -12,9 +12,6 @@
 - id: recognitions-honors
 - id: funding
 - id: funding-principal-investigator
-  exclude:
-    - F3
-    - F4
 - id: funding-co-investigator
 - id: presentations
 - id: presentations-invitedkeynote
