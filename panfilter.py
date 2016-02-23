@@ -76,35 +76,76 @@ def text_accept(flag):
         return "excluding"
 
 
-def proc_tree(tree, config, include_ids, citations, verbose):
+def noop(*args, **kwargs):
+    pass
+
+
+def get_node_type_content(node):
+    return node["t"], node["c"]
+
+
+def proc_bullet_item(node, citations):
+    node_type, node_content = get_node_type_content(node)
+
+    if node_type == "Str":
+        if node_content.startswith("%CITES"):
+            citation_id = node_content.partition(":")[2]
+            node["c"] = "{:,}".format(int(citations[citation_id]))
+
+
+def proc_bullet(node_content, citations):
+    # XXX: this will probably break, need to replace with something recursive
+    for subnode in node_content:
+        for subsubnode in subnode:
+            for subsubsubnode in subsubnode["c"]:
+                    proc_bullet_item(subsubsubnode, citations)
+
+
+def proc_para(node_content, section_exclude, section_year_min):
+    """
+    returns whether paragraph should be accepted
+    """
+    subnode = node_content[0]
+    subnode_type, subnode_content = get_node_type_content(subnode)
+
+    if (subnode_type == "Str"
+            and subnode_content.partition(".")[0] in section_exclude):
+        return False
+
+    for subnode in node_content:
+        subnode_type, subnode_content = get_node_type_content(subnode)
+
+        if subnode_type == "Str":
+            node_years = [text_to_year(match.group(0))
+                          for match in re_year.finditer(subnode_content)]
+            if node_years and max(node_years) < section_year_min:
+                return False
+
+    return True
+
+
+def generate_tree(tree, config, include_ids, citations, log):
     section_id = None
     section_accept = True
     section_exclude = frozenset()
-    para_accept = True
     section_year_min = None
-    res = []
 
-    # XXX: this is pretty hairy, should probably have a generator that
-    # eliminates this t/c stuff on the fly
     for node in tree:
-        node_type = node["t"]
-        node_content = node["c"]
+        node_type, node_content = get_node_type_content(node)
 
         if node_type == "Header":
             section_id = node_content[1][0]
             section_accept = not include_ids or section_id in include_ids
-            if verbose:
-                info(text_accept(section_accept), section_id)
+            log(text_accept(section_accept), section_id)
             section_config = config.get(section_id)
-            para_accept = True
+
             if section_config is not None:
                 section_name = section_config.get("name")
                 if section_name:
                     node_content[2] = [{"c": section_name, "t": "Str"}]
 
                 section_exclude = frozenset(section_config.get("exclude", []))
-                if verbose:
-                    info(" section_exclude:", *section_exclude)
+                log(" section_exclude:", *section_exclude)
 
                 section_year_min = section_config.get("year-min")
                 if section_year_min is not None and section_year_min < 0:
@@ -114,43 +155,22 @@ def proc_tree(tree, config, include_ids, citations, verbose):
             continue
 
         if node_type == "Para":
-            subnode = node_content[0]
-            if (subnode["t"] == "Str"
-                    and subnode["c"].partition(".")[0] in section_exclude):
-                para_accept = False
-                if verbose:
-                    info("", text_accept(para_accept), subnode["c"])
+            if not proc_para(node_content, section_exclude, section_year_min):
                 continue
-            if verbose:
-                    info("", text_accept(para_accept), subnode["c"])
 
-            for subnode in node_content:
-                if subnode["t"] == "Str":
-                    node_years = [text_to_year(match.group(0))
-                                  for match in re_year.finditer(subnode["c"])]
-                    if node_years and max(node_years) < section_year_min:
-                        para_accept = False
-                        break
-            else:
-                para_accept = True
-
-        if not para_accept:
-            continue
-
-        # XXX: this will probably break, need to replace with something
-        # recursive
         if node_type == "BulletList":
-            for subnode in node_content:
-                for subsubnode in subnode:
-                    for subsubsubnode in subsubnode["c"]:
-                        subsubsubnode_content = subsubsubnode["c"]
-                        if subsubsubnode["t"] == "Str" and subsubsubnode_content.startswith("%CITES"):
-                            citation_id = subsubsubnode_content.partition(":")[2]
-                            subsubsubnode["c"] = "{:,}".format(int(citations[citation_id]))
+            proc_bullet(node_content, citations)
 
-        res.append(node)
+        yield node
 
-    return res
+
+def proc_tree(tree, config, include_ids, citations, verbose):
+    if verbose:
+        log = info
+    else:
+        log = noop
+
+    return list(generate_tree(tree, config, include_ids, citations, log))
 
 
 def panfilter(infile, config_file=None, verbose=False):
