@@ -21,6 +21,7 @@
 - id: presentations-conference-selected-from-abstracts
 # - id: presentations-conference-selected-from-abstracts-trainee
 - id: presentations-invited-panelist
+# - id: presentations-invited-panelist-local
 - id: presentations-other-teaching
 - id: presentations-other-seminars
 # - id: presentations-other-seminars-local
@@ -35,6 +36,7 @@
 - id: professional-activities-institutional-leadership-positions-and-committees
 - id: professional-activities-student-committees-and-examinations
 - id: professional-activities-memberships
+# - id: professional-activities-memberships-local
 - id: prior-positions
 - id: trainees-and-staff-supervised
 - id: trainees-and-staff-supervised-current
