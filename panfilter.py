@@ -4,15 +4,15 @@
 """
 
 from __future__ import absolute_import, division, print_function
-from future_builtins import ascii, filter, hex, map, oct, zip
+from future_builtins import ascii, filter, hex, map, oct, zip  # noqa
 
 __version__ = "0.1"
 
-## Copyright 2015 Michael M. Hoffman <michael.hoffman@utoronto.ca>
+# Copyright 2015, 2016 Michael M. Hoffman <michael.hoffman@utoronto.ca>
 
 from datetime import date
+from functools import partial
 import json
-from pprint import pprint
 import re
 import sys
 
@@ -25,11 +25,15 @@ HTML_PARSER = "lxml"
 
 re_year = re.compile(r"19\d\d|20\d\d|present")
 
+error = partial(print, file=sys.stderr)
+
+
 def text_to_year(text):
     if text == "present":
         return YEAR
     else:
         return int(text)
+
 
 def load_google_scholar(filename=SCHOLAR_FILENAME):
     with open(filename) as infile:
@@ -47,6 +51,7 @@ def load_google_scholar(filename=SCHOLAR_FILENAME):
 
     return res
 
+
 def read_config(config_file):
     if config_file is None:
         config_raw = {}
@@ -63,11 +68,13 @@ def read_config(config_file):
 
     return config, include_ids
 
+
 def text_accept(flag):
     if flag:
         return "including"
     else:
         return "excluding"
+
 
 def proc_tree(tree, config, include_ids, citations, verbose):
     section_id = None
@@ -87,7 +94,7 @@ def proc_tree(tree, config, include_ids, citations, verbose):
             section_id = node_content[1][0]
             section_accept = not include_ids or section_id in include_ids
             if verbose:
-                print(text_accept(section_accept), section_id, file=sys.stderr)
+                error(text_accept(section_accept), section_id)
             section_config = config.get(section_id)
             para_accept = True
             if section_config is not None:
@@ -97,7 +104,7 @@ def proc_tree(tree, config, include_ids, citations, verbose):
 
                 section_exclude = frozenset(section_config.get("exclude", []))
                 if verbose:
-                    print(" section_exclude:", *section_exclude, file=sys.stderr)
+                    error(" section_exclude:", *section_exclude)
 
                 section_year_min = section_config.get("year-min")
                 if section_year_min is not None and section_year_min < 0:
@@ -109,13 +116,13 @@ def proc_tree(tree, config, include_ids, citations, verbose):
         if node_type == "Para":
             subnode = node_content[0]
             if (subnode["t"] == "Str"
-                and subnode["c"].partition(".")[0] in section_exclude):
+                    and subnode["c"].partition(".")[0] in section_exclude):
                 para_accept = False
                 if verbose:
-                    print("", text_accept(para_accept), subnode["c"], file=sys.stderr)
+                    error("", text_accept(para_accept), subnode["c"])
                 continue
             if verbose:
-                    print("", text_accept(para_accept), subnode["c"], file=sys.stderr)
+                    error("", text_accept(para_accept), subnode["c"])
 
             for subnode in node_content:
                 if subnode["t"] == "Str":
@@ -130,7 +137,8 @@ def proc_tree(tree, config, include_ids, citations, verbose):
         if not para_accept:
             continue
 
-        # XXX: this will probably break, need to replace with something recursive
+        # XXX: this will probably break, need to replace with something
+        # recursive
         if node_type == "BulletList":
             for subnode in node_content:
                 for subsubnode in subnode:
@@ -144,6 +152,7 @@ def proc_tree(tree, config, include_ids, citations, verbose):
 
     return res
 
+
 def panfilter(infile, config_file=None, verbose=False):
     pandoc_in = json.load(infile)
     metadata, tree = pandoc_in
@@ -154,12 +163,14 @@ def panfilter(infile, config_file=None, verbose=False):
     citations = load_google_scholar()
     config, include_ids = read_config(config_file)
 
-    pandoc_out = metadata, proc_tree(tree, config, include_ids, citations, verbose)
+    pandoc_out = (metadata,
+                  proc_tree(tree, config, include_ids, citations, verbose))
     json.dump(pandoc_out, sys.stdout)
 
     # XXX: print heading options
     # print(*(node["c"][1][0] for node in tree
     #         if node["t"] == "Header"), sep="\n")
+
 
 def parse_args(args):
     from argparse import (ArgumentDefaultsHelpFormatter, ArgumentParser,
@@ -180,6 +191,7 @@ def parse_args(args):
     parser.add_argument("--version", action="version", version=version)
 
     return parser.parse_args(args)
+
 
 def main(argv=sys.argv[1:]):
     args = parse_args(argv)
