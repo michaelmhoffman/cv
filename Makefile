@@ -11,7 +11,6 @@ PANDOC_DOCX = $(PANDOC_FINAL) --reference-docx=reference.docx
 PANDOC_TEX = $(PANDOC_FINAL) --variable=geometry=margin=1in --variable=mainfont="TeX Gyre Heros" --variable=fontsize=12pt --include-in-header=preamble.tex --latex-engine=xelatex --to=latex
 
 PANFILTER = ./panfilter.py $(PANFILTER_FLAGS)
-PANFILTER_DEFAULT = $(PANFILTER) --config=default.yaml
 
 RM = rm -f
 
@@ -45,17 +44,11 @@ clean: mostlyclean
 	./jinja.py $< $@
 
 # using a pipeline because using --filter, a Python filter, and Cygwin python doesn't seem to work
-%.docx : %.md reference.docx google-scholar.html default.yaml
-	$(PANDOC_TOFILTER) $< | $(PANFILTER_DEFAULT) | $(PANDOC_DOCX) --from=json -o $@
-
 cv-%.docx: cv.md reference.docx google-scholar.html %.yaml
 	$(PANDOC_TOFILTER) $< | $(PANFILTER) --config=$(*F).yaml | $(PANDOC_DOCX) --from=json -o $@
 
-%.html : %.md google-scholar.html default.yaml
-	$(PANDOC_TOFILTER) $< | $(PANFILTER_DEFAULT) | $(PANDOC_FINAL) --toc --from=json -o $@
-
-%.tex : %.md preamble.tex google-scholar.html default.yaml
-	$(PANDOC_TOFILTER) $< | $(PANFILTER_DEFAULT) | $(PANDOC_TEX) --from=json | $(TEXFILTER) > $@
+cv-%.html : cv.md google-scholar.html %.yaml
+	$(PANDOC_TOFILTER) $< | $(PANFILTER) --config=$(*F).yaml | $(PANDOC_FINAL) --toc --from=json -o $@
 
 cv-%.tex : cv.md preamble.tex google-scholar.html %.yaml
 	$(PANDOC_TOFILTER) $< | $(PANFILTER) --config=$(*F).yaml | $(PANDOC_TEX) --from=json | $(TEXFILTER) > $@
