@@ -19,17 +19,20 @@ TEXFILTER = perl -pe 's/^([A-Z][0-9]+.)~/\\item[\1] /; s/\\(begin|end)enumerate/
 SCHOLARURL=https://scholar.google.com/citations?user=$(SCHOLARID)
 
 ## phony targets
-ALL=$(SRC:.md=.docx) $(SRC:.md=.html) $(SRC:.md=.pdf) web
+ALL=$(SRC:.md=.docx) $(SRC:.md=.html) $(SRC:.md=.pdf)
 
-all: $(ALL)
+all: $(ALL) web
 
 web: cv-web.pdf
 	scp cv-web.pdf mordor:~/public_html/cv/michael-hoffman-cv.pdf
 
-clean:
-	-rm $(ALL) google-scholar.html cv-*.docx
+mostlyclean:
+	-rm $(ALL) cv.md cv.tex cv-*.tex cv-*.docx cv-*.pdf *.aux *.out *.log cv.json 
 
-.PHONY: all clean web
+clean: mostlyclean
+	-rm cookies.txt google-scholar.html
+
+.PHONY: all mostlyclean clean web
 
 ## pattern rules
 
