@@ -21,7 +21,7 @@ TEXFILTER = perl -pe 's/^([A-Z][0-9]+.)~/\\item[\1] /; s/\\(begin|end)enumerate/
 SCHOLARURL=https://scholar.google.com/citations?user=$(SCHOLARID)
 
 ## phony targets
-ALL=$(SRC:.md=.docx) $(SRC:.md=.html) $(SRC:.md=.pdf)
+ALL=$(SRC:.md=-default.docx) $(SRC:.md=-default.html) $(SRC:.md=-default.pdf)
 
 all: $(ALL) web
 
