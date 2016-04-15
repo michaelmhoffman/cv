@@ -1,6 +1,8 @@
 - id: michael-m.-hoffman
 - id: current-positions
+  name: "Employment: current positions"
 - id: education
+  name: "Academic degrees and training"
 - id: publications
 - id: publications-journal
 - id: publications-conference-proceedings
@@ -11,8 +13,13 @@
 # - id: recognitions-other-scholarships-and-awards
 # - id: recognitions-honors
 - id: funding
+  name: "Grant funding"
 - id: funding-principal-investigator
+  name: "Grant funding, principal investigator"
+  year-min: -5
 - id: funding-co-investigator
+  name: "Grant funding, co-investigator"
+  year-min: -5
 # - id: presentations
 # - id: presentations-invitedkeynote
 # - id: presentations-conference-selected-from-abstracts
@@ -33,6 +40,7 @@
 # - id: professional-activities-student-committees-and-examinations
 # - id: professional-activities-memberships
 - id: prior-positions
+  name: "Employment: prior positions"
 # - id: trainees-and-staff-supervised
 # - id: trainees-and-staff-supervised-current
 # - id: trainees-and-staff-supervised-past
