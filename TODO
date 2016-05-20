@@ -1,6 +1,11 @@
+Style:
+- add columns for part right under Michael M. Hoffman
+http://pandoc.org/README.html#tables
+
+
+
 Programmatic:
 
-- add --search-dir=../cv-private for default, but don't include for web site
 - switch to using Jinja2 for adding things in, filter for subtracting
 - panfilter collapse any empty sections (for example, after filtering
   out all presentations)

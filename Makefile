@@ -2,9 +2,10 @@
 SRC = cv.md
 SCHOLARID = 96r1DYUAAAAJ
 PANFILTER_FLAGS =
+MARGIN = 1in
 
 ## command variables
-PANDOC = pandoc --smart --from=markdown+raw_tex
+PANDOC = pandoc --smart --from=markdown+raw_tex -V geometry:margin=$(MARGIN)
 PANDOC_TOFILTER = $(PANDOC) --to=json
 PANDOC_FINAL = $(PANDOC) --standalone --smart
 PANDOC_DOCX = $(PANDOC_FINAL) --reference-docx=reference.docx
