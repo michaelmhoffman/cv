@@ -14,14 +14,20 @@ ORCID [0000-0002-4517-1562](http://orcid.org/0000-0002-4517-1562)
 ## Current positions
 {% endif %}
 
-**Scientist**{% if compact %}, {% else %}\
-{% endif %}Princess Margaret Cancer Centre, Toronto, ON, 2013--present.
+{% if compact %}
+{% set fieldsep %}, {% endset %}
+{% set recordsep %}\{% endset %}
+{% else %}
+{% set fieldsep %}\
+{% endset %}
+{% set recordsep %}{% endset %}
+{% endif %}
 
-**Assistant Professor**\
-Department of Medical Biophysics, University of Toronto, Toronto, ON, 2014--present.\
+**Scientist**{{ fieldsep }}Princess Margaret Cancer Centre, Toronto, ON, 2013--present.{{ recordsep }}
+
+**Assistant Professor**{{ fieldsep }}Dep{% if compact %}ts{% else %}artment{% endif %} of Medical Biophysics{% if compact %} & Computer Science{% endif %}, University of Toronto, Toronto, ON, 2014--present.{% if not compact %}\
 Department of Computer Science (status-only), University of Toronto, Toronto, ON, 2014--present.
 
-{% if not compact %}
 **Associate Member, Graduate Faculty**\
 School of Graduate Studies, University of Toronto, Toronto, ON, 2014--present.
 
@@ -31,31 +37,37 @@ Collaborative Graduate Program in Genome Biology and Bioinformatics, University 
 
 ## Education
 
-**Senior Fellow**\
-University of Washington, Seattle, WA, 2008--2013.
+**Senior Fellow**{{ fieldsep }}
+Dep{% if not compact %}artmen{% endif %}t of Genome Sciences, University of Washington, Seattle, WA, 2008--2013.{{ recordsep }}
+{% if not compact %}
 
 * Mentor: Dr. William Stafford Noble, Professor
 * National Human Genome Research Institute K99/R00 Pathway to Independence Award
 
 \vspace{3ex}
-
-**Doctor of Philosophy, Bioinformatics**\
-University of Cambridge (Trinity College), Cambridge, UK, 2003--2008.
+{% endif %}
+**Doctor of Philosophy, Bioinformatics**{{ fieldsep }}
+University of Cambridge (Trinity College), Cambridge, UK, 2003--2008.{{ recordsep }}
+{% if not compact %}
 
 * Adviser: Dr. Ewan Birney, Director, European Bioinformatics Institute
 * Marshall Scholar
 * National Science Foundation Graduate Research Fellow
 
 \vspace{3ex}
-
+{% endif %}{% if compact %}
+**Bachelor of Science, Biochemistry** & **Bachelor of Arts, Plan II Honors**,
+{% else %}
 **Bachelor of Science, Biochemistry, with Highest Honors, Special Honors**\
 **Bachelor of Arts, Plan II Honors Liberal Arts, with Highest Honors**\
-The University of Texas at Austin, Austin, TX, 1998--2003.
+{% endif %}University of Texas at Austin, Austin, TX, 1998--2003.
 
+{% if not compact %}
 * Adviser: Dr. Andrew D. Ellington, Professor
 * College of Natural Sciences Commencement Speaker, Dean's Honored Graduate
 * College of Liberal Arts Dean's Distinguished Graduate
 * University Honors
+{% endif %}
 
 ## Publications
 
