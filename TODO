@@ -2,7 +2,8 @@ Style:
 - add columns for part right under Michael M. Hoffman
 http://pandoc.org/README.html#tables
 
-
+Content:
+- add ORCIDs for all trainees
 
 Programmatic:
 
@@ -10,5 +11,4 @@ Programmatic:
 - panfilter collapse any empty sections (for example, after filtering
   out all presentations)
 - BibTeX bibliography
-- include links to papers
 - make the Google Scholar parsing a separate script because it is likely to break
