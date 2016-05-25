@@ -2,6 +2,8 @@
 
 # Michael M. Hoffman
 
+{% set compact = compact|default(false) %}
+{% if not compact %}
 101 College St TMDT 11-311\
 Toronto, ON M5G 1L7
 
@@ -10,19 +12,22 @@ E-mail michael.hoffman@utoronto.ca\
 ORCID [0000-0002-4517-1562](http://orcid.org/0000-0002-4517-1562)
 
 ## Current positions
+{% endif %}
 
-**Scientist**\
-Princess Margaret Cancer Centre, Toronto, ON, 2013--present.
+**Scientist**{% if compact %}, {% else %}\
+{% endif %}Princess Margaret Cancer Centre, Toronto, ON, 2013--present.
 
 **Assistant Professor**\
 Department of Medical Biophysics, University of Toronto, Toronto, ON, 2014--present.\
 Department of Computer Science (status-only), University of Toronto, Toronto, ON, 2014--present.
 
+{% if not compact %}
 **Associate Member, Graduate Faculty**\
 School of Graduate Studies, University of Toronto, Toronto, ON, 2014--present.
 
 **Member**\
 Collaborative Graduate Program in Genome Biology and Bioinformatics, University of Toronto, Toronto, ON, 2016--present.
+{% endif %}
 
 ## Education
 

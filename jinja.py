@@ -23,6 +23,9 @@ def parse_variable_specs(specs):
 
     for spec in specs:
         key, _, value = spec.partition("=")
+        if not value:
+            value = True
+
         res[key] = value
 
     return res

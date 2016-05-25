@@ -5,11 +5,14 @@ PANFILTER_FLAGS =
 MARGIN = 1in
 
 ## command variables
+JINJA_FLAGS_PRIVATE = --search-dir=../cv-private
+JINJA_FLAGS = $(JINJA_FLAGS_PRIVATE)
+
 PANDOC = pandoc --smart --from=markdown+raw_tex -V geometry:margin=$(MARGIN)
 PANDOC_TOFILTER = $(PANDOC) --to=json
 PANDOC_FINAL = $(PANDOC) --standalone --smart
 PANDOC_DOCX = $(PANDOC_FINAL) --reference-docx=reference.docx
-PANDOC_TEX = $(PANDOC_FINAL) --variable=geometry=margin=1in --variable=mainfont="TeX Gyre Heros" --variable=fontsize=12pt --include-in-header=preamble.tex --latex-engine=xelatex --to=latex
+PANDOC_TEX = $(PANDOC_FINAL) --variable=geometry=margin=$(MARGIN) --variable=mainfont="TeX Gyre Heros" --variable=fontsize=12pt --include-in-header=preamble.tex --latex-engine=xelatex --to=latex
 
 PANFILTER = ./panfilter.py $(PANFILTER_FLAGS)
 
@@ -42,7 +45,7 @@ clean: mostlyclean
 	$(PANDOC) $< -o $@
 
 cv-%.md : cv.md.jinja
-	./jinja.py --search-dir=../cv-private $< $@
+	./jinja.py $(JINJA_FLAGS) $< $@
 
 # using a pipeline because using --filter, a Python filter, and Cygwin python doesn't seem to work
 cv-%.docx: cv-%.md reference.docx google-scholar.html %.yaml
@@ -59,8 +62,12 @@ cv-%.tex : cv-%.md preamble.tex google-scholar.html %.yaml
 
 ## explicit rules
 
-cv-web.md : cv.md.jinja
-	./jinja.py $< $@
+# scn: Stem Cell Network
+cv-scn.md : JINJA_FLAGS = $(JINJA_FLAGS_PRIVATE) --set compact
+cv-scn.tex : MARGIN = 0.5in
+
+# web: default public web view
+cv-web.md : JINJA_FLAGS =
 
 google-scholar.html: cookies.txt
 	wget --load-cookies=$< -O $@ $(SCHOLARURL)
