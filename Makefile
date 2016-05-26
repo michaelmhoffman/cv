@@ -2,17 +2,18 @@
 SRC = cv.md
 SCHOLARID = 96r1DYUAAAAJ
 PANFILTER_FLAGS =
-MARGIN = 1in
+HMARGIN = 1in
+VMARGIN = 1in
 
 ## command variables
 JINJA_FLAGS_PRIVATE = --search-dir=../cv-private
 JINJA_FLAGS = $(JINJA_FLAGS_PRIVATE)
 
-PANDOC = pandoc --smart --from=markdown+raw_tex -V geometry:margin=$(MARGIN)
+PANDOC = pandoc --smart --from=markdown+raw_tex
 PANDOC_TOFILTER = $(PANDOC) --to=json
 PANDOC_FINAL = $(PANDOC) --standalone --smart
 PANDOC_DOCX = $(PANDOC_FINAL) --reference-docx=reference.docx
-PANDOC_TEX = $(PANDOC_FINAL) --variable=geometry=margin=$(MARGIN) --variable=mainfont="TeX Gyre Heros" --variable=fontsize=12pt --include-in-header=preamble.tex --latex-engine=xelatex --to=latex
+PANDOC_TEX = $(PANDOC_FINAL) --variable=geometry:hmargin=$(HMARGIN),vmargin=$(VMARGIN) --variable=mainfont:"TeX Gyre Heros" --variable=fontsize:12pt --include-in-header=preamble.tex --latex-engine=xelatex --to=latex
 
 PANFILTER = ./panfilter.py $(PANFILTER_FLAGS)
 
@@ -64,7 +65,8 @@ cv-%.tex : cv-%.md preamble.tex google-scholar.html %.yaml
 
 # scn: Stem Cell Network
 cv-scn.md : JINJA_FLAGS = $(JINJA_FLAGS_PRIVATE) --set compact
-cv-scn.tex : MARGIN = 0.5in
+cv-scn.tex : HMARGIN = 0.5in
+cv-scn.tex : VMARGIN = \{0.5in,0.75in\}
 
 # web: default public web view
 cv-web.md : JINJA_FLAGS =
