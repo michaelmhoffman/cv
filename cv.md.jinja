@@ -71,7 +71,9 @@ University of Cambridge (Trinity College), Cambridge, UK, 2003--2008.{{ recordse
 
 ## Publications
 
+{% if not compact %}
 ### Publications: journal
+{% endif %}
 
 {% macro shorten_authors() -%}
 {% if compact %}*({{ caller().split(",")|length }} authors)*{% else %}{{ caller() }}{% endif %}
@@ -192,7 +194,9 @@ J1.\ **Hoffman MM**, Khrapov MA, Cox JC, Yao J, Tong L, Ellington AD. ["AANT: th
 {# XXX: Underline indicates Michael Hoffman is an author or a consortium member. #}
 {% endif %}
 
+{% if not compact %}
 ### Publications: conference proceedings
+{% endif %}
 
 \beginenumerate
 
@@ -200,11 +204,17 @@ C1.\ Libbrecht MW, **Hoffman MM**, Noble WS, Bilmes JA. ["Entropic graph-based p
 
 \endenumerate
 
+{% if not compact %}
 ### Publications: submitted
+{% endif %}
 
 \beginenumerate
 
-S1.\ **Viner C**, Johnson J, Walker N, Shi H, Sjöberg M, Adams DJ, Ferguson-Smith AC, Bailey TL, and **Hoffman MM**. ["Modeling methyl-sensitive transcription factor motifs with an expanded epigenetic alphabet."](http://doi.org/10.1101/043794). Preprint: <http://doi.org/10.1101/043794>.
+S1.\ **Viner C**,
+{% call shorten_authors() %}
+Johnson J, Walker N, Shi H, Sjöberg M, Adams DJ, Ferguson-Smith AC, Bailey TL
+{% endcall %},
+**Hoffman MM**. ["Modeling methyl-sensitive transcription factor motifs with an expanded epigenetic alphabet."](http://doi.org/10.1101/043794) Preprint: <http://doi.org/10.1101/043794>
 
 \endenumerate
 

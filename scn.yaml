@@ -3,8 +3,8 @@
 - id: education
 - id: publications
 - id: publications-journal
-# - id: publications-conference-proceedings
-# - id: publications-submitted
+- id: publications-conference-proceedings
+- id: publications-submitted
 # - id: publications-theses
 # - id: intellectual-property
 # - id: recognitions

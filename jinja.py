@@ -9,6 +9,7 @@ __version__ = "$Revision: 871 $"
 
 # Copyright 2011, 2015, 2016 Michael M. Hoffman <mmh1@uw.edu>
 
+from calendar import month_abbr, month_name
 import codecs
 import sys
 
@@ -30,6 +31,8 @@ def parse_variable_specs(specs):
 
     return res
 
+
+def replace_dates()
 
 def jinja(infile, outfilename, variable_specs, search_dirnames):
     env = Environment(loader=FileSystemLoader(search_dirnames),
