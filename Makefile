@@ -64,7 +64,7 @@ cv-%.tex : cv-%.md preamble.tex google-scholar.html %.yaml
 ## explicit rules
 
 # scn: Stem Cell Network
-cv-scn.md : JINJA_FLAGS = $(JINJA_FLAGS_PRIVATE) --set compact
+cv-scn.md : JINJA_FLAGS = $(JINJA_FLAGS_PRIVATE) --abbr-months --set compact
 cv-scn.tex : HMARGIN = 0.5in
 cv-scn.tex : VMARGIN = \{0.5in,0.75in\}
 

@@ -16,6 +16,8 @@ import sys
 from jinja2 import Environment, FileSystemLoader
 
 
+MONTH_ABBRS = dict(zip(month_name[1:], month_abbr[1:]))
+
 def parse_variable_specs(specs):
     res = {}
 
@@ -32,17 +34,26 @@ def parse_variable_specs(specs):
     return res
 
 
-def replace_dates()
+def replace_dates(text):
+    for name, abbr in MONTH_ABBRS.iteritems():
+        text = text.replace(name, abbr)
 
-def jinja(infile, outfilename, variable_specs, search_dirnames):
+    return text
+
+
+def jinja(infile, outfilename, variable_specs, search_dirnames, abbr_months):
     env = Environment(loader=FileSystemLoader(search_dirnames),
                       extensions=['jinja2.ext.do'])
     template = env.get_template(infile)
 
     variables = parse_variable_specs(variable_specs)
 
+    text = template.render(variables)
+    if abbr_months:
+        text = replace_dates(text)
+
     with codecs.open(outfilename, "w", "utf-8") as outfile:
-        print(template.render(variables), file=outfile)
+        print(text, file=outfile)
 
 
 def parse_args(args):
@@ -62,6 +73,9 @@ def parse_args(args):
     parser.add_argument("--search-dir", action="append", default=["."],
                         help="prepend directory to template search path",)
 
+    parser.add_argument("--abbr-months", action="store_true",
+                        help="abbreviate months")
+
     version = "%(prog)s {}".format(__version__)
     parser.add_argument("--version", action="version", version=version)
 
@@ -72,7 +86,8 @@ def main(argv=sys.argv[1:]):
     args = parse_args(argv)
 
     search_dirnames = reversed(args.search_dir)
-    return jinja(args.infile, args.outfile, args.set, search_dirnames)
+    return jinja(args.infile, args.outfile, args.set, search_dirnames,
+                 args.abbr_months)
 
 if __name__ == "__main__":
     sys.exit(main())

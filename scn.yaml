@@ -7,7 +7,7 @@
 - id: publications-submitted
 # - id: publications-theses
 # - id: intellectual-property
-# - id: recognitions
+- id: recognitions
 # - id: recognitions-other-scholarships-and-awards
 # - id: recognitions-honors
 - id: funding
@@ -33,9 +33,9 @@
 #- id: professional-activities-student-committees-and-examinations
 #- id: professional-activities-memberships
 #- id: prior-positions
-#- id: trainees-and-staff-supervised
-#- id: trainees-and-staff-supervised-current
-#- id: trainees-and-staff-supervised-past
+- id: trainees-and-staff-supervised
+- id: trainees-and-staff-supervised-current
+- id: trainees-and-staff-supervised-past
 #- id: media-coverage
 #- id: media-coverage-interviews
 #- id: media-coverage-meeting-reports
