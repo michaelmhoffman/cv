@@ -20,9 +20,10 @@ pip install PyYAML beautifulsoup4 jinja2
 
 ## License
 
-License for software and config files: GNU General Public License v2.
+License for software, config files, and Jinja directives in
+`cv.md.jinja`: GNU General Public License v2.
 
-No license is provided for the contents of Michael Hoffman's CV
+No license is provided for the text contents of Michael Hoffman's CV
 (`cv.md.jinja`). Make your own!
 
 ## Support
