@@ -25,10 +25,10 @@ ORCID [0000-0002-4517-1562](http://orcid.org/0000-0002-4517-1562)
 {% set dept %}Department{% endset %}
 {% endif %}
 
-**Scientist**{{ fieldsep }}Princess Margaret Cancer Centre, Toronto, ON, 2013--present.{{ recordsep }}
+**Scientist**{{ fieldsep }}Princess Margaret Cancer Centre, Toronto, ON, {# 1 October #}2013--present.{{ recordsep }}
 
 **Assistant Professor**{{ fieldsep }}Dep{% if compact %}ts{% else %}artment{% endif %} of Medical Biophysics{% if compact %} & Computer Science{% endif %}, University of Toronto, Toronto, ON, 2014--present.{% if not compact %}\
-Department of Computer Science (status-only), University of Toronto, Toronto, ON, 2014--present.
+Department of Computer Science (status-only), University of Toronto, Toronto, ON, {# 1 April/1 September #}2014--present.
 
 **Associate Member, Graduate Faculty**\
 School of Graduate Studies, University of Toronto, Toronto, ON, 2014--present.
@@ -262,7 +262,7 @@ D1.\ **Hoffman MM**. [*Quantifying evolution and natural selection in vertebrate
 
 ## Funding
 
-### Funding: principal investigator
+### Funding: lead principal investigator
 
 \beginenumerate
 
@@ -284,13 +284,15 @@ F1.\ Graduate research fellowship. National Science Foundation. 5 years, direct 
 
 \endenumerate
 
+{% including 'funding-co-pi.md' %}
+
 ### Funding: co-investigator
 
 \beginenumerate
 
-F6.\ Cancer Stem Cell Program. Ontario Institute for Cancer Research. 2 years, total costs $5,436,364. April 2015--March 2017. Principal Investigator: John Dick. 
+F6.\ Cancer Stem Cell Program. Ontario Institute for Cancer Research. 2 years, total costs $5,436,364. April 2015--March 2017. Principal investigator: John Dick. 
 
-F5.\ "Sequence variation and DNA methylation patterning." Natural Sciences and Engineering Research Council of Canada. Discovery Grant. Awarded: 5 years, direct costs $160,000. January 2015--January 2017. Principal Investigator: Carl P.\ Ernst.
+F5.\ "Sequence variation and DNA methylation patterning." Natural Sciences and Engineering Research Council of Canada. Discovery Grant. Awarded: 5 years, direct costs $160,000. January 2015--January 2017. Principal investigator: Carl P.\ Ernst.
 
 \endenumerate
 
@@ -496,7 +498,7 @@ F5.\ "Sequence variation and DNA methylation patterning." Natural Sciences and E
 * **Examiner** for MSc students: {{ dept }} of Molecular Genetics, University of Toronto (Lina Antounians).
 * **Reviewer** for MSc theses: {{ dept }} of Computer Science, University of Toronto (Aryan Arbabi).
 * **Judge**, Biohackathon, Internationally Genetically Engineered Machine (iGEM) Club, University of Toronto, 2016.
-* **Judge**, Summer Student Poster Day, {{ dept }} of Medical Biophysics, University of Toronto, 2014--2015.
+* **Judge**, Summer Student Poster Day, {{ dept }} of Medical Biophysics, University of Toronto, 2014--2016.
 * **Mentor**, National Resource for Network Biology, Google Summer of Code, 2014.
 
 ### Professional activities: memberships
