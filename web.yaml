@@ -11,7 +11,8 @@
 - id: recognitions-other-scholarships-and-awards
 - id: recognitions-honors
 - id: funding
-- id: funding-principal-investigator
+- id: funding-lead-principal-investigator
+- id: funding-co-principal-investigator
 - id: funding-co-investigator
 - id: presentations
 - id: presentations-invitedkeynote
