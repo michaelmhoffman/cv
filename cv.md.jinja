@@ -76,13 +76,11 @@ University of Cambridge (Trinity College), Cambridge, UK, 2003--2008.{{ recordse
 {% if not compact %}
 ### Publications: journal
 {% endif %}
-
 {% macro shorten_authors() -%}
 {% if compact %}*({{ caller().split(",")|length }} authors)*{% else %}{{ caller() }}{% endif %}
 {%- endmacro %}
 
 \beginenumerate
-
 J18.\ Lundberg SM, Tu WB, Raught B, Penn LZ, **Hoffman MM**, Lee SI. ["ChromNet: learning the human chromatin network from all ENCODE ChIP-seq data."](http://genomebiology.biomedcentral.com/articles/10.1186/s13059-016-0925-0) *Genome Biol*. 2016; 17:82.
 
 J17.\ Franke B, Plante JF, Roscher R, Lee A, Smyth C, Hatefi A, Chen F, Gil E, Schwing A, Selvitella A, **Hoffman MM**, Grosse R, Hendricks D, Reid N. ["Statistical inference, learning and models in big data."](http://onlinelibrary.wiley.com/enhanced/doi/10.1111/insr.12176) *Int Stat Rev*. 2016. In press.
@@ -173,7 +171,6 @@ J1.\ **Hoffman MM**, Khrapov MA, Cox JC, Yao J, Tong L, Ellington AD. ["AANT: th
 {% if not compact %}
 * Cited %CITES:u5HHmVD_uO8C times.
 {% endif %}
-
 \endenumerate
 
 {% if not compact %}
@@ -189,9 +186,7 @@ J1.\ **Hoffman MM**, Khrapov MA, Cox JC, Yao J, Tong L, Ellington AD. ["AANT: th
 {% endif %}
 
 \beginenumerate
-
 C1.\ Libbrecht MW, **Hoffman MM**, Noble WS, Bilmes JA. ["Entropic graph-based posterior regularization."](http://jmlr.org/proceedings/papers/v37/libbrecht15.html) International Conference on Machine Learning. 2015. Lille, France.
-
 \endenumerate
 
 {% if not compact %}
@@ -199,7 +194,6 @@ C1.\ Libbrecht MW, **Hoffman MM**, Noble WS, Bilmes JA. ["Entropic graph-based p
 {% endif %}
 
 \beginenumerate
-
 S4.\ **Sood AJ**\*, **Viner C**\*, **Hoffman MM**. "DNAmod: the DNA modification database." 2016.
 
 S3.\ Carpenter A, Birney E, MacManes M, **Hoffman MM**. "Scientist-centered design: a checklist for improving grant systems and increasing scientific productivity." 2016.
@@ -209,15 +203,12 @@ S2.\ **Karimzadeh M**, **Hoffman MM**. ["Creating great documentation for bioinf
 S1.\ **Viner C**,
 {% call shorten_authors() %}Johnson J, Walker N, Shi H, Sjöberg M, Adams DJ, Ferguson-Smith AC, Bailey TL{% endcall %},
 **Hoffman MM**. ["Modeling methyl-sensitive transcription factor motifs with an expanded epigenetic alphabet."](http://doi.org/10.1101/043794) 2016. Preprint: <http://doi.org/10.1101/043794>
-
 \endenumerate
 
 ### Publications: theses
 
 \beginenumerate
-
 D1.\ **Hoffman MM**. [*Quantifying evolution and natural selection in vertebrate noncoding sequence*.](https://www.repository.cam.ac.uk/handle/1810/245947) PhD thesis, University of Cambridge. 2008 Jul 8.
-
 \endenumerate
 
 ## Intellectual property
@@ -267,7 +258,6 @@ D1.\ **Hoffman MM**. [*Quantifying evolution and natural selection in vertebrate
 ### Funding: lead principal investigator
 
 \beginenumerate
-
 F11.\ "Comprehending epigenomic changes in gene dysregulation and cancer using machine learning." Canadian Institutes of Health Research New Investigator Salary Award. 5 years, direct costs $300,000. March 2017--February 2022.
 
 F10.\ "The expanded epigenetic alphabet: transcription factor binding in methylated DNA and beyond."
@@ -285,27 +275,22 @@ F7.\ "Transcription factor recognition models with modified nucleobases." Natura
 F2.\ "Pattern discovery for comparative epigenomics." National Institutes of Health/National Human Genome Research Institute. Pathway to Independence Award (Parent K99/R00). Awarded: 5 years, total costs $966,069. September 2011--October 2013. 
 
 F1.\ Graduate research fellowship. National Science Foundation. 5 years, direct costs $142,872. September 2003--August 2008.
-
 \endenumerate
 
 ### Funding: co-principal investigator
 
 \beginenumerate
-
 F13.\ Deciphering and manipulating cell-specific regulatory network to produce therapeutic designer cells. Medicine by Design, University of Toronto. Team Project Award. 3 years, direct costs $314,309. September 2016--August 2019. Lead principal investigator: Jason Fish. {# C1TPA-2016-04 #}
 
 F12.\ Regulatory network control of neural stem cells for endogenous repair. Medicine by Design, University of Toronto. Team Project Award. 3 years, direct costs $3,053,789. September 2016--August 2019. Lead principal investigator: Gary Bader. {# C1TPA-2016-01 #}
-
 \endenumerate
 
 ### Funding: co-investigator
 
 \beginenumerate
-
 F6.\ Cancer Stem Cell Program. Ontario Institute for Cancer Research. 2 years, total costs $5,436,364. April 2015--March 2017. Lead principal investigator: John E.\ Dick. 
 
 F5.\ "Sequence variation and DNA methylation patterning." Natural Sciences and Engineering Research Council of Canada. Discovery Grant. Awarded: 5 years, direct costs $160,000. January 2015--January 2017. Lead principal investigator: Carl P.\ Ernst.
-
 \endenumerate
 
 ## Presentations
@@ -555,7 +540,6 @@ Plant Biochemistry Research Training Center, Washington State University, 2000.
 ### Trainees and staff supervised: current
 
 \beginenumerate
-
 T17.\ **Denisko, Danielle**. BSc Student, {% if not compact %}Summer Student Program,{% endif %} {{dept}} of Medical Biophysics, University of Toronto, 2016--present.
 
 T16.\ **Chan, Rachel**. BASc Student, Science Co-op Program, University of British Columbia, 2016--present.
@@ -571,13 +555,11 @@ T10.\ **Chicco, Davide**. Postdoctoral Fellow, University Health Network, 2014--
 T9.\ **Viner, Coby**. MSc Student, {{ dept }} of Computer Science, University of Toronto, 2014--present.
 
 T8.\ **Roberts, Eric**. Bioinformatics Programmer, University Health Network, 2014--present.
-
 \endenumerate
 
 ### Trainees and staff supervised: past
 
 \beginenumerate
-
 {% macro present_position() -%}
 {% if not compact %}\
 Present position: {{ caller() }}
@@ -612,7 +594,6 @@ T2.\ **Lemus Vergara, Tzitziki J.** PhD Student, {{ dept }} of Genome Sciences, 
 
 T1.\ **Buske, Orion J.** BS {% if not compact %}(Honors){% endif %} Student, {{ dept }} of Computer Science and Engineering, University of Washington, 2009--2010.
 {% call present_position() %}PhD Student, {{ dept }} of Computer Science, University of Toronto, Toronto, ON, Canada.{% endcall %}
-
 \endenumerate
 
 ## Media coverage
