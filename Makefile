@@ -9,11 +9,19 @@ VMARGIN = 1in
 JINJA_FLAGS_PRIVATE = --search-dir=../cv-private
 JINJA_FLAGS = $(JINJA_FLAGS_PRIVATE)
 
-PANDOC = pandoc --smart --from=markdown+raw_tex
-PANDOC_TOFILTER = $(PANDOC) --to=json
-PANDOC_FINAL = $(PANDOC) --standalone --smart
+PANDOC = pandoc
+PANDOC_TOJSON = $(PANDOC) --smart --from=markdown+raw_tex --to=json
+PANDOC_FINAL = $(PANDOC) --standalone --smart --variable=lang:en
 PANDOC_DOCX = $(PANDOC_FINAL) --reference-docx=reference.docx
-PANDOC_TEX = $(PANDOC_FINAL) --variable=geometry:hmargin=$(HMARGIN),vmargin=$(VMARGIN) --variable=mainfont:"TeX Gyre Heros" --variable=fontsize:12pt --variable=subparagraph --include-in-header=preamble.tex --latex-engine=xelatex --to=latex
+PANDOC_TEX = $(PANDOC_FINAL) \
+	--variable=geometry:hmargin=$(HMARGIN),vmargin=$(VMARGIN) \
+	--variable=mainfont:"TeX Gyre Heros" \
+	--variable=fontsize:12pt \
+	--variable=subparagraph \
+	--variable=colorlinks \
+	--include-in-header=preamble.tex \
+	--latex-engine=xelatex \
+	--to=latex
 
 PANFILTER = ./panfilter.py $(PANFILTER_FLAGS)
 
@@ -43,20 +51,20 @@ clean: mostlyclean
 ## pattern rules
 
 %.json : %.md
-	$(PANDOC) $< -o $@
+	$(PANDOC_TOJSON) $< -o $@
 
 cv-%.md : cv.md.jinja
 	./jinja.py $(JINJA_FLAGS) $< $@
 
 # using a pipeline because using --filter, a Python filter, and Cygwin python doesn't seem to work
 cv-%.docx: cv-%.md reference.docx google-scholar.html %.yaml
-	$(PANDOC_TOFILTER) $< | $(PANFILTER) --config=$(*F).yaml | $(PANDOC_DOCX) --from=json -o $@
+	$(PANDOC_TOJSON) $< | $(PANFILTER) --config=$(*F).yaml | $(PANDOC_DOCX) --from=json -o $@
 
 cv-%.html : cv-%.md google-scholar.html %.yaml
-	$(PANDOC_TOFILTER) $< | $(PANFILTER) --config=$(*F).yaml | $(PANDOC_FINAL) --toc --from=json -o $@
+	$(PANDOC_TOJSON) $< | $(PANFILTER) --config=$(*F).yaml | $(PANDOC_FINAL) --toc --from=json -o $@
 
 cv-%.tex : cv-%.md preamble.tex google-scholar.html %.yaml
-	$(PANDOC_TOFILTER) $< | $(PANFILTER) --config=$(*F).yaml | $(PANDOC_TEX) --from=json | $(TEXFILTER) > $@
+	$(PANDOC_TOJSON) $< | $(PANFILTER) --config=$(*F).yaml | $(PANDOC_TEX) --from=json | $(TEXFILTER) > $@
 
 %.pdf : %.tex
 	xelatex $<
