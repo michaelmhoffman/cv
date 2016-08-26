@@ -5,13 +5,16 @@
 - id: publications-journal
   name: "Publications: journal, peer-reviewed"
   exclude:
+    - J17
     - J16
     - J14
   year-min: -5
 - id: publications-conference-proceedings
   year-min: -5
 - id: funding
-- id: funding-principal-investigator
+- id: funding-lead-principal-investigator
+  year-min: -5
+- id: funding-co-principal-investigator
   year-min: -5
 - id: funding-co-investigator
   year-min: -5
