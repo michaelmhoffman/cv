@@ -13,7 +13,7 @@ PANDOC = pandoc --smart --from=markdown+raw_tex
 PANDOC_TOFILTER = $(PANDOC) --to=json
 PANDOC_FINAL = $(PANDOC) --standalone --smart
 PANDOC_DOCX = $(PANDOC_FINAL) --reference-docx=reference.docx
-PANDOC_TEX = $(PANDOC_FINAL) --variable=geometry:hmargin=$(HMARGIN),vmargin=$(VMARGIN) --variable=mainfont:"TeX Gyre Heros" --variable=fontsize:12pt --include-in-header=preamble.tex --latex-engine=xelatex --to=latex
+PANDOC_TEX = $(PANDOC_FINAL) --variable=geometry:hmargin=$(HMARGIN),vmargin=$(VMARGIN) --variable=mainfont:"TeX Gyre Heros" --variable=fontsize:12pt --variable=subparagraph --include-in-header=preamble.tex --latex-engine=xelatex --to=latex
 
 PANFILTER = ./panfilter.py $(PANFILTER_FLAGS)
 
