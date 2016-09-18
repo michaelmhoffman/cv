@@ -540,7 +540,9 @@ Plant Biochemistry Research Training Center, Washington State University, 2000.
 
 \beginenumerate
 
-T18.\ **Bi, Haixin ("Sarah")**. Post-BSc Summer Student, Princess Margaret Cancer Centre, 2016--present.
+T20.\ **Hawley, James**. MSc Student, {{ dept }} of Medical Biophysics, University of Toronto, 2016--present.
+
+T19.\ **Nguyen, Francis**. MSc Student, {{ dept }} of Medical Biophysics, University of Toronto, 2016--present.
 
 T17.\ **Denisko, Danielle**. BSc Student, {% if not compact %}Summer Student Program,{% endif %} {{dept}} of Medical Biophysics, University of Toronto, 2016--present.
 
@@ -550,7 +552,7 @@ T15.\ **Mendez, Mickaël**. PhD Student, {{ dept }} of Computer Science, Univers
 
 T13.\ **Sood, Ankur Jai**. BESc (Honors) Student, {% if not compact %}Summer Student Program,{% endif %} {{ dept }} of Medical Biophysics, University of Toronto. 2015--present.
 
-T11.\ **Karimzadeh, Mehran R.** Research Assistant, University Health Network, 2015--present.
+T11.\ **Karimzadeh, Mehran R.** MSc Student, {{ dept }} of Medical Biophysics, University of Toronto, 2015--present.
 
 T10.\ **Chicco, Davide**. Postdoctoral Fellow, University Health Network, 2014--present.
 
@@ -569,6 +571,10 @@ T8.\ **Roberts, Eric**. Bioinformatics Programmer, University Health Network, 20
 Present position: {{ caller() }}
 {% endif %}
 {%- endmacro %}
+
+T18.\ **Bi, Haixin ("Sarah")**. Post-BSc Summer Student, Princess Margaret Cancer Centre, 2016.
+{% call present_position() %}PhD Student, Massachusetts Institute of Technology, Cambridge, MA, USA.{% endcall %}
+{# XXX: fill in program name #}
 
 T14.\ **Madani Tonekaboni, S.\ Ali**. PhD Student, {{ dept }} of Medical Biophysics, University of Toronto. 2015.
 {% call present_position() %}PhD Student, {{ dept }} of Medical Biophysics, University of Toronto, Toronto, ON, Canada.{% endcall %}
