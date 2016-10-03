@@ -1,5 +1,3 @@
-\setlength{\topskip}{0mm}
-
 # Michael M. Hoffman
 
 {% set compact = compact|default(false) %}
@@ -76,13 +74,11 @@ University of Cambridge (Trinity College), Cambridge, UK, 2003--2008.{{ recordse
 {% if not compact %}
 ### Publications: journal
 {% endif %}
-
 {% macro shorten_authors() -%}
 {% if compact %}*({{ caller().split(",")|length }} authors)*{% else %}{{ caller() }}{% endif %}
 {%- endmacro %}
 
 \beginenumerate
-
 J18.\ Lundberg SM, Tu WB, Raught B, Penn LZ, **Hoffman MM**, Lee SI. ["ChromNet: learning the human chromatin network from all ENCODE ChIP-seq data."](http://genomebiology.biomedcentral.com/articles/10.1186/s13059-016-0925-0) *Genome Biol*. 2016; 17:82.
 
 J17.\ Franke B, Plante JF, Roscher R, Lee A, Smyth C, Hatefi A, Chen F, Gil E, Schwing A, Selvitella A, **Hoffman MM**, Grosse R, Hendricks D, Reid N. ["Statistical inference, learning and models in big data."](http://onlinelibrary.wiley.com/enhanced/doi/10.1111/insr.12176) *Int Stat Rev*. 2016. In press.
@@ -173,12 +169,9 @@ J1.\ **Hoffman MM**, Khrapov MA, Cox JC, Yao J, Tong L, Ellington AD. ["AANT: th
 {% if not compact %}
 * Cited %CITES:u5HHmVD_uO8C times.
 {% endif %}
-
 \endenumerate
-
 {% if not compact %}
-\vspace{3ex}
-
+\vspace{2em}
 *Boldface indicates Michael Hoffman or one of his trainees is an author or a consortium member.*
 
 {# XXX: Underline indicates Michael Hoffman is an author or a consortium member. #}
@@ -189,9 +182,7 @@ J1.\ **Hoffman MM**, Khrapov MA, Cox JC, Yao J, Tong L, Ellington AD. ["AANT: th
 {% endif %}
 
 \beginenumerate
-
 C1.\ Libbrecht MW, **Hoffman MM**, Noble WS, Bilmes JA. ["Entropic graph-based posterior regularization."](http://jmlr.org/proceedings/papers/v37/libbrecht15.html) International Conference on Machine Learning. 2015. Lille, France.
-
 \endenumerate
 
 {% if not compact %}
@@ -199,23 +190,21 @@ C1.\ Libbrecht MW, **Hoffman MM**, Noble WS, Bilmes JA. ["Entropic graph-based p
 {% endif %}
 
 \beginenumerate
+S4.\ **Sood AJ**\*, **Viner C**\*, **Hoffman MM**. ["DNAmod: the DNA modification database."](http://doi.org/10.1101/071712) 2016. Preprint: <http://doi.org/10.1101/071712>
 
-S3.\ Carpenter A, Birney E, MacManes M, **Hoffman MM**. "Scientist-centered design: a checklist for improving grant systems and increasing scientific productivity."
+S3.\ Carpenter A, Birney E, MacManes M, **Hoffman MM**. "Scientist-centered design: a checklist for improving grant systems and increasing scientific productivity." 2016.
 
-S2.\ **Karimzadeh M**, **Hoffman MM**. ["Creating great documentation for bioinformatics software."](http://hdl.handle.net/1807/73111) Preprint: <http://hdl.handle.net/1807/73111>
+S2.\ **Karimzadeh M**, **Hoffman MM**. ["Creating great documentation for bioinformatics software."](http://hdl.handle.net/1807/73111) 2016. Preprint: <http://hdl.handle.net/1807/73111>
 
 S1.\ **Viner C**,
 {% call shorten_authors() %}Johnson J, Walker N, Shi H, Sjöberg M, Adams DJ, Ferguson-Smith AC, Bailey TL{% endcall %},
-**Hoffman MM**. ["Modeling methyl-sensitive transcription factor motifs with an expanded epigenetic alphabet."](http://doi.org/10.1101/043794) Preprint: <http://doi.org/10.1101/043794>
-
+**Hoffman MM**. ["Modeling methyl-sensitive transcription factor motifs with an expanded epigenetic alphabet."](http://doi.org/10.1101/043794) 2016. Preprint: <http://doi.org/10.1101/043794>
 \endenumerate
 
 ### Publications: theses
 
 \beginenumerate
-
 D1.\ **Hoffman MM**. [*Quantifying evolution and natural selection in vertebrate noncoding sequence*.](https://www.repository.cam.ac.uk/handle/1810/245947) PhD thesis, University of Cambridge. 2008 Jul 8.
-
 \endenumerate
 
 ## Intellectual property
@@ -232,7 +221,7 @@ D1.\ **Hoffman MM**. [*Quantifying evolution and natural selection in vertebrate
 {% endif %}
 
 * Canadian Institutes of Health Research New Investigator, 2017--2022
-{% include 'honors.md' %}
+* Ontario Early Researcher Award, 2016--2021.
 * Bioinformatics.ca Bioinformatics Expert, 2014.
 * *Genome Technology* Young Investigator, 2011.
 {% if compact %}
@@ -265,35 +254,83 @@ D1.\ **Hoffman MM**. [*Quantifying evolution and natural selection in vertebrate
 ### Funding: lead principal investigator
 
 \beginenumerate
+F11.\ "Comprehending epigenomic changes in gene dysregulation and cancer using machine learning."
+Canadian Institutes of Health Research New Investigator Salary Award.
+5 years, direct costs $300,000.
+March 2017--February 2022. {# 201512MSH-360970 #}
 
-F11.\ "Comprehending epigenomic changes in gene dysregulation and cancer using machine learning." Canadian Institutes of Health Research New Investigator Salary Award. 5 years, direct costs $300,000. March 2017--February 2022.
+F10.\ "The expanded epigenetic alphabet: transcription factor binding in methylated DNA and beyond."
+Ontario Ministry of Research and Innovation.
+{% if not compact %}Ontario Research Fund:{% endif %}
+Early Researcher Award.
+5 years, total costs $140,000.
+April 2016--March 2021. {# ER15-11-233 #}
 
-{% include 'funding.md' %}
+F9.\ "Epigenetic DNA modifications as drivers of leukemia gene expression programs."
+Canadian Cancer Society Research Institute.
+Innovation Grant.
+3 years, direct costs $200,000.
+August 2015--July 2018. {# 703827 #}
 
-F9.\ "Epigenetic DNA modifications as drivers of leukemia gene expression programs." Canadian Cancer Society Research Institute. Innovation Grant. 3 years, direct costs $200,000. August 2015--July 2018. 
+F8.\ "Interpreting epigenetic DNA modifications in glioblastoma stem cells."
+McLaughlin Centre.
+Accelerator Grant in Genomic Medicine and Health Informatics.
+1 year, direct costs $65,000.
+May 2015--April 2016. {# MC-2015-06 #}
 
-F8.\ "Interpreting epigenetic DNA modifications in glioblastoma stem cells." McLaughlin Centre. Accelerator Grant in Genomic Medicine and Health Informatics. 1 year, direct costs $65,000. May 2015--April 2016.
-
-F7.\ "Transcription factor recognition models with modified nucleobases." Natural Sciences and Engineering Research Council of Canada. Discovery Grant. 5 years, direct costs $175,000. April 2015--March 2021.
+F7.\ "Transcription factor recognition models with modified nucleobases."
+Natural Sciences and Engineering Research Council of Canada.
+Discovery Grant.
+5 years, direct costs $175,000.
+April 2015--March 2021. {# RGPIN-2015-3948 #}
 
 {% include 'startup.md' %}
 
-F2.\ "Pattern discovery for comparative epigenomics." National Institutes of Health/National Human Genome Research Institute. Pathway to Independence Award (Parent K99/R00). Awarded: 5 years, total costs $966,069. September 2011--October 2013. 
+F2.\ "Pattern discovery for comparative epigenomics."
+National Institutes of Health/National Human Genome Research Institute.
+Pathway to Independence Award (Parent K99/R00).
+Awarded: 5 years, total costs $966,069.
+September 2011--October 2013. 
 
-F1.\ Graduate research fellowship. National Science Foundation. 5 years, direct costs $142,872. September 2003--August 2008.
-
+F1.\ Graduate research fellowship.
+National Science Foundation.
+5 years, direct costs $142,872.
+September 2003--August 2008.
 \endenumerate
 
-{% include 'funding-co-pi.md' %}
+### Funding: co-principal investigator
+
+\beginenumerate
+F13.\ Deciphering and manipulating cell-specific regulatory network to produce therapeutic designer cells.
+Medicine by Design, University of Toronto.
+Team Project Award.
+3 years, direct costs $314,309.
+September 2016--August 2019.
+Lead principal investigator: Jason Fish. {# C1TPA-2016-04 #}
+
+F12.\ Regulatory network control of neural stem cells for endogenous repair.
+Medicine by Design, University of Toronto.
+Team Project Award.
+3 years, direct costs $3,053,789.
+September 2016--August 2019.
+Lead principal investigator: Gary Bader. {# C1TPA-2016-01 #}
+\endenumerate
 
 ### Funding: co-investigator
 
 \beginenumerate
+F6.\ "Cancer Stem Cell Program."
+Ontario Institute for Cancer Research.
+2 years, total costs $5,436,364.
+April 2015--March 2017.
+Lead principal investigator: John E.\ Dick.  {# CSC-PRAR-UHN #}
 
-F6.\ Cancer Stem Cell Program. Ontario Institute for Cancer Research. 2 years, total costs $5,436,364. April 2015--March 2017. Principal investigator: John Dick. 
-
-F5.\ "Sequence variation and DNA methylation patterning." Natural Sciences and Engineering Research Council of Canada. Discovery Grant. Awarded: 5 years, direct costs $160,000. January 2015--January 2017. Principal investigator: Carl P.\ Ernst.
-
+F5.\ "Sequence variation and DNA methylation patterning."
+Natural Sciences and Engineering Research Council of Canada.
+Discovery Grant.
+Awarded: 5 years, direct costs $160,000.
+January 2015--January 2017.
+Lead principal investigator: Carl P.\ Ernst. {# RGPIN-2013-435512 #}
 \endenumerate
 
 ## Presentations
@@ -311,14 +348,15 @@ F5.\ "Sequence variation and DNA methylation patterning." Natural Sciences and E
 
 {{ p('"Modeling methyl-sensitive transcription factor motifs with an expanded epigenetic alphabet." Institute for Operations Research and the Management Sciences (INFORMS) Annual Meeting. Nashville, TN. 13--16 November 2016.', 700) -}}
 {{ p('Cold Spring Harbor Laboratory Meeting on Biological Data Sciences. Cold Spring Harbor, NY. 26--29 October 2016.', 700) -}}
+{{ p('"Semi-automated genome annotation and an expanded epigenetic alphabet." Wellcome Trust Sanger Institute. Hinxton, England. 19 September 2016.', 700) -}}
 {{ p('"Semi-automated human genome annotation using chromatin data." Intelligent Systems for Molecular Biology (ISMB). Orlando, FL. 12 July 2016.', 800) -}}
 {{ p('"Modeling methyl-sensitive transcription factor motifs with an expanded epigenetic alphabet." Bioinformatics Italian Society (BITS) Annual Meeting. Salerno, Italy. 17 June 2016.', 700) -}}
 {{ p('"Semi-automated genome annotation and an expanded epigenetic alphabet." Early Career Investigators Meeting on Quantitative Problems in Human Genetics and Health. Banff International Research Station. Banff, AB, Canada. 11 January 2016.', 700) -}}
 {{ p('"Semi-automated human genome annotation using chromatin data." Institute for Operations Research and the Management Sciences (INFORMS) Annual Meeting. Philadelphia, PA. 2 November 2015.', 700) -}}
 {{ p('"Modeling methyl-sensitive transcription factor motifs with an expanded epigenetic alphabet." Cold Spring Harbor Laboratory Meeting on Genome Informatics. Cold Spring Harbor, NY. 29 October 2015.', 800) -}}
-{{ p('"Semi-automated genome annotation and an expanded epigenetic alphabet." {{ dept }} of Biology. New York University. New York, NY. 28 October 2015.', 750) -}}
+{{ p('"Semi-automated genome annotation and an expanded epigenetic alphabet." ' ~ dept ~ ' of Biology. New York University. New York, NY. 28 October 2015.', 750) -}}
 {{ p('"Transcription factor binding motifs in an expanded epigenetic alphabet." Taiwan-Canada Joint Workshop on Epigenetics. Canadian Human and Statistical Genetics Meeting. Vancouver, BC. 21 April 2015.', 750) -}}
-{{ p('"Semi-automated genome annotation and an expanded epigenetic alphabet." {{ dept }} of Biochemistry and Molecular Genetics. University of Colorado Anschutz Medical Campus. Denver, CO. 3 April 2015.', 750) -}}
+{{ p('"Semi-automated genome annotation and an expanded epigenetic alphabet." ' ~ dept ~ ' of Biochemistry and Molecular Genetics. University of Colorado Anschutz Medical Campus. Denver, CO. 3 April 2015.', 750) -}}
 {{ p('"Semi-automated genome annotation and an expanded epigenetic alphabet." Bioinformatics Club. University of Waterloo. Waterloo, ON. 24 March 2015.', 500) -}}
 {{ p('"Semi-automated genome annotation and an expanded epigenetic alphabet." Understanding non-coding DNA through intra and inter-species epigenomic variation. Bellairs Research Institute. Holetown, Barbados. 9 January 2015.', 750) -}}
 {{ p('"Semi-automated genome annotation and an expanded epigenetic alphabet." McGill University. Montreal, QC. 21 November 2014.', 750) -}}
@@ -334,10 +372,11 @@ F5.\ "Sequence variation and DNA methylation patterning." Natural Sciences and E
 
 ### Presentations: invited/keynote, local
 
+{{ p('"The expanded epigenetic alphabet." Ontario Research Fund Funding Announcement. Ontario Ministry of Research and Innovation. Toronto, ON. 22 August 2016', 550) -}}
 {{ p('"100% open access: expect no less." Ontario Open Access: Accelerating Science. Ontario Ministry of Research and Innovation. Toronto, ON. 18 March 2016.', 600) -}}
 {{ p('"Semi-automated genome annotation and an expanded epigenetic alphabet." Signals and Computational Intelligence Chapter. Toronto Section. Institute of Electrical and Electronics Engineers. Toronto, ON. 11 February 2016', 100) -}}
 {{ p('"Modeling methyl-sensitive transcription factor motifs with an expanded epigenetic alphabet." Personalizing Cancer Medicine in 2016. Toronto, ON. 1 February 2016', 100) -}}
-{{ p('"Modeling methyl-sensitive transcription factor motifs with an expanded epigenetic alphabet." {{ dept }} of Medical Biophysics Annual Retreat. Geneva Park, ON. 20 October 2015.', 100) -}}
+{{ p('"Modeling methyl-sensitive transcription factor motifs with an expanded epigenetic alphabet." ' ~ dept ~ ' of Medical Biophysics Annual Retreat. Geneva Park, ON. 20 October 2015.', 100) -}}
 {{ p('"Semi-automated genome annotation and an expanded epigenetic alphabet." Program in Genetic Networks Workshop. Canadian Institute for Advanced Research. Toronto, ON. 10 April 2015.', 600) -}}
 {{ p('"Semi-automated human genome annotation." Signals and Intelligence Chapter/Signal Processing Chapter/Engineering in Medicine and Biology Chapter. Toronto Section. Institute of Electrical and Electronics Engineers. Toronto, ON. 9 March 2015.', 500) -}}
 {{ p('"Transcription factor binding prediction." Biohackathon. Internationally Genetically Engineered Machine (iGEM) Club. University of Toronto. Toronto, ON. 22 January 2015.', 500) -}}
@@ -348,10 +387,11 @@ F5.\ "Sequence variation and DNA methylation patterning." Natural Sciences and E
 
 ### Presentations: conference, selected from abstracts
 
+{{ p('"Transcription factor expression and its effects on binding site occupancy and motif preference." Cold Spring Harbor Laboratory/Wellcome Trust Conference on Genome Informatics. Hinxton, England. 19 September 2016.', 725) -}}
 {{ p('"Segway: semi-automated genome annotation." Bioinformatics Open Source Conference. Dublin, Ireland. 10 July 2015.', 350) -}}
 {{ p('"Transcription factor binding in an expanded epigenetic alphabet." World Congress on Medical Physics. International Union for Physical and Engineering Sciences. Toronto, ON. 11 June 2015.', 350) -}}
 {{ p('"Transcription factor binding in an expanded epigenetic alphabet." Keystone Symposium on DNA Methylation. Keystone Symposia on Molecular and Cellular Biology. Keystone, CO. 1 April 2015.', 725) -}}
-{{ p('"Transcription factor motif discovery and prediction in an expanded epigenetic alphabet." Cold Spring Harbor Laboratory/Wellcome Trust Conference on Genome Informatics. Cambridge, United Kingdom. 22 September 2014.', 725) -}}
+{{ p('"Transcription factor motif discovery and prediction in an expanded epigenetic alphabet." Cold Spring Harbor Laboratory/Wellcome Trust Conference on Genome Informatics. Cambridge, England. 22 September 2014.', 725) -}}
 {{ p('"One genome, many epigenomes, machine learning." Workshop on Big Data for Health, University of Toronto. Toronto, ON. 4 July 2014.', 300) -}}
 {{ p('"Semi-automated annotation of functional elements with whole genome RNA-seq." Machine Learning in Computational Biology 2012. Neural Information Processing Systems Conference 2012. Stateline, NV. 7 December 2012.', 350) -}}
 {{ p('"Functional genomics and machine learning." SynBioCon 2012. Austin, TX. 26 May 2012.', 300) -}}
@@ -379,7 +419,7 @@ F5.\ "Sequence variation and DNA methylation patterning." Natural Sciences and E
 ### Presentations: invited panelist, local
 
 {{ p('"Health research and data." Ontario Open Access: Accelerating Science. Ontario Ministry of Research and Innovation. Toronto, ON. 18 March 2016.', 200) -}}
-{{ p('"Geneva Election Day." {{ dept }} of Medical Biophysics Annual Retreat. Geneva Park, ON. 19 October 2015.', 200) -}}
+{{ p('"Geneva Election Day." ' ~ dept ~ ' of Medical Biophysics Annual Retreat. Geneva Park, ON. 19 October 2015.', 200) -}}
 {{ p('"Informatics, Annotation, and Computing." Applied Cancer Genomics Symposium, Toronto, ON. 3 October 2014.', 200) -}}
 {{ p('"The job search process: postdoctoral, faculty, and industry jobs." Toronto Bioinformatics Users Group. Toronto, ON. 27 November 2013.', 200) -}}
 {{ p('"Networking." Women in Genome Sciences Discussion. University of Washington. 23 February 2012.', 200) }}
@@ -387,11 +427,11 @@ F5.\ "Sequence variation and DNA methylation patterning." Natural Sciences and E
 ### Presentations: other teaching
 
 {{ p('"Data integration and epigenomics." Advanced Sequencing Technologies and Applications. Cold Spring Harbor Laboratory. 8--20 November 2016.', 50) -}}
-{{ p('"Epigenomics." Summer Student Program. {{ dept }} of Medical Biophysics. University of Toronto. 30 May 2016.', 50) -}}
+{{ p('"Epigenomics." Summer Student Program. ' ~ dept ~ ' of Medical Biophysics. University of Toronto. 30 May 2016.', 50) -}}
 {{ p('"Gene Regulation Network Analysis." High-throughput Biology: From Sequence to Networks. Canadian Bioinformatics Workshop. 15 June 2016.', 50) -}}
-{{ p('"Epigenomics." Summer Student Program. {{ dept }} of Medical Biophysics. University of Toronto. 8 June 2015.', 50) -}}
+{{ p('"Epigenomics." Summer Student Program. ' ~ dept ~ ' of Medical Biophysics. University of Toronto. 8 June 2015.', 50) -}}
 {{ p('"Gene Regulation Network Analysis." Pathway and Network Analysis of -omic Data. Canadian Bioinformatics Workshop. 3 June 2015.', 50) -}}
-{{ p('"Biophysics Seminar," MBP 1015Y. {{ dept }} of Medical Biophysics. University of Toronto. 15 October 2014--13 May 2015.', 50) -}}
+{{ p('"Biophysics Seminar," MBP 1015Y. ' ~ dept ~ ' of Medical Biophysics. University of Toronto. 15 October 2014--13 May 2015.', 50) -}}
 {{ p('"Gene Regulation Network Analysis." High-throughput Biology: From Sequence to Networks. Canadian Bioinformatics Workshop. 3 May 2015.', 50) -}}
 {{ p('"Transcription Factor Regulatory Analysis." Pathway and Network Analysis of omics Data. Canadian Bioinformatics Workshop, 4 June 2014.', 50) -}}
 {{ p('"Introduction to ENCODE" and "The Segway annotation of the ENCODE Data." Iowa Institute of Human Genetics Bioinformatics Short Course. Taught two one-hour lectures. University of Iowa. 30--31 July 2013.', 50) -}}
@@ -402,23 +442,23 @@ F5.\ "Sequence variation and DNA methylation patterning." Natural Sciences and E
 
 ### Presentations: other seminars
 
-{{ p('"Semi-automated annotation of the human genome using chromatin and RNA-seq data." {{ dept }} of Genetics. University of Pennsylvania. Philadelphia, PA. 25 July 2013.', 775) -}}
+{{ p('"Semi-automated annotation of the human genome using chromatin and RNA-seq data." ' ~ dept ~ ' of Genetics. University of Pennsylvania. Philadelphia, PA. 25 July 2013.', 775) -}}
 {{ p('"Semi-automated annotation of the human genome using chromatin and RNA-seq data." Ontario Cancer Institute. Toronto, ON. 4 July 2013.', 600) -}}
 {{ p('"Semi-automated annotation of the human genome using chromatin and RNA-seq data." Institute for Human Genetics. University of California, San Francisco. San Francisco, CA. 21 March 2013.', 775) -}}
 {{ p('"Semi-automated annotation of the human genome using chromatin and RNA-seq data." Analytical and Translational Genetics Unit. Massachusetts General Hospital. 24 April 2013.', 775) -}}
-{{ p('"Semi-automated annotation of the human genome using chromatin and RNA-seq data." {{ dept }} of Electrical and Computer Engineering. University of Texas at Austin. 22 April 2013.', 675) -}}
+{{ p('"Semi-automated annotation of the human genome using chromatin and RNA-seq data." ' ~ dept ~ ' of Electrical and Computer Engineering. University of Texas at Austin. 22 April 2013.', 675) -}}
 {{ p('"Semi-automated annotation of the human genome using chromatin and RNA-seq data." The Jackson Laboratory. Bar Harbor, ME. 11 March 2013.', 675) -}}
 {{ p('"Semi-automated annotation of the human genome using chromatin and RNA-seq data." McKusick-Nathans Institute of Genetic Medicine. Johns Hopkins University. Baltimore, MD. 7 March 2013.', 775) -}}
-{{ p('"Semi-automated annotation of the human genome using chromatin and RNA-seq data." {{ dept }} of Human Genetics. University of Utah. Salt Lake City, UT. 25 February 2013.', 675) -}}
+{{ p('"Semi-automated annotation of the human genome using chromatin and RNA-seq data." ' ~ dept ~ ' of Human Genetics. University of Utah. Salt Lake City, UT. 25 February 2013.', 675) -}}
 {{ p('"Semi-automated annotation of the human genome using chromatin and RNA-seq data." National Eye Institute. National Institutes of Health. Bethesda, MD. 30 January 2013.', 675) -}}
-{{ p('"Semi-automated annotation of the human genome using chromatin and RNA-seq data." {{ dept }} of Molecular and Medical Genetics. Oregon Health and Science University. Portland, OR. 23 January 2013.', 675) -}}
-{{ p('"Semi-automated annotation of the human genome using chromatin and RNA-seq data." {{ dept }} of Human Genetics. Emory University. Atlanta, GA. 14 January 2013.', 750) -}}
+{{ p('"Semi-automated annotation of the human genome using chromatin and RNA-seq data." ' ~ dept ~ ' of Molecular and Medical Genetics. Oregon Health and Science University. Portland, OR. 23 January 2013.', 675) -}}
+{{ p('"Semi-automated annotation of the human genome using chromatin and RNA-seq data." ' ~ dept ~ ' of Human Genetics. Emory University. Atlanta, GA. 14 January 2013.', 750) -}}
 {{ p('"Semi-automated annotation of the human genome using chromatin and RNA-seq data." McDermott Center for Human Growth and Development/Center for Human Genetics. University of Texas Southwestern Medical Center. Dallas, TX. 7 January 2013.', 675) -}}
 {{ p('"Semi-automated annotation of the human genome using chromatin and RNA-seq data." Earl Stadtman Symposium on Genetics, Genomics, and Systems Biology. Division of Intramural Research. National Institutes of Health. Bethesda, MD. 17 December 2012.', 750) -}}
 {{ p('"Semi-automated annotation of the human genome using chromatin and RNA-seq data." Program in Bioinformatics and Integrative Biology. University of Massachusetts Medical School. Worcester, MA. 10 December 2012.', 675) -}}
-{{ p('"Semi-automated annotation of the human genome using chromatin and RNA-seq data." {{ dept }} of Pediatrics. University of California, San Diego. 4 June 2012.', 675) -}}
+{{ p('"Semi-automated annotation of the human genome using chromatin and RNA-seq data." ' ~ dept ~ ' of Pediatrics. University of California, San Diego. 4 June 2012.', 675) -}}
 {{ p('"Unsupervised and semi-supervised pattern discovery in human chromatin\ structure." Section of Genetic Medicine. University of Chicago. Chicago, IL. 23 April 2012.', 775) -}}
-{{ p('"Simultaneous segmentation of multiple functional genomics data sets with heterogeneous patterns of missing data." {{ dept }} of Computer Science. Colorado State University. Fort Collins, CO. 10 April 2012.', 700) -}}
+{{ p('"Simultaneous segmentation of multiple functional genomics data sets with heterogeneous patterns of missing data." ' ~ dept ~ ' of Computer Science. Colorado State University. Fort Collins, CO. 10 April 2012.', 700) -}}
 {{ p('"Properties of natural selection in mammalian promoters." Seminar, Broad Institute of MIT and Harvard. Cambridge, MA. 9 April 2008.', 775) -}}
 {{ p('"Properties of natural selection in mammalian promoters." Seminar, Program in Bioinformatics and Integrative Biology, University of Massachusetts Medical School. Worcester, MA. 25 March 2008.', 750) }}
 
@@ -428,9 +468,9 @@ F5.\ "Sequence variation and DNA methylation patterning." Natural Sciences and E
 {{ p('"Deciphering leukemia stemness programs with an expanded epigenetic alphabet." Acute Leukemia Translational Research Initiative Workshop. Ontario Institute for Cancer Research. Toronto, ON. 26 January 2016.', 100) -}}
 {{ p('"Epigenetics." Princess Margaret Cancer Foundation Board Retreat. Toronto, ON. 8 November 2014.', 100) -}}
 {{ p('"Semi-automated annotation of the human genome using chromatin data." Biomedical Postdoc Seminar. University of Washington. Seattle, WA. 4 March 2013.', 100) -}}
-{{ p('"Semi-automated annotation of the human genome using chromatin and RNA-seq data." Computational Biology Group Meeting/CSE 591C. {{ dept }} of Computer Science. Seattle, WA. 14 December 2012.', 100) -}}
-{{ p('"Semi-automated annotation of the human genome using whole-genome RNA-seq." Postdoctoral Research Talk. {{ dept }} of Genome Sciences. University of Washington. 16 May 2012.', 100) -}}
-{{ p('"Segway: pattern discovery in multitrack functional genomics data." Research Reports. {{ dept }} of Genome Sciences. University of Washington. 13 November 2009.', 100) -}}
+{{ p('"Semi-automated annotation of the human genome using chromatin and RNA-seq data." Computational Biology Group Meeting/CSE 591C. ' ~ dept ~ ' of Computer Science. Seattle, WA. 14 December 2012.', 100) -}}
+{{ p('"Semi-automated annotation of the human genome using whole-genome RNA-seq." Postdoctoral Research Talk. ' ~ dept ~ ' of Genome Sciences. University of Washington. 16 May 2012.', 100) -}}
+{{ p('"Segway: pattern discovery in multitrack functional genomics data." Research Reports. ' ~ dept ~ ' of Genome Sciences. University of Washington. 13 November 2009.', 100) -}}
 {{ p('"Segway: a dynamic Bayesian network for genomic segmentation." Reading and Research in Computational Biology. CSE 590C. 4 May 2009.', 100) }}
 
 ---
@@ -462,6 +502,7 @@ F5.\ "Sequence variation and DNA methylation patterning." Natural Sciences and E
 * *Ad hoc* external review: United Kingdom Medical Research Council, French Institute for Bioinformatics, Natural Sciences and Engineering Research Council of Canada.
 
 ### Professional activities: manuscript review
+* **Member**, Program Committee, Idea DREAM Challenge, 2016--present.
 * **Affiliate Scientist**, bioRxiv, Cold Spring Harbor Laboratory Press, 2015--present.
 * **Member**, Program Committee, International Joint Conference on Artificial Intelligence (IJCAI), 2015--2016.
 * **Member**, Program Committee, Great Lakes Bioinformatics Conference/Canadian Computational Biology Conference (GLBIO/CCBC), 2015--2016.
@@ -477,8 +518,9 @@ F5.\ "Sequence variation and DNA methylation patterning." Natural Sciences and E
 * **Chair**, Large-scale Integration Task Group, ENCODE Analysis Working Group, 2010--2012.
 
 ### Professional activities: institutional leadership positions and committees
-* **Co-organizer**, Princess Margaret Cancer Centre Research Retreat, 2015--2016. {# Huntsville, ON, Canada. 11 May 2016--13 May 2016. #}
 * **Co-chair**, University Health Network Cancer Genomics Program Bioinformatics Subcommittee, 2013--present.
+* **Co-organizer**, Princess Margaret Cancer Centre Research Retreat, 2015--2016. {# Huntsville, ON, Canada. 11 May 2016--13 May 2016. #}
+* **Member**, Till and McCullough Paper of the Year Selection Committee, Princess Margaret Cancer Centre, 2016.
 * **Member**, Graduate Admissions Committee, {{ dept }} of Computer Science, University of Toronto, 2014--2015.
 * **Member**, Princess Margaret Genomics Centre Advisory Board, 2013--2015.
 * **Chair**, Cambridge University Student Pugwash Society, 2006--2007. **Secretary**, 2007--2008.
@@ -497,6 +539,7 @@ F5.\ "Sequence variation and DNA methylation patterning." Natural Sciences and E
 * **Examiner** for PhD students: Institute for Medical Science, University of Toronto (Sarah Gagliano).
 * **Examiner** for MSc students: {{ dept }} of Molecular Genetics, University of Toronto (Lina Antounians).
 * **Reviewer** for MSc theses: {{ dept }} of Computer Science, University of Toronto (Aryan Arbabi).
+* **Judge**, Poster Session, James Lepock Memorial Student Symposium, Department of Medical Biophysics, University of Toronto, 2016.
 * **Judge**, Biohackathon, Internationally Genetically Engineered Machine (iGEM) Club, University of Toronto, 2016.
 * **Judge**, Summer Student Poster Day, {{ dept }} of Medical Biophysics, University of Toronto, 2014--2016.
 * **Mentor**, National Resource for Network Biology, Google Summer of Code, 2014.
@@ -539,7 +582,6 @@ Plant Biochemistry Research Training Center, Washington State University, 2000.
 ### Trainees and staff supervised: current
 
 \beginenumerate
-
 T20.\ **Hawley, James**. MSc Student, {{ dept }} of Medical Biophysics, University of Toronto, 2016--present.
 
 T19.\ **Nguyen, Francis**. MSc Student, {{ dept }} of Medical Biophysics, University of Toronto, 2016--present.
@@ -559,13 +601,11 @@ T10.\ **Chicco, Davide**. Postdoctoral Fellow, University Health Network, 2014--
 T9.\ **Viner, Coby**. MSc Student, {{ dept }} of Computer Science, University of Toronto, 2014--present.
 
 T8.\ **Roberts, Eric**. Bioinformatics Programmer, University Health Network, 2014--present.
-
 \endenumerate
 
 ### Trainees and staff supervised: past
 
 \beginenumerate
-
 {% macro present_position() -%}
 {% if not compact %}\
 Present position: {{ caller() }}
@@ -573,8 +613,7 @@ Present position: {{ caller() }}
 {%- endmacro %}
 
 T18.\ **Bi, Haixin ("Sarah")**. Post-BSc Summer Student, Princess Margaret Cancer Centre, 2016.
-{% call present_position() %}PhD Student, Massachusetts Institute of Technology, Cambridge, MA, USA.{% endcall %}
-{# XXX: fill in program name #}
+{% call present_position() %}PhD Student, Computational and Systems Biology Program, Massachusetts Institute of Technology, Cambridge, MA, USA.{% endcall %}
 
 T14.\ **Madani Tonekaboni, S.\ Ali**. PhD Student, {{ dept }} of Medical Biophysics, University of Toronto. 2015.
 {% call present_position() %}PhD Student, {{ dept }} of Medical Biophysics, University of Toronto, Toronto, ON, Canada.{% endcall %}
@@ -601,7 +640,6 @@ T2.\ **Lemus Vergara, Tzitziki J.** PhD Student, {{ dept }} of Genome Sciences, 
 
 T1.\ **Buske, Orion J.** BS {% if not compact %}(Honors){% endif %} Student, {{ dept }} of Computer Science and Engineering, University of Washington, 2009--2010.
 {% call present_position() %}PhD Student, {{ dept }} of Computer Science, University of Toronto, Toronto, ON, Canada.{% endcall %}
-
 \endenumerate
 
 ## Media coverage

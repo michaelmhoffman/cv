@@ -11,13 +11,16 @@
 - id: recognitions-other-scholarships-and-awards
 - id: recognitions-honors
 - id: funding
-- id: funding-principal-investigator
+- id: funding-lead-principal-investigator
+- id: funding-co-principal-investigator
 - id: funding-co-investigator
 - id: presentations
 - id: presentations-invitedkeynote
+# - id: presentations-invitedkeynote-local
 - id: presentations-conference-selected-from-abstracts
 # - id: presentations-conference-selected-from-abstracts-trainee
 - id: presentations-invited-panelist
+# - id: presentations-invited-panelist-local
 - id: presentations-other-teaching
 - id: presentations-other-seminars
 # - id: presentations-other-seminars-local
@@ -32,6 +35,7 @@
 - id: professional-activities-institutional-leadership-positions-and-committees
 - id: professional-activities-student-committees-and-examinations
 - id: professional-activities-memberships
+# - id: excluding professional-activities-memberships-local
 - id: prior-positions
 - id: trainees-and-staff-supervised
 - id: trainees-and-staff-supervised-current
