@@ -28,7 +28,7 @@ PANFILTER = ./panfilter.py $(PANFILTER_FLAGS)
 RM = rm -f
 
 # XXX: \beginenumerate etc. could be made a TeX macro rather than filtering here
-TEXFILTER = perl -pe 's/^([A-Z][0-9]+.)~/\\item[\1] /; s/\\(begin|end)enumerate/\\\1\{enumerate}/g'
+TEXFILTER = perl -pe 's/^([A-Z]+[0-9]+.)~/\\item[\1] /; s/\\(begin|end)enumerate/\\\1\{enumerate}/g'
 
 SCHOLARURL=https://scholar.google.com/citations?user=$(SCHOLARID)
 
