@@ -355,12 +355,14 @@ Lead principal investigator: Carl P.\ Ernst. {# RGPIN-2013-435512 #}
 {% set num_presentations = cycler(*range(1000)) %}
 {% macro p(text, score=0) -%}
 {% if score >= presentation_score_min -%}
-* {{ text }}{% do num_presentations.next() %}
+{{ text }}{% do num_presentations.next() %}
 {% endif -%}
 {% endmacro -%}
 {# Last presentation in a group must end with }} instead of -}} #}
 
 ### Presentations: invited/keynote
+
+\beginenumerate
 {{ p('"FA27.\ Novel inferences from Hi-C data with protein-coding gene data." Great Lakes Bioinformatics Conference. Chicago, IL. 16--17 May 2017.', 700) -}}
 {{ p('"FA26.\ Computational predictive models and 3D genome organization." Workshop on the Physical Basis of Functional Genome Organization. Bellairs Research Institute. Holetown, Barbados. 15 April 2017.', 700) -}}
 {{ p('"FA25.\ Automated genome annotation and an expanded epigenetic alphabet." Microsoft Research New England. Cambridge, MA. 27 March 2017.', 700) -}}
@@ -388,9 +390,11 @@ Lead principal investigator: Carl P.\ Ernst. {# RGPIN-2013-435512 #}
 {{ p('"FA3.\ Finding the patterns in chromatin data." Fifth Barbados Workshop on Gene Regulation: The role of chromatin in 3D structure. Holetown, Barbados. 21 April 2010.', 750) -}}
 {{ p('"FA2.\ Properties of natural selection in mammalian promoters." Weizmann UK Symposium: Biological complexity: from models to systems. London, England. Summer 2008.', 700) -}}
 {{ p('"FA1.\ Predicting Selection in Promoters by Simulating the Effects of Mutations." Waterman Seminar, Leibniz Institute of Plant Genetics and Crop Plant Research. Gatersleben, Germany. Autumn 2007.', 700) }}
+\endenumerate
 
 ### Presentations: invited/keynote, local
 
+\beginenumerate
 {{ p('"FB14.\ Semi-automated human genome annotation using chromatin data." Undergraduate AI Day. Undergraduate AI Group, University of Toronto. Toronto, ON. 22 November 2016.', 550) -}}
 {{ p('"FB13.\ Data challenges for researchers." Reconnect16. CASRAI Canadian National Chapter. Toronto, ON. 24 October 2016.', 550) -}}
 {{ p('"FB12.\ The expanded epigenetic alphabet." Ontario Research Fund Funding Announcement. Ontario Ministry of Research and Innovation. Toronto, ON. 22 August 2016', 550) -}}
@@ -405,9 +409,11 @@ Lead principal investigator: Carl P.\ Ernst. {# RGPIN-2013-435512 #}
 {{ p('"FB3.\ Semi-automated annotation of the human genome using chromatin and RNA-seq data." Toronto Bioinformatics Users Group. Toronto, ON. 27 November 2013.', 500) -}}
 {{ p('"FB2.\ Student address, The University of Texas at Austin 120th Spring Commencement, College of Natural Sciences Convocation." Austin, TX. 17 May 2003.', 250) -}}
 {{ p('"FB1.\ Student address, The University of Texas at Austin 55th Honors Day Convocation." Austin, TX. 12 April 2003.', 250) }}
+\endenumerate
 
 ### Presentations: conference, selected from abstracts
 
+\beginenumerate
 {{ p('"FC16.\ Transcription factor expression and its effects on binding site occupancy and motif preference." Cold Spring Harbor Laboratory/Wellcome Trust Conference on Genome Informatics. Hinxton, England. 19 September 2016.', 725) -}}
 {{ p('"FC15.\ Segway: semi-automated genome annotation." Bioinformatics Open Source Conference. Dublin, Ireland. 10 July 2015.', 350) -}}
 {{ p('"FC14.\ Transcription factor binding in an expanded epigenetic alphabet." World Congress on Medical Physics. International Union for Physical and Engineering Sciences. Toronto, ON. 11 June 2015.', 350) -}}
@@ -424,21 +430,27 @@ Lead principal investigator: Carl P.\ Ernst. {# RGPIN-2013-435512 #}
 {{ p('"FC3.\ Segway: a dynamic Bayesian network for genomic segmentation." ENCODE and modENCODE Consortia Meeting. Bethesda, MD. Spring 2009.', 300) -}}
 {{ p('"FC2.\ ENCODE and Segway." ENCODE AWG Workshop. Rockville, MD. December 2008.', 300) -}}
 {{ p('"FC1.\ Poly: rapid development of embarrassingly parallelizable applications." Bioinformatics Open Source Conference. Glasgow, Scotland. Summer 2004.', 350) }}
+\endenumerate
 
 ### Presentations: conference, selected from abstracts, trainee
 
+\beginenumerate
 {{ p('"FD5.\ Semi-automated annotation of the human genome using chromatin data." University of Washington Postdoctoral Association Research Symposium. Seattle, WA. 27 November 2012.', 100) -}}
 {{ p('"FD4.\ Properties of natural selection in mammalian promoters." Sanger-Cambridge PhD Symposium. Hinxton, England. Spring 2008.', 100) -}}
 {{ p('"FD3.\ Sunflower: a model of transcription factor binding." EMBL Predoctoral Fellow Retreat. Barcelona, Spain. Summer 2007.', 100) -}}
 {{ p('"FD2.\ Measurements of evolution and natural selection." Trinity College Science Society Symposium. Cambridge, England. Spring 2007.', 100) -}}
 {{ p('"FD1.\ Visualizing protein-DNA and protein-RNA interactions with AANT." Trinity College Science Society Symposium. Cambridge, England. 13 March 2004.', 100) }}
+\endenumerate
 
 ### Presentations: invited panelist
 
+\beginenumerate
 {{ p('"FE1.\ Genomic computing challenges and perspectives." Intelligent Systems for Molecular Biology (ISMB). Orlando, FL. 12 July 2016.', 250) }}
+\endenumerate
 
 ### Presentations: invited panelist, local
 
+\beginenumerate
 {{ p('"FF7. Big data." Connaught International Symposium. GEMINI Connaught Program and Department of Immunology, University of Toronto. Toronto, ON. 21 November 2016', 200) -}}
 {{ p('"FF6. Canada\'s Research Data Management Ecosystem." Reconnect16. Canadian National Chapter, CASRAI. Toronto, ON. 24 October 2016.', 200) -}}
 {{ p('"FF5. Health research and data." Ontario Open Access: Accelerating Science. Ontario Ministry of Research and Innovation. Toronto, ON. 18 March 2016.', 200) -}}
@@ -446,9 +458,11 @@ Lead principal investigator: Carl P.\ Ernst. {# RGPIN-2013-435512 #}
 {{ p('"FF3. Informatics, Annotation, and Computing." Applied Cancer Genomics Symposium, Toronto, ON. 3 October 2014.', 200) -}}
 {{ p('"FF2. The job search process: postdoctoral, faculty, and industry jobs." Toronto Bioinformatics Users Group. Toronto, ON. 27 November 2013.', 200) -}}
 {{ p('"FF1. Networking." Women in Genome Sciences Discussion. University of Washington. 23 February 2012.', 200) }}
+\endenumerate
 
 ### Presentations: other teaching
 
+\beginenumerate
 {{ p('"FG14. Semi-automated human genome annotation using chromatin data." Guest lecture for CSC 2417, Department of Computer Science, University of Toronto. 16 November 2016.', 50) -}}
 {{ p('"FG13. Data integration and epigenomics." Advanced Sequencing Technologies and Applications. Cold Spring Harbor Laboratory. 14 November 2016.', 50) -}}
 {{ p('"FG12. Epigenomics." Summer Student Program. ' ~ dept ~ ' of Medical Biophysics. University of Toronto. 30 May 2016.', 50) -}}
@@ -463,9 +477,11 @@ Lead principal investigator: Carl P.\ Ernst. {# RGPIN-2013-435512 #}
 {{ p('"FG3. Introduction to Python." Taught two-day seminar. European Molecular Biology Laboratory. Autumn 2005.', 50) -}}
 {{ p('"FG2. EMBL Predoctoral Bioinformatics Workshop." Organizing committee member and teaching assistant for three-day course. European Molecular Biology Laboratory. Autumn 2004.', 50) -}}
 {{ p('"FG1. Biological sequence analysis." Discussion leader for eight-week seminar. The University of Texas at Austin Society for Computational Biology. Summer 2003.', 50) }}
+\endenumerate
 
 ### Presentations: other seminars
 
+\beginenumerate
 {{ p('"FH19. Semi-automated annotation of the human genome using chromatin and RNA-seq data." ' ~ dept ~ ' of Genetics. University of Pennsylvania. Philadelphia, PA. 25 July 2013.', 775) -}}
 {{ p('"FH18. Semi-automated annotation of the human genome using chromatin and RNA-seq data." Ontario Cancer Institute. Toronto, ON. 4 July 2013.', 600) -}}
 {{ p('"FH17. Semi-automated annotation of the human genome using chromatin and RNA-seq data." Institute for Human Genetics. University of California, San Francisco. San Francisco, CA. 21 March 2013.', 775) -}}
@@ -485,9 +501,11 @@ Lead principal investigator: Carl P.\ Ernst. {# RGPIN-2013-435512 #}
 {{ p('"FH3. Simultaneous segmentation of multiple functional genomics data sets with heterogeneous patterns of missing data." ' ~ dept ~ ' of Computer Science. Colorado State University. Fort Collins, CO. 10 April 2012.', 700) -}}
 {{ p('"FH2. Properties of natural selection in mammalian promoters." Seminar, Broad Institute of MIT and Harvard. Cambridge, MA. 9 April 2008.', 775) -}}
 {{ p('"FH1. Properties of natural selection in mammalian promoters." Seminar, Program in Bioinformatics and Integrative Biology, University of Massachusetts Medical School. Worcester, MA. 25 March 2008.', 750) }}
+\endenumerate
 
 ### Presentations: other seminars, local
 
+\beginenumerate
 {{ p('"FI8. Methyl-sensitive transcription factors in brain cancers." Brean Cancer Translational Research Initiative Workshop. Ontario Institute for Cancer Research. Toronto, ON. 1 February 2016.', 100) -}}
 {{ p('"FI7. Deciphering leukemia stemness programs with an expanded epigenetic alphabet." Acute Leukemia Translational Research Initiative Workshop. Ontario Institute for Cancer Research. Toronto, ON. 26 January 2016.', 100) -}}
 {{ p('"FI6. Epigenetics." Princess Margaret Cancer Foundation Board Retreat. Toronto, ON. 8 November 2014.', 100) -}}
@@ -496,6 +514,7 @@ Lead principal investigator: Carl P.\ Ernst. {# RGPIN-2013-435512 #}
 {{ p('"FI3. Semi-automated annotation of the human genome using whole-genome RNA-seq." Postdoctoral Research Talk. ' ~ dept ~ ' of Genome Sciences. University of Washington. 16 May 2012.', 100) -}}
 {{ p('"FI2. Segway: pattern discovery in multitrack functional genomics data." Research Reports. ' ~ dept ~ ' of Genome Sciences. University of Washington. 13 November 2009.', 100) -}}
 {{ p('"FI1. Segway: a dynamic Bayesian network for genomic segmentation." Reading and Research in Computational Biology. CSE 590C. 4 May 2009.', 100) }}
+\endenumerate
 
 ---
 # displayed presentations: {{ num_presentations.current }}
