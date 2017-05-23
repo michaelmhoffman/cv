@@ -76,6 +76,9 @@ cv-scn.md : JINJA_FLAGS = $(JINJA_FLAGS_PRIVATE) --abbr-months --set compact
 cv-scn.tex : HMARGIN = 0.5in
 cv-scn.tex : VMARGIN = \{0.5in,0.75in\}
 
+# select: Selected stuff only
+cv-select.md : JINJA_FLAGS = $(JINJA_FLAGS_PRIVATE) --set select
+
 # web: default public web view
 cv-web.md : JINJA_FLAGS =
 

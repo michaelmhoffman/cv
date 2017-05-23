@@ -1,6 +1,7 @@
 # Michael M. Hoffman
 
 {% set compact = compact|default(false) %}
+{% set select = select|default(false) %}
 {% set statusonly = statusonly|default(false) %}
 {% if not compact %}
 101 College St TMDT 11-311\
@@ -40,7 +41,7 @@ Collaborative Graduate Program in Genome Biology and Bioinformatics, University 
 
 **Senior Fellow**{{ fieldsep }}
 {{ dept }} of Genome Sciences, University of Washington, Seattle, WA, 2008--2013.{{ recordsep }}
-{% if not compact %}
+{% if not compact and not select %}
 
 * Mentor: Dr. William Stafford Noble, Professor
 * National Human Genome Research Institute K99/R00 Pathway to Independence Award
@@ -49,7 +50,7 @@ Collaborative Graduate Program in Genome Biology and Bioinformatics, University 
 {% endif %}
 **Doctor of Philosophy, Bioinformatics**{{ fieldsep }}
 University of Cambridge (Trinity College), Cambridge, UK, 2003--2008.{{ recordsep }}
-{% if not compact %}
+{% if not compact and not select %}
 
 * Adviser: Dr. Ewan Birney, Director, European Bioinformatics Institute
 * Marshall Scholar
@@ -63,7 +64,7 @@ University of Cambridge (Trinity College), Cambridge, UK, 2003--2008.{{ recordse
 **Bachelor of Arts, Plan II Honors Liberal Arts, with Highest Honors**\
 {% endif %}University of Texas at Austin, Austin, TX, 1998--2003.
 
-{% if not compact %}
+{% if not compact and not select %}
 * Adviser: Dr. Andrew D. Ellington, Professor
 * College of Natural Sciences Commencement Speaker, Dean's Honored Graduate
 * College of Liberal Arts Dean's Distinguished Graduate
@@ -229,17 +230,19 @@ D1.\ **Hoffman MM**. [*Quantifying evolution and natural selection in vertebrate
 * Genomedata: a format for storing large-scale functional genomics data. <http://pmgenomics.ca/hoffmanlab/proj/genomedata/>. Canadian copyright registration number 1115391.
 * Sunflower: a model of transcription factor binding and evolution. Canadian copyright registration number 1115330.
 
-## Recognitions
+## Recognitions {% if compact or select %}(selected){% endif %}
 
-{% if not compact %}
+{% if not compact and not select%}
 ### Recognitions: honors
 {% endif %}
 
 * Canadian Institutes of Health Research New Investigator, 2017--2022
 * Ontario Early Researcher Award, 2016--2021.
+{% if not compact and not select %}
 * Bioinformatics.ca Bioinformatics Expert, 2014.
+{% endif %}
 * *Genome Technology* Young Investigator, 2011.
-{% if compact %}
+{% if compact or select %}
 * National Human Genome Research Institute K99/R00 Pathway to Independence Award, 2011--2013.
 * National Science Foundation Graduate Research Fellow, 2003--2008.
 * Marshall Scholar, 2003--2005.
@@ -644,7 +647,9 @@ Plant Biochemistry Research Training Center, Washington State University, 2000.
 
 \beginenumerate
 {# TXXX.\ **Asenjo Ponce de León, Marc**. Bachelor's Student, Barcelona School of Informatics, Universitat Politècnica de Catalunya, 2018--present. #}
-T24.\ **Cao, Chang**. BSc Student, XXX, University of Toronto, 2017--present.
+{# TXXX.\ **Desai, Nikita**. PhD Student, {{ dept }} of Computer Science, University of Toronto, 2017--present. #}
+
+T24.\ **Cao, Chang**. BSc Student, {{ dept }} of Statistical Sciences, University of Toronto, 2017--present.
 
 T19.\ **Nguyen, Francis**. MSc Student, {{ dept }} of Medical Biophysics, University of Toronto, 2016--present.
 
