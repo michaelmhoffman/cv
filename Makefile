@@ -69,6 +69,9 @@ cv-%.tex : cv-%.md preamble.tex google-scholar.html %.yaml
 %.pdf : %.tex
 	xelatex $<
 
+%.yaml :
+	touch $@
+
 ## explicit rules
 
 # scn: Stem Cell Network
@@ -78,6 +81,9 @@ cv-scn.tex : VMARGIN = \{0.5in,0.75in\}
 
 # select: Selected stuff only
 cv-select.md : JINJA_FLAGS = $(JINJA_FLAGS_PRIVATE) --set select
+
+# statusonly: Include "status-only" for those who care about it
+cv-statusonly.md : JINJA_FLAGS = $(JINJA_FLAGS_PRIVATE) --set statusonly
 
 # web: default public web view
 cv-web.md : JINJA_FLAGS =
