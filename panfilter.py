@@ -8,7 +8,7 @@ from future_builtins import ascii, filter, hex, map, oct, zip  # noqa
 
 __version__ = "0.1"
 
-# Copyright 2015, 2016 Michael M. Hoffman <michael.hoffman@utoronto.ca>
+# Copyright 2015, 2016, 2017 Michael M. Hoffman <michael.hoffman@utoronto.ca>
 
 from datetime import date
 from functools import partial
@@ -45,7 +45,7 @@ def load_google_scholar(filename=SCHOLAR_FILENAME):
 
     rows = table.find_all("tr", class_="gsc_a_tr")
     for row in rows:
-        id = row.find("a", class_="gsc_a_at")["href"].rpartition(":")[2]
+        id = row.find("a", class_="gsc_a_at")["data-href"].rpartition(":")[2]
         cites = row.find("a", class_="gsc_a_ac").contents[0]
         res[id] = cites
 
