@@ -35,6 +35,10 @@ SCHOLARURL=https://scholar.google.com/citations?user=$(SCHOLARID)
 ## phony targets
 ALL=$(SRC:.md=-default.docx) $(SRC:.md=-default.html) $(SRC:.md=-default.pdf)
 
+installdeps-sudo-debian:
+	sudo apt install pandoc texlive-xetex
+	sudo --set-home pip install jinja2 bs4 PyYAML lxml
+
 all: $(ALL) web
 
 web: cv-web.pdf
@@ -46,7 +50,7 @@ mostlyclean:
 clean: mostlyclean
 	-$(RM) cookies.txt google-scholar.html
 
-.PHONY: all mostlyclean clean web
+.PHONY: all mostlyclean clean web installdeps
 
 ## pattern rules
 
