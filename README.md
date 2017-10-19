@@ -18,6 +18,12 @@ Python prerequisites
 pip install PyYAML beautifulsoup4 jinja2
 ```
 
+## Debugging
+
+To debug `panfilter.py` it's often helpful to `make` the intermediate
+`.json` file it uses. Then you can run `panfilter something.json`
+under the Python debugger instead of using pipes.
+
 ## License
 
 License for software, config files, and Jinja directives in
