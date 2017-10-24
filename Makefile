@@ -27,6 +27,8 @@ PANFILTER = ./panfilter.py $(PANFILTER_FLAGS)
 
 RM = rm -f
 
+PYTHON_DEPS = jinja2 bs4 PyYAML lxml
+
 # XXX: \beginenumerate etc. could be made a TeX macro rather than filtering here
 TEXFILTER = perl -pe 's/^([A-Z]+[0-9]+.)~/\\item[\1] /; s/\\(begin|end)enumerate/\\\1\{enumerate}/g'
 
@@ -37,7 +39,7 @@ ALL=$(SRC:.md=-default.docx) $(SRC:.md=-default.html) $(SRC:.md=-default.pdf)
 
 installdeps-sudo-debian:
 	sudo apt install pandoc texlive-xetex
-	sudo --set-home pip install jinja2 bs4 PyYAML lxml
+	sudo --set-home pip install $(PYTHON_DEPS)
 
 all: $(ALL) web
 
@@ -45,12 +47,12 @@ web: cv-web.pdf
 	scp cv-web.pdf mordor:~/public_html/cv/michael-hoffman-cv.pdf
 
 mostlyclean:
-	-$(RM) cv-*.{md,tex,docx,pdf,json} *.aux *.out *.log
+	-$(RM) cv-*.{md,tex,docx,pdf,json} *.aux *.out *.log empty.yaml
 
 clean: mostlyclean
 	-$(RM) cookies.txt google-scholar.html
 
-.PHONY: all mostlyclean clean web installdeps
+.PHONY: all mostlyclean clean web installdeps-sudo-debian
 
 .INTERMEDIATE: cv-empty.json
 
@@ -83,7 +85,7 @@ cv-%.tex : cv-%.md preamble.tex google-scholar.html %.yaml
 # empty.yaml: empty yaml, can copy to new YAMLs
 # XXX: Google Scholar shouldn't be required strictly speaking
 empty.yaml: cv-empty.json google-scholar.html
-	$(PANFILTER) --verbose $< > /dev/null 2> $@
+	$(PANFILTER) --verbose $< 2>&1 >/dev/null | sed -e 's/^including/- id:/' > $@
 
 # scn: Stem Cell Network
 cv-scn.md : JINJA_FLAGS = $(JINJA_FLAGS_PRIVATE) --abbr-months --set compact
