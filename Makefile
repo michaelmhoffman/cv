@@ -45,12 +45,14 @@ web: cv-web.pdf
 	scp cv-web.pdf mordor:~/public_html/cv/michael-hoffman-cv.pdf
 
 mostlyclean:
-	-$(RM) cv-*.{md,tex,docx,pdf} *.aux *.out *.log
+	-$(RM) cv-*.{md,tex,docx,pdf,json} *.aux *.out *.log
 
 clean: mostlyclean
 	-$(RM) cookies.txt google-scholar.html
 
 .PHONY: all mostlyclean clean web installdeps
+
+.INTERMEDIATE: cv-empty.json
 
 ## pattern rules
 
@@ -77,6 +79,11 @@ cv-%.tex : cv-%.md preamble.tex google-scholar.html %.yaml
 	touch $@
 
 ## explicit rules
+
+# empty.yaml: empty yaml, can copy to new YAMLs
+# XXX: Google Scholar shouldn't be required strictly speaking
+empty.yaml: cv-empty.json google-scholar.html
+	$(PANFILTER) --verbose $< > /dev/null 2> $@
 
 # scn: Stem Cell Network
 cv-scn.md : JINJA_FLAGS = $(JINJA_FLAGS_PRIVATE) --abbr-months --set compact

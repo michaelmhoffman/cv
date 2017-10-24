@@ -18,3 +18,5 @@ cv-*.{md,docx,html,json,pdf,tex}
 
 google-scholar.html
 cookies.txt
+
+empty.yaml
