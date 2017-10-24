@@ -95,6 +95,11 @@ cv-scn.tex : VMARGIN = \{0.5in,0.75in\}
 # select: Selected stuff only
 cv-select.md : JINJA_FLAGS = $(JINJA_FLAGS_PRIVATE) --set select
 
+# select-nostartup: selected stuff without startup
+select-nostartup.yaml : select.yaml
+	cp $< $@
+cv-select-nostartup.md : JINJA_FLAGS = $(JINJA_FLAGS_PRIVATE) --set select --set nostartup
+
 # statusonly: Include "status-only" for those who care about it
 cv-statusonly.md : JINJA_FLAGS = $(JINJA_FLAGS_PRIVATE) --set statusonly
 

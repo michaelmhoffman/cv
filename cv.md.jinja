@@ -3,6 +3,7 @@
 {% set compact = compact|default(false) %}
 {% set select = select|default(false) %}
 {% set statusonly = statusonly|default(false) %}
+{% set nostartup = nostartup|default(false) %}
 {% if not compact %}
 101 College St PMCRT 11-311\
 Toronto, ON M5G 1L7
@@ -311,7 +312,9 @@ Discovery Grant.
 5 years, direct costs CAD 175,000.
 April 2015--March 2020. {# RGPIN-2015-3948 #}
 
+{% if not nostartup %}
 {% include 'startup.md' %}
+{% endif %}
 
 F2.\ "Pattern discovery for comparative epigenomics."
 National Institutes of Health/National Human Genome Research Institute.
