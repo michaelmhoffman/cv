@@ -43,6 +43,9 @@ installdeps-sudo-debian:
 	sudo apt install pandoc texlive-xetex
 	sudo --set-home pip install $(PYTHON_DEPS)
 
+installdeps-python:
+	pip install $(PYTHON_DEPS)
+
 web: cv-web.pdf
 	scp cv-web.pdf mordor:~/public_html/cv/michael-hoffman-cv.pdf
 
