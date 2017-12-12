@@ -37,11 +37,11 @@ SCHOLARURL=https://scholar.google.com/citations?user=$(SCHOLARID)
 ## phony targets
 ALL=$(SRC:.md=-default.docx) $(SRC:.md=-default.html) $(SRC:.md=-default.pdf)
 
+all: $(ALL) web
+
 installdeps-sudo-debian:
 	sudo apt install pandoc texlive-xetex
 	sudo --set-home pip install $(PYTHON_DEPS)
-
-all: $(ALL) web
 
 web: cv-web.pdf
 	scp cv-web.pdf mordor:~/public_html/cv/michael-hoffman-cv.pdf
