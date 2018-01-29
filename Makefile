@@ -92,6 +92,9 @@ cv-%.tex : cv-%.md preamble.tex google-scholar.html %.yaml
 empty.yaml: cv-empty.json google-scholar.html
 	$(PANFILTER) --verbose $< 2>&1 >/dev/null | sed -e 's/^including/- id:/' > $@
 
+# all: everythin
+cv-all.md : JINJA_FLAGS = $(JINJA_FLAGS_PRIVATE)
+
 # scn: Stem Cell Network
 cv-scn.md : JINJA_FLAGS = $(JINJA_FLAGS_PRIVATE) --abbr-months --set compact
 cv-scn.tex : HMARGIN = 0.5in
