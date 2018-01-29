@@ -26,7 +26,8 @@ PANDOC_TEX = $(PANDOC_FINAL) \
 PANFILTER = ./panfilter.py $(PANFILTER_FLAGS)
 
 RM = rm -f
-PIP = pip # or python3 -m pip
+PYTHON = python2
+PIP = $(PYTHON) -m pip
 
 PYTHON_DEPS = jinja2 bs4 PyYAML lxml
 
