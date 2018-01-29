@@ -26,6 +26,7 @@ PANDOC_TEX = $(PANDOC_FINAL) \
 PANFILTER = ./panfilter.py $(PANFILTER_FLAGS)
 
 RM = rm -f
+PIP = pip # or python3 -m pip
 
 PYTHON_DEPS = jinja2 bs4 PyYAML lxml
 
@@ -44,7 +45,7 @@ installdeps-sudo-debian:
 	sudo --set-home pip install $(PYTHON_DEPS)
 
 installdeps-python:
-	pip install $(PYTHON_DEPS)
+	$(PIP) install $(PYTHON_DEPS)
 
 web: cv-web.pdf
 	scp cv-web.pdf mordor:~/public_html/cv/michael-hoffman-cv.pdf
