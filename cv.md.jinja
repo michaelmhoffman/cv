@@ -31,6 +31,8 @@ ORCID [0000-0002-4517-1562](http://orcid.org/0000-0002-4517-1562)
 **Assistant Professor{% if statusonly %} (status-only){% endif %}**{{ fieldsep }}Dep{% if compact %}ts{% else %}artment{% endif %} of Medical Biophysics{% if compact %} & Computer Science{% endif %}, University of Toronto, Toronto, ON, 2014--present.{% if not compact %}\
 Department of Computer Science, University of Toronto, Toronto, ON, {# 1 April/1 September #}2014--present.
 
+**Faculty Affiliate**{{ fieldsep }}Vector Institute, Toronto, ON, 2018--present.
+
 **Full Member, Graduate Faculty**\
 School of Graduate Studies, University of Toronto, Toronto, ON, 2017--present.
 
@@ -83,6 +85,10 @@ University of Cambridge (Trinity College), Cambridge, UK, 2003--2008.{{ recordse
 {% if compact %}*({{ caller().split(",")|length }} authors)*{% else %}{{ caller() }}{% endif %}
 {%- endmacro %}
 
+{% macro pages(start, end=None) -%}
+{{ start }}{% if not compact %}--{{ end }}{% endif %}
+{%- endmacro %}
+
 \beginenumerate
 J24.\ **Karimzadeh M**, Ernst C, Kundaje A, **Hoffman MM**. ["Umap and Bismap: quantifying genome and methylome mappability."](https://doi.org/10.1101/095463) *Nucleic Acids Res*. 2018; in press. Preprint: <https://doi.org/10.1101/095463>
 
@@ -93,13 +99,13 @@ J23.\ Ching T, Himmelstein DS, Beaulieu-Jones BK, Kalinin AA, Do BT, Way GP, Fer
 * [Recommended](https://f1000.com/prime/732001658) by Faculty of 1000.
 {% endif %}
 
-J22.\ **Denisko D**, **Hoffman MM**. ["Classification and interaction in random forests."](https://doi.org/10.1073/pnas.1800256115) *Proc Natl Acad Sci U S A*. 2018; 115:1690{% if not compact %}--2{% endif %}.
+J22.\ **Denisko D**, **Hoffman MM**. ["Classification and interaction in random forests."](https://doi.org/10.1073/pnas.1800256115) *Proc Natl Acad Sci U S A*. 2018; 115:{{ pages(1690, 2) }}.
 
-J21.\ **Chan RCW**\*, Libbrecht MW\*, **Roberts EG**, Bilmes JA, Noble WS, **Hoffman MM**. ["Segway 2.0: Gaussian mixture models and minibatch training."](https://doi.org/10.1093/bioinformatics/btx603) *Bioinformatics*. 2018; 34:669{% if not compact %}--71{% endif %}.
+J21.\ **Chan RCW**\*, Libbrecht MW\*, **Roberts EG**, Bilmes JA, Noble WS, **Hoffman MM**. ["Segway 2.0: Gaussian mixture models and minibatch training."](https://doi.org/10.1093/bioinformatics/btx603) *Bioinformatics*. 2018; 34:{{ pages(669, 71) }}.
 
-J20.\ **Chicco D**, **Hoffman MM**. ["Genome Informatics 2016."](https://doi.org/10.1186/s13059-016-1135-5) *Genome Biol*. 2017; 18:5.
+J20.\ **Karimzadeh M**, **Hoffman MM**. ["Top considerations for creating bioinformatics software documentation."](https://academic.oup.com/bib/article/doi/10.1093/bib/bbw134/2907814/Top-considerations-for-creating-bioinformatics) *Brief Bioinform*. 2018; 19:{{ pages(693, 699) }}.
 
-J19.\ **Karimzadeh M**, **Hoffman MM**. ["Top considerations for creating bioinformatics software documentation."](https://academic.oup.com/bib/article/doi/10.1093/bib/bbw134/2907814/Top-considerations-for-creating-bioinformatics) *Brief Bioinform*. 2017. In press.
+J19.\ **Chicco D**, **Hoffman MM**. ["Genome Informatics 2016."](https://doi.org/10.1186/s13059-016-1135-5) *Genome Biol*. 2017; 18:5.
 
 J18.\ Lundberg SM, Tu WB, Raught B, Penn LZ, **Hoffman MM**, Lee SI. ["ChromNet: learning the human chromatin network from all ENCODE ChIP-seq data."](http://genomebiology.biomedcentral.com/articles/10.1186/s13059-016-0925-0) *Genome Biol*. 2016; 17:82.
 
@@ -107,12 +113,12 @@ J18.\ Lundberg SM, Tu WB, Raught B, Penn LZ, **Hoffman MM**, Lee SI. ["ChromNet:
 * [Recommended](https://f1000.com/prime/726328111) by Faculty of 1000.
 {% endif %}
 
-J17.\ Franke B, Plante JF, Roscher R, Lee A, Smyth C, Hatefi A, Chen F, Gil E, Schwing A, Selvitella A, **Hoffman MM**, Grosse R, Hendricks D, Reid N. ["Statistical inference, learning and models in big data."](http://onlinelibrary.wiley.com/enhanced/doi/10.1111/insr.12176) *Int Stat Rev*. 2016. 84:371{% if not compact %}--89{% endif %}.
+J17.\ Franke B, Plante JF, Roscher R, Lee A, Smyth C, Hatefi A, Chen F, Gil E, Schwing A, Selvitella A, **Hoffman MM**, Grosse R, Hendricks D, Reid N. ["Statistical inference, learning and models in big data."](http://onlinelibrary.wiley.com/enhanced/doi/10.1111/insr.12176) *Int Stat Rev*. 2016. 84:{{ pages(371, 89) }}.
 
-J16.\ **Viner C**, **Hoffman MM**. ["Determining the epigenome using DNA alone."](http://pubmed.gov/25719827) *Nat Methods*. 2015 Mar; 12:191{% if not compact %}--2{% endif %}.
+J16.\ **Viner C**, **Hoffman MM**. ["Determining the epigenome using DNA alone."](http://pubmed.gov/25719827) *Nat Methods*. 2015 Mar; 12:{{ pages(191, 2) }}.
 
 J15.\ Libbrecht MW, Ay F, **Hoffman MM**,
-{% call shorten_authors() %}Gilbert DM, Bilmes JA, Noble WS{% endcall %}. ["Joint annotation of chromatin state and chromatin conformation reveals relationships among domain types and identifies domains of cell type-specific expression."](http://genome.cshlp.org/content/25/4/544.full) *Genome Res*. 2015; 25:544{% if not compact %}--57{% endif %}.
+{% call shorten_authors() %}Gilbert DM, Bilmes JA, Noble WS{% endcall %}. ["Joint annotation of chromatin state and chromatin conformation reveals relationships among domain types and identifies domains of cell type-specific expression."](http://genome.cshlp.org/content/25/4/544.full) *Genome Res*. 2015; 25:{{ pages(544, 57) }}.
 
 {% if not compact %}
 * Selected as one of top 11 papers of 2014--2015 at the Research in Computational Molecular Biology (RECOMB)/International Society for Computational Biology Conference on Regulatory and Systems Genomics 2015.
@@ -124,42 +130,42 @@ J13.\ Ho JWK,
 {% call shorten_authors() %}Jung YL, Liu T, Alver BH, Lee S, Ikegami K, Sohn K, Minoda A, Tolstorukov MY, Appert A, Parker SCJ, Gu T, Kundaje A, Riddle NC, Bishop E, Egelhofer TA, Hu SS, Alekseyenko AA, Rechtsteiner A, Asker D, Belsky JA, Bowman SK, Chen QB, Chen RA, Day DS, Dong Y, Dose AC, Duan X, Epstein CB, Ercan S, Feingold EA, Ferrari F, Garrigues JM, Gehlenborg N, Good PJ, Haseley P, He D, Herrmann M{% endcall %},
 **Hoffman MM**,
 {% call shorten_authors() %}Jeffers TE, Kharchenko PV, Kolasinska-Zwierz P, Kotwaliwale CV, Kumar N, Langley SA, Larschan EN, Latorre I, Libbrecht MW, Lin X, Park R, Pazin MJ, Pham HN, Plachetka A, Qin B, Schwartz YB, Shoresh N, Stempor P, Vielle A, Wang C, Whittle CM, Xue H, Kingston RE, Kim JH, Bernstein BE, Dernburg AF, Pirrotta V, Kuroda MI, Noble WS, Tullius TD, Kellis M, MacAlpine DM, Strome S, Elgin SCR, Liu XS, Lieb JD, Ahringer J, Karpen GH, Park PJ{% endcall %}.
-["Comparative analysis of metazoan chromatin organization."](http://doi.org/10.1038/nature13415) *Nature*. 2014 Aug 28; 512:449{% if not compact %}--52{% endif %}.
+["Comparative analysis of metazoan chromatin organization."](http://doi.org/10.1038/nature13415) *Nature*. 2014 Aug 28; 512:{{ pages(449, 52) }}.
 
 {% if not compact %}
-* News and views summary: Muerdter F, Stark A. *Nature*. 2014 Aug 28; 512:374{% if not compact %}--5{% endif %}.
+* News and views summary: Muerdter F, Stark A. *Nature*. 2014 Aug 28; 512:{{ pages(374, 5) }}.
 * Cited %CITES:g8uWPOAv7ggC times.
 {% endif %}
 
 J12.\ **Hoffman MM**\*, Ernst J\*, Wilder SP, Kundaje A, Harris RS, Libbrecht M, Giardine B, **Ellenbogen PM**,
-{% call shorten_authors() %}Bilmes JA, Birney E, Hardison RC, Dunham I, Kellis M, Noble WS{% endcall %}. ["Integrative annotation of chromatin elements from ENCODE data."](http://doi.org/10.1093/nar/gks1284) *Nucleic Acids Res*. 2013 Jan; 41:827{% if not compact %}--41{% endif %}.
+{% call shorten_authors() %}Bilmes JA, Birney E, Hardison RC, Dunham I, Kellis M, Noble WS{% endcall %}. ["Integrative annotation of chromatin elements from ENCODE data."](http://doi.org/10.1093/nar/gks1284) *Nucleic Acids Res*. 2013 Jan; 41:{{ pages(827, 41) }}.
 
 {% if not compact %}
 * Featured Article in *Nucleic Acids Research*.
 * Cited %CITES:ufrVoPGSRksC times.
 {% endif %}
 
-J11.\ **ENCODE Project Consortium**. ["An integrated Encyclopedia of DNA Elements in the human genome."](http://doi.org/10.1038/nature11247) *Nature*. 2012 Sep 6; 489:57{% if not compact %}--74{% endif %}.
+J11.\ **ENCODE Project Consortium**. ["An integrated Encyclopedia of DNA Elements in the human genome."](http://doi.org/10.1038/nature11247) *Nature*. 2012 Sep 6; 489:{{ pages(57, 74) }}.
 
 {% if not compact %}
 * Author contribution: Lead analyst.
 * Featured on cover of *Nature*.
 * Recommended by Faculty of 1000.
-* News and views summary: Ecker JR et al. *Nature*. 2012 Sep 6; 489:52{% if not compact %}--55{% endif %}.
+* News and views summary: Ecker JR et al. *Nature*. 2012 Sep 6; 489:{{ pages(52, 55) }}.
 * Cited %CITES:eQOLeE2rZwMC times.
 {% endif %}
 
 J10.\ Landt SG,
 {% call shorten_authors() %}Marinov GK, Kundaje A, Kheradpour P, Pauli F, Batzoglou S, Bernstein B, Bickel P, Brown B, Cayting P, Chen Y, Desalvo G, Epstein C, Fisher-Aylor KI, Euskirchen G, Gerstein M, Gertz J, Hartemink AJ{% endcall %},
 **Hoffman MM**,
-{% call shorten_authors() %}Iyer VR, Jung YL, Karmakar S, Kellis M, Kharchenko PV, Li Q, Liu T, Liu XS, Ma L, Milosavljevic A, Myers RM, Park PJ, Pazin MJ, Perry MD, Raha D, Reddy TE, Rozowsky J, Shoresh N, Sidow A, Slattery M, Stamatoyonnopoulous JA, Tolstorukov MY, White KP, Xi S, Farnham PJ, Lieb JF, Wold BJ, Snyder M{% endcall %}. ["ChIP-seq guidelines and practices used by the ENCODE and modENCODE consortia."](http://doi.org/10.1101/gr.136184.111) *Genome Res*. 2012 Sep; 22:1813{% if not compact %}--31{% endif %}.
+{% call shorten_authors() %}Iyer VR, Jung YL, Karmakar S, Kellis M, Kharchenko PV, Li Q, Liu T, Liu XS, Ma L, Milosavljevic A, Myers RM, Park PJ, Pazin MJ, Perry MD, Raha D, Reddy TE, Rozowsky J, Shoresh N, Sidow A, Slattery M, Stamatoyonnopoulous JA, Tolstorukov MY, White KP, Xi S, Farnham PJ, Lieb JF, Wold BJ, Snyder M{% endcall %}. ["ChIP-seq guidelines and practices used by the ENCODE and modENCODE consortia."](http://doi.org/10.1101/gr.136184.111) *Genome Res*. 2012 Sep; 22:{{ pages(1813, 31) }}.
 
 {% if not compact %}
 * [Recommended](https://f1000.com/prime/717960363) by Faculty of 1000.
 * Cited %CITES:WF5omc3nYNoC times.
 {% endif %}
 
-J9.\ **Hoffman MM**, **Buske OJ**, Wang J, Weng Z, Bilmes JA, Noble WS. ["Unsupervised pattern discovery in human chromatin structure through genomic segmentation."](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3340533/) *Nat Methods*. 2012 Mar 18; 9:473{% if not compact %}--6{% endif %}.
+J9.\ **Hoffman MM**, **Buske OJ**, Wang J, Weng Z, Bilmes JA, Noble WS. ["Unsupervised pattern discovery in human chromatin structure through genomic segmentation."](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3340533/) *Nat Methods*. 2012 Mar 18; 9:{{ pages(473, 6) }}.
 
 {% if not compact %}
 * Cited %CITES:IjCSPb-OGe4C times.
@@ -174,23 +180,23 @@ J8.\ **ENCODE Project Consortium**. ["A user's guide to the Encyclopedia of DNA 
 
 J7.\ **Buske OJ**, **Hoffman MM**, Ponts N, Le Roch KG, Noble WS. ["Exploratory analysis of genomic segmentations with Segtools."](http://doi.org/10.1186/1471-2105-12-415) *BMC Bioinformatics*. 2011 Oct 26; 12:415.
 
-J6.\ **Hoffman MM**, **Buske OJ**, Noble WS. ["The Genomedata format for storing large-scale functional genomics data."](http://doi.org/10.1093/bioinformatics/btq164) *Bioinformatics*. 2010 Jun 1; 26:1458{% if not compact %}--9{% endif %}.
+J6.\ **Hoffman MM**, **Buske OJ**, Noble WS. ["The Genomedata format for storing large-scale functional genomics data."](http://doi.org/10.1093/bioinformatics/btq164) *Bioinformatics*. 2010 Jun 1; 26:{{ pages(1458, 9) }}.
 
-J5.\ Chen X, **Hoffman MM**, Bilmes JA, Hesselberth JR, Noble WS. ["A dynamic Bayesian network for identifying protein-binding footprints from single molecule-based sequencing data."](http://doi.org/10.1093/bioinformatics/btq175) *Bioinformatics*. 2010 Jun 15; 26:i334{% if not compact %}--42{% endif %}.
+J5.\ Chen X, **Hoffman MM**, Bilmes JA, Hesselberth JR, Noble WS. ["A dynamic Bayesian network for identifying protein-binding footprints from single molecule-based sequencing data."](http://doi.org/10.1093/bioinformatics/btq175) *Bioinformatics*. 2010 Jun 15; 26:{{ pages(i334, 42) }}.
 
-J4.\ **Hoffman MM**, Birney E. ["An effective model for natural selection in promoters."](http://doi.org/10.1101/gr.096719.109) *Genome Res*. 2010 May; 20:685{% if not compact %}--92{% endif %}.
+J4.\ **Hoffman MM**, Birney E. ["An effective model for natural selection in promoters."](http://doi.org/10.1101/gr.096719.109) *Genome Res*. 2010 May; 20:{{ pages(685, 92) }}.
 
-J3.\ **Hoffman MM**, Birney E. ["Estimating the neutral rate of nucleotide substitution using introns."](http://doi.org/10.1093/molbev/msl179) *Mol Biol Evol*. 2007 Feb; 24:522{% if not compact %}--31{% endif %}.
+J3.\ **Hoffman MM**, Birney E. ["Estimating the neutral rate of nucleotide substitution using introns."](http://doi.org/10.1093/molbev/msl179) *Mol Biol Evol*. 2007 Feb; 24:{{ pages(522, 31) }}.
 
-J2.\ **International Chicken Genome Sequencing Consortium**. ["Sequence and comparative analysis of the chicken genome provide unique perspectives on vertebrate evolution."](http://doi.org/10.1038/nature03154) *Nature*. 2004 Dec 9; 432:695{% if not compact %}--716{% endif %}.
+J2.\ **International Chicken Genome Sequencing Consortium**. ["Sequence and comparative analysis of the chicken genome provide unique perspectives on vertebrate evolution."](http://doi.org/10.1038/nature03154) *Nature*. 2004 Dec 9; 432:{{ pages(695, 716) }}.
 
 {% if not compact %}
 * Featured on cover of *Nature*.
-* News and views summary: Schmutz J, Grimwood J. *Nature*. 2004 Dec 9; 432:679{% if not compact %}--80{% endif %}.
+* News and views summary: Schmutz J, Grimwood J. *Nature*. 2004 Dec 9; 432:{{ pages(679, 80) }}.
 * Cited %CITES:W7OEmFMy1HYC times.
 {% endif %}
 
-J1.\ **Hoffman MM**, Khrapov MA, Cox JC, Yao J, Tong L, Ellington AD. ["AANT: the Amino Acid-Nucleotide Interaction Database."](http://doi.org/10.1093/nar/gkh128) *Nucleic Acids Res*. 2004 Jan 1; 32:D174{% if not compact %}--81{% endif %}.
+J1.\ **Hoffman MM**, Khrapov MA, Cox JC, Yao J, Tong L, Ellington AD. ["AANT: the Amino Acid-Nucleotide Interaction Database."](http://doi.org/10.1093/nar/gkh128) *Nucleic Acids Res*. 2004 Jan 1; 32:{{ pages(D174, 81) }}.
 
 {% if not compact %}
 * Cited %CITES:u5HHmVD_uO8C times.
