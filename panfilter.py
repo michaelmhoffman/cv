@@ -8,7 +8,7 @@ from future_builtins import ascii, filter, hex, map, oct, zip  # noqa
 
 __version__ = "0.1"
 
-# Copyright 2015, 2016, 2017 Michael M. Hoffman <michael.hoffman@utoronto.ca>
+# Copyright 2015-2018 Michael M. Hoffman <michael.hoffman@utoronto.ca>
 
 from datetime import date
 from functools import partial
@@ -81,7 +81,7 @@ def noop(*args, **kwargs):
 
 
 def get_node_type_content(node):
-    return node["t"], node["c"]
+    return node["t"], node.get("c")
 
 
 def proc_bullet_item(node, citations):
@@ -175,17 +175,16 @@ def proc_tree(tree, config, include_ids, citations, verbose):
 
 def panfilter(infile, config_file=None, verbose=False):
     pandoc_in = json.load(infile)
-    metadata, tree = pandoc_in
+    tree = pandoc_in["blocks"]
 
-    assert isinstance(metadata, dict)
     assert isinstance(tree, list)
 
     citations = load_google_scholar()
     config, include_ids = read_config(config_file)
 
-    pandoc_out = (metadata,
-                  proc_tree(tree, config, include_ids, citations, verbose))
-    json.dump(pandoc_out, sys.stdout)
+    pandoc_in["blocks"] = proc_tree(tree, config, include_ids, citations,
+                                    verbose)
+    json.dump(pandoc_in, sys.stdout)
 
     # XXX: print heading options
     # print(*(node["c"][1][0] for node in tree
@@ -217,6 +216,7 @@ def main(argv=sys.argv[1:]):
     args = parse_args(argv)
 
     return panfilter(args.infile, args.config, args.verbose)
+
 
 if __name__ == "__main__":
     sys.exit(main())
