@@ -8,6 +8,7 @@ VMARGIN = 1in
 ## command variables
 JINJA_FLAGS_PRIVATE = --search-dir=../cv-private
 JINJA_FLAGS = $(JINJA_FLAGS_PRIVATE)
+JINJA = ./jinja.py $(JINJA_FLAGS)
 
 PANDOC = pandoc
 PANDOC_TOJSON = $(PANDOC) --smart --from=markdown+raw_tex --to=json
@@ -67,7 +68,7 @@ clean: mostlyclean
 	$(PANDOC_TOJSON) $< -o $@
 
 cv-%.md : cv.md.jinja
-	./jinja.py $(JINJA_FLAGS) $< $@
+	$(JINJA) $< $@
 
 # using a pipeline because using --filter, a Python filter, and Cygwin python doesn't seem to work
 cv-%.docx: cv-%.md reference.docx google-scholar.html %.yaml
@@ -85,6 +86,8 @@ cv-%.tex : cv-%.md preamble.tex google-scholar.html %.yaml
 %.yaml :
 	touch $@
 
+# XXX: Jinja include dependencies not included
+
 ## explicit rules
 
 # empty.yaml: empty yaml, can copy to new YAMLs
@@ -96,7 +99,8 @@ empty.yaml: cv-empty.json google-scholar.html
 cv-all.md : JINJA_FLAGS = $(JINJA_FLAGS_PRIVATE)
 
 # crs:
-cv-crs.md : 
+cv-crs.md : cv-crs.md.jinja
+	$(JINJA) $< $@
 
 # scn: Stem Cell Network
 cv-scn.md : JINJA_FLAGS = $(JINJA_FLAGS_PRIVATE) --abbr-months --set compact

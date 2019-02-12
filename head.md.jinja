@@ -1,7 +1,7 @@
 # Michael M. Hoffman
 
 {% set compact = compact|default(false) %}
-{% set annotate = annotate|compact %} {# annotate publications #}
+{% set annotate = annotate|default(compact) %} {# annotate publications #}
 {% set select = select|default(false) %} {# selected stuff only #}
 {% set statusonly = statusonly|default(false) %}
 {% set nostartup = nostartup|default(false) %}
