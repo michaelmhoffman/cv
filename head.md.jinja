@@ -1,0 +1,26 @@
+# Michael M. Hoffman
+
+{% set compact = compact|default(false) %}
+{% set select = select|default(false) %}
+{% set statusonly = statusonly|default(false) %}
+{% set nostartup = nostartup|default(false) %}
+
+{% if compact %}
+{% set fieldsep %}, {% endset %}
+{% set recordsep %}\{% endset %}
+{% set dept %}Dept{% endset %}
+{% else %}
+{% set fieldsep %}\
+{% endset %}
+{% set recordsep %}{% endset %}
+{% set dept %}Department{% endset %}
+{% endif %}
+
+{% if not compact %}
+101 College St PMCRT 11-311\
+Toronto, ON M5G 1L7
+
+Work +1 416 581 7481\
+E-mail michael.hoffman@utoronto.ca\
+ORCID [0000-0002-4517-1562](http://orcid.org/0000-0002-4517-1562)
+{% endif %}
