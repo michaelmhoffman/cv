@@ -70,6 +70,11 @@ clean: mostlyclean
 cv-%.md : cv.md.jinja
 	$(JINJA) $< $@
 
+# debugging:
+# variant=crs
+# make "cv-${variant}.json"
+# PYTHONINSPECT=1 ./panfilter.py --config="${variant}.yaml" "cv-${variant}.json"
+
 # using a pipeline because using --filter, a Python filter, and Cygwin python doesn't seem to work
 cv-%.docx: cv-%.md reference.docx google-scholar.html %.yaml
 	$(PANDOC_TOJSON) $< | $(PANFILTER) --config=$(*F).yaml | $(PANDOC_DOCX) --from=json -o $@

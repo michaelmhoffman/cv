@@ -1,3 +1,7 @@
+{% set annotate = annotate|default(false) %}
+{% extends 'base.md.jinja' %}
+
+{% block everything %}
 {% include 'head.md.jinja' %}
 
 ## Education
@@ -14,3 +18,4 @@
 ## Publications
 
 {% include 'publications.md.jinja' %}
+{% endblock %}

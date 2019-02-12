@@ -1,0 +1,14 @@
+- id: michael-m.-hoffman
+- id: education
+- id: academic-research-and-industrial-experience
+- id: recognitions-honors
+- id: recognitions-other-scholarships-and-awards
+- id: publications
+- id: publications-journal
+  year-min: -5
+- id: publications-conference-proceedings
+  year-min: -5
+- id: publications-submitted
+  year-min: -5
+- id: publications-community-engagement
+  year-min: -5

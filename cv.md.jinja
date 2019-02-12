@@ -1,10 +1,13 @@
+{% extends 'base.md.jinja' %}
+
+{% block everything %}
 {% include 'head.md.jinja' %}
 
 {% if not compact %}
 ## Current positions
 {% endif %}
 
-{% include 'positions.md.jinja' %}
+{% include 'positions-current.md.jinja' %}
 
 ## Education
 
@@ -576,3 +579,4 @@ T1.\ **Buske, Orion J.** BS {% if not compact %}(Honors){% endif %} Student, {{ 
 ## Citizenship and immigration
 * United States of America: citizen.
 * Canada: permanent resident.
+{% endblock %}

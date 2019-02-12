@@ -175,14 +175,20 @@ def proc_tree(tree, config, include_ids, citations, verbose):
 
 def panfilter(infile, config_file=None, verbose=False):
     pandoc_in = json.load(infile)
-    tree = pandoc_in["blocks"]
+
+    key = "blocks"
+    try:
+        tree = pandoc_in[key]
+    except TypeError:  # pre pandoc-1.19
+        key = 1
+        tree = pandoc_in[key]
 
     assert isinstance(tree, list)
 
     citations = load_google_scholar()
     config, include_ids = read_config(config_file)
 
-    pandoc_in["blocks"] = proc_tree(tree, config, include_ids, citations,
+    pandoc_in[key] = proc_tree(tree, config, include_ids, citations,
                                     verbose)
     json.dump(pandoc_in, sys.stdout)
 
