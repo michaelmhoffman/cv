@@ -67,6 +67,8 @@ clean: mostlyclean
 %.json : %.md
 	$(PANDOC_TOJSON) $< -o $@
 
+# XXX: change everything to cv-%-%.*: to separate template and yaml config
+# XXX: use jinja2.meta.find_referenced_templates to automake deps
 cv-%.md : cv.md.jinja
 	$(JINJA) $< $@
 
