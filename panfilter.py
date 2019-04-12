@@ -8,7 +8,7 @@ from future_builtins import ascii, filter, hex, map, oct, zip  # noqa
 
 __version__ = "0.1"
 
-# Copyright 2015-2018 Michael M. Hoffman <michael.hoffman@utoronto.ca>
+# Copyright 2015-2019 Michael M. Hoffman <michael.hoffman@utoronto.ca>
 
 from datetime import date
 from functools import partial
@@ -56,7 +56,7 @@ def read_config(config_file):
     if config_file is None:
         config_raw = {}
     else:
-        config_raw = yaml.load(config_file)
+        config_raw = yaml.safe_load(config_file)
         if config_raw is None:
             config_raw = {}
 
