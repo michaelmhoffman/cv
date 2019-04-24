@@ -4,7 +4,7 @@
 """
 
 from __future__ import absolute_import, division, print_function
-from future_builtins import ascii, filter, hex, map, oct, zip  # noqa
+from future_builtins import ascii, filter, hex, map, oct, zip
 
 __version__ = "0.1"
 

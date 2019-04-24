@@ -123,7 +123,7 @@ select-nostartup.yaml : select.yaml
 cv-select-nostartup.md : JINJA_FLAGS = $(JINJA_FLAGS_PRIVATE) --set select --set nostartup
 
 # statusonly: Include "status-only" for those who care about it
-cv-statusonly.md : JINJA_FLAGS = $(JINJA_FLAGS_PRIVATE) --set statusonly
+cv-statusonly.md : JINJA_FLAGS = $(JINJA_FLAGS_PRIVATE) --set statusonly --set nostartup
 
 # web: default public web view
 cv-web.md : JINJA_FLAGS =
