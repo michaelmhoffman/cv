@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2
 """jinja: basic jinja templating
 """
 
@@ -7,7 +7,7 @@ from future_builtins import ascii, filter, hex, map, oct, zip  # noqa
 
 __version__ = "$Revision: 871 $"
 
-# Copyright 2011, 2015, 2016 Michael M. Hoffman <mmh1@uw.edu>
+# Copyright 2011, 2015, 2016, 2019 Michael M. Hoffman <mmh1@uw.edu>
 
 from calendar import month_abbr, month_name
 import codecs
@@ -17,6 +17,7 @@ from jinja2 import Environment, FileSystemLoader
 
 
 MONTH_ABBRS = dict(zip(month_name[1:], month_abbr[1:]))
+
 
 def parse_variable_specs(specs):
     res = {}
@@ -88,6 +89,7 @@ def main(argv=sys.argv[1:]):
     search_dirnames = reversed(args.search_dir)
     return jinja(args.infile, args.outfile, args.set, search_dirnames,
                  args.abbr_months)
+
 
 if __name__ == "__main__":
     sys.exit(main())

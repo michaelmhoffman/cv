@@ -1,10 +1,10 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2
 
 """panfilter.py: filter out parts of a pandoc document
 """
 
 from __future__ import absolute_import, division, print_function
-from future_builtins import ascii, filter, hex, map, oct, zip
+from future_builtins import ascii, filter, hex, map, oct, zip  # noqa
 
 __version__ = "0.1"
 
@@ -98,7 +98,7 @@ def proc_bullet(node_content, citations):
     for subnode in node_content:
         for subsubnode in subnode:
             for subsubsubnode in subsubnode["c"]:
-                    proc_bullet_item(subsubsubnode, citations)
+                proc_bullet_item(subsubsubnode, citations)
 
 
 def proc_para(node_content, section_exclude, section_year_min):
@@ -189,7 +189,7 @@ def panfilter(infile, config_file=None, verbose=False):
     config, include_ids = read_config(config_file)
 
     pandoc_in[key] = proc_tree(tree, config, include_ids, citations,
-                                    verbose)
+                               verbose)
     json.dump(pandoc_in, sys.stdout)
 
     # XXX: print heading options
