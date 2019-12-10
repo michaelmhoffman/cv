@@ -6,7 +6,7 @@ HMARGIN = 1in
 VMARGIN = 1in
 
 ## command variables
-JINJA_FLAGS_PRIVATE = --search-dir=../cv-private
+JINJA_FLAGS_PRIVATE = --search-dir=../cv-private --set private
 JINJA_FLAGS = $(JINJA_FLAGS_PRIVATE)
 JINJA = ./jinja.py $(JINJA_FLAGS)
 
@@ -53,7 +53,7 @@ web: cv-web.pdf
 	scp cv-web.pdf mordor:~/public_html/cv/michael-hoffman-cv.pdf
 
 mostlyclean:
-	-$(RM) cv-*.{md,tex,docx,pdf,json} *.aux *.out *.log empty.yaml
+	-$(RM) cv-*.md cv-*.tex cv-*.docx cv-*.pdf cv-*.json *.aux *.out *.log empty.yaml
 
 clean: mostlyclean
 	-$(RM) cookies.txt google-scholar.html

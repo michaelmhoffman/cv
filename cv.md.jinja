@@ -16,10 +16,12 @@
 ## Publications
 
 {% include 'publications.md.jinja' %}
- 
+
 ## Intellectual property
 
-{% include 'patents.md %}
+{% if private %}
+{% include 'patents.md' %}
+{% endif %}
 
 ### Copyrights
 
@@ -620,8 +622,10 @@ T1.\ **Buske, Orion J.** BS {% if not compact %}(Honors){% endif %} Student, {{ 
 
 ## Long-term visitors hosted
 ### Long-term visitors hosted: past
+\beginenumerate
 V1.\ **Zamparo, Lee**. Postdoctoral Fellow, Memorial Sloan-Kettering Cancer Center, 2017--2019.
 {# 2017-12-04--2019-06-30 #}
+\endenumerate
 
 ## Media coverage
 ### Media coverage: text interviews
