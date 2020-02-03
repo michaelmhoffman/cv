@@ -105,6 +105,11 @@ empty.yaml: cv-empty.json google-scholar.html
 # all: everything
 cv-all.md : JINJA_FLAGS = $(JINJA_FLAGS_PRIVATE)
 
+all-public.yaml : all.yaml
+	cp $< $@
+
+cv-all-public.md : JINJA_FLAGS =
+
 # crs:
 cv-crs.md : cv-crs.md.jinja
 	$(JINJA) $< $@

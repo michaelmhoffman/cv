@@ -19,5 +19,6 @@ cv-*.{md,docx,html,json,pdf,tex}
 google-scholar.html
 cookies.txt
 
+all-public.yaml
 empty.yaml
 select-nostartup.yaml
