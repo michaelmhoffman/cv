@@ -110,6 +110,8 @@ all-public.yaml : all.yaml
 
 cv-all-public.md : JINJA_FLAGS =
 
+cv-all-nostartup.md : JINJA_FLAGS = $(JINJA_FLAGS_PRIVATE) --set nostartup
+
 # crs:
 cv-crs.md : cv-crs.md.jinja
 	$(JINJA) $< $@
