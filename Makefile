@@ -89,6 +89,7 @@ cv-%.tex : cv-%.md preamble.tex google-scholar.html %.yaml
 
 %.pdf : %.tex
 	xelatex $<
+	cp $@ cv.pdf
 
 %.yaml :
 	touch $@
