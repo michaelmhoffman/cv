@@ -2,12 +2,14 @@
 - id: current-positions
 - id: education
 - id: publications
-- id: publications-journal
-- id: publications-conference-proceedings
+- id: publications-journal-peer-reviewed
+- id: publications-conference-proceedings-peer-reviewed
+- id: publications-journal-commentaries-and-meeting-reports
 - id: publications-submitted
 # - id: publications-theses
 - id: publications-community-engagement
 - id: intellectual-property
+- id: patent-applications
 - id: recognitions-selected
 # - id: recognitions-honors
 # - id: recognitions-other-scholarships-and-awards
@@ -29,7 +31,8 @@
 - id: professional-activities-society-leadership-positions
 - id: professional-activities-conference-organizer
 - id: professional-activities-advisory
-- id: professional-activities-session-chair
+- id: professional-activities-session-organizer-or-chair
+# - id: professional-activities-session-organizer-or-chair-local
 - id: professional-activities-funding-review
 - id: professional-activities-manuscript-review
 # - id: professional-activities-consortium-leadership-positions
@@ -41,7 +44,10 @@
 - id: trainees-and-staff-supervised
 - id: trainees-and-staff-supervised-current
 - id: trainees-and-staff-supervised-past
+# - id: long-term-visitors-hosted
+# - id: long-term-visitors-hosted-past
 - id: media-coverage
-- id: media-coverage-interviews
+- id: media-coverage-text-interviews
+- id: media-coverage-audio-interviews
 - id: media-coverage-meeting-reports
 # - id: citizenship-and-immigration
