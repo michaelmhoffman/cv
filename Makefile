@@ -130,11 +130,13 @@ select-nostartup.yaml : select.yaml
 	cp $< $@
 cv-select-nostartup.md : JINJA_FLAGS = $(JINJA_FLAGS_PRIVATE) --set select --set nostartup
 
-# compact: Selected stuff only, compact style
-select-nostartup.yaml : select.yaml
+# compact: Selected stuff only without startup, compact style
+compact.yaml : select.yaml
 	cp $< $@
-cv-select-nostartup.md : JINJA_FLAGS = $(JINJA_FLAGS_PRIVATE) --set select --set nostartup
+cv-compact.md : JINJA_FLAGS = $(JINJA_FLAGS_PRIVATE) --set select --set nostartup --set compact --abbr-months
 
+cv-compact.tex : HMARGIN = 0.5in
+cv-compact.tex : VMARGIN = \{0.5in,0.75in\}
 
 # nostartup: everything except startup
 cv-nostartup.md : JINJA_FLAGS = $(JINJA_FLAGS_PRIVATE) --set nostartup
