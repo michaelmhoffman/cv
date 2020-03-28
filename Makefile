@@ -10,6 +10,8 @@ JINJA_FLAGS_PRIVATE = --search-dir=../cv-private --set private
 JINJA_FLAGS = $(JINJA_FLAGS_PRIVATE)
 JINJA = ./jinja.py $(JINJA_FLAGS)
 
+LATEX = xelatex
+
 PANDOC = pandoc
 PANDOC_TOJSON = $(PANDOC) --smart --from=markdown+raw_tex --to=json
 PANDOC_FINAL = $(PANDOC) --standalone --smart --variable=lang:en
@@ -21,7 +23,7 @@ PANDOC_TEX = $(PANDOC_FINAL) \
 	--variable=subparagraph \
 	--variable=colorlinks \
 	--include-in-header=preamble.tex \
-	--latex-engine=xelatex \
+	--latex-engine=$(LATEX) \
 	--to=latex
 
 PANFILTER = ./panfilter.py $(PANFILTER_FLAGS)
@@ -88,7 +90,7 @@ cv-%.tex : cv-%.md preamble.tex google-scholar.html %.yaml
 	$(PANDOC_TOJSON) $< | $(PANFILTER) --config=$(*F).yaml | $(PANDOC_TEX) --from=json | $(TEXFILTER) > $@
 
 %.pdf : %.tex
-	xelatex $<
+	texfot $<
 	cp $@ cv.pdf
 
 %.yaml :
