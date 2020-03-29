@@ -90,7 +90,7 @@ cv-%.tex : cv-%.md preamble.tex google-scholar.html %.yaml
 	$(PANDOC_TOJSON) $< | $(PANFILTER) --config=$(*F).yaml | $(PANDOC_TEX) --from=json | $(TEXFILTER) > $@
 
 %.pdf : %.tex
-	texfot $<
+	texmk -$(LATEX) $<
 	cp $@ cv.pdf
 
 %.yaml :
@@ -135,7 +135,7 @@ cv-select-nostartup.md : JINJA_FLAGS = $(JINJA_FLAGS_PRIVATE) --set select --set
 # compact: Selected stuff only without startup, compact style
 compact.yaml : select.yaml
 	cp $< $@
-cv-compact.md : JINJA_FLAGS = $(JINJA_FLAGS_PRIVATE) --set select --set nostartup --set compact --abbr-months
+cv-compact.md : JINJA_FLAGS = $(JINJA_FLAGS_PRIVATE) --set select --set nostartup --set compact --abbr-months --set presentation_score=760
 
 cv-compact.tex : HMARGIN = 0.5in
 cv-compact.tex : VMARGIN = \{0.5in,0.75in\}

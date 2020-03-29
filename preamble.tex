@@ -1,18 +1,19 @@
 \usepackage{enumitem}
 \usepackage{titlesec}
+\usepackage{calc}
 
 \newcommand{\textblacksquare}{{\tiny\raisebox{0.6ex}{\ensuremath{\blacksquare}}}}
 \newcommand{\afteritemizeskip}{\baselineskip}
 
 \setlist[itemize]{itemsep=0ex,parsep=0ex,topsep=-2ex,leftmargin=1.2em,label=\textblacksquare}
 
-\setlist[enumerate]{itemsep=0ex,parsep=0ex,topsep=-2ex,leftmargin=3.45em}
+\setlist[enumerate]{itemsep=0ex,parsep=0ex,topsep=-2ex,leftmargin=\widthof{S99.}+0.5em,labelwidth=0em,labelsep=0.5em,itemindent=0em}
 
 \titlespacing{\section}{0pt}{\parskip}{-\parskip}
 \titlespacing{\subsection}{0pt}{\parskip}{-\parskip}
 \titlespacing{\subsubsection}{0pt}{\parskip}{-\parskip}
 
 \frenchspacing
-\sloppy
+\setlength{\emergencystretch}{\hsize}
 
 \setlength{\topskip}{0mm}
