@@ -9,9 +9,12 @@
 
 \setlist[enumerate]{itemsep=0ex,parsep=0ex,topsep=-2ex,leftmargin=\widthof{S99.}+0.5em,labelwidth=0em,labelsep=0.5em,itemindent=0em}
 
-\titlespacing{\section}{0pt}{\parskip}{-\parskip}
-\titlespacing{\subsection}{0pt}{\parskip}{-\parskip}
-\titlespacing{\subsubsection}{0pt}{\parskip}{-\parskip}
+\titlespacing{\section}{0pt}{\parskip}{0pt}
+\titlespacing{\subsection}{0pt}{\parskip}{0pt}
+\titlespacing{\subsubsection}{0pt}{\parskip}{0pt}
+
+\setcounter{secnumdepth}{3} % to avoid problems with unnumbered headings
+\titlelabel{} % eliminate numbering
 
 \frenchspacing
 \setlength{\emergencystretch}{\hsize}
