@@ -1,6 +1,3 @@
-syntax:glob
-
-.hgignore-manifest
 auto
 ~$*
 \#*
@@ -19,9 +16,9 @@ auto
 cv.{md,docx,html,json,pdf,tex}
 cv-*.{md,docx,html,json,pdf,tex}
 
-google-scholar.html
-cookies.txt
+/google-scholar.html
+/cookies.txt
 
-all-public.yaml
-empty.yaml
-select-nostartup.yaml
+/all-public.yaml
+/empty.yaml
+/select-nostartup.yaml
