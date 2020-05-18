@@ -10,7 +10,7 @@ JINJA_FLAGS_PRIVATE = --search-dir=../cv-private --set private
 JINJA_FLAGS = $(JINJA_FLAGS_PRIVATE)
 JINJA = ./jinja.py $(JINJA_FLAGS)
 
-LATEX = xelatex
+LATEX = lualatex
 
 PANDOC = pandoc
 PANDOC_TOJSON = $(PANDOC) --smart --from=markdown+raw_tex --to=json
