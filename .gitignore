@@ -13,8 +13,19 @@ auto
 *.synctex.gz
 *.toc
 
-cv.{md,docx,html,json,pdf,tex}
-cv-*.{md,docx,html,json,pdf,tex}
+/cv.md
+/cv.docx
+/cv.html
+/cv.json
+/cv.pdf
+/cv.tex
+
+/cv-*.md
+/cv-*.docx
+/cv-*.html
+/cv-*.json
+/cv-*.pdf
+/cv-*.tex
 
 /google-scholar.html
 /cookies.txt
