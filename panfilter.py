@@ -138,7 +138,11 @@ def generate_tree(tree, config, include_ids, citations, log):
             log(text_accept(section_accept), section_id)
             section_config = config.get(section_id)
 
-            if section_config is not None:
+            if section_config is None:
+                # XXX: spaghetti
+                section_exclude = frozenset()
+                section_year_min = 0
+            else:
                 section_name = section_config.get("name")
                 if section_name:
                     node_content[2] = [{"c": section_name, "t": "Str"}]
