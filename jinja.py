@@ -1,13 +1,10 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python
 """jinja: basic jinja templating
 """
 
-from __future__ import absolute_import, division, print_function
-from future_builtins import ascii, filter, hex, map, oct, zip  # noqa
-
 __version__ = "$Revision: 871 $"
 
-# Copyright 2011, 2015, 2016, 2019 Michael M. Hoffman <mmh1@uw.edu>
+# Copyright 2011, 2015, 2016, 2019, 2020 Michael M. Hoffman <mmh1@uw.edu>
 
 from calendar import month_abbr, month_name
 import codecs
@@ -36,7 +33,7 @@ def parse_variable_specs(specs):
 
 
 def replace_dates(text):
-    for name, abbr in MONTH_ABBRS.iteritems():
+    for name, abbr in MONTH_ABBRS.items():
         text = text.replace(name, abbr)
 
     return text

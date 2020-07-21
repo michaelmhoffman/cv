@@ -13,8 +13,8 @@ JINJA = ./jinja.py $(JINJA_FLAGS)
 LATEX = lualatex
 
 PANDOC = pandoc
-PANDOC_TOJSON = $(PANDOC) --smart --from=markdown+raw_tex --to=json
-PANDOC_FINAL = $(PANDOC) --standalone --smart --variable=lang:en
+PANDOC_TOJSON = $(PANDOC) --from=markdown+raw_tex --to=json
+PANDOC_FINAL = $(PANDOC) --standalone --variable=lang:en
 PANDOC_DOCX = $(PANDOC_FINAL) --reference-docx=reference.docx
 PANDOC_TEX = $(PANDOC_FINAL) \
 	--variable=geometry:hmargin=$(HMARGIN),vmargin=$(VMARGIN) \
@@ -23,7 +23,7 @@ PANDOC_TEX = $(PANDOC_FINAL) \
 	--variable=subparagraph \
 	--variable=colorlinks \
 	--include-in-header=preamble.tex \
-	--latex-engine=$(LATEX) \
+	--pdf-engine=$(LATEX) \
 	--to=latex
 
 PANFILTER = ./panfilter.py $(PANFILTER_FLAGS)

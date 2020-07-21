@@ -1,14 +1,13 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python
 
 """panfilter.py: filter out parts of a pandoc document
 """
 
 from __future__ import absolute_import, division, print_function
-from future_builtins import ascii, filter, hex, map, oct, zip  # noqa
 
 __version__ = "0.1"
 
-# Copyright 2015-2019 Michael M. Hoffman <michael.hoffman@utoronto.ca>
+# Copyright 2015-2020 Michael M. Hoffman <michael.hoffman@utoronto.ca>
 
 from datetime import date
 from functools import partial
