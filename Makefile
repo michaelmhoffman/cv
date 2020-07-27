@@ -15,7 +15,7 @@ LATEX = lualatex
 PANDOC = pandoc
 PANDOC_TOJSON = $(PANDOC) --from=markdown+raw_tex --to=json
 PANDOC_FINAL = $(PANDOC) --standalone --variable=lang:en
-PANDOC_DOCX = $(PANDOC_FINAL) --reference-docx=reference.docx
+PANDOC_DOCX = $(PANDOC_FINAL) --reference-doc=reference.docx
 PANDOC_TEX = $(PANDOC_FINAL) \
 	--variable=geometry:hmargin=$(HMARGIN),vmargin=$(VMARGIN) \
 	--variable=mainfont:"TeX Gyre Heros" \
@@ -82,6 +82,7 @@ cv-%.md : cv.md.jinja
 # using a pipeline because using --filter, a Python filter, and Cygwin python doesn't seem to work
 cv-%.docx: cv-%.md reference.docx google-scholar.html %.yaml
 	$(PANDOC_TOJSON) $< | $(PANFILTER) --config=$(*F).yaml | $(PANDOC_DOCX) --from=json -o $@
+	cp $@ cv.docx
 
 cv-%.html : cv-%.md google-scholar.html %.yaml
 	$(PANDOC_TOJSON) $< | $(PANFILTER) --config=$(*F).yaml | $(PANDOC_FINAL) --toc --from=json -o $@
