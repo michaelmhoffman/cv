@@ -55,7 +55,7 @@ web: cv-web.pdf
 	scp cv-web.pdf mordor:~/public_html/cv/michael-hoffman-cv.pdf
 
 mostlyclean:
-	-$(RM) cv-*.md cv-*.tex cv-*.docx cv-*.pdf cv-*.json *.aux *.out *.log empty.yaml
+	-$(RM) cv-*.md cv-*.tex cv-*.docx cv-*.pdf cv-*.json *.aux *.out *.log *.synctex.gz *.fdb_latexmk empty.yaml
 
 clean: mostlyclean
 	-$(RM) cookies.txt google-scholar.html
