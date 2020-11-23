@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 
-"""panfilter.py: filter out parts of a pandoc document
-"""
+"""panfilter.py: filter out parts of a pandoc document."""
 
 from __future__ import absolute_import, division, print_function
 
@@ -110,6 +109,9 @@ def proc_para(node_content, section_exclude, section_year_min):
     if (subnode_type == "Str"
             and subnode_content.partition(".")[0] in section_exclude):
         return False
+
+    if section_year_min is None:
+        return True
 
     for subnode in node_content:
         subnode_type, subnode_content = get_node_type_content(subnode)
