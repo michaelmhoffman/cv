@@ -17,8 +17,8 @@
 - id: funding-lead-principal-investigator
 - id: funding-co-principal-investigator
 - id: funding-co-investigator
-- id: presentations
-- id: presentations-invitedkeynote
+# - id: presentations
+- id: presentations-invitedkeynote-selected
 # - id: presentations-invitedkeynote-local
 # - id: presentations-conference-selected-from-abstracts
 # - id: presentations-conference-selected-from-abstracts-trainee
@@ -36,7 +36,7 @@
 - id: professional-activities-funding-review
 - id: professional-activities-manuscript-review
 # - id: professional-activities-consortium-leadership-positions
-# - id: professional-activities-institutional-leadership-positions-and-committees
+- id: professional-activities-institutional-leadership-positions-and-committees
 # - id: professional-activities-student-committees-and-examinations
 # - id: professional-activities-memberships
 # - id: professional-activities-memberships-local
@@ -44,10 +44,10 @@
 - id: trainees-and-staff-supervised
 - id: trainees-and-staff-supervised-current
 - id: trainees-and-staff-supervised-past
-# - id: long-term-visitors-hosted
-# - id: long-term-visitors-hosted-past
+- id: long-term-visitors-hosted
+- id: long-term-visitors-hosted-past
 - id: media-coverage
 - id: media-coverage-text-interviews
 - id: media-coverage-audio-interviews
 - id: media-coverage-meeting-reports
-# - id: citizenship-and-immigration
+- id: citizenship

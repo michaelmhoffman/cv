@@ -141,6 +141,12 @@ cv-compact.md : JINJA_FLAGS = $(JINJA_FLAGS_PRIVATE) --set select --set nostartu
 cv-compact.tex : HMARGIN = 0.5in
 cv-compact.tex : VMARGIN = \{0.5in,0.75in\}
 
+# rsc: Royal Society of Canada
+cv-rsc.md : JINJA_FLAGS = $(JINJA_FLAGS_PRIVATE) --set select --set nostartup --set compact --set annotate --abbr-months --set presentation_score=0
+
+cv-rsc.tex : HMARGIN = 0.5in
+cv-rsc.tex : VMARGIN = \{0.5in,0.75in\}
+
 # nostartup: everything except startup
 cv-nostartup.md : JINJA_FLAGS = $(JINJA_FLAGS_PRIVATE) --set nostartup
 
