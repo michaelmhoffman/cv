@@ -1,10 +1,10 @@
-*Publication list also available on [Google Scholar Citations](https://scholar.google.ca/citations?user=96r1DYUAAAAJ&hl=en), [ImpactStory](https://impactstory.org/u/0000-0002-4517-1562/publications), and [PubMed](https://pubmed.ncbi.nlm.nih.gov/?term=Hoffman+Michael+M%5Bau%5D+OR+Hoffman+Michael+M%5Bir%5D+OR+International+Chicken+Genome+Sequencing+Consortium%5Bcn%5D&format=abstract&sort=pubdate&size=200).*
+*Publication list also available on [Google Scholar Citations](https://scholar.google.ca/citations?user=96r1DYUAAAAJ&hl=en), [ImpactStory](https://impactstory.org/u/0000-0002-4517-1562/publications), and [PubMed](https://pubmed.ncbi.nlm.nih.gov/?term=Hoffman+Michael+M%5Bau%5D+OR+Hoffman+Michael+M%5Bir%5D+OR+International+Chicken+Genome+Sequencing+Consortium%5Bcn%5D&sort=pubdate&size=200).*
 
 {% if compact %}
 \setlist*[enumerate]{leftmargin=\widthof{S99.}+0.5em}
 {% endif %}
 
-{% if not compact %}
+{% if annotate or not compact %}
 ### Publications: journal, peer-reviewed
 {% endif %}
 {% macro shorten_authors() -%}
@@ -151,7 +151,7 @@ J1.\ **Hoffman MM**, Khrapov MA, Cox JC, Yao J, Tong L, Ellington AD. ["AANT: th
 {# TODO: Underline indicates Michael Hoffman is an author or a consortium member. #}
 {% endif %}
 
-{% if not compact %}
+{% if annotate or not compact %}
 ### Publications: conference proceedings, peer-reviewed
 {% endif %}
 
@@ -159,7 +159,7 @@ J1.\ **Hoffman MM**, Khrapov MA, Cox JC, Yao J, Tong L, Ellington AD. ["AANT: th
 C1.\ Libbrecht MW, **Hoffman MM**, Noble WS, Bilmes JA. ["Entropic graph-based posterior regularization."](http://jmlr.org/proceedings/papers/v37/libbrecht15.html) International Conference on Machine Learning. 2015. Lille, France.
 \endenumerate
 
-{% if not compact %}
+{% if annotate or not compact %}
 ### Publications: journal, commentaries and meeting reports
 {% endif %}
 
@@ -176,7 +176,7 @@ N1.\ Church DM, Schneider VA, Steinberg KM, Schatz MC, Quinlan AR, Chin CS, Kitt
 {% endif %}
 \endenumerate
 
-{% if not compact %}
+{% if annotate or not compact %}
 ### Publications: submitted
 {% endif %}
 
@@ -210,7 +210,9 @@ S1.\ **Viner C**,
 \beginenumerate
 D1.\ **Hoffman MM**. [*Quantifying evolution and natural selection in vertebrate noncoding sequence*.](https://doi.org/10.17863/CAM.13940) PhD thesis, University of Cambridge. 2008{% if not compact %} Jul 8.{% endif %}
 \endenumerate
+{% endif %}
 
+{% if annotate or not compact %}
 ### Publications: community engagement
 {% endif %}
 
