@@ -54,6 +54,11 @@ installdeps-python:
 web: cv-web.pdf
 	scp cv-web.pdf mordor:~/public_html/cv/michael-hoffman-cv.pdf
 
+github: cv-web.pdf cv-web.docx
+	cp cv-web.pdf cv.pdf
+	cp cv-web.docx cv.docx
+	gh release upload latest cv.pdf cv.docx --clobber
+
 mostlyclean:
 	-$(RM) cv-*.md cv-*.tex cv-*.docx cv-*.pdf cv-*.json *.aux *.out *.log *.synctex.gz *.fdb_latexmk empty.yaml
 
