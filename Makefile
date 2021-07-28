@@ -96,7 +96,7 @@ cv-%.tex : cv-%.md preamble.tex google-scholar.html %.yaml
 	$(PANDOC_TOJSON) $< | $(PANFILTER) --config=$(*F).yaml | $(PANDOC_TEX) --from=json | $(TEXFILTER) > $@
 
 %.pdf : %.tex
-	fottexmk -$(LATEX) $<
+	fotlatexmk -$(LATEX) $<
 	cp $@ cv.pdf
 
 %.yaml :
