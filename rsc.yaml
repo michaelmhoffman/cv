@@ -20,10 +20,12 @@
 - id: funding-co-investigator
 - id: presentations
 - id: presentations-invitedkeynote
+  name: "Presentations: invited/keynote (2017–present)"
+  year-min: 2017
 # - id: presentations-invitedkeynote-local
-- id: presentations-conference-selected-from-abstracts
+# - id: presentations-conference-selected-from-abstracts
 # - id: presentations-conference-selected-from-abstracts-trainee
-- id: presentations-invited-panelist
+# - id: presentations-invited-panelist
 # - id: presentations-invited-panelist-local
 # - id: presentations-other-teaching
 # - id: presentations-other-seminars
@@ -32,12 +34,12 @@
 - id: professional-activities-society-leadership-positions
 - id: professional-activities-conference-organizer
 - id: professional-activities-advisory
-- id: professional-activities-session-organizer-or-chair
+# - id: professional-activities-session-organizer-or-chair
 # - id: professional-activities-session-organizer-or-chair-local
 - id: professional-activities-funding-review
 - id: professional-activities-manuscript-review
 # - id: professional-activities-consortium-leadership-positions
-- id: professional-activities-institutional-leadership-positions-and-committees
+# - id: professional-activities-institutional-leadership-positions-and-committees
 # - id: professional-activities-student-committees-and-examinations
 # - id: professional-activities-memberships
 # - id: professional-activities-memberships-local
