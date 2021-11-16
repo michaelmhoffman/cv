@@ -5,6 +5,7 @@
 - id: publications-journal-peer-reviewed
 - id: publications-conference-proceedings-peer-reviewed
 - id: publications-journal-commentaries-and-meeting-reports
+- id: publications-standards
 - id: publications-submitted
 # - id: publications-theses
 - id: publications-community-engagement
