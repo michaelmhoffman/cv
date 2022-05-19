@@ -48,8 +48,8 @@
 F21. "Computational methods for chromatin data."
 Natural Sciences and Engineering Research Council of Canada.
 Discovery Grant.
-5 years, direct costs CAD 240,000.00.
-April 2022–March 2027.
+{% if compact %}D{% else %}5 years, d{% endif %}irect costs CAD 240,000.
+{% if not compact %}April {% endif %}2022--{% if not compact %}March {% endif %}2027.
 
 F20.\ Essential Oncology Software for Research.
 Princess Margaret Data Science Program, University Health Network.
@@ -447,7 +447,7 @@ Lead principal investigator: Carl P.\ Ernst. {# RGPIN-2013-435512 #}
 ### Presentations: other teaching
 
 \beginenumerate
-{{ p('PG36.\ "Evaluating machine learning claims." Summer Student Program. Department of Medical Biophysics. University of Toronto. 26 July 2022.
+{{ p('PG36.\ "Evaluating machine learning claims." Summer Student Program.' ~ dept ~ ' of Medical Biophysics. University of Toronto. 26 July 2022.', 50) -}}
 {{ p('PG35.\ "Evaluating machine learning claims." Foundational Computational Biology.' ~ dept ~ ' of Molecular Genetics. University of Toronto. 16 June 2022.', 50) -}}
 {{ p('PG34.\ "Cancer Epigenetics." ' ~ dept ~ ' of Medical Biophysics. University of Toronto. 18 November 2021.', 50) -}}
 {{ p('PG33.\ "Evaluating machine learning claims." Summer Student Program. ' ~ dept ~ ' of Medical Biophysics. University of Toronto. 17 August 2021.', 50) -}}
@@ -647,9 +647,8 @@ Lead principal investigator: Carl P.\ Ernst. {# RGPIN-2013-435512 #}
 * **Examiner** for PhD final examinations: School of Computing, Queen's University (Emese Somogyvari).
 * **Examiner** for PhD final examinations: {{ dept }} of Medical Biophysics, University of Toronto (Sahar Ghanavati, Santosh Hariharan, Helen Zhu).
 * **Examiner** for PhD final examinations: Institute for Medical Science, University of Toronto (Sarah Gagliano).
-* **Examiner** for MSc final examinations: {{ dept }} of Molecular Genetics, University of Toronto (Farzan Taj).
 * **Examiner** for MSc final examinations: {{ dept }} of Medical Biophysics, University of Toronto (Andrew Weatherbee).
-* **Examiner** for MSc final examinations: {{ dept }} of Molecular Genetics, University of Toronto (Lina Antounians).
+* **Examiner** for MSc final examinations: {{ dept }} of Molecular Genetics, University of Toronto (Lina Antounians, Farzan Taj).
 * **Examiner** for MSc final examinations: Institute for Medical Science, University of Toronto (Kartikay Chadha).
 * **Examiner** for PhD qualifying examinations: {{ dept }} of Medical Biophysics, University of Toronto (Chris Huynh).
 * **Examiner** for PhD reclassification examinations: {{ dept }} of Molecular Genetics, University of Toronto (Ido Nofech-Mozes).
