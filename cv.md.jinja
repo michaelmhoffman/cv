@@ -725,16 +725,19 @@ Present position: {{ caller() }}
 {% endif %}
 {%- endmacro %}
 T43.\ **Agopian, Mary**. PhD Student, {{ dept }} of Medical Biophysics, University of Toronto, 2022. {# ???--??? #}
+{% call present_position() %}PhD Student, {{ dept }} of Medical Biophysics, University of Toronto, Toronto, ON, Canada.{% endcall %}
 
 T42.\ **Alba, Veronica**. BSc Student, Campus Saint-Jean, University of Alberta. 2021--???. {# ???--??? #}
 
 T41.\ **Tan, Luomeng**. PhD Student, {{ dept }} of Medical Biophysics, University of Toronto, 2022. HBSc Student, {{ dept }}{% if not compact %}s{% endif %} of Cell and System Biology{% if not compact %} and Computer Science{% endif %}, University of Toronto. 2021--present. {# 2021-05-10--present #}
+{% call present_position() %}PhD Student, {{ dept }} of Medical Biophysics, University of Toronto, Toronto, ON, Canada.{% endcall %}
 
 T39.\ **Li, Xing Hao ("Leo")**. BASc Student, Division of Engineering Science, University of Toronto. 2020--2021. {# 2020-05-11--2021-04-30 #}
 
 T38.\ **Gopalakrishnan, Aparna**. HBSc Student, {{ dept }}{% if not compact %}s{% endif %} of Computer Science{% if not compact %} and Mathematics{% endif %}, University of Toronto. 2020--2021. {# 2020-05-11--2021-04-30 #}
 
 T36.\ **Keshavarzian, Tina**. MSc Student, {{ dept }} of Medical Biophysics, University of Toronto, 2020. {# 2020-05-11--??? #}
+{% call present_position() %}PhD Student, {{ dept }} of Medical Biophysics, University of Toronto, Toronto, ON, Canada.{% endcall %}
 
 T34.\ **Wrana, Michael**. BComp Student, {{ dept }} of Mathematics and Statistics, Queen's University, 2019.
 {% call present_position() %}MSc Student, School of Computing, Queen's University, Kingston, ON.{% endcall %}
