@@ -33,7 +33,8 @@
 - id: professional-activities
 - id: professional-activities-society-leadership-positions
 - id: professional-activities-conference-organizer
-- id: professional-activities-advisory
+- id: professional-activities-external-advisory-committees
+- id: professional-activities-external-advisory-workshops-and-panels
 # - id: professional-activities-session-organizer-or-chair
 # - id: professional-activities-session-organizer-or-chair-local
 - id: professional-activities-funding-review

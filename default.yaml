@@ -29,7 +29,8 @@
 - id: professional-activities-session-chair
 - id: professional-activities-funding-review
 - id: professional-activities-manuscript-review
-- id: professional-activities-advisory
+- id: professional-activities-external-advisory-committees
+- id: professional-activities-external-advisory-workshops-and-panels
 - id: professional-activities-society-leadership-positions
 - id: professional-activities-consortium-leadership-positions
 - id: professional-activities-institutional-leadership-positions-and-committees
