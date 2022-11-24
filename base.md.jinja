@@ -9,11 +9,23 @@
 {% set fieldsep %}, {% endset %}
 {% set recordsep %}\{% endset %}
 {% set dept %}Dept{% endset %}
+{% set univ_before_period %}U{% endset %}
+{% set univ %}{{ univ_before_period }}.\{% endset %}
+{% set and %}&{% endset %}
+{% set cihr %}CIHR{% endset %}
+{% set nserc %}NSERC{% endset %}
+{% set nih %}NIH{% endset %}
 {% else %}
 {% set fieldsep %}\
 {% endset %}
 {% set recordsep %}{% endset %}
 {% set dept %}Department{% endset %}
+{% set univ_before_period %}University{% endset %}
+{% set univ %}{{ univ_before_period }}{% endset %}
+{% set and %}and{% endset %}
+{% set cihr %}Canadian Institutes of Health Research{% endset %}
+{% set nserc %}Natural Sciences and Engineering Research Council of Canada{% endset %}
+{% set nih %}National Institutes of Health{% endset %}
 {% endif %}
 
 {% block everything %}{% endblock %}
