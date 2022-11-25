@@ -733,6 +733,9 @@ T8.\ **Roberts, Eric**. Bioinformatics Programmer, University Health Network, 20
 Present position: {{ caller() }}
 {% endif %}
 {%- endmacro %}
+T46.\ **Kaczmarek, Emily**. PhD Student, {{ dept }} of Medical Biophysics, {{ univ }} of Toronto, 2021.
+{% call present_position() %}PhD Student, {{ dept }} of Medical Biophysics, {{ univ }} of Toronto, Toronto, ON, Canada.{% endcall %}
+
 T45.\ **Gao, Yuan ("William")**. PhD Student, {{ dept }} of Medical Biophysics, {{ univ }} of Toronto, 2021.
 {% call present_position() %}PhD Student, {{ dept }} of Medical Biophysics, {{ univ }} of Toronto, Toronto, ON, Canada.{% endcall %}
 
@@ -740,6 +743,7 @@ T44.\ **Agopian, Mary**. PhD Student, {{ dept }} of Medical Biophysics, {{ univ 
 {% call present_position() %}PhD Student, {{ dept }} of Medical Biophysics, {{ univ }} of Toronto, Toronto, ON, Canada.{% endcall %}
 
 T42.\ **Alba, Veronica**. BSc Student, Campus Saint-Jean, {{ univ }} of Alberta. 2021--2022. {# ???--??? #}
+{% call present_position() %}BSc Student, Campus Saint-Jean, {{ univ }} of Alberta, Edmonton, AB, Canada.
 
 T41.\ **Tan, Luomeng**. PhD Student, {{ dept }} of Medical Biophysics, {{ univ }} of Toronto, 2022. {% if not compact %}H{% endif %}BSc Student, {{ dept }}{% if not compact %}s{% endif %} of Cell {{ and }} System Biology{% if not compact %} {{ and }} Computer Science{% endif %}, {{ univ }} of Toronto. 2021--2022. {# 2021-05-10--present #}
 {% call present_position() %}PhD Student, {{ dept }} of Medical Biophysics, {{ univ }} of Toronto, Toronto, ON, Canada.{% endcall %}
@@ -758,6 +762,7 @@ T34.\ **Wrana, Michael**. BComp Student, {{ dept }} of Mathematics {{ and }} Sta
 
 T33.\ **Liu, Yushan ("Ida")**. {% if not compact %}H{% endif %}BSc Student, {{ dept }}{% if not compact %}s{% endif %} of Mathematics{% if not compact %} {{ and }} Statistical Sciences{% endif %}, {{ univ }} of Toronto, 2019--2021.
 {# 2019-05-13--??? #}
+{% call present_position() %}, Software engineer, Boston, MA, USA.
 
 T32.\ **Reed, Siddharth**. BSc Student, {{ dept }} of Biology, McMaster {{ univ }}, 2019.
 {% call present_position() %}MSc Student, {{ dept }} of Computational Biology, Carnegie Mellon {{ univ }}, USA.{% endcall %}
