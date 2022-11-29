@@ -235,7 +235,10 @@ Lead principal investigator: Carl P.\ Ernst. {# RGPIN-2013-435512 #}
 {% else %}
 {{ pa('49.\ "Identifying transcription factor binding using open chromatin, transcriptome, and methylation data." SAGE/Biostatistics Seminar. ' ~ dept ~ ' of Mathematics and Statistics. ' ~ univ ~ ' of Calgary', 'Videoconference', '12 February', 2021, 33) -}}
 {% endif %}
-{{ pa('48.\ "Identifying transcription factor binding using open chromatin, transcriptome, and methylation data." Student Invited Speaker. Curriculum in Bioinformatics and Computational Biology Seminar Series. ' ~ univ ~ ' of North Carolina-Chapel Hill', 'Videoconference', '29 January', 2021, 33) -}}
+{{ pa('48.\ "Identifying transcription factor binding using open chromatin, transcriptome, and methylation data." Curriculum in Bioinformatics and Computational Biology Seminar Series. ' ~ univ ~ ' of North Carolina-Chapel Hill', 'Videoconference', '29 January', 2021, 33) -}}
+{% if annotate %}
+* Student invited speaker
+{% endif %}
 {% if compact %}
 {{ pa('47.\ "BEHST: genomic set enrichment analysis enhanced through integration of chromatin long-range interactions." Asilomar Chromatin, Chromosomes, and Epigenetics Conference', 'Videoconference', '10 December', 2020, 33) -}}
 {% else %}
@@ -341,7 +344,8 @@ Lead principal investigator: Carl P.\ Ernst. {# RGPIN-2013-435512 #}
 
 \beginenumerate
 {{ p('PB22.\ "Reproducibility standards for machine learning in the life sciences." Statistical Genetics Journal Club. Strategic Training for Advanced Genetic Epidemiology, ' ~ univ ~ ' of Toronto. Videoconference. 29 April 2022.') -}}
-{{ p('PB21.\ ["Reproducibility standards for machine learning in the life sciences."](https://www.youtube.com/watch?v=iDiwLwh1B-c) Keynote. Workshop on Reproducibility. Canadian Statistical Sciences Institute Ontario. Videoconference. 25 February 2022.') -}}
+{{ p('PB21.\ ["Reproducibility standards for machine learning in the life sciences."](https://www.youtube.com/watch?v=iDiwLwh1B-c) Workshop on Reproducibility. Canadian Statistical Sciences Institute Ontario. Videoconference. 25 February 2022.') -}}
+* Keynote.
 {{ p('PB20.\ "Virtual ChIP-seq: predicting transcription factor binding by learning from the transcriptome." Amgen Scholars Distinguished Speaker Seminar. Amgen Scholars Canada Program, ' ~ univ ~ ' of Toronto. Videoconference. 2 June 2021.', 33) -}}
 {{ p('PB19.\ ["Segway and the Graphical Models Toolkit: a framework for probabilistic genomic inference."](https://www.youtube.com/watch?v=kQLN0BiTsOM&t=111) ' ~ univ ~ ' of Toronto Machine Intelligence Student Team, ' ~ univ ~ ' of Toronto. Videoconference. 14 January 2021.', 550) -}}
 {{ p('PB18.\ "Evaluating machine learning claims." International Data Science Speaker Series. Canadian Statistical Sciences Institute, ' ~ dept ~ ' of Computer Science Master of Science in Applied Computing Program, and Rotman School of Management Master of Management Analytics Program. ' ~ univ ~ ' of Toronto. Videoconference. 21 December 2020.', 550) -}}
@@ -706,9 +710,9 @@ Lead principal investigator: Carl P.\ Ernst. {# RGPIN-2013-435512 #}
 {% endif %}
 
 \beginenumerate
-T43.\ **Sera, Riddhi**. BTech Student, {{ dept }} of Bioscience {{ and }} Bioengineering, Indian Institute of Technology Jodhpur. 2022--present. {# 2022-05-09--present #}
+T45.\ **Sera, Riddhi**. BTech Student, {{ dept }} of Bioscience {{ and }} Bioengineering, Indian Institute of Technology Jodhpur. 2022--present. {# 2022-05-09--present #}
 
-T40.\ **Yoo, Esther**. BASc Student, Division of Engineering Science, {{ univ }} of Toronto. 2020--present. {# 2020-05-11--present #}
+T42.\ **Yoo, Esther**. BASc Student, Division of Engineering Science, {{ univ }} of Toronto. 2020--present. {# 2020-05-11--present #}
 
 T37.\ **Lu, Zhiyuan ("Annie")**. BSc Student, {{ dept }}{% if not compact %}s{% endif %} of Computer Science{% if not compact %} {{ and }} Statistical Sciences{% endif %}, {{ univ }} of Toronto. 2020--present. {# 2020-05-11--present #}
 
@@ -733,15 +737,19 @@ T8.\ **Roberts, Eric**. Bioinformatics Programmer, University Health Network, 20
 Present position: {{ caller() }}
 {% endif %}
 {%- endmacro %}
-T45.\ **Gao, Yuan ("William")**. PhD Student, {{ dept }} of Medical Biophysics, {{ univ }} of Toronto, 2021.
+T46.\ **Agopian, Mary**. PhD Student, {{ dept }} of Medical Biophysics, {{ univ }} of Toronto, 2022. {# ???--??? #}
 {% call present_position() %}PhD Student, {{ dept }} of Medical Biophysics, {{ univ }} of Toronto, Toronto, ON, Canada.{% endcall %}
 
-T44.\ **Agopian, Mary**. PhD Student, {{ dept }} of Medical Biophysics, {{ univ }} of Toronto, 2022. {# ???--??? #}
+T44.\ **Alba, Veronica**. BSc Student, Campus Saint-Jean, {{ univ }} of Alberta. 2021--2022. {# ???--??? #}
+{% call present_position() %}BSc Student, Campus Saint-Jean, {{ univ }} of Alberta, Edmonton, AB, Canada.{% endcall %}
+
+T43.\ **Tan, Luomeng**. PhD Student, {{ dept }} of Medical Biophysics, {{ univ }} of Toronto, 2022. {% if not compact %}H{% endif %}BSc Student, {{ dept }}{% if not compact %}s{% endif %} of Cell {{ and }} System Biology{% if not compact %} {{ and }} Computer Science{% endif %}, {{ univ }} of Toronto. 2021--2022. {# 2021-05-10--present #}
 {% call present_position() %}PhD Student, {{ dept }} of Medical Biophysics, {{ univ }} of Toronto, Toronto, ON, Canada.{% endcall %}
 
-T42.\ **Alba, Veronica**. BSc Student, Campus Saint-Jean, {{ univ }} of Alberta. 2021--2022. {# ???--??? #}
+T41.\ **Kaczmarek, Emily**. PhD Student, {{ dept }} of Medical Biophysics, {{ univ }} of Toronto, 2021.
+{% call present_position() %}PhD Student, {{ dept }} of Medical Biophysics, {{ univ }} of Toronto, Toronto, ON, Canada.{% endcall %}
 
-T41.\ **Tan, Luomeng**. PhD Student, {{ dept }} of Medical Biophysics, {{ univ }} of Toronto, 2022. {% if not compact %}H{% endif %}BSc Student, {{ dept }}{% if not compact %}s{% endif %} of Cell {{ and }} System Biology{% if not compact %} {{ and }} Computer Science{% endif %}, {{ univ }} of Toronto. 2021--2022. {# 2021-05-10--present #}
+T40.\ **Gao, Yuan ("William")**. PhD Student, {{ dept }} of Medical Biophysics, {{ univ }} of Toronto, 2021.
 {% call present_position() %}PhD Student, {{ dept }} of Medical Biophysics, {{ univ }} of Toronto, Toronto, ON, Canada.{% endcall %}
 
 T39.\ **Li, Xing Hao ("Leo")**. BASc Student, Division of Engineering Science, {{ univ }} of Toronto. 2020--2022. {# 2020-05-11--2021-04-30 #}
@@ -758,6 +766,7 @@ T34.\ **Wrana, Michael**. BComp Student, {{ dept }} of Mathematics {{ and }} Sta
 
 T33.\ **Liu, Yushan ("Ida")**. {% if not compact %}H{% endif %}BSc Student, {{ dept }}{% if not compact %}s{% endif %} of Mathematics{% if not compact %} {{ and }} Statistical Sciences{% endif %}, {{ univ }} of Toronto, 2019--2021.
 {# 2019-05-13--??? #}
+{% call present_position() %}, Software Engineer, Boston, MA, USA.{% endcall %}
 
 T32.\ **Reed, Siddharth**. BSc Student, {{ dept }} of Biology, McMaster {{ univ }}, 2019.
 {% call present_position() %}MSc Student, {{ dept }} of Computational Biology, Carnegie Mellon {{ univ }}, USA.{% endcall %}
