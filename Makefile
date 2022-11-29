@@ -75,8 +75,8 @@ clean: mostlyclean
 	$(PANDOC_TOJSON) $< -o $@
 
 # XXX: change everything to cv-%-%.*: to separate template and yaml config
-# XXX: use jinja2.meta.find_referenced_templates to automake deps
-cv-%.md : cv.md.jinja
+# XXX: use jinja.py --print-dependencies to automatically add the non-cv.md.jinja dependencies
+cv-%.md : cv.md.jinja base.md.jinja head.md.jinja positions-current.md.jinja education.md.jinja publications.md.jinja recognitions.md.jinja startup.md positions-prior.md.jinja
 	$(JINJA) $< $@
 
 # debugging:
@@ -101,8 +101,6 @@ cv-%.tex : cv-%.md preamble.tex google-scholar.html %.yaml
 
 %.yaml :
 	touch $@
-
-# XXX: Jinja include dependencies not included
 
 ## explicit rules
 
