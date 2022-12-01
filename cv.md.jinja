@@ -63,7 +63,7 @@ Canada Research Coordinating Committee.
 
 F17.\ "Genome-wide cell-free DNA methylation enrichment and sequencing for preeclampsia diagnosis."
 McLaughlin Centre.
-Accelerator Grant in Genomic Medicine and Health Informatics.
+Accelerator Grant{% if not compact %} in Genomic Medicine and Health Informatics{% endif %}.
 {% if not compact %}1 year, direct costs {% endif %}CAD\ 80,000.
 {% if not compact %}May {% endif %}2019--{% if not compact %}April {% endif %}2020. {# MC-2019-07 #}
 
@@ -210,6 +210,7 @@ Lead principal investigator: Carl P.\ Ernst. {# RGPIN-2013-435512 #}
 {% endif %}
 
 \beginenumerate
+{# XXX many of these doubling ups can be replaced with a `~ ' optional text' if not compact ~' #}
 {% if compact %}
 {{ pa('57.\ "Reproducibility standards for machine learning in the life sciences." Deep Learning for Genetics, Genomics and Metagenomics. Banff International Research Station', 'Videoconference', '8 June', 2022, 33) -}}
 {% else %}
@@ -235,7 +236,7 @@ Lead principal investigator: Carl P.\ Ernst. {# RGPIN-2013-435512 #}
 {% else %}
 {{ pa('49.\ "Identifying transcription factor binding using open chromatin, transcriptome, and methylation data." SAGE/Biostatistics Seminar. ' ~ dept ~ ' of Mathematics and Statistics. ' ~ univ ~ ' of Calgary', 'Videoconference', '12 February', 2021, 33) -}}
 {% endif %}
-{{ pa('48.\ "Identifying transcription factor binding using open chromatin, transcriptome, and methylation data." Curriculum in Bioinformatics and Computational Biology Seminar Series. ' ~ univ ~ ' of North Carolina-Chapel Hill', 'Videoconference', '29 January', 2021, 33) -}}
+{{ pa('48.\ "Identifying transcription factor binding using open chromatin, transcriptome, and methylation data." Curriculum in Bioinformatics and Computational Biology' ~ (' Seminar Series' if not compact) ~ '. ' ~ univ ~ ' of North Carolina-Chapel Hill', 'Videoconference', '29 January', 2021, 33) -}}
 {% if annotate %}
 * Student invited speaker
 {% endif %}
@@ -562,7 +563,7 @@ Lead principal investigator: Carl P.\ Ernst. {# RGPIN-2013-435512 #}
 ### Professional activities: external advisory workshops and panels
 * **Invited Participant**, Classification Expert Group, Biomedical Image Analysis Challenges (BIAS) Initiative, Medical Image Computing and Computer Assisted Intervention Society, 2021--present.
 * **Invited Participant**, Transparency and Openness Promotion (TOP) Guidelines for Academic Institutions Panel. Ottawa Hospital Research Institute and Centre for Open Science. 2022.
-* **Invited Participant**, Open Science Dashboard Delphi Panel, Ottawa Heart Research Institute. {% if not compact %}14--15 {% endif %}March 2022.
+* **Invited Participant**, Open Science Dashboard Delphi Panel, Ottawa Heart Research Institute. {% if not compact %}14--15 March {% endif %}2022.
 * **Invited Participant**, TRIPOD-AI Delphi Panel, TRIPOD Group, 2021--2022.
 * **Invited Participant**, National Health Research Summit, {{ cihr }}, 2019.
 * **Invited Participant**, Client Experience Workshop and Journey Map Validation, Tri-Agency Grants Management Solution, 2019.
@@ -710,19 +711,19 @@ Lead principal investigator: Carl P.\ Ernst. {# RGPIN-2013-435512 #}
 {% endif %}
 
 \beginenumerate
-T45.\ **Sera, Riddhi**. BTech Student, {{ dept }} of Bioscience {{ and }} Bioengineering, Indian Institute of Technology Jodhpur. 2022--present. {# 2022-05-09--present #}
+T45.\ **Sera, Riddhi**. BTech Student, {% if not compact %}{{ dept }} of Bioscience {{ and }} Bioengineering, {% endif %}Indian Institute of Technology Jodhpur. 2022--present. {# 2022-05-09--present #}
 
-T42.\ **Yoo, Esther**. BASc Student, Division of Engineering Science, {{ univ }} of Toronto. 2020--present. {# 2020-05-11--present #}
+T42.\ **Yoo, Esther**. BASc Student, {% if not compact %}Division of Engineering Science, {% endif %}{{ univ }} of Toronto. 2020--present. {# 2020-05-11--present #}
 
-T37.\ **Lu, Zhiyuan ("Annie")**. BSc Student, {{ dept }}{% if not compact %}s{% endif %} of Computer Science{% if not compact %} {{ and }} Statistical Sciences{% endif %}, {{ univ }} of Toronto. 2020--present. {# 2020-05-11--present #}
+T37.\ **Lu, Zhiyuan ("Annie")**. BSc Student, {% if not compact %}{{ dept }}{% if not compact %}s{% endif %} of Computer Science{% if not compact %} {{ and }} Statistical Sciences{% endif %}, {% endif %}{{ univ }} of Toronto. 2020--present. {# 2020-05-11--present #}
 
 T35.\ **Huynh, Linh**. Postdoctoral Fellow, University Health Network, 2020--2022.
 {# ???--??? #}
 
-T15.\ **Mendez, Mickaël**. PhD Student, {{ dept }} of Computer Science, {{ univ }} of Toronto, 2016--present.
+T15.\ **Mendez, Mickaël**. PhD Student, {% if not compact %}{{ dept }} of Computer Science, {% endif %}{{ univ }} of Toronto, 2016--present.
 {# 2016-01--present #}
 
-T9.\ **Viner, Coby**. PhD Student, {{ dept }} of Computer Science, {{ univ }} of Toronto, 2016--present. MSc Student{% if not compact %}, {{ dept }} of Computer Science, {{ univ }} of Toronto{% endif %}, 2014--2016.
+T9.\ **Viner, Coby**. PhD Student, {% if not compact %}{{ dept }} of Computer Science, {% endif %}{{ univ }} of Toronto, 2016--present. MSc Student{% if not compact %}, {% if not compact %}{{ dept }} of Computer Science, {% endif %}{{ univ }} of Toronto{% endif %}, 2014--2016.
 {# MSc: 2014-06-02--2016-01, PhD: 2016-01--present #}
 {# MSc graduation: 2016-03-15 #}
 
@@ -737,112 +738,112 @@ T8.\ **Roberts, Eric**. Bioinformatics Programmer, University Health Network, 20
 Present position: {{ caller() }}
 {% endif %}
 {%- endmacro %}
-T46.\ **Agopian, Mary**. PhD Student, {{ dept }} of Medical Biophysics, {{ univ }} of Toronto, 2022. {# ???--??? #}
-{% call present_position() %}PhD Student, {{ dept }} of Medical Biophysics, {{ univ }} of Toronto, Toronto, ON, Canada.{% endcall %}
+T46.\ **Agopian, Mary**. PhD Student, {% if not compact %}{{ dept }} of Medical Biophysics, {% endif %}{{ univ }} of Toronto, 2022. {# ???--??? #}
+{% call present_position() %}PhD Student, {% if not compact %}{{ dept }} of Medical Biophysics, {% endif %}{{ univ }} of Toronto, Toronto, ON, Canada.{% endcall %}
 
-T44.\ **Alba, Veronica**. BSc Student, Campus Saint-Jean, {{ univ }} of Alberta. 2021--2022. {# ???--??? #}
-{% call present_position() %}BSc Student, Campus Saint-Jean, {{ univ }} of Alberta, Edmonton, AB, Canada.{% endcall %}
+T44.\ **Alba, Veronica**. BSc Student, {% if not compact %}Campus Saint-Jean, {% endif %}{{ univ }} of Alberta. 2021--2022. {# ???--??? #}
+{% call present_position() %}BSc Student, {% if not compact %}Campus Saint-Jean, {% endif %}{{ univ }} of Alberta, Edmonton, AB, Canada.{% endcall %}
 
-T43.\ **Tan, Luomeng**. PhD Student, {{ dept }} of Medical Biophysics, {{ univ }} of Toronto, 2022. {% if not compact %}H{% endif %}BSc Student, {{ dept }}{% if not compact %}s{% endif %} of Cell {{ and }} System Biology{% if not compact %} {{ and }} Computer Science{% endif %}, {{ univ }} of Toronto. 2021--2022. {# 2021-05-10--present #}
-{% call present_position() %}PhD Student, {{ dept }} of Medical Biophysics, {{ univ }} of Toronto, Toronto, ON, Canada.{% endcall %}
+T43.\ **Tan, Luomeng**. PhD Student, {% if not compact %}{{ dept }} of Medical Biophysics, {% endif %}{{ univ }} of Toronto, 2022. {% if not compact %}H{% endif %}BSc Student, {% if not compact %}{{ dept }}{% if not compact %}s{% endif %} of Cell {{ and }} System Biology{% if not compact %} {{ and }} Computer Science, {% endif %}{{ univ }} of Toronto. {% endif %}2021--2022. {# 2021-05-10--present #}
+{% call present_position() %}PhD Student, {% if not compact %}{{ dept }} of Medical Biophysics, {% endif %}{{ univ }} of Toronto, Toronto, ON, Canada.{% endcall %}
 
-T41.\ **Kaczmarek, Emily**. PhD Student, {{ dept }} of Medical Biophysics, {{ univ }} of Toronto, 2021.
-{% call present_position() %}PhD Student, {{ dept }} of Medical Biophysics, {{ univ }} of Toronto, Toronto, ON, Canada.{% endcall %}
+T41.\ **Kaczmarek, Emily**. PhD Student, {% if not compact %}{{ dept }} of Medical Biophysics, {% endif %}{{ univ }} of Toronto, 2021.
+{% call present_position() %}PhD Student, {% if not compact %}{{ dept }} of Medical Biophysics, {% endif %}{{ univ }} of Toronto, Toronto, ON, Canada.{% endcall %}
 
-T40.\ **Gao, Yuan ("William")**. PhD Student, {{ dept }} of Medical Biophysics, {{ univ }} of Toronto, 2021.
-{% call present_position() %}PhD Student, {{ dept }} of Medical Biophysics, {{ univ }} of Toronto, Toronto, ON, Canada.{% endcall %}
+T40.\ **Gao, Yuan ("William")**. PhD Student, {% if not compact %}{{ dept }} of Medical Biophysics, {% endif %}{{ univ }} of Toronto, 2021.
+{% call present_position() %}PhD Student, {% if not compact %}{{ dept }} of Medical Biophysics, {% endif %}{{ univ }} of Toronto, Toronto, ON, Canada.{% endcall %}
 
-T39.\ **Li, Xing Hao ("Leo")**. BASc Student, Division of Engineering Science, {{ univ }} of Toronto. 2020--2022. {# 2020-05-11--2021-04-30 #}
-{% call present_position() %}BASc Student, Division of Engineering Science, {{ univ }} of Toronto.{% endcall %}
+T39.\ **Li, Xing Hao ("Leo")**. BASc Student, {% if not compact %}Division of Engineering Science, {% endif %}{{ univ }} of Toronto. 2020--2022. {# 2020-05-11--2021-04-30 #}
+{% call present_position() %}BASc Student, {% if not compact %}Division of Engineering Science, {% endif %}{{ univ }} of Toronto.{% endcall %}
 
-T38.\ **Gopalakrishnan, Aparna**. {% if not compact %}H{% endif %}BSc Student, {{ dept }}{% if not compact %}s{% endif %} of Computer Science{% if not compact %} {{ and }} Mathematics{% endif %}, {{ univ }} of Toronto. 2020--2022. {# 2020-05-11--2021-04-30 #}
+T38.\ **Gopalakrishnan, Aparna**. {% if not compact %}H{% endif %}BSc Student, {% if not compact %}{{ dept }}{% if not compact %}s{% endif %} of Computer Science{% if not compact %} {{ and }} Mathematics{% endif %}, {% endif %}{{ univ }} of Toronto. 2020--2022. {# 2020-05-11--2021-04-30 #}
 
-T36.\ **Keshavarzian, Tina**. MSc Student, {{ dept }} of Medical Biophysics, {{ univ }} of Toronto, 2020. {# 2020-05-11--??? #}
-{% call present_position() %}PhD Student, {{ dept }} of Medical Biophysics, {{ univ }} of Toronto, Toronto, ON, Canada.{% endcall %}
+T36.\ **Keshavarzian, Tina**. MSc Student, {% if not compact %}{{ dept }} of Medical Biophysics, {% endif %}{{ univ }} of Toronto, 2020. {# 2020-05-11--??? #}
+{% call present_position() %}PhD Student, {% if not compact %}{{ dept }} of Medical Biophysics, {% endif %}{{ univ }} of Toronto, Toronto, ON, Canada.{% endcall %}
 
-T34.\ **Wrana, Michael**. BComp Student, {{ dept }} of Mathematics {{ and }} Statistics, Queen's {{ univ }}, 2019.
-{% call present_position() %}PhD Student, Cheriton School of Computer Science, {{ univ }} of Waterloo {{ univ }}, Waterloo, ON.{% endcall %}
+T34.\ **Wrana, Michael**. BComp Student, {% if not compact %}{{ dept }} of Mathematics {{ and }} Statistics, {% endif %}Queen's {{ univ }}, 2019.
+{% call present_position() %}PhD Student, {% if not compact %}Cheriton School of Computer Science, {% endif %}{{ univ }} of Waterloo {{ univ }}, Waterloo, ON.{% endcall %}
 {# 2019-05-13-- #}
 
-T33.\ **Liu, Yushan ("Ida")**. {% if not compact %}H{% endif %}BSc Student, {{ dept }}{% if not compact %}s{% endif %} of Mathematics{% if not compact %} {{ and }} Statistical Sciences{% endif %}, {{ univ }} of Toronto, 2019--2021.
+T33.\ **Liu, Yushan ("Ida")**. {% if not compact %}H{% endif %}BSc Student, {% if not compact %}{{ dept }}{% if not compact %}s{% endif %} of Mathematics{% if not compact %} {{ and }} Statistical Sciences{% endif %}, {% endif %}{{ univ }} of Toronto, 2019--2021.
 {# 2019-05-13--??? #}
 {% call present_position() %}, Software Engineer, Boston, MA, USA.{% endcall %}
 
-T32.\ **Reed, Siddharth**. BSc Student, {{ dept }} of Biology, McMaster {{ univ }}, 2019.
-{% call present_position() %}MSc Student, {{ dept }} of Computational Biology, Carnegie Mellon {{ univ }}, USA.{% endcall %}
+T32.\ **Reed, Siddharth**. BSc Student, {% if not compact %}{{ dept }} of Biology, {% endif %}McMaster {{ univ }}, 2019.
+{% call present_position() %}MSc Student, {% if not compact %}{{ dept }} of Computational Biology, {% endif %}Carnegie Mellon {{ univ }}, USA.{% endcall %}
 {# 2019-05-06--??? #}
 
-T31.\ **Niu, Yi Nian ("Jeffrey")**. {% if not compact %}H{% endif %}BSc Student, {{ dept }} of Computer Science, {{ univ }} of Toronto, 2019--2022.
+T31.\ **Niu, Yi Nian ("Jeffrey")**. {% if not compact %}H{% endif %}BSc Student, {% if not compact %}{{ dept }} of Computer Science, {% endif %}{{ univ }} of Toronto, 2019--2022.
 {# 2019-05-06--??? #}
 
-T30.\ **Liu, Yufang ("Flora")**. BSc Student, {{ dept }} of Computer Science, {{ univ }} of Toronto, 2018.
+T30.\ **Liu, Yufang ("Flora")**. BSc Student, {% if not compact %}{{ dept }} of Computer Science, {% endif %}{{ univ }} of Toronto, 2018.
 {% call present_position() %}Software Developer, Google Cloud Industry Foundation, Waterloo, ON, Canada.{% endcall %}
 {# 2018-05-07-- #}
 
-T29.\ **McNeil, Matthew**. BSc Student, {{ dept }} of Biochemistry, {{ univ }} of Toronto, 2018--2019.
-{% call present_position() %}PhD Student, {{ dept }} of Medical Biophysics, {{ univ }} of Toronto, Toronto, ON, Canada.{% endcall %}
+T29.\ **McNeil, Matthew**. BSc Student, {% if not compact %}{{ dept }} of Biochemistry, {% endif %}{{ univ }} of Toronto, 2018--2019.
+{% call present_position() %}PhD Student, {% if not compact %}{{ dept }} of Medical Biophysics, {% endif %}{{ univ }} of Toronto, Toronto, ON, Canada.{% endcall %}
 {# 2018-04-30--2019-08-30 #}
 
-T28.\ **Xu, Winnie**. BSc Student, {{ dept }} of Immunology, {{ univ }} of Toronto, 2018.
+T28.\ **Xu, Winnie**. BSc Student, {% if not compact %}{{ dept }} of Immunology, {% endif %}{{ univ }} of Toronto, 2018.
 {% call present_position() %}Research Scientist Intern, Meta AI, New York, NY, USA.{% endcall %}
 {# 2018-04-23-- #}
 
 T27.\ **Wilson, Samantha**. Postdoctoral Fellow, University Health Network, 2018--2022.
-{% call present_position() %}Assistant Professor, {{ dept }} of Obstetrics and Gynecology, McMaster {{ univ }}, Hamilton, ON, Canada.{% endcall %}
+{% call present_position() %}Assistant Professor, {% if not compact %}{{ dept }} of Obstetrics and Gynecology, {% endif %}McMaster {{ univ }}, Hamilton, ON, Canada.{% endcall %}
 
-T26.\ **Asenjo Ponce de León, Marc**. Bachelor's Student, {% if not compact %}Barcelona {% endif %}School of Informatics, Universitat Politècnica de Catalunya, 2018.
+T26.\ **Asenjo Ponce de León, Marc**. Bachelor's Student, {% if not compact %}Barcelona {% endif %}{% if not compact %}School of Informatics, {% endif %}Universitat Politècnica de Catalunya, 2018.
 {% call present_position() %}NLP Data Scientist, IOMED Medical Solutions, Barcelona, Spain.{% endcall %}
 
-T25.\ **Subasri, Vallijah**. MSc Student, {{ dept }} of Medical Biophysics, {{ univ }} of Toronto, 2017.
+T25.\ **Subasri, Vallijah**. MSc Student, {% if not compact %}{{ dept }} of Medical Biophysics, {% endif %}{{ univ }} of Toronto, 2017.
 {% call present_position() %}Applied Machine Learning Intern, Vector Institute, Toronto, ON, Canada.{% endcall %}
 {# 2017-09-07--sometime in 2017 #}
 
-T24.\ **Cao, Chang**. BSc Student, {{ dept }} of Statistical Sciences, {{ univ }} of Toronto, 2017--2018.
+T24.\ **Cao, Chang**. BSc Student, {% if not compact %}{{ dept }} of Statistical Sciences, {% endif %}{{ univ }} of Toronto, 2017--2018.
 {% call present_position() %}Manager, AML/ATF Models and Analytics, Scotiabank, Toronto, ON, Canada.{% endcall %}
 {# 2017-05-08--??? #}
 
-T23.\ **Smith, Ian**. MSc Student, {{ dept }} of Medical Biophysics, {{ univ }} of Toronto, 2017.
-{% call present_position() %}PhD Student, {{ dept }} of Medical Biophysics, {{ univ }} of Toronto, Toronto, ON, Canada.{% endcall %}
+T23.\ **Smith, Ian**. MSc Student, {% if not compact %}{{ dept }} of Medical Biophysics, {% endif %}{{ univ }} of Toronto, 2017.
+{% call present_position() %}PhD Student, {% if not compact %}{{ dept }} of Medical Biophysics, {% endif %}{{ univ }} of Toronto, Toronto, ON, Canada.{% endcall %}
 {# 2017-03-20-- #}
 
-T22.\ **Schonbach, Maya**. MSc Student, {{ dept }} of Medical Biophysics, {{ univ }} of Toronto, 2016.
+T22.\ **Schonbach, Maya**. MSc Student, {% if not compact %}{{ dept }} of Medical Biophysics, {% endif %}{{ univ }} of Toronto, 2016.
 {% call present_position() %}Psychology Student, Interdisciplinary Center Herzliya, Herzliya, Israel.{% endcall %}
 {# 2016-10-17-- #}
 
-T21.\ **Houlahan, Katie**. MSc Student, {{ dept }} of Medical Biophysics, {{ univ }} of Toronto, 2016.
+T21.\ **Houlahan, Katie**. MSc Student, {% if not compact %}{{ dept }} of Medical Biophysics, {% endif %}{{ univ }} of Toronto, 2016.
 {% call present_position() %}Postdoctoral Fellow, Stanford {{ univ }}, Stanford, CA, USA.{% endcall %}
 {# 2016-10-17-- #}
 
-T20.\ **Hawley, James**. MSc Student, {{ dept }} of Medical Biophysics, {{ univ }} of Toronto, 2016.
+T20.\ **Hawley, James**. MSc Student, {% if not compact %}{{ dept }} of Medical Biophysics, {% endif %}{{ univ }} of Toronto, 2016.
 {% call present_position() %}Computational Biologist, Roche, Toronto, ON, Canada.{% endcall %}
 
-T19.\ **Nguyen, Francis**. MSc Student, {{ dept }} of Medical Biophysics, {{ univ }} of Toronto, 2016--2019.
+T19.\ **Nguyen, Francis**. MSc Student, {% if not compact %}{{ dept }} of Medical Biophysics, {% endif %}{{ univ }} of Toronto, 2016--2019.
 {% call present_position() %}Web Developer, University Health Network, Toronto, ON, Canada.{% endcall %}
 
 T18.\ **Bi, Haixin ("Sarah")**. Post-BSc Summer Student, Princess Margaret Cancer Centre, 2016.
 {% call present_position() %}PhD Student, Computational and Systems Biology Program, Massachusetts Institute of Technology, Cambridge, MA, USA.{% endcall %}
 
-T17.\ **Denisko, Danielle**. MSc Student, {{ dept }} of Medical Biophysics, {{ univ }} of Toronto, 2017--2019. BSc Student, {{ dept }} of Physics, {{ univ }} of Toronto, 2016--2017.
+T17.\ **Denisko, Danielle**. MSc Student, {% if not compact %}{{ dept }} of Medical Biophysics, {% endif %}{{ univ }} of Toronto, 2017--2019. BSc Student, {% if not compact %}{{ dept }} of Physics, {% endif %}{{ univ }} of Toronto, 2016--2017.
 {% call present_position() %}PhD Student, Bioinformatics and Integrative Genomics PhD Program, Harvard {{ univ }}, Boston, MA, USA.{% endcall %}
 {# 2016-05-09--2019-11-29 #}
 
-T16.\ **Chan, Rachel**. MSc Student, {{ dept }} of Computer Science, {{ univ }} of Toronto, 2018--2020. BASc Student, Science Co-op Program, {{ univ }} of British Columbia, 2016--2018.
+T16.\ **Chan, Rachel**. MSc Student, {% if not compact %}{{ dept }} of Computer Science, {% endif %}{{ univ }} of Toronto, 2018--2020. BASc Student, {% if not compact %}Science Co-op Program, {% endif %}{{ univ }} of British Columbia, 2016--2018.
 {% call present_position() %}Computer Vision Engineer, DeepX, Tokyo, Japan.{% endcall %}
 {# 2016-05-02--??? #}
 
-T14.\ **Madani Tonekaboni, S.\ Ali**. PhD Student, {{ dept }} of Medical Biophysics, {{ univ }} of Toronto. 2015.
+T14.\ **Madani Tonekaboni, S.\ Ali**. PhD Student, {% if not compact %}{{ dept }} of Medical Biophysics, {% endif %}{{ univ }} of Toronto. 2015.
 {% call present_position() %}Machine Learning Team Lead, Cyclica, Toronto, ON, Canada.{% endcall %}
 {# 2015-09-10-- #}
 
-T13.\ **Sood, Ankur Jai**. BESc {% if not compact %}(Honors) {% endif %}Student, Mechatronic Systems Engineering, {% if not compact %}{{ univ }} of Western Ontario{% else %}Western {{ univ }}{% endif %}. 2015--2019.
+T13.\ **Sood, Ankur Jai**. BESc {% if not compact %}(Honors) {% endif %}Student, {% if not compact %}Mechatronic Systems Engineering, {% endif %}{% if not compact %}{{ univ }} of Western Ontario{% else %}Western {{ univ }}{% endif %}. 2015--2019.
 {% call present_position() %}Software Engineer, Lucid Motors, Newark, CA, USA.{% endcall %}
 {# 2015-05-14-- #}
 
-T12.\ **Zeng, Xing**. {% if not compact %}H{% endif %}BSc Student, {% if not compact %}Undergraduate Toronto Research Experience in Computer Science,{% endif %} {{ dept }} of Computer Science, {{ univ }} of Toronto. 2015--2016.
+T12.\ **Zeng, Xing**. {% if not compact %}H{% endif %}BSc Student, {% if not compact %}Undergraduate Toronto Research Experience in Computer Science,{% endif %} {% if not compact %}{{ dept }} of Computer Science, {% endif %}{{ univ }} of Toronto. 2015--2016.
 {% call present_position() %}Senior Software Engineer, Text IQ, Vancouver, BC, Canada.{% endcall %}
 {# 2015-05-19-- #}
 
-T11.\ **Karimzadeh, Mehran R.** PhD Student, {{ dept }} of Medical Biophysics, {{ univ }} of Toronto, 2015--2020.
+T11.\ **Karimzadeh, Mehran R.** PhD Student, {% if not compact %}{{ dept }} of Medical Biophysics, {% endif %}{{ univ }} of Toronto, 2015--2020.
 {% call present_position() %}Postdoctoral Fellow, Vector Institute {{ and }} {{ univ }} of California, San Francisco, CA, USA.{% endcall %}
 {# research assistant 2014-12-23--2016-08; PhD student 2016-09--??? #}
 
@@ -853,21 +854,21 @@ T10.\ **Chicco, Davide**. Postdoctoral Fellow, University Health Network, 2014--
 T7.\ **Shaw, Adam J.** Student, Google Summer of Code, 2014.
 {% call present_position() %}Software Engineer, Google, San Bruno, CA, USA.{% endcall %}
 
-T6.\ **Petwe, Harshad S.** BS Student, {{ dept }} of Computer Science {{ and }} Engineering, {{ univ }} of Washington, 2012.
+T6.\ **Petwe, Harshad S.** BS Student, {% if not compact %}{{ dept }} of Computer Science {{ and }} Engineering, {% endif %}{{ univ }} of Washington, 2012.
 
-T5.\ **Ellenbogen, Paul**. BS Student, {{ dept }} of Computer Science {{ and }} Engineering, {{ univ }} of Washington, 2011--2013.
-{% call present_position() %}PhD Student, {{ dept }} of Computer Science, Princeton {{ univ }}, Princeton, NJ, USA.{% endcall %}
+T5.\ **Ellenbogen, Paul**. BS Student, {% if not compact %}{{ dept }} of Computer Science {{ and }} Engineering, {% endif %}{{ univ }} of Washington, 2011--2013.
+{% call present_position() %}PhD Student, {% if not compact %}{{ dept }} of Computer Science, {% endif %}Princeton {{ univ }}, Princeton, NJ, USA.{% endcall %}
 
-T4.\ **Sahu, Avinash D.** MS Student, School of Communication {{ and }} Computer Science, École Polytechnic Fédérale de Lausanne, 2011.
-{% call present_position() %}Postdoctoral Fellow, {{ dept }} of Computer Science, {{ univ }} of Maryland, College Park, MD, USA.{% endcall %}
+T4.\ **Sahu, Avinash D.** MS Student, {% if not compact %}School of Communication {{ and }} Computer Science, {% endif %}École Polytechnic Fédérale de Lausanne, 2011.
+{% call present_position() %}Postdoctoral Fellow, {% if not compact %}{{ dept }} of Computer Science, {% endif %}{{ univ }} of Maryland, College Park, MD, USA.{% endcall %}
 
-T3.\ **Staples, Jeffrey**. PhD Student, {{ dept }} of Genome Sciences, {{ univ }} of Washington, 2011.
+T3.\ **Staples, Jeffrey**. PhD Student, {% if not compact %}{{ dept }} of Genome Sciences, {% endif %}{{ univ }} of Washington, 2011.
 {% call present_position() %}Manager, Analysis R&D, Regeneron Pharmaceuticals, Tarrytown, NY, USA.{% endcall %}
 
-T2.\ **Lemus Vergara, Tzitziki J.** PhD Student, {{ dept }} of Genome Sciences, {{ univ }} of Washington, 2009.
-{% call present_position() %}Postdoctoral Fellow, {{ dept }} of Human Genetics {{ and }} Biological Chemistry, {{ univ }} of California, Los Angeles, CA, USA, 2016.{% endcall %}
+T2.\ **Lemus Vergara, Tzitziki J.** PhD Student, {% if not compact %}{{ dept }} of Genome Sciences, {% endif %}{{ univ }} of Washington, 2009.
+{% call present_position() %}Postdoctoral Fellow, {% if not compact %}{{ dept }} of Human Genetics {{ and }} Biological Chemistry, {% endif %}{{ univ }} of California, Los Angeles, CA, USA, 2016.{% endcall %}
 
-T1.\ **Buske, Orion J.** BS {% if not compact %}(Honors) {% endif %}Student, {{ dept }} of Computer Science {{ and }} Engineering, {{ univ }} of Washington, 2009--2010.
+T1.\ **Buske, Orion J.** BS {% if not compact %}(Honors) {% endif %}Student, {% if not compact %}{{ dept }} of Computer Science {{ and }} Engineering, {% endif %}{{ univ }} of Washington, 2009--2010.
 {% call present_position() %}CEO, Gene42, Toronto, ON, Canada.{% endcall %}
 \endenumerate
 
