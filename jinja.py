@@ -21,20 +21,22 @@ from jinja2.meta import find_referenced_templates
 MONTH_ABBRS = dict(zip(month_name[1:], month_abbr[1:]))
 ENCODING = "utf-8"
 
+
+def parse_variable_spec(spec: str) -> tuple[str, Union[str, bool]]:
+    match spec.partition("="):
+        case key, _, value if value:
+            return key, value
+        case key, _, _:
+            # value is empty -> consider it to be a boolean that is true
+            return key, True
+
+    # can't happen, this silences mypy complaints
+    assert False
+
+
 def parse_variable_specs(specs: Sequence[str]) -> Mapping[str, Union[str, bool]]:
-    res: dict[str, Union[str, bool]] = {}
-
-    for spec in specs:
-        key: str
-        value: Union[str, bool]
-
-        key, _, value = spec.partition("=")
-        if not value:
-            value = True
-
-        res[key] = value
-
-    return res
+    return dict(parse_variable_spec(spec)
+                for spec in specs)
 
 
 def replace_dates(text: str) -> str:
@@ -82,6 +84,7 @@ def jinja(infilename: str, outfilename: Optional[str], variable_specs: Sequence[
           print_dependencies: Optional[bool]) -> int:
     env = Environment(loader=FileSystemLoader(search_dirnames),
                       extensions=['jinja2.ext.do'])
+
     if print_dependencies:
         text = get_dependencies(infilename, env)
     else:
