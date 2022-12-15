@@ -107,7 +107,7 @@ def parse_args(argv: list[str]) -> Namespace:
     parser.add_argument("outfile", nargs="?", metavar="OUTFILE",
                         help="output file")
 
-    parser.add_argument("-s", "--set", action="append", metavar="VAR=VALUE",
+    parser.add_argument("-s", "--set", action="append", default=[], metavar="VAR=VALUE",
                         help="set variable VAR to VALUE")
     # to prepend, reverse after parsing
     parser.add_argument("--search-dir", action="append", default=["."],
