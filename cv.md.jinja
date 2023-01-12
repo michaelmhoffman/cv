@@ -38,147 +38,7 @@
 
 ## Funding
 
-{% if compact %}
-\setlist*[enumerate]{leftmargin=\widthof{F99.}+0.5em}
-{% endif %}
-
-### Funding: lead principal investigator
-
-\beginenumerate
-F21.\ "Computational methods for chromatin data."
-{{ nserc }}.
-Discovery Grant.
-{% if not compact %}5 years, direct costs {% endif %}CAD\ 240,000.
-{% if not compact %}April {% endif %}2022--{% if not compact %}March {% endif %}2027. {# RGPIN-2022-05134 #}
-
-F20.\ Essential Oncology Software for Research.
-Princess Margaret Data Science Program, University Health Network.
-{% if not compact %}8 months, direct costs {% endif %}CAD\ 16,500.
-{% if not compact %}August {% endif %}2021--{% if not compact %}May {% endif %}2022.
-
-F19.\ Canada Research Continuity Emergency Fund.
-Canada Research Coordinating Committee.
-{% if not compact %}24 weeks, direct costs {% endif %}CAD\ 65,452.
-{% if not compact %}October {% endif %}2020--{% if not compact %}February {% endif %}2021.
-
-F17.\ "Genome-wide cell-free DNA methylation enrichment and sequencing for preeclampsia diagnosis."
-McLaughlin Centre.
-Accelerator Grant{% if not compact %} in Genomic Medicine and Health Informatics{% endif %}.
-{% if not compact %}1 year, direct costs {% endif %}CAD\ 80,000.
-{% if not compact %}May {% endif %}2019--{% if not compact %}April {% endif %}2020. {# MC-2019-07 #}
-
-F16.\ "DNA methylation profiling in cell-free DNA: a non-invasive method to screen for pre-term birth."
-{{ cihr }}.
-Project Grant.
-{% if not compact %}6 years, direct costs {% endif %}CAD\ 1,237,817. {# initial 1,212,525 + 25,292 COVID supplement #}
-{% if not compact %}April {% endif %}2019--{% if not compact %}March {% endif %}2023. {# 389866 #}
-
-F15.\ "Virtual ChIP-seq."
-Nvidia GPU Grant.
-In-kind, USD\ 4999. {# CAD\ 6289.35 using OANDA rate of 1.258121 CAD/USD on 2018-02-12 #}
-{% if not compact %}February {% endif %}2018.
-
-F11.\ "Comprehending epigenomic changes in gene dysregulation and cancer using machine learning."
-{{ cihr }} New Investigator Salary Award.
-{% if not compact %}5 years, direct costs {% endif %}CAD\ 300,000.
-{% if not compact %}March {% endif %}2017--{% if not compact %}February {% endif %}2022. {# 201512MSH-360970 #}
-
-F10.\ "The expanded epigenetic alphabet: transcription factor binding in methylated DNA and beyond."
-Ontario {% if not compact %}Ministry of Economic Development, Job Creation and Trade.
-Ontario Research Fund:
-{% endif %}Early Researcher Award.
-{% if not compact %}5 years, total costs {% endif %}CAD\ 140,000.
-{% if not compact %}April {% endif %}2016--{% if not compact %}March {% endif %}2021. {# ER15-11-233 #}
-
-F9.\ "Epigenetic DNA modifications as drivers of leukemia gene expression programs."
-Canadian Cancer Society.
-Innovation Grant.
-{% if not compact %}Awarded: 3 years, direct costs CAD\ 200,000.
-Actual: {% endif %}{% if not compact %}3 years, direct costs {% endif %}CAD\ 199,000{% if not compact %} (sponsor-wide cut to continuing grants){% endif %}.
-{% if not compact %}August {% endif %}2015--{% if not compact %}July {% endif %}2018. {# 703827 #}
-
-F8.\ "Interpreting epigenetic DNA modifications in glioblastoma stem cells."
-McLaughlin Centre.
-Accelerator Grant in Genomic Medicine and Health Informatics.
-{% if not compact %}1 year, direct costs {% endif %}CAD\ 65,000.
-{% if not compact %}May {% endif %}2015--{% if not compact %}April {% endif %}2016. {# MC-2015-06 #}
-
-F7.\ "Transcription factor recognition models with modified nucleobases."
-{{ nserc }}.
-Discovery Grant.
-{% if not compact %}7 years, direct costs {% endif %}CAD\ 247,192.83. {# 35,000/year * 7 + 2,192.83 supplement #}
-{% if not compact %}April {% endif %}2015--{% if not compact %}March {% endif %}2022. {# RGPIN-2015-3948 #}
-
-{% if not nostartup %}
-{% include 'startup.md' %}
-{% endif %}
-
-F2.\ "Pattern discovery for comparative epigenomics."
-{{ nih }}/National Human Genome Research Institute.
-Pathway to Independence Award ({% if not compact %}Parent {% endif %}K99/R00).
-{% if not compact %}Awarded: 5 years, total costs USD\ 966,069.
-Actual: {% endif %}{% if not compact %}2 years, total costs {% endif %}USD\ 206,244{% if not compact %} (no longer eligible for R00 portion after move to Canada){% endif %}.
-{% if not compact %}September {% endif %}2011--{% if not compact %}October {% endif %}2013.
-
-F1.\ Graduate research fellowship.
-National Science Foundation.
-{% if not compact %}5 years, direct costs {% endif %}USD\ 142,872.
-{% if not compact %}September {% endif %}2003--{% if not compact %}August {% endif %}2008.
-\endenumerate
-
-### Funding: co-principal investigator
-
-\beginenumerate
-F14.\ "Acute Leukemia Translational Research Initiative."
-Ontario Institute for Cancer Research.
-{% if not compact %}2 years, total costs {% endif %}CAD\ 9,743,920.
-{% if not compact %}April {% endif %}2017--{% if not compact %}September {% endif %}2021.
-{% if not compact %}Lead principal investigators: John E.\ Dick, Aaron D.\ Schimmer.{% endif %} {# AL-TRI-FR-UHN #}
-
-F13.\ "Deciphering and manipulating cell-specific regulatory network to produce therapeutic designer cells."
-Medicine by Design, {{ univ }} of Toronto.
-Team Project Award.
-{% if not compact %}3 years, direct costs {% endif %}CAD\ 314,309.
-{% if not compact %}September {% endif %}2016--{% if not compact %}August {% endif %}2019.
-{% if not compact %}Lead principal investigator: Jason Fish.{% endif %} {# C1TPA-2016-04 #}
-
-F12.\ "Regulatory network control of neural stem cells for endogenous repair."
-Medicine by Design, {{ univ }} of Toronto.
-Team Project Award.
-{% if not compact %}3 years, direct costs {% endif %}CAD\ 3,053,789.
-{% if not compact %}September {% endif %}2016--{% if not compact %}August {% endif %}2019.
-{% if not compact %}Lead principal investigator: Gary Bader.{% endif %} {# C1TPA-2016-01 #}
-\endenumerate
-
-### Funding: co-investigator
-
-\beginenumerate
-F21.\ "Phenomic liquid biopsy resource."
-Data Transformation Grant.
-Canadian Cancer Society.
-{% if not compact %}1 year, direct costs {% endif %}CAD 125,000.
-{% if not compact %}March {% endif %}2022--{% if not compact %}March {% endif %}2023.
-Lead principal investigator: Trevor Pugh.
-
-F18.\ "Lung cancer early detection and classification using methylome analysis of plasma cell free DNA."
-{{ cihr }}.
-{% if not compact %}4 years, direct costs {% endif %}CAD 995,264.
-{% if not compact %}October {% endif %}2019--{% if not compact %}September {% endif %}2023.
-Lead principal investigators: Scott V.\ Bratman, Geoffrey Liu. {# 420085 #}
-
-F6.\ "Cancer Stem Cell Program."
-Ontario Institute for Cancer Research.
-{% if not compact %}2 years, total costs {% endif %}CAD\ 5,436,364.
-{% if not compact %}April {% endif %}2015--{% if not compact %}March {% endif %}2017.
-Lead principal investigator: John E.\ Dick. {# CSC-PRAR-UHN #}
-
-F5.\ "Sequence variation and DNA methylation patterning."
-{{ nserc }}.
-Discovery Grant.
-{% if not compact %}5 years, direct costs {% endif %}CAD\ 160,000.
-Hoffman Lab: {% if not compact %}January {% endif %}2015--{% if not compact %}January {% endif %}2017.
-Lead principal investigator: Carl P.\ Ernst. {# RGPIN-2013-435512 #}
-\endenumerate
+{% include 'funding.md.jinja' %}
 
 {% if (not compact) or annotate %}
 ## Presentations
@@ -623,22 +483,22 @@ Lead principal investigator: Carl P.\ Ernst. {# RGPIN-2013-435512 #}
 * **Chair**, Large-scale Integration Task Group, ENCODE Analysis Working Group, 2010--2012.
 
 ### Professional activities: institutional leadership positions and committees
-* **Chair**, Research Assessment Implementation Committee, University Health Network, 2023--present.
-* **Member**, Research Council on Oncology, Princess Margaret Cancer Centre, University Health Network, 2023--present.
-* **Member**, Research Data Management Strategy Initiative Working Group, University Health Network, 2022--present.
-* **Co-chair**, Bioinformatics Subcommittee, Cancer Genomics Program, Princess Margaret Cancer Centre, University Health Network, 2013--present.
-* **Member**, Senior Advisory Group, Research, Princess Margaret Cancer Centre, University Health Network, 2019--2022.
+* **Chair**, Research Assessment Implementation Committee, {{ uhn }}, 2023--present.
+* **Member**, Research Council on Oncology, Princess Margaret Cancer Centre, {{ uhn }}, 2023--present.
+* **Member**, Research Data Management Strategy Initiative Working Group, {{ uhn }}, 2022--present.
+* **Co-chair**, Bioinformatics Subcommittee, Cancer Genomics Program, Princess Margaret Cancer Centre, {{ uhn }}, 2013--present.
+* **Member**, Senior Advisory Group, Research, Princess Margaret Cancer Centre, {{ uhn }}, 2019--2022.
 * **Member**, Collaborative Specialization Committee, Collaborative Specialization in Genome Biology and Bioinformatics, School of Graduate Studies, {{ univ }} of Toronto, 2020--present.
 * **Member**, Research Space Committee, Princess Margaret Cancer Centre, 2016--present.
-* **Lead**, Indicators for Research Impact and Organizational Excellence Working Group, University Health Network, 2019--2022.
-* **Consultant member**, Declaration of Research Assessment (DORA) Advisory Group, University Health Network, 2020--2022.
-* **Member**, Computational Biology Faculty Recruitment Committee, Princess Margaret Cancer Centre, University Health Network, 2020.
+* **Lead**, Indicators for Research Impact and Organizational Excellence Working Group, {{ uhn }}, 2019--2022.
+* **Consultant member**, Declaration of Research Assessment (DORA) Advisory Group, {{ uhn }}, 2020--2022.
+* **Member**, Computational Biology Faculty Recruitment Committee, Princess Margaret Cancer Centre, {{ uhn }}, 2020.
 * **Member**, Director of Research Search Committee, Princess Margaret Cancer Centre, 2016--2019.
 * **Member**, Legacy Working Group, Medicine by Design, {{ univ }} of Toronto, 2017.
 * **Co-organizer**, Princess Margaret Cancer Centre Research Retreat, 2015--2016. {# Huntsville, ON, Canada. 11 May 2016--13 May 2016. #}
-* **Member**, Till and McCulloch Paper of the Year Selection Committee, Princess Margaret Cancer Centre, University Health Network, 2016--2017.
+* **Member**, Till and McCulloch Paper of the Year Selection Committee, Princess Margaret Cancer Centre, {{ uhn }}, 2016--2017.
 * **Member**, Graduate Admissions Committee, {{ dept }} of Computer Science, {{ univ }} of Toronto, 2014--2015.
-* **Member**, Princess Margaret Genomics Centre Advisory Board, University Health Network, 2013--2015.
+* **Member**, Princess Margaret Genomics Centre Advisory Board, {{ uhn }}, 2013--2015.
 * **Chair**, Cambridge {{ univ }} Student Pugwash Society, 2006--2007. **Secretary**, 2007--2008.
 * **Representative**, Predoctoral Fellow Association, EMBL--European Bioinformatics Institute, 2004--2005.
 * **President**, Board of Operating Trustees, Texas Student Publications, {{ univ }} of Texas at Austin, 2002--2003. **Vice President**, 2001--2002. **Member**, 2000--2003.
@@ -723,7 +583,7 @@ T42.\ **Yoo, Esther**. BASc Student, {% if not compact %}Division of Engineering
 
 T37.\ **Lu, Zhiyuan ("Annie")**. BSc Student, {% if not compact %}{{ dept }}{% if not compact %}s{% endif %} of Computer Science{% if not compact %} {{ and }} Statistical Sciences{% endif %}, {% endif %}{{ univ }} of Toronto. 2020--present. {# 2020-05-11--present #}
 
-T35.\ **Huynh, Linh**. Postdoctoral Fellow, University Health Network, 2020--2022.
+T35.\ **Huynh, Linh**. Postdoctoral Fellow, {{ uhn }}, 2020--2022.
 {# ???--??? #}
 
 T15.\ **Mendez, Mickaël**. PhD Student, {% if not compact %}{{ dept }} of Computer Science, {% endif %}{{ univ }} of Toronto, 2016--present.
@@ -733,7 +593,7 @@ T9.\ **Viner, Coby**. PhD Student, {% if not compact %}{{ dept }} of Computer Sc
 {# MSc: 2014-06-02--2016-01, PhD: 2016-01--present #}
 {# MSc graduation: 2016-03-15 #}
 
-T8.\ **Roberts, Eric**. Bioinformatics Programmer, University Health Network, 2014--present.
+T8.\ **Roberts, Eric**. Bioinformatics Programmer, {{ uhn }}, 2014--present.
 \endenumerate
 
 ### Trainees and staff supervised: past
@@ -789,7 +649,7 @@ T28.\ **Xu, Winnie**. BSc Student, {% if not compact %}{{ dept }} of Immunology,
 {% call present_position() %}Research Scientist Intern, Meta AI, New York, NY, USA.{% endcall %}
 {# 2018-04-23--2018-08-31 #}
 
-T27.\ **Wilson, Samantha**. Postdoctoral Fellow, University Health Network, 2018--2022.
+T27.\ **Wilson, Samantha**. Postdoctoral Fellow, {{ uhn }}, 2018--2022.
 {% call present_position() %}Assistant Professor, {% if not compact %}{{ dept }} of Obstetrics and Gynecology, {% endif %}McMaster {{ univ }}, Hamilton, ON, Canada.{% endcall %}
 
 T26.\ **Asenjo Ponce de León, Marc**. Bachelor's Student, {% if not compact %}Barcelona {% endif %}{% if not compact %}School of Informatics, {% endif %}Universitat Politècnica de Catalunya, 2018.
@@ -819,7 +679,7 @@ T20.\ **Hawley, James**. MSc Student, {% if not compact %}{{ dept }} of Medical 
 {% call present_position() %}Computational Biologist, Roche, Toronto, ON, Canada.{% endcall %}
 
 T19.\ **Nguyen, Francis**. MSc Student, {% if not compact %}{{ dept }} of Medical Biophysics, {% endif %}{{ univ }} of Toronto, 2016--2019.
-{% call present_position() %}Web Developer, University Health Network, Toronto, ON, Canada.{% endcall %}
+{% call present_position() %}Web Developer, {{ uhn }}, Toronto, ON, Canada.{% endcall %}
 
 T18.\ **Bi, Haixin ("Sarah")**. Post-BSc Summer Student, Princess Margaret Cancer Centre, 2016.
 {% call present_position() %}PhD Student, Computational and Systems Biology Program, Massachusetts Institute of Technology, Cambridge, MA, USA.{% endcall %}
@@ -848,7 +708,7 @@ T11.\ **Karimzadeh, Mehran R.** PhD Student, {% if not compact %}{{ dept }} of M
 {% call present_position() %}Postdoctoral Fellow, Vector Institute {{ and }} {{ univ }} of California, San Francisco, CA, USA.{% endcall %}
 {# research assistant 2014-12-23--2016-08; PhD student 2016-09--??? #}
 
-T10.\ **Chicco, Davide**. Postdoctoral Fellow, University Health Network, 2014--2018.
+T10.\ **Chicco, Davide**. Postdoctoral Fellow, {{ uhn }}, 2014--2018.
 {% call present_position() %}Research Associate, {{ univ }} of Toronto, Toronto, ON, Canada.{% endcall %}
 {# 2014-09-08-- #}
 
@@ -902,7 +762,7 @@ V1.\ **Zamparo, Lee**. Postdoctoral Fellow, Memorial Sloan-Kettering Cancer Cent
 * ["Meet Michael Hoffman."](http://thepmcf.ca/News-Media/Blog/The-PMCF-Blog/January-2014/Meet-Michael-Hoffman) Princess Margaret Cancer Foundation Blog. {% if not compact %}16 January {% endif %}2014.
 
 ### Media coverage: audio interviews
-* ["Using computers to understand cancer with Dr.\ Michael Hoffman."](https://www.uhn.ca/corporate/News/UHN_PodCast/Behind_the_Breakthrough/Pages/Episode10_Michael_Hoffman.aspx) Behind the Breakthrough Podcast, University Health Network. {% if not compact %}10 December {% endif %}2019.
+* ["Using computers to understand cancer with Dr.\ Michael Hoffman."](https://www.uhn.ca/corporate/News/UHN_PodCast/Behind_the_Breakthrough/Pages/Episode10_Michael_Hoffman.aspx) Behind the Breakthrough Podcast, {{ uhn }}. {% if not compact %}10 December {% endif %}2019.
 
 ### Media coverage: meeting reports
 * ["Genome Informatics 2014."](http://www.genomebiology.com/2014/15/11/543) *Genome Biology*. {% if not compact %}22 November {% endif %}2014.

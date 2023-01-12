@@ -1,0 +1,38 @@
+{% set annotate = annotate|default(false) %}
+{% set compact = compact|default(true) %}
+{% set verycompact = verycompact|default(true) %}
+{% set publiststandards = publiststandards|default(false) %}
+{% extends 'base.md.jinja' %}
+
+{% block everything %}
+### 1. Brief Personal Statement 
+
+Michael Hoffman creates predictive computational models to understand interactions between the genome, epigenome, and phenotype in human cancers.
+His influential machine learning approaches have reshaped researchers' analysis of gene regulation.
+These approaches include the genome annotation method Segway, which enables simple interpretation of multivariate genomic data.
+It was a linchpin of the ENCODE Project analysis, which transformed our thinking about the role of noncoding DNA in the human genome.
+
+### 2. Main Affiliation(s), Positions and Honors 
+
+{% include 'positions-current.md.jinja' %}
+{% include 'recognitions.md.jinja' %}
+
+### 3. Relevant Contributions to Research 
+
+Dr.\ Hoffman is an international leader in the field of computational biology, for which he has developed several widely used methods for analyzing epigenomics data.
+Specifically, Dr.\ Hoffman's research program focuses on creating and validating predictive models of how genetic variants cause epigenomic changes and how these epigenomic changes affect gene regulation and phenotype.
+Dr.\ Hoffman's commitment to openly sharing his research methods, software, and genome annotations have enabled scientists around the world to address fundamental questions in biological and biomedical research.
+
+### 4. Publications (including Working Papers and Forthcoming Work) 
+
+{% include 'publications.md.jinja' %}
+
+### 5. Other Scholarly Works (e.g., Policy Reports, Multimedia, Software, etc.)
+
+{% include 'standards.md.jinja' %}
+
+### 6. Additional Information Relevant to Proposal and Review: (e.g., Research Funding within the last 5 years)
+
+{% include 'funding.md.jinja' %}
+
+{% endblock %}

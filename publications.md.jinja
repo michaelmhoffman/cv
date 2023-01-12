@@ -1,7 +1,7 @@
-*Publication list also available on [Google Scholar Citations](https://scholar.google.ca/citations?user=96r1DYUAAAAJ&hl=en), [PubMed](https://pubmed.ncbi.nlm.nih.gov/?term=Hoffman+Michael+M%5Bau%5D+OR+Hoffman+Michael+M%5Bir%5D+OR+International+Chicken+Genome+Sequencing+Consortium%5Bcn%5D&sort=pubdate&size=200), and [Europe PMC](https://europepmc.org/authors/0000-0002-4517-1562).*
-
 {% if compact %}
 \setlist*[enumerate]{leftmargin=\widthof{S99.}+0.5em}
+{% else %}
+*Publication list also available on [Google Scholar Citations](https://scholar.google.ca/citations?user=96r1DYUAAAAJ&hl=en), [PubMed](https://pubmed.ncbi.nlm.nih.gov/?term=Hoffman+Michael+M%5Bau%5D+OR+Hoffman+Michael+M%5Bir%5D+OR+International+Chicken+Genome+Sequencing+Consortium%5Bcn%5D&sort=pubdate&size=200), and [Europe PMC](https://europepmc.org/authors/0000-0002-4517-1562).*
 {% endif %}
 
 {% if annotate or not compact %}
@@ -18,7 +18,7 @@
 \beginenumerate
 J35.\ **Denisko D**, **Viner C**, **Hoffman MM**. "Motif elucidation in ChIP-seq datasets with a knockout control." *Bioinform Adv* 2022; in press. Preprint: <https://doi.org/10.1101/721720>
 
-J34.\ Gagliardi AR, {% call shorten_authors() %}Chen RHC, Boury H, Albert M, Chow J, DaCosta RS{% endcall %}, **Hoffman MM**, {% call shorten_authors() %}Keshavarz B, Kontos P, Liu J, McAndrews MP, Protze S{% endcall %}. "DORA-compliant measures to assess research quality and impact in biomedical institutions: review of published research, international best practice and Delphi survey." *PLOS One* 2022; in press. Preprint: <https://doi.org/10.1101/2022.06.16.22276440>
+J34.\ Gagliardi AR, {% call shorten_authors() %}Chen RHC, Boury H, Albert M, Chow J, DaCosta RS{% endcall %}, **Hoffman MM**, {% call shorten_authors() %}Keshavarz B, Kontos P, Liu J, McAndrews MP, Protze S{% endcall %}. "DORA-compliant measures to assess research quality and impact in biomedical institutions: review of published research, international best practice and Delphi survey." *PLOS One* 2022; in press. Preprint: <{% if compact %}https://doi.org/jsnf{% else %}https://doi.org/10.1101/2022.06.16.22276440{% endif %}>
 
 J33.\ Cobey KD, {% call shorten_authors() %}Haustein S, Brehaut J, Dirnagl U, Franzen DL, Hemkens LG, Presseau J, Riedel N, Strech D, Alperin JP, Costas R, Sena ES, van Leeuwen T, Ardern CL, Bacellar IOL, Camack N, Correa MB, Buccione R, Cenci MS, Fergusson DA, Gould van Praag C{% endcall %}, **Hoffman MM**, {% call shorten_authors() %}Bielemann RM, Moschini U, Paschetta M, Pasquale V, Rac VE, Roskams-Edris D, Schatzl HM, Stratton JA, Moher D{% endcall %}. "Community consensus on core open science practices in biomedicine." *PLOS Biol* 2022; in press. Preprint: <{% if compact %}https://doi.org/jncm{% else %}https://doi.org/10.1101/2022.06.27.22276964{% endif %}>
 
@@ -228,9 +228,9 @@ N1.\ Church DM, {% call shorten_authors() %}Schneider VA, Steinberg KM, Schatz M
 ### Publications: standards
 {% endif %}
 
-\beginenumerate
-X1.\ **Niu J**, **Denisko D**, **Hoffman MM**. ["The Browser Extensible Data (BED) format."](https://samtools.github.io/hts-specs/BEDv1.pdf) 2021. Global Alliance for Genomics and Health (GA4GH) Approved Standard.
-\endenumerate
+{% if publiststandards %}
+{% include 'standards.md.jinja' %}
+{% endif %}
 
 {% if annotate or not compact %}
 ### Publications: submitted

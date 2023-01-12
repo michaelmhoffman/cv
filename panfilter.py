@@ -6,7 +6,7 @@ from __future__ import absolute_import, division, print_function
 
 __version__ = "0.1"
 
-# Copyright 2015-2021 Michael M. Hoffman <michael.hoffman@utoronto.ca>
+# Copyright 2015-2021, 2023 Michael M. Hoffman <michael.hoffman@utoronto.ca>
 
 from datetime import date
 from functools import partial
@@ -34,7 +34,7 @@ def text_to_year(text):
 
 
 def load_google_scholar(filename=SCHOLAR_FILENAME):
-    with open(filename) as infile:
+    with open(filename, "rb") as infile:
         soup = BeautifulSoup(infile, HTML_PARSER)
 
     table = soup.find(id="gsc_a_t")

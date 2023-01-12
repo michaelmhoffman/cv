@@ -1,9 +1,11 @@
 {% set compact = compact|default(false) %}
+{% set verycompact = verycompact|default(false) %}
 {% set annotate = annotate|default(not compact) %} {# annotate publications #}
 {% set select = select|default(false) %} {# selected stuff only #}
 {% set statusonly = statusonly|default(false) %}
 {% set nostartup = nostartup|default(false) %}
 {% set private = private|default(false) %}
+{% set publiststandards = publiststandards|default(true) %}
 
 {% if compact %}
 {% set fieldsep %}, {% endset %}
@@ -18,7 +20,8 @@
 {% else %}
 {% set fieldsep %}\
 {% endset %}
-{% set recordsep %}{% endset %}
+{% set recordsep %}
+{% endset %}
 {% set dept %}Department{% endset %}
 {% set univ_before_period %}University{% endset %}
 {% set univ %}{{ univ_before_period }}{% endset %}
@@ -26,6 +29,12 @@
 {% set cihr %}Canadian Institutes of Health Research{% endset %}
 {% set nserc %}Natural Sciences and Engineering Research Council of Canada{% endset %}
 {% set nih %}National Institutes of Health{% endset %}
+{% endif %}
+
+{% if verycompact %}
+{% set uhn %}UHN{% endset %}
+{% else %}
+{% set uhn %}University Health Network{% endset %}
 {% endif %}
 
 {% block everything %}{% endblock %}

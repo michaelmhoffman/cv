@@ -1,0 +1,13 @@
+- id: brief-personal-statement
+- id: main-affiliations-positions-and-honors
+# - id: recognitions-other-scholarships-and-awards
+- id: relevant-contributions-to-research
+- id: publications-including-working-papers-and-forthcoming-work
+- id: other-scholarly-works-e.g.-policy-reports-multimedia-software-etc.
+- id: additional-information-relevant-to-proposal-and-review-e.g.-research-funding-within-the-last-5-years
+- id: funding-lead-principal-investigator
+  year-min: -5
+- id: funding-co-principal-investigator
+  year-min: -5
+- id: funding-co-investigator
+  year-min: -5

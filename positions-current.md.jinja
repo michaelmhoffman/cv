@@ -1,7 +1,11 @@
+{% if not compact %}
+```{=latex}
+\begin{samepage}
+```
+{% endif %}
+
 **Chair**{{ fieldsep }}Computational Biology and Medicine Program, Princess Margaret Cancer Centre, University Health Network, {% if not compact %}Toronto, ON, {% endif %}2023--2026.{% if compact %} {% else %}{{ recordsep }}{% endif %}
-
 **Senior Scientist**{{ fieldsep }}{% if not compact %}Computational Biology and Medicine Program, Princess Margaret Cancer Centre, University Health Network, Toronto, ON, {% endif %}{# 3 September #}2020--present.{{ recordsep }}
-
 **Associate Professor{% if statusonly %} (status-only){% endif %}**{{ fieldsep }}Dep{% if compact %}ts{% else %}artment{% endif %} of Medical Biophysics{% if compact %} & Computer Science{% endif %}, {{ univ }} of Toronto, {% if not compact %}Toronto, ON, {# 1 July #}{% endif %}2020--present{% if not compact %}\
 Department of Computer Science, {{ univ }} of Toronto, Toronto, ON, {# 1 July #}2020--present{% endif %}.
 
@@ -19,6 +23,11 @@ Data Sciences Institute, {{ univ }} of Toronto, Toronto, ON, 2021--present.
 
 **Member**\
 Temerty Centre for Artificial Intelligence Research and Education in Medicine, {{ univ }} of Toronto, Toronto, ON, 2020--present.
+{% if not compact %}
+```{=latex}
+\end{samepage}
+```
+{% endif %}
 
 **Mentor**\
 Strategic Training for Advanced Genetic Epidemiology Program, Canadian Statistical Sciences Institute Ontario, Toronto, ON, 2022--present.

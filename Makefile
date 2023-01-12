@@ -7,6 +7,7 @@ VMARGIN = 1in
 
 ## command variables
 JINJA_FLAGS_PRIVATE = --search-dir=../cv-private --set private
+JINJA_FLAGS_COMPACT = --set select --set nostartup --set compact --abbr-months --set presentation_score=750
 JINJA_FLAGS = $(JINJA_FLAGS_PRIVATE)
 JINJA = ./jinja.py $(JINJA_FLAGS)
 
@@ -85,6 +86,7 @@ cv-%.md : cv.md.jinja base.md.jinja head.md.jinja positions-current.md.jinja edu
 # PYTHONINSPECT=1 ./panfilter.py --config="${variant}.yaml" "cv-${variant}.json"
 
 # using a pipeline because using --filter, a Python filter, and Cygwin python doesn't seem to work
+# XXX: can we change this now that we no longer use Python?
 cv-%.docx: cv-%.md reference.docx google-scholar.html %.yaml
 	$(PANDOC_TOJSON) $< | $(PANFILTER) --config=$(*F).yaml | $(PANDOC_DOCX) --from=json -o $@
 	cp $@ cv.docx
@@ -128,6 +130,11 @@ cv-scn.md : JINJA_FLAGS = $(JINJA_FLAGS_PRIVATE) --abbr-months --set compact
 cv-scn.tex : HMARGIN = 0.5in
 cv-scn.tex : VMARGIN = \{0.5in,0.75in\}
 
+# dsi: Data Sciences Institute
+cv-dsi.md : JINJA_FLAGS = $(JINJA_FLAGS_PRIVATE) $(JINJA_FLAGS_COMPACT)
+cv-dsi.md : cv-dsi.md.jinja
+	$(JINJA) $< $@
+
 # select: Selected stuff only
 cv-select.md : JINJA_FLAGS = $(JINJA_FLAGS_PRIVATE) --set select
 
@@ -139,7 +146,7 @@ cv-select-nostartup.md : JINJA_FLAGS = $(JINJA_FLAGS_PRIVATE) --set select --set
 # compact: Selected stuff only without startup, compact style
 compact.yaml : select.yaml
 	cp $< $@
-cv-compact.md : JINJA_FLAGS = $(JINJA_FLAGS_PRIVATE) --set select --set nostartup --set compact --abbr-months --set presentation_score=750
+cv-compact.md : JINJA_FLAGS = $(JINJA_FLAGS_PRIVATE) $(JINJA_FLAGS_COMPACT)
 
 cv-compact.tex : HMARGIN = 0.5in
 cv-compact.tex : VMARGIN = \{0.5in,0.75in\}

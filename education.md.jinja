@@ -1,3 +1,8 @@
+{% if not compact %}
+```{=latex}
+\begin{samepage}
+```
+{% endif %}
 **Senior Fellow**{{ fieldsep }}{{ dept }} of Genome Sciences, {{ univ }} of Washington, {% if not compact %}Seattle, WA, {% endif %}2008--2013.{{ recordsep }}
 {% if not compact and not select %}
 
@@ -23,4 +28,10 @@
 * College of Natural Sciences Commencement Speaker, Dean's Honored Graduate
 * College of Liberal Arts Dean's Distinguished Graduate
 * University Honors
+{% endif %}
+
+{% if not compact %}
+```{=latex}
+\end{samepage}
+```
 {% endif %}
