@@ -13,7 +13,7 @@ from functools import partial
 import json
 import re
 import sys
-from typing import Any, Callable, Generator, Optional, TextIO
+from typing import Any, Callable, Generator, Optional, TextIO, TypedDict
 
 from bs4 import BeautifulSoup, Tag
 import yaml
@@ -29,8 +29,13 @@ info = partial(print, file=sys.stderr)
 CitationsDict = dict[str, str]
 SectionConfigDict = dict[str, str | int | list[str]]
 ConfigDict = dict[str, SectionConfigDict]
-NodeContent = str | list | None
+PandocNodeContent = str | list | None
 PrintCallable = Callable[..., None]
+
+
+class PandocNode(TypedDict):
+    t: str
+    c: PandocNodeContent
 
 
 def text_to_year(text: str) -> int:
@@ -101,14 +106,14 @@ def noop(*args: list[Any], **kwargs: dict[str, Any]) -> None:
     pass
 
 
-def get_node_type_content(node) -> tuple[str, NodeContent]:
+def get_node_type_content(node: PandocNode) -> tuple[str, PandocNodeContent]:
     node_type = node["t"]
     node_content = node.get("c")
 
     return node_type, node_content
 
 
-def proc_bullet_item(node: dict[str, str], citations: CitationsDict) -> None:
+def proc_bullet_item(node: PandocNode, citations: CitationsDict) -> None:
     node_type, node_content = get_node_type_content(node)
 
     if node_type == "Str":
@@ -119,7 +124,8 @@ def proc_bullet_item(node: dict[str, str], citations: CitationsDict) -> None:
             node["c"] = "{:,}".format(int(citations[citation_id]))
 
 
-def proc_bullet(node_content: NodeContent, citations: CitationsDict):
+def proc_bullet(node_content: PandocNodeContent,
+                citations: CitationsDict) -> None:
     # XXX: this will probably break, need to replace with something recursive
     assert isinstance(node_content, list)
 
@@ -129,7 +135,7 @@ def proc_bullet(node_content: NodeContent, citations: CitationsDict):
                 proc_bullet_item(subsubsubnode, citations)
 
 
-def is_accepted_para(node_content: NodeContent,
+def is_accepted_para(node_content: PandocNodeContent,
                      section_exclude: frozenset[str],
                      section_year_min: Optional[int]) -> bool:
     """Return whether paragraph should be accepted."""
@@ -166,7 +172,8 @@ def is_accepted_para(node_content: NodeContent,
 
 
 def generate_tree(tree: list, config: ConfigDict, include_ids: frozenset[str],
-                  citations: CitationsDict, log: PrintCallable) -> Generator:
+                  citations: CitationsDict, log: PrintCallable) \
+                  -> Generator[PandocNode, None, None]:
     section_id = None
     section_accept = True
     section_exclude: frozenset[str] = frozenset()
