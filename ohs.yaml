@@ -2,6 +2,8 @@
 # - id: current-positions
 - id: education
 - id: publications
+  name: "Publications (2019–present)"
+  year-min: 2019
 # - id: publications-journal-peer-reviewed
 # - id: publications-conference-proceedings-peer-reviewed
 # - id: publications-journal-commentaries-and-meeting-reports
@@ -15,10 +17,13 @@
 # - id: recognitions
 # - id: recognitions-honors
 # - id: recognitions-other-scholarships-and-awards
+- id: recognitions-selected
 - id: funding
 - id: funding-lead-principal-investigator
-- id: funding-co-principal-investigator
+  year-min: 2023
+# - id: funding-co-principal-investigator
 - id: funding-co-investigator
+  year-min: 2023
 # - id: presentations
 # - id: presentations-invitedkeynote
 # - id: presentations-invitedkeynote-local

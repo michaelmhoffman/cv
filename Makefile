@@ -36,7 +36,7 @@ PIP = $(PYTHON) -m pip
 PYTHON_DEPS = jinja2 bs4 PyYAML lxml
 
 # XXX: \beginenumerate etc. could be made a TeX macro rather than filtering here
-TEXFILTER = perl -pe 's/^([A-Z]+[0-9]+.)~/\\item[\1] /; s/\\(begin|end)enumerate/\\\1\{enumerate}/g'
+TEXFILTER = perl -0pe 's/\\beginenumerate\s*\\endenumerate//g' | perl -pe 's/^([A-Z]+[0-9]+.)~/\\item[\1] /; s/\\(begin|end)enumerate/\\\1\{enumerate}/g'
 
 SCHOLARURL=https://scholar.google.com/citations?user=$(SCHOLARID)
 
