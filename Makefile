@@ -157,6 +157,12 @@ cv-rsc.md : JINJA_FLAGS = $(JINJA_FLAGS_PRIVATE) --set select --set nostartup --
 cv-rsc.tex : HMARGIN = 0.5in
 cv-rsc.tex : VMARGIN = \{0.5in,0.75in\}
 
+# ohs: Ontario Health Study
+cv-ohs.md : JINJA_FLAGS = $(JINJA_FLAGS_COMPACT)
+
+cv-ohs.tex : HMARGIN = 0.5in
+cv-ohs.tex : VMARGIN = \{0.5in,0.75in\}
+
 # nostartup: everything except startup
 cv-nostartup.md : JINJA_FLAGS = $(JINJA_FLAGS_PRIVATE) --set nostartup
 
