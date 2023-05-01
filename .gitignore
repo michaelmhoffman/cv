@@ -2,6 +2,7 @@ auto
 ~$*
 \#*
 .#*
+__pycache__
 .nfs*
 *.aux
 *.fdb_latexmk

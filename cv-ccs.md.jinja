@@ -1,0 +1,54 @@
+{% extends 'base.md.jinja' %}
+
+{% block everything %}
+## Brief Biography (Optional):
+
+{% include 'bio.md' %}
+
+## A. Academic appointments
+
+{% include 'positions-current.md.jinja' %}
+{% include 'positions-prior.md.jinja' %}
+
+## B. Awards and honours
+
+{% include 'recognitions.md.jinja' %}
+
+## C. Leadership positions
+
+{% include 'leadership-society.md.jinja' %}
+{% include 'leadership-institutional.md.jinja' %}
+
+## D. Research Grant Support
+
+{% include 'funding.md.jinja' %}
+
+## E. Significant Contributions
+
+XXX
+
+## F. ORCID
+
+{% include 'orcid.md.jinja' %}
+
+## G. Invited Conference Presentations
+
+{% include 'presentations-invited.md.jinja' %}
+
+## H. Patents Granted & Licensed
+
+{% include 'patent.md.jinja' %}
+
+## I. Mentorship/Supervision
+
+{% include 'supervision.md.jinja' %}
+
+## J. Peer Review & Related Contributions
+
+{% include 'advisory-peer-review.md.jinja' %}
+
+## K. Publications (All)
+
+{% include 'publications.md.jinja' %}
+
+{% endblock %}

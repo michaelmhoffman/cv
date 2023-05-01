@@ -58,7 +58,9 @@ def proc_section_year_min(section_config: SectionConfigDict) -> Optional[int]:
 def proc_scholar_row(row) -> tuple[str, str]:
     article_url = row.find("a", class_="gsc_a_at")["href"]
     article_id = article_url.rpartition(":")[2]
-    cites = row.find("a", class_="gsc_a_ac").contents[0]
+    cite_links = row.find("a", class_="gsc_a_ac")
+
+    cites = next(iter(cite_links.contents), "0")
 
     return (article_id, cites)
 

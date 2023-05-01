@@ -1,0 +1,147 @@
+{% macro pa(text, location, date, year, score=0) -%}
+{% if compact -%}
+{{ p("P" ~ text ~ ". " ~ year ~ ".", score) }}
+{% else -%}
+{{ p("PA" ~ text ~ ". " ~ location ~ ". " ~ date ~ " " ~ year ~ ".", score) }}
+{% endif -%}
+{% endmacro -%}
+
+{% if (not compact) or annotate %}#{% endif %}## Presentations: invited/keynote{% if compact and not annotate %} (selected){% endif %}
+
+{% if compact %}
+\setlist*[enumerate]{leftmargin=\widthof{P99.}+0.5em}
+{% endif %}
+
+\beginenumerate
+{# XXX many of these doubling ups can be replaced with a `~ ' optional text' if not compact ~' #}
+{% if compact %}
+{{ pa('58.\ BioNet 2023. University of Alberta.', 'Edmonton, AB', '31 May--2 June', 2023, 33) -}}
+* Keynote.
+{{ pa('57.\ "Reproducibility standards for machine learning in the life sciences." Deep Learning for Genetics, Genomics and Metagenomics. Banff International Research Station', 'Videoconference', '8 June', 2022, 33) -}}
+{% else %}
+{{ pa('57.\ "Reproducibility standards for machine learning in the life sciences." Deep Learning for Genetics, Genomics and Metagenomics: Latest Developments and New Directions. Banff International Research Station', 'Videoconference', '8 June', 2022, 33) -}}
+{% endif %}
+{{ pa('56.\ ["Acidbio and BED."](https://docs.google.com/presentation/d/1n6sHAVTh3psKUrTfLHfkK7rz2dkDqXp6G6Eg_vZn5GQ/edit#slide=id.g123eb2b9aae_0_404) Global Alliance for Genomics and Health (GA4GH) GA4GH Connect', 'Montréal, QC', '20 April', 2022, 250) -}}
+{{ pa('55.\ "Predicting transcription factor binding and the effects of viral integration." Computational Biology Seminar Series. Garvan Institute of Medical Research', 'Videoconference', '13 April', 2022, 33) -}}
+{% if compact %}
+{{ pa('54.\ ["Predicting transcription factor binding and the effects of viral integration."](https://www.youtube.com/watch?v=1oxhmjnQDiU&t=7s) Center for Genomic Science Innovation, ' ~ univ ~ ' of Wisconsin-Madison', 'Madison, WI', '7 April', 2022, 33) -}}
+{% else %}
+{{ pa('54.\ ["Predicting transcription factor binding and the effects of viral integration."](https://www.youtube.com/watch?v=1oxhmjnQDiU&t=7s) Genomics Seminar Series. Center for Genomic Science Innovation, ' ~ univ ~ ' of Wisconsin-Madison', 'Madison, WI', '7 April', 2022, 33) -}}
+{% endif %}
+{{ pa('53.\ ["Evaluating research after DORA: a Canadian perspective."](https://www.youtube.com/watch?v=c6DYkASSj3Q&t=2529s) Canadian Science Policy Conference', 'Videoconference', '25 November', 2021, 33) -}}
+{% if compact %}
+{{ pa('52.\ ["The ungracious guest: how the human papillomavirus (HPV) changes the local host epigenome and transcriptome to promote tumorigenesis."](https://www.youtube.com/watch?v=mgtkpEcZnOU) Sanford Burnham Prebys', 'Videoconference', '14 June', 2021, 33) -}}
+{% else %}
+{{ pa('52.\ ["The ungracious guest: how the human papillomavirus (HPV) changes the local host epigenome and transcriptome to promote tumorigenesis."](https://www.youtube.com/watch?v=mgtkpEcZnOU) Cancer Center Seminar Series. Sanford Burnham Prebys Medical Discovery Institute', 'Videoconference', '14 June', 2021, 33) -}}
+{% endif %}
+{{ pa('51.\ "Predicting transcription factor binding and the effects of viral integration." Ludwig Institute Seminar Series, Ludwig Institute for Cancer Research, ' ~ univ ~ ' of Oxford', 'Videoconference', '18 March', 2021, 33) -}}
+{{ pa('50.\ "Identifying transcription factor binding using open chromatin, transcriptome, and methylation data." Vancouver Bioinformatics User Group (VanBUG)', 'Videoconference', '17 March', 2021, 33) -}}
+{% if compact %}
+{{ pa('49.\ "Identifying transcription factor binding using open chromatin, transcriptome, and methylation data." ' ~ dept ~ ' of Mathematics and Statistics. ' ~ univ ~ ' of Calgary', 'Videoconference', '12 February', 2021, 33) -}}
+{% else %}
+{{ pa('49.\ "Identifying transcription factor binding using open chromatin, transcriptome, and methylation data." SAGE/Biostatistics Seminar. ' ~ dept ~ ' of Mathematics and Statistics. ' ~ univ ~ ' of Calgary', 'Videoconference', '12 February', 2021, 33) -}}
+{% endif %}
+{{ pa('48.\ "Identifying transcription factor binding using open chromatin, transcriptome, and methylation data." Curriculum in Bioinformatics and Computational Biology' ~ (' Seminar Series' if not compact) ~ '. ' ~ univ ~ ' of North Carolina-Chapel Hill', 'Videoconference', '29 January', 2021, 33) -}}
+{% if annotate %}
+* Student invited speaker
+{% endif %}
+{% if compact %}
+{{ pa('47.\ "BEHST: genomic set enrichment analysis enhanced through integration of chromatin long-range interactions." Asilomar Chromatin, Chromosomes, and Epigenetics Conference', 'Videoconference', '10 December', 2020, 33) -}}
+{% else %}
+{{ pa('47.\ "BEHST: genomic set enrichment analysis enhanced through integration of chromatin long-range interactions." Bioinformatics Tools for Functional Genomics. Asilomar Chromatin, Chromosomes, and Epigenetics Conference', 'Videoconference', '10 December', 2020, 33) -}}
+{% endif %}
+{{ pa('46.\ ["Evaluating machine learning claims."](https://www.slideshare.net/hoffmanlab/evaluating-machine-learning-claims-229405631) Science Foundation Ireland Centre for Research Training in Genomics Data Science. National ' ~ univ ~ ' of Ireland', 'Videoconference', '30 November', 2020, 33) -}}
+{{ pa('45.\ "Viral integration and data integration: what they can tell us about the classical and 3D epigenomes". Barbados Workshop: Bridging the Classical and 3D Epigenomics. Bellairs Research Institute', 'Holetown, Barbados', 'Conference postponed due to global pandemic. Original dates: 17--24 April', 2020, 33) -}}
+{{ pa('44.\ "Identifying transcription factor binding using open chromatin, transcriptome, and methylation data." Institute of Cellular and Molecular Biology, ' ~ univ ~ ' of Texas at Austin', 'Austin, TX', '10 October', 2019, 750) -}}
+{{ pa('43.\ "Identifying transcription factor binding using open chromatin, transcriptome, and methylation data." Departmental Grand Rounds, ' ~ dept ~ ' of Biomedical Informatics, ' ~ univ ~ ' at Buffalo', 'Buffalo, NY', '19 June', 2019, 700) -}}
+{% if compact %}
+{{ pa('42.\ "Virtual ChIP-seq: predicting transcription factor binding by learning from the transcriptome." ' ~ dept ~ ' of Mathematics and Biostatistics. ' ~ univ ~ ' of Guelph', 'Guelph, ON', '13 May', 2019, 700) -}}
+{{ pa('41.\ "Identifying transcription factor binding using open chromatin, transcriptome, and methylation data". ' ~ dept ~ ' of Genetics and Genomic Sciences. Icahn School of Medicine at Mount Sinai', 'New York, NY', '29 March', 2019, 775) -}}
+{{ pa('40.\ "Virtual ChIP-seq: predicting transcription factor binding by learning from the transcriptome." The Role of Genomics and Metagenomics in Human Health', 'Banff, AB', '4 February', 2019, 790) -}}
+{% else %}
+{{ pa('42.\ "Virtual ChIP-seq: predicting transcription factor binding by learning from the transcriptome." Artificial Intelligence and Machine Learning in Biology Symposium. ' ~ dept ~ ' of Mathematics and Biostatistics. ' ~ univ ~ ' of Guelph', 'Guelph, ON', '13 May', 2019, 700) -}}
+{{ pa('41.\ "Identifying transcription factor binding using open chromatin, transcriptome, and methylation data". ' ~ dept ~ ' of Genetics and Genomic Sciences and Institute for Genomics and Multiscale Biology. Icahn School of Medicine at Mount Sinai', 'New York, NY', '29 March', 2019, 775) -}}
+{{ pa('40.\ "Virtual ChIP-seq: predicting transcription factor binding by learning from the transcriptome." The Role of Genomics and Metagenomics in Human Health: Recent Developments in Statistical and Computational Methods. Banff International Research Station', 'Banff, AB', '4 February', 2019, 790) -}}
+{% endif %}
+{% if compact %}
+{{ pa('39.\ "Modeling methyl-sensitive transcription factor motifs with an expanded epigenetic alphabet." Pacific Symposium on Biocomputing', 'Kohala Coast, HI', '6 January', 2019, 800) -}}
+{{ pa('38.\ "Identifying transcription factor binding using open chromatin, transcriptome, and methylation data." ' ~ dept ~ ' of Biomedical and Molecular Sciences, Queen\'s ' ~ univ_before_period, 'Kingston, ON', '26 November', 2018, 700) -}}
+{% else %}
+{{ pa('39.\ "Modeling methyl-sensitive transcription factor motifs with an expanded epigenetic alphabet." Reading between the genes: interpreting noncoding DNA in high throughput. Pacific Symposium on Biocomputing (PSB)', 'Kohala Coast, HI', '6 January', 2019, 800) -}}
+{{ pa('38.\ "Identifying transcription factor binding using open chromatin, transcriptome, and methylation data." Special Seminar, ' ~ dept ~ ' of Biomedical and Molecular Sciences and School of Computing, Queen\'s ' ~ univ_before_period, 'Kingston, ON', '26 November', 2018, 700) -}}
+{% endif %}
+{{ pa('37.\ "Virtual ChIP-seq: predicting transcription factor binding by learning from the transcriptome." Cold Spring Harbor Laboratory Meeting on Biological Data Sciences', 'Cold Spring Harbor, NY', '8 November', 2018, 800) -}}
+{{ pa('36.\ "Segway and the Graphical Models Toolkit: a framework for probabilistic genomic inference." Meeting on Probabilistic Modeling In Genomics', 'Cold Spring Harbor, NY', '5 November', 2018, 800) -}}
+{% if compact %}
+{{ pa('35.\ "Identifying transcription factor binding using open chromatin, transcriptome, and methylation data." ' ~ dept ~ ' of Computational Medicine and Bioinformatics. ' ~ univ ~ ' of Michigan', 'Ann Arbor, MI', '24 October', 2018, 775) -}}
+{% else %}
+{{ pa('35.\ "Identifying transcription factor binding using open chromatin, transcriptome, and methylation data." ' ~ dept ~ ' of Computational Medicine and Bioinformatics Seminar Series. ' ~ univ ~ ' of Michigan', 'Ann Arbor, MI', '24 October', 2018, 775) -}}
+{% endif %}
+{{ pa('34.\ "Virtual ChIP-seq: predicting transcription factor binding by learning from the transcriptome." Fifth Canadian Conference on Epigenetics. Epigenetics Canada', 'Estérel, QC', '30 September--3 October', 2018, 790) -}}
+{{ pa('33.\ "Virtual ChIP-seq: predicting transcription factor binding by learning from the transcriptome." BioC', 'Toronto, ON', '26 July', 2018, 760) -}}
+{% if compact %}
+{{ pa('32.\ "Identifying transcription factor binding using open chromatin, transcriptome, and methylation data." ' ~ dept ~ ' of Cellular and Molecular Physiology. Pennsylvania State ' ~ univ_before_period, 'Hershey, PA', '5 June', 2018, 700) -}}
+{{ pa('31.\ "Virtual ChIP-seq: predicting transcription factor binding by learning from the transcriptome." Symposium on Advances in Genomics, Epidemiology, and Statistics', 'Philadelphia, PA', '1 June', 2018, 800) -}}
+{% else %}
+{{ pa('32.\ "Identifying transcription factor binding using open chromatin, transcriptome, and methylation data." ' ~ dept ~ ' of Cellular and Molecular Physiology. College of Medicine. Pennsylvania State ' ~ univ_before_period, 'Hershey, PA', '5 June', 2018, 700) -}}
+{{ pa('31.\ "Virtual ChIP-seq: predicting transcription factor binding by learning from the transcriptome." Symposium on Advances in Genomics, Epidemiology, and Statistics (SAGES)', 'Philadelphia, PA', '1 June', 2018, 800) -}}
+{% endif %}
+{{ pa('30.\ "Understanding epigenetics—and what it means for cancer." Barbados Workshop on Cancer Epigenetics. Bellairs Research Institute', 'Holetown, Barbados', '8 January', 2018, 755) -}}
+{% if compact %}
+{{ pa('29.\ "Identifying transcription factor binding using open chromatin, transcriptome, and methylation data." Sidney Kimmel Comprehensive Cancer Center. Johns Hopkins ' ~ univ_before_period, 'Baltimore, MD', '14 December', 2017, 775) -}}
+{% else %}
+{{ pa('29.\ "Identifying transcription factor binding using open chromatin, transcriptome, and methylation data." Research Program in Quantitative Sciences Seminar Series. Division of Biostatistics and Bioinformatics. Sidney Kimmel Comprehensive Cancer Center. Johns Hopkins ' ~ univ_before_period, 'Baltimore, MD', '14 December', 2017, 775) -}}
+{% endif %}
+{{ pa('28.\ "Identifying transcription factor binding using open chromatin, transcriptome, and methylation data." Research Seminar Series. British Columbia Cancer Agency', 'Vancouver, BC', '2 October', 2017, 750) -}}
+{{ pa('27.\ "Novel inferences from Hi-C data with protein-coding gene data." Great Lakes Bioinformatics Conference', 'Chicago, IL', '17 May', 2017, 700) -}}
+{{ pa('26.\ "Computational predictive models and 3D genome organization." Workshop on the Physical Basis of Functional Genome Organization. Bellairs Research Institute', 'Holetown, Barbados', '15 April', 2017, 745) -}}
+{{ pa('25.\ "Automated genome annotation and an expanded epigenetic alphabet." Microsoft Research New England', 'Cambridge, MA', '27 March', 2017, 700) -}}
+{{ pa('24.\ "Automated genome annotation and an expanded epigenetic alphabet." HudsonAlpha Institute for Biotechnology', 'Huntsville, AL', '8 March', 2017, 700) -}}
+{% if compact %}
+{{ pa('23.\ "Modeling methyl-sensitive transcription factor motifs with an expanded epigenetic alphabet." Institute for Operations Research and the Management Sciences Annual Meeting', 'Nashville, TN', '15 November', 2016, 700) -}}
+{% else %}
+{{ pa('23.\ "Modeling methyl-sensitive transcription factor motifs with an expanded epigenetic alphabet." Institute for Operations Research and the Management Sciences (INFORMS) Annual Meeting', 'Nashville, TN', '15 November', 2016, 700) -}}
+{% endif %}
+{{ pa('22.\ "Modeling methyl-sensitive transcription factor motifs with an expanded epigenetic alphabet." Cold Spring Harbor Laboratory Meeting on Biological Data Sciences', 'Cold Spring Harbor, NY', '27 October', 2016, 800) -}}
+{{ pa('21.\ "Semi-automated genome annotation and an expanded epigenetic alphabet." Wellcome Trust Sanger Institute', 'Hinxton, England', '19 September', 2016, 725) -}}
+{% if compact %}
+{{ pa('20.\ ["Semi-automated human genome annotation using chromatin data."](https://www.youtube.com/watch?v=IZXLTO0mL-E&list=PLmX8XnLr6zeFSjK3H4YdtUG57yjJUlDjb&index=9) Intelligent Systems for Molecular Biology', 'Orlando, FL', '12 July', 2016, 800) -}}
+{% else %}
+{{ pa('20.\ ["Semi-automated human genome annotation using chromatin data."](https://www.youtube.com/watch?v=IZXLTO0mL-E&list=PLmX8XnLr6zeFSjK3H4YdtUG57yjJUlDjb&index=9) Intelligent Systems for Molecular Biology (ISMB)', 'Orlando, FL', '12 July', 2016, 800) -}}
+{% endif %}
+{{ pa('19.\ "Modeling methyl-sensitive transcription factor motifs with an expanded epigenetic alphabet." Bioinformatics Italian Society (BITS) Annual Meeting', 'Salerno, Italy', '17 June', 2016, 700) -}}
+{{ pa('18.\ "Semi-automated genome annotation and an expanded epigenetic alphabet." Early Career Investigators Meeting on Quantitative Problems in Human Genetics and Health. Banff International Research Station', 'Banff, AB', '11 January', 2016, 790) -}}
+{{ pa('17.\ "Semi-automated human genome annotation using chromatin data." Institute for Operations Research and the Management Sciences (INFORMS) Annual Meeting', 'Philadelphia, PA', '2 November', 2015, 700) -}}
+{{ pa('16.\ "Modeling methyl-sensitive transcription factor motifs with an expanded epigenetic alphabet." Cold Spring Harbor Laboratory Meeting on Genome Informatics', 'Cold Spring Harbor, NY', '29 October', 2015, 800) -}}
+{{ pa('15.\ "Semi-automated genome annotation and an expanded epigenetic alphabet." ' ~ dept ~ ' of Biology. New York ' ~ univ_before_period, 'New York, NY', '28 October', 2015, 745) -}}
+{{ pa('14.\ "Transcription factor binding motifs in an expanded epigenetic alphabet." Taiwan-Canada Joint Workshop on Epigenetics. Canadian Human and Statistical Genetics Meeting', 'Vancouver, BC', '21 April', 2015, 745) -}}
+{{ pa('13.\ "Semi-automated genome annotation and an expanded epigenetic alphabet." ' ~ dept ~ ' of Biochemistry and Molecular Genetics. ' ~ univ ~ ' of Colorado Anschutz Medical Campus', 'Denver, CO', '3 April', 2015, 745) -}}
+{{ pa('12.\ "Semi-automated genome annotation and an expanded epigenetic alphabet." Bioinformatics Club. ' ~ univ ~ ' of Waterloo', 'Waterloo, ON', '24 March', 2015, 500) -}}
+{{ pa('11.\ "Semi-automated genome annotation and an expanded epigenetic alphabet." Understanding non-coding DNA through intra and inter-species epigenomic variation. Bellairs Research Institute', 'Holetown, Barbados', '9 January', 2015, 745) -}}
+{{ pa('10.\ "Semi-automated genome annotation and an expanded epigenetic alphabet." McGill ' ~ univ_before_period, 'Montréal, QC', '21 November', 2014, 745) -}}
+{% if compact %}
+{{ pa('9.\ "Semi-automated annotation of the human genome using chromatin and RNA-seq data." Undergraduate Program in Genomic Sciences. National Autonomous ' ~ univ ~ ' of Mexico', 'Mexico City, Mexico (videoconference)', '5 March', 2014, 500) -}}
+{% else %}
+{{ pa('9.\ "Semi-automated annotation of the human genome using chromatin and RNA-seq data." Major Discoveries in Biology. Undergraduate Program in Genomic Sciences. National Autonomous ' ~ univ ~ ' of Mexico', 'Mexico City, Mexico (videoconference)', '5 March', 2014, 500) -}}
+{% endif %}
+{{ pa('8.\ "Semi-automated Genome Annotation with Segway." Institute of Electrical and Electronics Engineers International Workshop on Genomic Signal Processing and Statistics', 'Houston, TX', '17 November', 2013, 700) -}}
+{% if compact %}
+{{ pa('7.\ "Unsupervised pattern discovery in human chromatin structure through genomic segmentation." Workshop on Epigenomics and Cell Function. ACM Conference on Bioinformatics, Computational Biology and Biomedicine', 'Washington, DC', '22 September', 2013, 700) -}}
+{% else %}
+{{ pa('7.\ "Unsupervised pattern discovery in human chromatin structure through genomic segmentation." Workshop on Epigenomics and Cell Function 2013. Association for Computing Machinery Conference on Bioinformatics, Computational Biology and Biomedicine', 'Washington, DC', '22 September', 2013, 700) -}}
+{% endif %}
+{{ pa('6.\ "Semi-automated annotation of the human genome using chromatin and RNA-seq data." Genentech', 'South San Francisco, CA', '12 November', 2012, 600) -}}
+{{ pa('5.\ "Unsupervised pattern discovery in human chromatin data." Computational Biology Center Guest Seminar. Memorial Sloan-Kettering Cancer Center', 'New York, New York', '18 May', 2011, 600) -}}
+{{ pa('4.\ "Segway: finding patterns in chromatin data." Center for Bioinformatics Research Special Talk, Indiana ' ~ univ_before_period, 'Bloomington, Indiana', '18 November', 2010, 700) -}}
+{% if compact %}
+{{ pa('3.\ "Finding the patterns in chromatin data." Barbados Workshop on Gene Regulation', 'Holetown, Barbados', '21 April', 2010, 745) -}}
+{% else %}
+{{ pa('3.\ "Finding the patterns in chromatin data." Fifth Barbados Workshop on Gene Regulation: The role of chromatin in 3D structure', 'Holetown, Barbados', '21 April', 2010, 745) -}}
+{% endif %}
+{% if compact %}
+{{ pa('2.\ "Properties of natural selection in mammalian promoters." Weizmann UK Symposium: Biological complexity', 'London, England', 'Summer', 2008, 700) -}}
+{% else %}
+{{ pa('2.\ "Properties of natural selection in mammalian promoters." Weizmann UK Symposium: Biological complexity: from models to systems', 'London, England', 'Summer', 2008, 700) -}}
+{% endif %}
+{{ pa('1.\ "Predicting Selection in Promoters by Simulating the Effects of Mutations." Waterman Seminar, Leibniz Institute of Plant Genetics and Crop Plant Research', 'Gatersleben, Germany', 'Autumn', 2007, 700) }}
+\endenumerate

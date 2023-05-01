@@ -37,4 +37,19 @@
 {% set uhn %}University Health Network{% endset %}
 {% endif %}
 
+{% set presentation_score_min = presentation_score|default("-inf")|float -%}
+{% set num_presentations = cycler(*range(1000)) %}
+{% macro p(text, score=0) -%}
+{% if score >= presentation_score_min -%}
+{{ text }}{% do num_presentations.next() %}
+
+{% endif -%}
+{% endmacro -%}
+
+{% macro present_position() -%}
+{% if not compact %}\
+Present position: {{ caller() }}
+{% endif %}
+{%- endmacro %}
+
 {% block everything %}{% endblock %}

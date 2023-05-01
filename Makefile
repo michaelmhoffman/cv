@@ -38,7 +38,7 @@ PYTHON_DEPS = jinja2 bs4 PyYAML lxml
 # XXX: \beginenumerate etc. could be made a TeX macro rather than filtering here
 TEXFILTER = perl -0pe 's/\\beginenumerate\s*\\endenumerate//g' | perl -pe 's/^([A-Z]+[0-9]+.)~/\\item[\1] /; s/\\(begin|end)enumerate/\\\1\{enumerate}/g'
 
-SCHOLARURL=https://scholar.google.com/citations?user=$(SCHOLARID)
+SCHOLARURL="https://scholar.google.com/citations?user=$(SCHOLARID)"
 
 ## phony targets
 ALL=$(SRC:.md=-default.docx) $(SRC:.md=-default.html) $(SRC:.md=-default.pdf)
@@ -120,6 +120,11 @@ all-public.yaml : all.yaml
 cv-all-public.md : JINJA_FLAGS =
 
 cv-all-nostartup.md : JINJA_FLAGS = $(JINJA_FLAGS_PRIVATE) --set nostartup
+
+# ccs: Canadian Cancer Society
+cv-ccs.md : JINJA_FLAGS = $(JINJA_FLAGS_PRIVATE)
+cv-ccs.md : cv-ccs.md.jinja
+	$(JINJA) $< $@
 
 # crs:
 cv-crs.md : cv-crs.md.jinja
