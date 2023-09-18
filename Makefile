@@ -1,6 +1,6 @@
 ## user variables
 SRC = cv.md
-SCHOLARID = 96r1DYUAAAAJ
+SCHOLAR_ID = 96r1DYUAAAAJ
 PANFILTER_FLAGS =
 HMARGIN = 1in
 VMARGIN = 1in
@@ -38,7 +38,8 @@ PYTHON_DEPS = jinja2 bs4 PyYAML lxml
 # XXX: \beginenumerate etc. could be made a TeX macro rather than filtering here
 TEXFILTER = perl -0pe 's/\\beginenumerate\s*\\endenumerate//g' | perl -pe 's/^([A-Z]+[0-9]+.)~/\\item[\1] /; s/\\(begin|end)enumerate/\\\1\{enumerate}/g'
 
-SCHOLARURL="https://scholar.google.com/citations?user=$(SCHOLARID)"
+SCHOLAR_PAGESIZE=100
+SCHOLAR_URL="https://scholar.google.com/citations?user=$(SCHOLAR_ID)&pagesize=$(SCHOLAR_PAGESIZE)"
 
 ## phony targets
 ALL=$(SRC:.md=-default.docx) $(SRC:.md=-default.html) $(SRC:.md=-default.pdf)
@@ -86,7 +87,7 @@ cv-%.md : cv.md.jinja base.md.jinja head.md.jinja positions-current.md.jinja edu
 # PYTHONINSPECT=1 ./panfilter.py --config="${variant}.yaml" "cv-${variant}.json"
 
 # using a pipeline because using --filter, a Python filter, and Cygwin python doesn't seem to work
-# XXX: can we change this now that we no longer use Python?
+# XXX: can we change this now that we no longer use Cygwin
 cv-%.docx: cv-%.md reference.docx google-scholar.html %.yaml
 	$(PANDOC_TOJSON) $< | $(PANFILTER) --config=$(*F).yaml | $(PANDOC_DOCX) --from=json -o $@
 	cp $@ cv.docx
@@ -178,7 +179,7 @@ cv-statusonly.md : JINJA_FLAGS = $(JINJA_FLAGS_PRIVATE) --set statusonly --set n
 cv-web.md : JINJA_FLAGS =
 
 google-scholar.html: cookies.txt
-	wget --load-cookies=$< -O $@ $(SCHOLARURL)
+	wget --load-cookies=$< -O $@ $(SCHOLAR_URL)
 
 cookies.txt:
-	wget --save-cookies=$@ -O /dev/null $(SCHOLARURL)
+	wget --save-cookies=$@ -O /dev/null $(SCHOLAR_URL)
