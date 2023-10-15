@@ -1,0 +1,82 @@
+- id: michael-m.-hoffman
+- id: current-positions
+# - id: education
+- id: publications
+- id: publications-journal-peer-reviewed
+  year-min: -5
+# - id: publications-conference-proceedings-peer-reviewed
+- id: publications-journal-commentaries-and-meeting-reports
+  year-min: -5
+- id: publications-standards
+- id: publications-submitted
+  year-min: -5
+# - id: publications-theses
+# - id: publications-community-engagement
+- id: intellectual-property
+- id: patent-applications
+# - id: copyrights
+# - id: recognitions
+# - id: recognitions-honors
+# - id: recognitions-other-scholarships-and-awards
+- id: funding
+- id: funding-lead-principal-investigator
+  year-min: -5
+- id: funding-co-principal-investigator
+  year-min: -5
+- id: funding-co-investigator
+  year-min: -5
+- id: presentations
+- id: presentations-invitedkeynote
+  year-min: -5
+- id: presentations-invitedkeynote-local
+  year-min: -5
+- id: presentations-conference-selected-from-abstracts
+  year-min: -5
+# - id: presentations-conference-selected-from-abstracts-trainee
+- id: presentations-invited-panelist
+  year-min: -5
+- id: presentations-invited-panelist-local
+  year-min: -5
+- id: presentations-other-teaching
+  year-min: -5
+# - id: presentations-other-seminars
+# - id: presentations-other-seminars-local
+- id: professional-activities
+- id: professional-activities-society-leadership-positions
+  year-min: -5
+- id: professional-activities-external-advisory-committees
+  year-min: -5
+- id: professional-activities-conference-organizer
+  year-min: -5
+- id: professional-activities-external-advisory-workshops-and-panels
+  year-min: -5
+- id: professional-activities-session-organizer-or-chair
+  year-min: -5
+- id: professional-activities-session-organizer-or-chair-local
+  year-min: -5
+- id: professional-activities-funding-review
+  year-min: -5
+- id: professional-activities-manuscript-review
+  year-min: -5
+# - id: professional-activities-consortium-leadership-positions
+- id: professional-activities-institutional-leadership-positions-and-committees
+  year-min: -5
+- id: professional-activities-student-committees-and-examinations
+  year-min: -5
+- id: professional-activities-memberships
+  year-min: -5
+# - id: professional-activities-memberships-local
+# - id: prior-positions
+- id: trainees-and-staff-supervised
+- id: trainees-and-staff-supervised-current
+- id: trainees-and-staff-supervised-past
+  year-min: -5
+- id: long-term-visitors-hosted
+- id: long-term-visitors-hosted-past
+  year-min: -5
+- id: media-coverage
+- id: media-coverage-text-interviews
+  year-min: -5
+- id: media-coverage-audio-interviews
+# - id: media-coverage-meeting-reports
+- id: citizenship
