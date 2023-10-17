@@ -115,43 +115,9 @@ def get_node_type_content(node: PandocNode) -> tuple[str, PandocNodeContent]:
     return node_type, node_content
 
 
-def proc_bullet_item(node: PandocNode, citations: CitationsDict) -> None:
-    node_type, node_content = get_node_type_content(node)
-
-    if node_type == "Str":
-        assert isinstance(node_content, str)
-
-        if node_content.startswith("%CITES"):
-            citation_id = node_content.partition(":")[2]
-            node["c"] = "{:,}".format(int(citations[citation_id]))
-
-
-def proc_bullet(node_content: PandocNodeContent,
-                citations: CitationsDict) -> None:
-    # XXX: this will probably break, need to replace with something recursive
+def is_accepted_node_content(node_content: PandocNodeContent,
+                             section_year_min: Optional[int]) -> bool:
     assert isinstance(node_content, list)
-
-    for subnode in node_content:
-        for subsubnode in subnode:
-            for subsubsubnode in subsubnode["c"]:
-                proc_bullet_item(subsubsubnode, citations)
-
-
-def is_accepted_para(node_content: PandocNodeContent,
-                     section_exclude: frozenset[str],
-                     section_year_min: Optional[int]) -> bool:
-    """Return whether paragraph should be accepted."""
-    assert isinstance(node_content, list)
-
-    subnode = node_content[0]
-    subnode_type, subnode_content = get_node_type_content(subnode)
-
-    # is paragraph explicitly excluded? -> False
-    if subnode_type == "Str":
-        assert isinstance(subnode_content, str)
-
-        if subnode_content.partition(".")[0] in section_exclude:
-            return False
 
     # is section_year_min unset? -> True
     if section_year_min is None:
@@ -171,6 +137,70 @@ def is_accepted_para(node_content: PandocNodeContent,
 
     # default -> True
     return True
+
+
+def proc_bullet_item(node: PandocNode, citations: CitationsDict) -> None:
+    node_type, node_content = get_node_type_content(node)
+
+    if node_type == "Str":
+        assert isinstance(node_content, str)
+
+        if node_content.startswith("%CITES"):
+            citation_id = node_content.partition(":")[2]
+            node["c"] = "{:,}".format(int(citations[citation_id]))
+
+
+def proc_bullet(node_content: PandocNodeContent,
+                citations: CitationsDict,
+                section_year_min: Optional[int]) -> None:
+    # XXX: this will probably break, need to replace with something recursive
+    assert isinstance(node_content, list)
+
+    # XXX: ugh
+    deletion_indexes = []
+
+    for subnode_index, subnode in enumerate(node_content):
+        for subsubnode in subnode:
+            (subsubnode_type,
+             subsubnode_content) = get_node_type_content(subsubnode)
+
+            if not is_accepted_node_content(subsubnode_content,
+                                            section_year_min):
+
+                deletion_indexes.append(subnode_index)
+                continue
+
+            for subsubsubnode in subsubnode["c"]:
+                proc_bullet_item(subsubsubnode, citations)
+
+    for deletion_index in reversed(deletion_indexes):
+        del node_content[deletion_index]
+
+
+def is_accepted_header(node_content: PandocNodeContent,
+                       section_exclude: frozenset[str]) -> bool:
+    assert isinstance(node_content, list)
+
+    subnode = node_content[0]
+    subnode_type, subnode_content = get_node_type_content(subnode)
+
+    # is paragraph explicitly excluded? -> False
+    if subnode_type == "Str":
+        assert isinstance(subnode_content, str)
+
+        if subnode_content.partition(".")[0] in section_exclude:
+            return False
+
+    return True
+
+
+def is_accepted_para(node_content: PandocNodeContent,
+                     section_exclude: frozenset[str],
+                     section_year_min: Optional[int]) -> bool:
+    """Return whether paragraph should be accepted."""
+
+    return (is_accepted_header(node_content, section_exclude)
+            and is_accepted_node_content(node_content, section_year_min))
 
 
 def generate_tree(tree: list, config: ConfigDict, include_ids: frozenset[str],
@@ -218,7 +248,7 @@ def generate_tree(tree: list, config: ConfigDict, include_ids: frozenset[str],
                 continue
 
         if node_type == "BulletList":
-            proc_bullet(node_content, citations)
+            proc_bullet(node_content, citations, section_year_min)
 
         if node_type == "RawBlock":
             pass
