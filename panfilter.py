@@ -198,7 +198,6 @@ def is_accepted_para(node_content: PandocNodeContent,
                      section_exclude: frozenset[str],
                      section_year_min: Optional[int]) -> bool:
     """Return whether paragraph should be accepted."""
-
     return (is_accepted_header(node_content, section_exclude)
             and is_accepted_node_content(node_content, section_year_min))
 
