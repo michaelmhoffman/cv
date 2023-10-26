@@ -37,6 +37,16 @@ PandocType = str
 PandocContent = str | list | None
 PrintCallable = Callable[..., None]
 
+# documentation:
+# Pandoc AST: https://hackage.haskell.org/package/pandoc-types/docs/Text-Pandoc-Definition.html
+# lua filters: https://github.com/jgm/pandoc/blob/main/doc/lua-filters.md
+# Python pandocfilters: https://github.com/jgm/pandocfilters
+
+# XXX: some refactoring to do:
+# type -> tag
+# node -> element
+# separate treatment of blocks vs. inlines if necessary
+# that would involve turning PandocTree into BlockList
 
 class PandocNode(TypedDict):
     t: PandocType
