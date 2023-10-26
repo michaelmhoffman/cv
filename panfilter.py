@@ -14,6 +14,7 @@ from datetime import date
 from functools import partial
 import json
 from os import EX_OK
+from pprint import pprint
 import re
 import sys
 from typing import Any, Callable, Iterator, Optional, TextIO, TypedDict
@@ -163,18 +164,38 @@ def proc_bullet_str(node: PandocNode, citations: CitationsDict) -> None:
 def generate_bullet_tree(tree: PandocTree, citations: CitationsDict,
                          section_year_min: Optional[int]) \
                          -> Iterator[PandocNode]:
+    if not is_accepted_tree(tree, section_year_min):
+        return
+
     for node in tree:
         node_type, content = unpack_node(node)
 
-        if isinstance(content, list):
+        if node_type == "BulletList":
+            assert isinstance(content, list)
+
+            yield proc_bullet_list(node, citations, section_year_min)
+        elif node_type == "Plain":
+            assert isinstance(content, list)
+
+            processed_content = list(generate_bullet_tree(content, citations,
+                                                          section_year_min))
+            yield pack_node(node_type, processed_content)
+        elif isinstance(content, list):
             if not is_accepted_tree(content, section_year_min):
                 continue
 
-            yield proc_bullet_list(node, citations, section_year_min)
+            yield node
         else:
             proc_bullet_str(node, citations)
 
             yield node
+
+
+def generate_bullet_list(trees: list[PandocTree], citations: CitationsDict,
+                         section_year_min: Optional[int]) \
+                         -> Iterator[PandocTree]:
+    for tree in trees:
+        yield list(generate_bullet_tree(tree, citations, section_year_min))
 
 
 def proc_bullet_list(node: PandocNode,
@@ -183,7 +204,7 @@ def proc_bullet_list(node: PandocNode,
     node_type, content = unpack_node(node)
     assert isinstance(content, list)
 
-    processed_content = list(generate_bullet_tree(content, citations,
+    processed_content = list(generate_bullet_list(content, citations,
                                                   section_year_min))
 
     return pack_node(node_type, processed_content)
@@ -261,14 +282,13 @@ def generate_tree(tree: PandocTree, config: ConfigDict,
                                     section_year_min):
                 continue
 
+            node["c"] = list(generate_bullet_tree(content, citations,
+                                                  section_year_min))
+
         if node_type == "BulletList":
-            assert isinstance(content, list)
+            node = proc_bullet_list(node, citations, section_year_min)
 
-            yield proc_bullet_list(content, citations, section_year_min)
-
-        if node_type == "RawBlock":
-            pass
-
+        pprint(node, sys.stderr)
         yield node
 
 
