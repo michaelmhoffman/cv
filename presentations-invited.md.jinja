@@ -13,13 +13,15 @@
 {% endif %}
 
 \beginenumerate
-{# XXX many of these doubling ups can be replaced with a `~ ' optional text' if not compact ~' #}
+{# XXX many of these doubling ups can be replaced with `~ (' optional text' if not compact) ~' #}
 {{ pa('61.\ Verge Genomics Seminar Series. Verge Genomics', 'Videoconference', '', 2024, 33) -}}
 {{ pa('60.\ CRINA Connects Seminar Series. Cancer Research Institute for Northern Alberta (CRINA), University of Alberta', 'Alberta, MD', '6 December', 2023, 33) -}}
 {{ pa('59.\ "Identifying transcription factor binding using open chromatin, transcriptome, and methylation data." University of Maryland', 'College Park, MD', '6 November', 2023, 33) -}}
 {{ pa('58.\ "Identifying transcription factor binding using open chromatin, transcriptome, and methylation data." BioNet 2023. University of Alberta', 'Edmonton, AB', '31 May', 2023, 33) -}}
+{% if annotate %}
 * Keynote.
-{{ pa('57.\ ["Reproducibility standards for machine learning in the life sciences."](http://www.birs.ca/events/2022/5-day-workshops/22w5085/videos/watch/202206080850-Hoffman.html) Deep Learning for Genetics, Genomics and Metagenomics' ~ ': Latest Developments and New Directions' if not compact ~ '. Banff International Research Station', 'Videoconference', '8 June', 2022, 33) -}}
+{% endif %}
+{{ pa('57.\ ["Reproducibility standards for machine learning in the life sciences."](http://www.birs.ca/events/2022/5-day-workshops/22w5085/videos/watch/202206080850-Hoffman.html) Deep Learning for Genetics, Genomics and Metagenomics' ~ (': Latest Developments and New Directions' if not compact) ~ '. Banff International Research Station', 'Videoconference', '8 June', 2022, 33) -}}
 {{ pa('56.\ ["Acidbio and BED."](https://docs.google.com/presentation/d/1n6sHAVTh3psKUrTfLHfkK7rz2dkDqXp6G6Eg_vZn5GQ/edit#slide=id.g123eb2b9aae_0_404) Global Alliance for Genomics and Health (GA4GH) GA4GH Connect', 'Montréal, QC', '20 April', 2022, 250) -}}
 {{ pa('55.\ "Predicting transcription factor binding and the effects of viral integration." Computational Biology Seminar Series. Garvan Institute of Medical Research', 'Videoconference', '13 April', 2022, 33) -}}
 {% if compact %}

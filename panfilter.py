@@ -14,7 +14,6 @@ from datetime import date
 from functools import partial
 import json
 from os import EX_OK
-from pprint import pprint
 import re
 import sys
 from typing import Any, Callable, Iterator, Optional, TextIO, TypedDict
@@ -38,7 +37,8 @@ PandocContent = str | list | None
 PrintCallable = Callable[..., None]
 
 # documentation:
-# Pandoc AST: https://hackage.haskell.org/package/pandoc-types/docs/Text-Pandoc-Definition.html
+# Pandoc AST:
+# https://hackage.haskell.org/package/pandoc-types/docs/Text-Pandoc-Definition.html
 # lua filters: https://github.com/jgm/pandoc/blob/main/doc/lua-filters.md
 # Python pandocfilters: https://github.com/jgm/pandocfilters
 
@@ -47,6 +47,7 @@ PrintCallable = Callable[..., None]
 # node -> element
 # separate treatment of blocks vs. inlines if necessary
 # that would involve turning PandocTree into BlockList
+
 
 class PandocNode(TypedDict):
     t: PandocType
@@ -298,7 +299,6 @@ def generate_tree(tree: PandocTree, config: ConfigDict,
         if node_type == "BulletList":
             node = proc_bullet_list(node, citations, section_year_min)
 
-        pprint(node, sys.stderr)
         yield node
 
 
