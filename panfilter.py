@@ -8,12 +8,15 @@ __version__ = "0.1"
 
 # Copyright 2015-2021, 2023 Michael M. Hoffman <michael.hoffman@utoronto.ca>
 
+from argparse import Namespace
+from contextlib import nullcontext
 from datetime import date
 from functools import partial
 import json
+from os import EX_OK
 import re
 import sys
-from typing import Any, Callable, Generator, Optional, TextIO, TypedDict
+from typing import Any, Callable, Iterator, Optional, TextIO, TypedDict
 
 from bs4 import BeautifulSoup, Tag
 import yaml
@@ -29,13 +32,17 @@ info = partial(print, file=sys.stderr)
 CitationsDict = dict[str, str]
 SectionConfigDict = dict[str, str | int | list[str]]
 ConfigDict = dict[str, SectionConfigDict]
-PandocNodeContent = str | list | None
+PandocType = str
+PandocContent = str | list | None
 PrintCallable = Callable[..., None]
 
 
 class PandocNode(TypedDict):
-    t: str
-    c: PandocNodeContent
+    t: PandocType
+    c: PandocContent
+
+
+PandocTree = list[PandocNode]
 
 
 def text_to_year(text: str) -> int:
@@ -108,30 +115,33 @@ def noop(*args: list[Any], **kwargs: dict[str, Any]) -> None:
     pass
 
 
-def get_node_type_content(node: PandocNode) -> tuple[str, PandocNodeContent]:
+def unpack_node(node: PandocNode) -> tuple[PandocType, PandocContent]:
     node_type = node["t"]
-    node_content = node.get("c")
+    content = node.get("c")
 
-    return node_type, node_content
+    return node_type, content
 
 
-def is_accepted_node_content(node_content: PandocNodeContent,
-                             section_year_min: Optional[int]) -> bool:
-    assert isinstance(node_content, list)
+def pack_node(node_type: PandocType,
+              content: PandocContent) -> PandocNode:
+    return {"t": node_type, "c": content}
 
+
+def is_accepted_tree(tree: PandocTree,
+                     section_year_min: Optional[int]) -> bool:
     # is section_year_min unset? -> True
     if section_year_min is None:
         return True
 
     # does any subnode have a max year <section_year_min? -> False
-    for subnode in node_content:
-        subnode_type, subnode_content = get_node_type_content(subnode)
+    for node in tree:
+        node_type, content = unpack_node(node)
 
-        if subnode_type == "Str":
-            assert isinstance(subnode_content, str)
+        if node_type == "Str":
+            assert isinstance(content, str)
 
             node_years = [text_to_year(match.group(0))
-                          for match in re_year.finditer(subnode_content)]
+                          for match in re_year.finditer(content)]
             if node_years and max(node_years) < section_year_min:
                 return False
 
@@ -139,50 +149,52 @@ def is_accepted_node_content(node_content: PandocNodeContent,
     return True
 
 
-def proc_bullet_item(node: PandocNode, citations: CitationsDict) -> None:
-    node_type, node_content = get_node_type_content(node)
+def proc_bullet_str(node: PandocNode, citations: CitationsDict) -> None:
+    node_type, content = unpack_node(node)
 
     if node_type == "Str":
-        assert isinstance(node_content, str)
+        assert isinstance(content, str)
 
-        if node_content.startswith("%CITES"):
-            citation_id = node_content.partition(":")[2]
+        if content.startswith("%CITES"):
+            citation_id = content.partition(":")[2]
             node["c"] = "{:,}".format(int(citations[citation_id]))
 
 
-def proc_bullet(node_content: PandocNodeContent,
-                citations: CitationsDict,
-                section_year_min: Optional[int]) -> None:
-    # XXX: this will probably break, need to replace with something recursive
-    assert isinstance(node_content, list)
+def generate_bullet_tree(tree: PandocTree, citations: CitationsDict,
+                         section_year_min: Optional[int]) \
+                         -> Iterator[PandocNode]:
+    for node in tree:
+        node_type, content = unpack_node(node)
 
-    # XXX: ugh
-    deletion_indexes = []
-
-    for subnode_index, subnode in enumerate(node_content):
-        for subsubnode in subnode:
-            (subsubnode_type,
-             subsubnode_content) = get_node_type_content(subsubnode)
-
-            if not is_accepted_node_content(subsubnode_content,
-                                            section_year_min):
-
-                deletion_indexes.append(subnode_index)
+        if isinstance(content, list):
+            if not is_accepted_tree(content, section_year_min):
                 continue
 
-            for subsubsubnode in subsubnode["c"]:
-                proc_bullet_item(subsubsubnode, citations)
+            yield proc_bullet_list(node, citations, section_year_min)
+        else:
+            proc_bullet_str(node, citations)
 
-    for deletion_index in reversed(deletion_indexes):
-        del node_content[deletion_index]
+            yield node
 
 
-def is_accepted_header(node_content: PandocNodeContent,
+def proc_bullet_list(node: PandocNode,
+                     citations: CitationsDict,
+                     section_year_min: Optional[int]) -> PandocNode:
+    node_type, content = unpack_node(node)
+    assert isinstance(content, list)
+
+    processed_content = list(generate_bullet_tree(content, citations,
+                                                  section_year_min))
+
+    return pack_node(node_type, processed_content)
+
+
+def is_accepted_header(content: PandocContent,
                        section_exclude: frozenset[str]) -> bool:
-    assert isinstance(node_content, list)
+    assert isinstance(content, list)
 
-    subnode = node_content[0]
-    subnode_type, subnode_content = get_node_type_content(subnode)
+    subnode = content[0]
+    subnode_type, subnode_content = unpack_node(subnode)
 
     # is paragraph explicitly excluded? -> False
     if subnode_type == "Str":
@@ -194,29 +206,30 @@ def is_accepted_header(node_content: PandocNodeContent,
     return True
 
 
-def is_accepted_para(node_content: PandocNodeContent,
+def is_accepted_para(tree: PandocTree,
                      section_exclude: frozenset[str],
                      section_year_min: Optional[int]) -> bool:
     """Return whether paragraph should be accepted."""
-    return (is_accepted_header(node_content, section_exclude)
-            and is_accepted_node_content(node_content, section_year_min))
+    return (is_accepted_header(tree, section_exclude)
+            and is_accepted_tree(tree, section_year_min))
 
 
-def generate_tree(tree: list, config: ConfigDict, include_ids: frozenset[str],
-                  citations: CitationsDict, log: PrintCallable) \
-                  -> Generator[PandocNode, None, None]:
+def generate_tree(tree: PandocTree, config: ConfigDict,
+                  include_ids: frozenset[str],
+                  citations: CitationsDict,
+                  log: PrintCallable) -> Iterator[PandocNode]:
     section_id = None
     section_accept = True
     section_exclude: frozenset[str] = frozenset()
     section_year_min = None
 
     for node in tree:
-        node_type, node_content = get_node_type_content(node)
+        node_type, content = unpack_node(node)
 
         if node_type == "Header":
-            assert isinstance(node_content, list)
+            assert isinstance(content, list)
 
-            section_id = node_content[1][0]
+            section_id = content[1][0]
             section_accept = not include_ids or section_id in include_ids
             log(text_accept(section_accept), section_id)
             section_config = config.get(section_id)
@@ -228,7 +241,7 @@ def generate_tree(tree: list, config: ConfigDict, include_ids: frozenset[str],
             else:
                 section_name = section_config.get("name")
                 if section_name:
-                    node_content[2] = [{"c": section_name, "t": "Str"}]
+                    content[2] = [{"c": section_name, "t": "Str"}]
 
                 section_exclude_list = section_config.get("exclude", [])
                 assert isinstance(section_exclude_list, list)
@@ -242,12 +255,16 @@ def generate_tree(tree: list, config: ConfigDict, include_ids: frozenset[str],
             continue
 
         if node_type == "Para":
-            if not is_accepted_para(node_content, section_exclude,
+            assert isinstance(content, list)
+
+            if not is_accepted_para(content, section_exclude,
                                     section_year_min):
                 continue
 
         if node_type == "BulletList":
-            proc_bullet(node_content, citations, section_year_min)
+            assert isinstance(content, list)
+
+            yield proc_bullet_list(content, citations, section_year_min)
 
         if node_type == "RawBlock":
             pass
@@ -262,8 +279,9 @@ def get_log_func(verbose: bool) -> PrintCallable:
         return noop
 
 
-def proc_tree(tree: list, config: ConfigDict, include_ids: frozenset[str],
-              citations: CitationsDict, verbose: bool) -> list:
+def proc_tree(tree: PandocTree, config: ConfigDict,
+              include_ids: frozenset[str], citations: CitationsDict,
+              verbose: bool) -> list:
     log = get_log_func(verbose)
 
     return list(generate_tree(tree, config, include_ids, citations, log))
@@ -288,17 +306,17 @@ def panfilter(infile: TextIO, config_file: Optional[TextIO] = None,
     #         if node["t"] == "Header"), sep="\n")
 
 
-def parse_args(args: list[str]):
+def parse_args(args: list[str]) -> Namespace:
     from argparse import (ArgumentDefaultsHelpFormatter, ArgumentParser,
                           FileType)
 
     description = __doc__.splitlines()[0].partition(": ")[2]
     parser = ArgumentParser(description=description,
                             formatter_class=ArgumentDefaultsHelpFormatter)
-    parser.add_argument("infile", nargs="?", type=FileType("r"),
+    parser.add_argument("infile", nargs="?", type=FileType(),
                         default=sys.stdin, metavar="FILE",
                         help="input file in Pandoc JSON format")
-    parser.add_argument("--config", type=FileType("r"),
+    parser.add_argument("--config", type=FileType(), default=nullcontext(),
                         metavar="FILE", help="file with YAML configuration")
     parser.add_argument("--verbose", action="store_true",
                         help="verbose output")
@@ -309,10 +327,13 @@ def parse_args(args: list[str]):
     return parser.parse_args(args)
 
 
-def main(argv: list[str] = sys.argv[1:]):
+def main(argv: list[str] = sys.argv[1:]) -> int:
     args = parse_args(argv)
 
-    return panfilter(args.infile, args.config, args.verbose)
+    with args.infile as infile, args.config as config_file:
+        panfilter(infile, config_file, args.verbose)
+
+    return EX_OK
 
 
 if __name__ == "__main__":
