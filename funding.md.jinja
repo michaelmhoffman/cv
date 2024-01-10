@@ -5,7 +5,11 @@
 ### Funding: lead principal investigator
 
 \beginenumerate
-F22. Segway Suite.  Research Stimulus Grant. Princess Margaret Cancer Centre, University Health Network. 12 months, direct costs CAD 75,000. October 2023–September 2024.
+F22.\ "Segway Suite."
+{% if not verycompact %}Princess Margaret Cancer Centre, {% endif %}{{ uhn }}.
+{% if not compact %}Research Stimulus Grant.
+1 year, direct costs {% endif %}CAD\ 75,000.
+{% if not compact %}October {% endif %}2023--{% if not compact %}September {% endif %}2024.
 
 F21.\ "Computational methods for chromatin data."
 {{ nserc }}.
