@@ -141,7 +141,8 @@ def pack_node(node_type: PandocType,
 
 
 def is_accepted_tree(tree: PandocTree,
-                     section_year_min: Optional[int]) -> bool:
+                     section_year_min: Optional[int],
+                     log: PrintCallable) -> bool:
     # is section_year_min unset? -> True
     if section_year_min is None:
         return True
@@ -149,6 +150,8 @@ def is_accepted_tree(tree: PandocTree,
     # does any subnode have a max year <section_year_min? -> False
     for node in tree:
         node_type, content = unpack_node(node)
+
+        #log(f" examining {node}")
 
         if node_type == "Str":
             assert isinstance(content, str)
@@ -174,9 +177,10 @@ def proc_bullet_str(node: PandocNode, citations: CitationsDict) -> None:
 
 
 def generate_bullet_tree(tree: PandocTree, citations: CitationsDict,
-                         section_year_min: Optional[int]) \
+                         section_year_min: Optional[int],
+                         log: PrintCallable) \
                          -> Iterator[PandocNode]:
-    if not is_accepted_tree(tree, section_year_min):
+    if not is_accepted_tree(tree, section_year_min, log):
         return
 
     for node in tree:
@@ -185,12 +189,13 @@ def generate_bullet_tree(tree: PandocTree, citations: CitationsDict,
         if node_type == "BulletList":
             assert isinstance(content, list)
 
-            yield proc_bullet_list(node, citations, section_year_min)
+            yield proc_bullet_list(node, citations, section_year_min, log)
         elif node_type == "Plain":
             assert isinstance(content, list)
 
             processed_content = list(generate_bullet_tree(content, citations,
-                                                          section_year_min))
+                                                          section_year_min,
+                                                          log))
             yield pack_node(node_type, processed_content)
         elif node_type == "Quoted":
             assert isinstance(content, list)
@@ -201,11 +206,12 @@ def generate_bullet_tree(tree: PandocTree, citations: CitationsDict,
 
             processed_inner_content = \
                 list(generate_bullet_tree(inner_content, citations,
-                                          section_year_min))
+                                          section_year_min,
+                                          log))
 
             yield pack_node(node_type, [content[0], processed_inner_content])
         elif isinstance(content, list):
-            if not is_accepted_tree(content, section_year_min):
+            if not is_accepted_tree(content, section_year_min, log):
                 continue
 
             yield node
@@ -216,20 +222,23 @@ def generate_bullet_tree(tree: PandocTree, citations: CitationsDict,
 
 
 def generate_bullet_list(trees: list[PandocTree], citations: CitationsDict,
-                         section_year_min: Optional[int]) \
+                         section_year_min: Optional[int],
+                         log: PrintCallable) \
                          -> Iterator[PandocTree]:
     for tree in trees:
-        yield list(generate_bullet_tree(tree, citations, section_year_min))
+        yield list(generate_bullet_tree(tree, citations, section_year_min,
+                                        log))
 
 
 def proc_bullet_list(node: PandocNode,
                      citations: CitationsDict,
-                     section_year_min: Optional[int]) -> PandocNode:
+                     section_year_min: Optional[int],
+                     log: PrintCallable) -> PandocNode:
     node_type, content = unpack_node(node)
     assert isinstance(content, list)
 
     processed_content = list(generate_bullet_list(content, citations,
-                                                  section_year_min))
+                                                  section_year_min, log))
 
     return pack_node(node_type, processed_content)
 
@@ -253,10 +262,11 @@ def is_accepted_header(content: PandocContent,
 
 def is_accepted_para(tree: PandocTree,
                      section_exclude: frozenset[str],
-                     section_year_min: Optional[int]) -> bool:
+                     section_year_min: Optional[int],
+                     log: PrintCallable) -> bool:
     """Return whether paragraph should be accepted."""
     return (is_accepted_header(tree, section_exclude)
-            and is_accepted_tree(tree, section_year_min))
+            and is_accepted_tree(tree, section_year_min, log))
 
 
 def generate_tree(tree: PandocTree, config: ConfigDict,
@@ -277,6 +287,7 @@ def generate_tree(tree: PandocTree, config: ConfigDict,
             section_id = content[1][0]
             section_accept = not include_ids or section_id in include_ids
             log(text_accept(section_accept), section_id)
+
             section_config = config.get(section_id)
 
             if section_config is None:
@@ -292,9 +303,12 @@ def generate_tree(tree: PandocTree, config: ConfigDict,
                 assert isinstance(section_exclude_list, list)
 
                 section_exclude = frozenset(section_exclude_list)
-                log(" section_exclude:", *section_exclude)
+                if section_exclude:
+                    log(" section_exclude:", *section_exclude)
 
                 section_year_min = proc_section_year_min(section_config)
+                if section_year_min is not None:
+                    log(" section_year_min:", section_year_min)
 
         if not section_accept:
             continue
@@ -303,14 +317,14 @@ def generate_tree(tree: PandocTree, config: ConfigDict,
             assert isinstance(content, list)
 
             if not is_accepted_para(content, section_exclude,
-                                    section_year_min):
+                                    section_year_min, log):
                 continue
 
             node["c"] = list(generate_bullet_tree(content, citations,
-                                                  section_year_min))
+                                                  section_year_min, log))
 
         if node_type == "BulletList":
-            node = proc_bullet_list(node, citations, section_year_min)
+            node = proc_bullet_list(node, citations, section_year_min, log)
 
         yield node
 
