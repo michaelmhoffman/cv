@@ -6,7 +6,8 @@ from __future__ import absolute_import, division, print_function
 
 __version__ = "0.1"
 
-# Copyright 2015-2021, 2023 Michael M. Hoffman <michael.hoffman@utoronto.ca>
+# Copyright 2015-2021, 2023-2024 Michael M. Hoffman
+# <michael.hoffman@utoronto.ca>
 
 from argparse import Namespace
 from contextlib import nullcontext
@@ -191,6 +192,18 @@ def generate_bullet_tree(tree: PandocTree, citations: CitationsDict,
             processed_content = list(generate_bullet_tree(content, citations,
                                                           section_year_min))
             yield pack_node(node_type, processed_content)
+        elif node_type == "Quoted":
+            assert isinstance(content, list)
+
+            inner_content = content[1]
+
+            assert isinstance(inner_content, list)
+
+            processed_inner_content = \
+                list(generate_bullet_tree(inner_content, citations,
+                                          section_year_min))
+
+            yield pack_node(node_type, [content[0], processed_inner_content])
         elif isinstance(content, list):
             if not is_accepted_tree(content, section_year_min):
                 continue

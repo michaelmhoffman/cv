@@ -84,7 +84,7 @@ cv-%.md : cv.md.jinja base.md.jinja head.md.jinja positions-current.md.jinja edu
 # debugging:
 # variant=crs
 # make "cv-${variant}.json"
-# PYTHONINSPECT=1 ./panfilter.py --config="${variant}.yaml" "cv-${variant}.json"
+# PYTHONINSPECT=1 ./panfilter.py --verbose --config="${variant}.yaml" "cv-${variant}.json"
 
 # using a pipeline because using --filter, a Python filter, and Cygwin python doesn't seem to work
 # XXX: can we change this now that we no longer use Cygwin
