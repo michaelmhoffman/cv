@@ -44,7 +44,7 @@ SCHOLAR_URL="https://scholar.google.com/citations?user=$(SCHOLAR_ID)&pagesize=$(
 ## phony targets
 ALL=$(SRC:.md=-default.docx) $(SRC:.md=-default.html) $(SRC:.md=-default.pdf)
 
-all: $(ALL) web
+all: $(ALL) github
 
 installdeps-sudo-debian:
 	sudo apt install pandoc texlive-xetex
