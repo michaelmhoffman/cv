@@ -13,6 +13,7 @@ __pycache__
 *.nav
 *.snm
 *.synctex.gz
+*.synctex.gz(busy)
 *.toc
 
 /cv.md
