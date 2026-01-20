@@ -6,7 +6,7 @@ from __future__ import absolute_import, division, print_function
 
 __version__ = "0.1"
 
-# Copyright 2015-2021, 2023-2024 Michael M. Hoffman
+# Copyright 2015-2021, 2023-2024, 2026 Michael M. Hoffman
 # <michael.hoffman@utoronto.ca>
 
 from argparse import Namespace
@@ -210,6 +210,8 @@ def generate_bullet_tree(tree: PandocTree, citations: CitationsDict,
                                           log))
 
             yield pack_node(node_type, [content[0], processed_inner_content])
+        elif node_type in {"RawInline", "Link"}:
+            yield node
         elif isinstance(content, list):
             if not is_accepted_tree(content, section_year_min, log):
                 continue
