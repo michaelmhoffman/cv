@@ -36,3 +36,4 @@ __pycache__
 /all-public.yaml
 /empty.yaml
 /select-nostartup.yaml
+/.agent-shell/
